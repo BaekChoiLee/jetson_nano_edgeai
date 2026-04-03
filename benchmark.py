@@ -45,6 +45,14 @@ model = models.mobilenet_v3_small(pretrained=True).eval()
 dummy = np.random.randn(1, 3, 224, 224).astype(np.float32)
 inp   = torch.from_numpy(dummy)
 
+# torch.tensor() : 데이터를 새로 복사 - 원본 데이터와 독립적으로 텐서를 조작
+# torch.from_numpy() : numpy array를 torch tensor로 변환하는데, 이때 메모리 공유(zero_copy)방식임
+# 즉, numpy array를 복사하지 않고 그대로 사용하기 때문에 매우 빠름, 데이터 타입 일치해야함
+# torch값을 변경하면, numpy값도 바뀜
+# 기본적으로 CPU에 위치하기 때문에, gpu를 사용하려면 .to('cuda')를 해줘야함
+# gpu공간으로 옮겨진 텐서는 더 이상 numpy 배열과 메모리를 공유하지 않음
+
+
 result = run_benchmark(
     infer_fn=lambda x: model(x),
     input_data=inp
