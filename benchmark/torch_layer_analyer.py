@@ -8,6 +8,10 @@ class LayerProfiler:
         self._hooks = []                  # 나중에 제거하기 위해 등록된 훅(Hook)들을 저장하는 리스트
         self._start_times = {}            # 각 레이어의 시작 시간을 임시로 기록할 딕셔너리
 
+        """
+        pytorch에서 module에 적용하는 hook에 forward_pre_hook, forward_hook, full_backward_hook있음
+        """
+
     def attach(self):
         # 모델의 모든 모듈(레이어)을 이름과 함께 하나씩 순회
         for name, module in self.model.named_modules():
