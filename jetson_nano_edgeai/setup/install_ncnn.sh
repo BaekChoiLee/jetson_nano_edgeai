@@ -23,7 +23,7 @@ if [ -d "$NCNN_DIR" ]; then
         cd "$NCNN_DIR" && git pull
     else
         echo "  ncnn directory exists but is not a git repo. Removing and re-cloning..."
-        rm -rf "$NCNN_DIR"
+        sudo rm -rf "$NCNN_DIR"
         git clone --depth=1 https://github.com/Tencent/ncnn.git "$NCNN_DIR"
     fi
 else
