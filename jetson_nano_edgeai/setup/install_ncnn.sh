@@ -44,6 +44,10 @@ cmake \
     -D NCNN_BUILD_BENCHMARK=ON \
     -D NCNN_BUILD_EXAMPLES=OFF \
     -D NCNN_PYTHON=ON \
+    -D NCNN_BUILD_TESTS=OFF \
+    -D Protobuf_INCLUDE_DIR=/usr/include \
+    -D Protobuf_LIBRARIES=/usr/lib/aarch64-linux-gnu/libprotobuf.so \
+    -D Protobuf_PROTOC_EXECUTABLE=/usr/bin/protoc \
     ..
 
 make -j$(nproc)
@@ -75,7 +79,10 @@ if [ -f "$ONNX2NCNN" ]; then
     echo "  onnx2ncnn binary: $ONNX2NCNN"
     echo "  [OK] onnx2ncnn available."
 else
-    echo "  [WARN] onnx2ncnn not found. ONNX conversion may not work."
+    echo "  [WARN] onnx2ncnn not found."
+    echo "  This usually means protobuf was not detected by cmake."
+    echo "  Check cmake output above for 'Protobuf' lines."
+    echo "  Try: sudo apt-get install -y libprotobuf-dev protobuf-compiler"
 fi
 
 echo ""

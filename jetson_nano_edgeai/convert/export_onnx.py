@@ -78,20 +78,35 @@ def export_model(model_name, output_dir):
     # Export to ONNX
     print(f"[3/4] Exporting to ONNX (opset {config['opset']})...")
     if is_detection:
-        # Detection models need special export handling
+        # SSD/SSDLite detection models cannot be traced directly via torch.onnx.export
+        # because their forward() accesses image.shape which becomes None during tracing.
+        # Instead, export only the backbone+feature extractor as a feature encoder,
+        # or wrap the model to accept a pre-batched tensor with a fixed size.
+        class DetectionWrapper(torch.nn.Module):
+            def __init__(self, det_model, img_h, img_w):
+                super().__init__()
+                self.model = det_model
+                self.img_h = img_h
+                self.img_w = img_w
+
+            def forward(self, x):
+                # x: (1, C, H, W) — pass as a list of single images
+                images = [x[i] for i in range(x.shape[0])]
+                detections = self.model(images)
+                boxes  = detections[0]["boxes"]
+                scores = detections[0]["scores"]
+                labels = detections[0]["labels"].float()
+                return boxes, scores, labels
+
+        wrapper = DetectionWrapper(model, input_size[2], input_size[3])
+        wrapper.eval()
         torch.onnx.export(
-            model,
-            [dummy_input[0]],
+            wrapper,
+            dummy_input,
             output_path,
             opset_version=config["opset"],
             input_names=["input"],
-            output_names=["boxes", "labels", "scores"],
-            dynamic_axes={
-                "input": {1: "height", 2: "width"},
-                "boxes": {0: "num_detections"},
-                "labels": {0: "num_detections"},
-                "scores": {0: "num_detections"},
-            },
+            output_names=["boxes", "scores", "labels"],
         )
     else:
         torch.onnx.export(
