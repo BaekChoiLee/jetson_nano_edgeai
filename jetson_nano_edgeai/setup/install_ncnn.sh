@@ -18,8 +18,14 @@ sudo apt-get install -y \
 # Step 2: Clone ncnn
 echo "[2/5] Cloning ncnn repository..."
 if [ -d "$NCNN_DIR" ]; then
-    echo "  ncnn directory exists, pulling latest..."
-    cd "$NCNN_DIR" && git pull
+    if [ -d "$NCNN_DIR/.git" ]; then
+        echo "  ncnn directory exists, pulling latest..."
+        cd "$NCNN_DIR" && git pull
+    else
+        echo "  ncnn directory exists but is not a git repo. Removing and re-cloning..."
+        rm -rf "$NCNN_DIR"
+        git clone --depth=1 https://github.com/Tencent/ncnn.git "$NCNN_DIR"
+    fi
 else
     git clone --depth=1 https://github.com/Tencent/ncnn.git "$NCNN_DIR"
 fi
