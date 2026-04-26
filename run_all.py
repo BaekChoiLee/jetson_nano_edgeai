@@ -56,23 +56,16 @@ def main():
     # 각 모델별 실행
     for model_name in models_to_run:
         print(f"\n[Processing Model: {model_name}]")
-        master = BenchmarkMaster(model_name)
-        
-        # 이미 측정된 조합 스킵 기능
+
+        # 이전 실행 결과가 있어도 이번 실행 결과로 덮어쓴다.
         csv_path = f"./results/benchmark_{model_name}.csv"
-        completed_runtimes = set()
         if os.path.exists(csv_path):
-            import csv
-            with open(csv_path, 'r') as f:
-                reader = csv.DictReader(f)
-                for row in reader:
-                    completed_runtimes.add(row.get('runtime', ''))
+            os.remove(csv_path)
+            print(f"  - [OVERWRITE] Removed previous result file: {csv_path}")
+
+        master = BenchmarkMaster(model_name)
                     
         for rt, dev in runtimes_to_run:
-            if rt in completed_runtimes:
-                print(f"  - [SKIP] {rt} on {model_name} already completed.")
-                continue
-                
             try:
                 master.run_runtime_benchmark(
                     runtime=rt, 
