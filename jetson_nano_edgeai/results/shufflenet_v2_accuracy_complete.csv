@@ -1,4 +1,0 @@
-runtime,top1,top5,n
-pytorch_cpu,0.2,1.0,500
-pytorch_cuda,87.2,97.4,500
-onnxrt_cuda,87.2,97.4,500

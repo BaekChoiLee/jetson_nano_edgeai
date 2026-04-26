@@ -1,8 +1,0 @@
-runtime,top1,top5,n
-pytorch_cpu,89.0,97.8,1000
-pytorch_cuda,89.0,97.8,1000
-onnxrt_cuda,89.0,97.8,1000
-tflite_cpu,88.4,97.9,1000
-tensorrt_fp16,89.0,97.8,1000
-tensorrt_int8,88.6,97.6,1000
-ncnn,89.0,97.8,1000

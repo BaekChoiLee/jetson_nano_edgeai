@@ -8,7 +8,13 @@ import csv
 from datetime import datetime
 
 # 기존에 만든 하드웨어 모니터 클래스 임포트 (파일이 같은 경로에 있다고 가정)
-from tegra_parser import TegraMonitor 
+from benchmark.tegra_parser import TegraMonitor 
+from benchmark.result_saver import ResultSaver
+from benchmark.power_mapper import PowerMapper
+try:
+    from codecarbon import OfflineEmissionsTracker
+except ImportError:
+    OfflineEmissionsTracker = None
 
 # 각 런타임별 로딩 및 추론 엔진 (예시 구조)
 # 실제 환경에 맞게 각 run_xxx.py 파일에서 함수를 가져오거나 내부에 구현합니다.
@@ -18,6 +24,7 @@ class BenchmarkMaster:
         self.model_name = model_name
         self.model_dir = model_dir
         self.results = []
+        self.saver = ResultSaver(path=f"./results/benchmark_{self.model_name}.csv")
 
     def calc_detailed_stats(self, latencies):
         """코드 B의 장점: 상세 백분위 통계 계산"""
@@ -39,6 +46,11 @@ class BenchmarkMaster:
         # 1. 하드웨어 모니터링 시작 (코드 A의 장점)
         monitor = TegraMonitor(interval_ms=100)
         monitor.start()
+        
+        tracker = None
+        if OfflineEmissionsTracker:
+            tracker = OfflineEmissionsTracker(country_iso_code="KOR", log_level="error")
+            tracker.start()
 
         # 2. 모델 및 입력 준비 (런타임별 분기)
         # 여기서는 구조적 예시만 보여드립니다. 실제 로직은 각 엔진별 라이브러리 호출 필요.
@@ -77,17 +89,57 @@ class BenchmarkMaster:
         # 5. 하드웨어 데이터 수집 종료
         monitor.stop()
         hw_summary = monitor.summary()
+        
+        co2_kg = 0.0
+        if tracker:
+            co2_kg = tracker.stop()
 
-        # 6. 결과 통합
+        # 6. 결과 통합 및 전력 매핑
         stats = self.calc_detailed_stats(latencies)
+        
+        # [NEW] Power Mapper를 이용해 레이어 타임스탬프와 tegrastats 전력 매핑
+        # 현재는 dummy layer_profiles를 예시로 넘기지만, 
+        # 실제 각 프레임워크(ONNX, TFLite 등)의 profiler parser 결과를 여기에 주입해야 합니다.
+        dummy_layer_profiles = [
+            {"layer_name": "dummy_conv", "type": "Conv", "mean_ms": stats["mean_ms"], "timestamp": time.time()}
+        ]
+        
+        power_mapper = PowerMapper()
+        mapped_layer_profiles = power_mapper.map_power(dummy_layer_profiles, monitor.records)
+        power_mapper.save_csv(mapped_layer_profiles, self.model_name, runtime)
+        
         result = {
             "runtime": runtime,
             "device": device_str,
             "latency": stats,
             "memory": mem_stats,
-            "hardware": hw_summary
+            "hardware": hw_summary,
+            "co2_kg": co2_kg,
+            "layer_profiles": mapped_layer_profiles
         }
         self.results.append(result)
+        
+        # ResultSaver를 통한 실시간 CSV 저장
+        self.saver.save({
+            "model": self.model_name,
+            "runtime": runtime,
+            "precision": "fp32" if "fp32" in runtime else ("fp16" if "fp16" in runtime else "int8" if "int8" in runtime else "N/A"),
+            "power_mode": "10w", # 기본값, 외부 주입 가능
+            "mean_ms": stats["mean_ms"],
+            "std_ms": stats["std_ms"],
+            "min_ms": stats["min_ms"],
+            "max_ms": stats["max_ms"],
+            "median_ms": stats["p50_ms"],
+            "power_total_mw_mean": hw_summary.get("power_total_mw_mean", 0),
+            "power_gpu_mw_mean": hw_summary.get("power_gpu_mw_mean", 0),
+            "power_cpu_mw_mean": hw_summary.get("power_cpu_mw_mean", 0),
+            "ram_used_mb_mean": hw_summary.get("ram_used_mb_mean", 0),
+            "gpu_util_pct_mean": hw_summary.get("gpu_util_pct_mean", 0),
+            "gpu_temp_c_mean": hw_summary.get("gpu_temp_c_mean", 0),
+            "co2_kg": co2_kg,
+            "accuracy_top1": 0 # 나중에 검증 단계에서 업데이트
+        })
+        
         return result
 
     def save_all(self, output_dir="./results"):
