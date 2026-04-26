@@ -83,7 +83,9 @@ def main():
                 print(f"  - Waiting for cool-down (10s)...")
                 time.sleep(10) # 열 스로틀링 방지용 대기
             except Exception as e:
+                import traceback
                 print(f"[Error] {model_name} on {rt} failed: {e}")
+                traceback.print_exc()
                 continue # 특정 조합 실패 시 스킵하고 다음으로 진행
                 
         # 모델 하나가 끝나면 저장 (result_saver 연동은 BenchmarkMaster 내부에 구현됨)

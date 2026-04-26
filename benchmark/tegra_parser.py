@@ -12,27 +12,48 @@ class TegraMonitor:
 
 
     def start(self):
-        # 1. tegrastats 명령어를 백그라운드에서 실행
-        """
-        Popen으로 실행하면 stdout, terminate(), poll()을 사용할 수 있음(제어권을 얻게 됨)
-        """
-        self._proc = subprocess.Popen(
-            ['sudo', 'tegrastats', '--interval', str(self.interval_ms)],  # 명령어
-            stdout=subprocess.PIPE, # tegrastats가 출력하는 내용이 self._proc.stdout으로 전달됨                                   
-            stderr=subprocess.DEVNULL, # 에러는 버림
-            text=True
-        )
-        # 2. 출력을 실시간으로 읽어서 기록할 스레드 생성 및 시작
-        self._thread = threading.Thread(target=self._collect)
-        self._thread.daemon = True # 메인 프로그램 종료 시 스레드도 자동 종료되도록 설정
-        self._thread.start()
-        time.sleep(0.5)  # 프로세스가 완전히 뜨고 첫 출력이 나올 때까지 잠시 대기
+        # 1. tegrastats 명령어가 시스템에 존재하는지 먼저 확인
+        try:
+            # which 명령어로 tegrastats 경로 확인
+            subprocess.check_output(['which', 'tegrastats'])
+        except subprocess.CalledProcessError:
+            print("[Warning] 'tegrastats' not found. Hardware monitoring will be disabled (Non-Jetson environment?).")
+            return
+
+        # 2. tegrastats 명령어를 백그라운드에서 실행
+        try:
+            self._proc = subprocess.Popen(
+                ['sudo', 'tegrastats', '--interval', str(self.interval_ms)],
+                stdout=subprocess.PIPE,
+                stderr=subprocess.DEVNULL,
+                text=True
+            )
+            # 3. 출력을 실시간으로 읽어서 기록할 스레드 생성 및 시작
+            self._thread = threading.Thread(target=self._collect)
+            self._thread.daemon = True
+            self._thread.start()
+            time.sleep(0.5)
+        except Exception as e:
+            print(f"[Warning] Failed to start tegrastats: {e}")
 
     def stop(self):
         # 모니터링 프로세스를 종료하고 스레드를 정리함
         if self._proc:
-            self._proc.terminate()      # 프로세스 강제 종료 신호
-            self._thread.join(timeout=2) # 스레드가 안전하게 끝날 때까지 최대 2초 대기
+            try:
+                # 1. 먼저 프로세스가 아직 살아있는지 확인
+                if self._proc.poll() is None:
+                    self._proc.terminate()      # 프로세스 강제 종료 신호
+                    self._proc.wait(timeout=1)  # 종료 대기
+            except (PermissionError, OSError):
+                # sudo로 실행된 프로세스는 일반 유저가 terminate() 할 수 없으므로 시스템 명령어로 kill
+                try:
+                    import subprocess
+                    subprocess.run(['sudo', 'kill', str(self._proc.pid)], stderr=subprocess.DEVNULL)
+                except:
+                    pass
+            
+            if self._thread:
+                self._thread.join(timeout=1)
 
     def _collect(self):
         # tegrastats가 한 줄씩 출력할 때마다 반복해서 읽어옴

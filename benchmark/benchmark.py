@@ -92,7 +92,11 @@ class BenchmarkMaster:
         
         co2_kg = 0.0
         if tracker:
-            co2_kg = tracker.stop()
+            try:
+                co2_kg = tracker.stop()
+            except Exception as e:
+                print(f"  [Warning] CodeCarbon failed to stop cleanly: {e}")
+                co2_kg = 0.0
 
         # 6. 결과 통합 및 전력 매핑
         stats = self.calc_detailed_stats(latencies)

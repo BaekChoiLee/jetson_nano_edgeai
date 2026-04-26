@@ -1,0 +1,2 @@
+timestamp,model,runtime,precision,power_mode,mean_ms,std_ms,min_ms,max_ms,median_ms,power_total_mw_mean,power_gpu_mw_mean,power_cpu_mw_mean,ram_used_mb_mean,gpu_util_pct_mean,gpu_temp_c_mean,co2_kg,accuracy_top1
+2026-04-27T00:04:16.206248,mobilenetv3s,pytorch_cpu,N/A,10w,10.96,0.0,10.96,10.96,10.96,0,0,0,0,0,0,0.0,0
