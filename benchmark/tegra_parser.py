@@ -9,7 +9,8 @@ class TegraMonitor:
         self.records = []              # 파싱된 데이터를 저장할 리스트
         self._proc = None              # 실행될 서브프로세스 객체 담는 변수
         self._thread = None            # 데이터를 읽어올 스레드 객체 담는 변수
-
+        self._stderr_thread = None
+        self._stderr_lines = []
 
     def start(self):
         # 1. tegrastats 명령어가 시스템에 존재하는지 먼저 확인
@@ -21,20 +22,43 @@ class TegraMonitor:
             return
 
         # 2. tegrastats 명령어를 백그라운드에서 실행
-        try:
-            self._proc = subprocess.Popen(
-                ['sudo', 'tegrastats', '--interval', str(self.interval_ms)],
-                stdout=subprocess.PIPE,
-                stderr=subprocess.DEVNULL,
-                text=True
-            )
-            # 3. 출력을 실시간으로 읽어서 기록할 스레드 생성 및 시작
-            self._thread = threading.Thread(target=self._collect)
-            self._thread.daemon = True
-            self._thread.start()
-            time.sleep(0.5)
-        except Exception as e:
-            print(f"[Warning] Failed to start tegrastats: {e}")
+        # Jetson에서는 일반 사용자로 실행 가능한 경우가 많습니다. 원격 SSH에서는 sudo가
+        # 비밀번호 프롬프트에서 막힐 수 있으므로 먼저 sudo 없이 시도합니다.
+        commands = [
+            ['tegrastats', '--interval', str(self.interval_ms)],
+            ['sudo', '-n', 'tegrastats', '--interval', str(self.interval_ms)],
+        ]
+        last_error = None
+        for cmd in commands:
+            try:
+                self._proc = subprocess.Popen(
+                    cmd,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.PIPE,
+                    text=True,
+                    bufsize=1
+                )
+                self._thread = threading.Thread(target=self._collect)
+                self._thread.daemon = True
+                self._thread.start()
+                self._stderr_thread = threading.Thread(target=self._collect_stderr)
+                self._stderr_thread.daemon = True
+                self._stderr_thread.start()
+                time.sleep(0.8)
+
+                if self.records:
+                    return
+
+                if self._proc.poll() is None:
+                    return
+
+                last_error = "\n".join(self._stderr_lines[-3:])
+            except Exception as e:
+                last_error = str(e)
+
+            self.stop()
+
+        print(f"[Warning] Failed to start tegrastats. Hardware monitoring will be disabled. {last_error or ''}".strip())
 
     def stop(self):
         # 모니터링 프로세스를 종료하고 스레드를 정리함
@@ -54,6 +78,8 @@ class TegraMonitor:
             
             if self._thread:
                 self._thread.join(timeout=1)
+            if self._stderr_thread:
+                self._stderr_thread.join(timeout=1)
 
     def _collect(self):
         # tegrastats가 한 줄씩 출력할 때마다 반복해서 읽어옴
@@ -62,15 +88,23 @@ class TegraMonitor:
             if parsed:
                 self.records.append(parsed)     # 성공적으로 파싱되면 리스트에 추가
 
+    def _collect_stderr(self):
+        for line in self._proc.stderr:
+            line = line.strip()
+            if line:
+                self._stderr_lines.append(line)
+
     def _parse(self, line):
         # 정규표현식을 이용해 텍스트 데이터에서 필요한 수치만 추출
         result = {'timestamp': time.time()} # 현재 시간 기록
         patterns = {
             'ram_used_mb':    r'RAM (\d+)/\d+MB',  # RAM 사용량 추출
             'gpu_util_pct':   r'GR3D_FREQ (\d+)%', # GPU 사용 점유율(%) 추출
-            'power_total_mw': r'VDD_IN (\d+)mW',   # 전체 소비 전력(mW) 추출
-            'power_cpu_mw':   r'VDD_CPU (\d+)mW',  # CPU 소비 전력 추출
-            'power_gpu_mw':   r'VDD_GPU (\d+)mW',  # GPU 소비 전력 추출
+            # Jetson 보드/JetPack 버전에 따라 전력 필드가 다릅니다.
+            # 예: VDD_IN 3816/3816, VDD_IN 3816mW, POM_5V_IN 3160/3160
+            'power_total_mw': r'(?:VDD_IN|POM_5V_IN)\s+(\d+)(?:mW|/\d+)?',
+            'power_cpu_mw':   r'(?:VDD_CPU|POM_5V_CPU)\s+(\d+)(?:mW|/\d+)?',
+            'power_gpu_mw':   r'(?:VDD_GPU|POM_5V_GPU)\s+(\d+)(?:mW|/\d+)?',
             'gpu_temp_c':     r'GPU@(\d+)C',       # GPU 온도 추출
             'cpu_temp_c':     r'CPU@(\d+)C',       # CPU 온도 추출
         }
