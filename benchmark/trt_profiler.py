@@ -1,18 +1,23 @@
 # benchmark/trt_profiler.py
 import re
 
-try:
-    import pycuda.driver as cuda
-    import pycuda.autoinit
-    import tensorrt as trt
-except ImportError:
-    cuda = None
-    trt = None
+trt = None
 
-class TRTProfiler(trt.IProfiler if trt else object):
+
+def _load_tensorrt():
+    global trt
+    if trt is not None:
+        return trt
+    try:
+        import tensorrt as trt_module
+    except Exception as exc:
+        raise ImportError("tensorrt is required for Python API TRT profiling.") from exc
+    trt = trt_module
+    return trt
+
+
+class TRTProfiler:
     def __init__(self):
-        if trt:
-            super().__init__()
         self.layer_times = {}
 
     def report_layer_time(self, layer_name, ms):
@@ -40,9 +45,14 @@ def attach_profiler_to_context(context):
       # ... inference run ...
       print(profiler.summary())
     """
-    if trt is None:
-        raise ImportError("tensorrt and pycuda are required to attach TRTProfiler to an execution context.")
-    profiler = TRTProfiler()
+    trt_module = _load_tensorrt()
+
+    class _TRTProfiler(trt_module.IProfiler, TRTProfiler):
+        def __init__(self):
+            trt_module.IProfiler.__init__(self)
+            TRTProfiler.__init__(self)
+
+    profiler = _TRTProfiler()
     context.profiler = profiler
     return profiler
 
