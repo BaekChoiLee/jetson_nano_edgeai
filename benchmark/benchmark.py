@@ -1,4 +1,5 @@
 import torch
+import torchvision.models as tv_models
 import time
 import numpy as np
 import os
@@ -11,6 +12,7 @@ from datetime import datetime
 from benchmark.tegra_parser import TegraMonitor 
 from benchmark.result_saver import ResultSaver
 from benchmark.power_mapper import PowerMapper
+from benchmark.torch_layer_analyer import LayerProfiler
 try:
     from codecarbon import OfflineEmissionsTracker
 except ImportError:
@@ -40,6 +42,40 @@ class BenchmarkMaster:
             "fps":     round(1000.0 / np.mean(latencies), 2) if np.mean(latencies) > 0 else 0
         }
 
+    def load_pytorch_model(self):
+        builders = {
+            "mobilenetv3s": tv_models.mobilenet_v3_small,
+            "efficientnetb0": tv_models.efficientnet_b0,
+            "shufflenetv2": tv_models.shufflenet_v2_x1_0,
+            "resnet50": tv_models.resnet50,
+        }
+        if self.model_name == "yolov8n":
+            try:
+                from ultralytics import YOLO
+            except ImportError as exc:
+                raise ImportError("ultralytics is required for YOLOv8 layer profiling. Install it or place a PyTorch YOLO loader here.") from exc
+
+            candidates = [
+                os.path.join(self.model_dir, "yolov8n.pt"),
+                "yolov8n.pt",
+            ]
+            weights_path = next((path for path in candidates if os.path.exists(path)), candidates[-1])
+            return YOLO(weights_path).model
+
+        if self.model_name not in builders:
+            return None
+
+        builder = builders[self.model_name]
+        try:
+            return builder(weights=None)
+        except TypeError:
+            return builder(pretrained=False)
+
+    def input_shape(self):
+        if self.model_name in {"yolov8n", "ssd_mv2"}:
+            return (1, 3, 640, 640)
+        return (1, 3, 224, 224)
+
     def run_runtime_benchmark(self, runtime, device_str, warmup=10, runs=100):
         print(f"\n>>> Running Benchmark: [{runtime}] on [{device_str}]")
         
@@ -52,19 +88,26 @@ class BenchmarkMaster:
             tracker = OfflineEmissionsTracker(country_iso_code="KOR", log_level="error")
             tracker.start()
 
-        # 2. 모델 및 입력 준비 (런타임별 분기)
-        # 여기서는 구조적 예시만 보여드립니다. 실제 로직은 각 엔진별 라이브러리 호출 필요.
         device = torch.device(device_str)
-        
-        # [Placeholder] 실제 모델 로드 및 추론 함수 정의 (lambda 혹은 def)
-        # 예: infer_fn = lambda x: model(x)
-        # dummy_input = torch.randn(1, 3, 224, 224).to(device)
-        
-        # --- (이 부분에 각 런타임별 로드/추론 로직 삽입) ---
+        model = None
+        dummy_input = None
+        infer_fn = None
+        if runtime.startswith("pytorch"):
+            model = self.load_pytorch_model()
+            if model is None:
+                raise ValueError(f"PyTorch model loader is not implemented for {self.model_name}")
+            model = model.to(device).eval()
+            dummy_input = torch.randn(*self.input_shape()).to(device)
+            infer_fn = lambda: model(dummy_input)
+
         # 3. 워밍업 (Warm-up)
         print(f"  - Warming up {warmup} times...")
-        # for _ in range(warmup): infer_fn(dummy_input)
-        if device.type == "cuda": torch.cuda.synchronize()
+        with torch.no_grad():
+            for _ in range(warmup):
+                if infer_fn:
+                    infer_fn()
+        if device.type == "cuda":
+            torch.cuda.synchronize()
 
         # 4. 본 측정 및 메모리 체크 (코드 B의 장점)
         latencies = []
@@ -75,8 +118,11 @@ class BenchmarkMaster:
             if device.type == "cuda": torch.cuda.synchronize()
             start = time.perf_counter()
             
-            # infer_fn(dummy_input) # 실제 실행
-            time.sleep(0.01) # 테스트용 더미 딜레이
+            if infer_fn:
+                with torch.no_grad():
+                    infer_fn()
+            else:
+                time.sleep(0.01) # 아직 실제 런타임 profiler가 붙지 않은 엔진용 placeholder
             
             if device.type == "cuda": torch.cuda.synchronize()
             latencies.append((time.perf_counter() - start) * 1000)
@@ -85,6 +131,14 @@ class BenchmarkMaster:
         mem_stats = {"peak_usage_mb": 0}
         if device.type == "cuda":
             mem_stats["peak_usage_mb"] = round(torch.cuda.max_memory_allocated() / 1024**2, 2)
+
+        layer_profiles = []
+        if model is not None and dummy_input is not None:
+            print(f"  - Profiling PyTorch layers over {runs} iterations...")
+            layer_profiler = LayerProfiler(model, device=device)
+            layer_profiles = layer_profiler.profile(dummy_input, warmup=warmup, runs=runs)
+        else:
+            print("  - [Warning] Runtime-specific layer profiler is not implemented yet; skipping layer CSV.")
 
         # 5. 하드웨어 데이터 수집 종료
         monitor.stop()
@@ -100,17 +154,10 @@ class BenchmarkMaster:
 
         # 6. 결과 통합 및 전력 매핑
         stats = self.calc_detailed_stats(latencies)
-        
-        # [NEW] Power Mapper를 이용해 레이어 타임스탬프와 tegrastats 전력 매핑
-        # 현재는 dummy layer_profiles를 예시로 넘기지만, 
-        # 실제 각 프레임워크(ONNX, TFLite 등)의 profiler parser 결과를 여기에 주입해야 합니다.
-        dummy_layer_profiles = [
-            {"layer_name": "dummy_conv", "type": "Conv", "mean_ms": stats["mean_ms"], "timestamp": time.time()}
-        ]
-        
         power_mapper = PowerMapper()
-        mapped_layer_profiles = power_mapper.map_power(dummy_layer_profiles, monitor.records)
-        power_mapper.save_csv(mapped_layer_profiles, self.model_name, runtime)
+        mapped_layer_profiles = power_mapper.map_power(layer_profiles, monitor.records) if layer_profiles else []
+        if mapped_layer_profiles:
+            power_mapper.save_csv(mapped_layer_profiles, self.model_name, runtime)
         
         result = {
             "runtime": runtime,

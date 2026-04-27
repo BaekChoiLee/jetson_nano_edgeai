@@ -1,12 +1,16 @@
-import torch  
-import time   
+import time
+
+import numpy as np
+import torch
 
 class LayerProfiler:
-    def __init__(self, model):
+    def __init__(self, model, device=None):
         self.model = model                # 측정 대상이 될 PyTorch 모델 저장
-        self.layer_times = {}             # 각 레이어별 실행 시간 리스트를 저장할 딕셔너리
+        self.device = device or next(model.parameters()).device
+        self.layer_records = {}           # 각 레이어별 구조/시간 정보를 저장할 딕셔너리
         self._hooks = []                  # 나중에 제거하기 위해 등록된 훅(Hook)들을 저장하는 리스트
         self._start_times = {}            # 각 레이어의 시작 시간을 임시로 기록할 딕셔너리
+        self._modules = dict(model.named_modules())
 
         """
         pytorch에서 module에 적용하는 hook에 forward_pre_hook, forward_hook, full_backward_hook있음
@@ -36,6 +40,8 @@ class LayerProfiler:
     def _pre_hook(self, name):
         # 실제 hook 함수를 반환하는 클로저(Closure) 정의
         def hook(module, input):
+            if self.device.type == "cuda":
+                torch.cuda.synchronize()
             # 현재 레이어의 이름을 키로 해서 시작 시간을 고정밀 시계로 기록
             self._start_times[name] = time.perf_counter()
         return hook
@@ -43,24 +49,98 @@ class LayerProfiler:
     def _post_hook(self, name):
         # 연산이 끝난 후 호출될 hook 함수 정의
         def hook(module, input, output):
+            if self.device.type == "cuda":
+                torch.cuda.synchronize()
             # (현재 시간 - 시작 시간)을 계산하고 1000을 곱해 ms(밀리초) 단위로 변환
             elapsed = (time.perf_counter() - self._start_times[name]) * 1000
-            # 해당 레이어 이름이 저장 딕셔너리에 없으면 리스트 생성
-            if name not in self.layer_times:
-                self.layer_times[name] = []
-            # 측정된 시간을 리스트에 추가
-            self.layer_times[name].append(elapsed)
+            if name not in self.layer_records:
+                self.layer_records[name] = self._describe_module(name, module, input, output)
+            self.layer_records[name]["times_ms"].append(elapsed)
+            self.layer_records[name]["timestamp"] = time.time()
         return hook
 
-    def summary(self):
-        import numpy as np  # 통계 계산을 위해 numpy 임포트
-        # 각 레이어별로 평균 실행 시간을 계산하여 딕셔너리 형태로 반환
+    def reset_timings(self):
+        for record in self.layer_records.values():
+            record["times_ms"].clear()
+
+    def profile(self, input_tensor, warmup=10, runs=100):
+        self.model.eval()
+        self.attach()
+        try:
+            with torch.no_grad():
+                for _ in range(warmup):
+                    self.model(input_tensor)
+                if self.device.type == "cuda":
+                    torch.cuda.synchronize()
+
+                self.reset_timings()
+                for _ in range(runs):
+                    self.model(input_tensor)
+                if self.device.type == "cuda":
+                    torch.cuda.synchronize()
+        finally:
+            self.detach()
+        return self.summary()
+
+    def _shape_to_str(self, value):
+        if torch.is_tensor(value):
+            return "x".join(str(dim) for dim in value.shape)
+        if isinstance(value, (list, tuple)):
+            shapes = [self._shape_to_str(v) for v in value if torch.is_tensor(v) or isinstance(v, (list, tuple))]
+            return ";".join(s for s in shapes if s)
+        if isinstance(value, dict):
+            shapes = [self._shape_to_str(v) for v in value.values()]
+            return ";".join(s for s in shapes if s)
+        return ""
+
+    def _format_attr(self, value):
+        if value is None:
+            return ""
+        if isinstance(value, tuple):
+            return "x".join(str(v) for v in value)
+        return str(value)
+
+    def _describe_module(self, name, module, input, output):
+        params = list(module.parameters(recurse=False))
+        param_count = sum(p.numel() for p in params)
+        trainable_param_count = sum(p.numel() for p in params if p.requires_grad)
+
         return {
-            name: {
-                # 측정된 시간들의 평균값을 구하고 소수점 4자리까지 반올림
-                'mean_ms': round(float(np.mean(times)), 4),
-                # 레이어 이름의 마지막 부분(예: 'conv1')을 타입으로 저장
-                'type': name.split('.')[-1]
-            }
-            for name, times in self.layer_times.items()
+            "layer_name": name,
+            "type": module.__class__.__name__,
+            "module_repr": str(module).replace("\n", " "),
+            "input_shape": self._shape_to_str(input),
+            "output_shape": self._shape_to_str(output),
+            "param_count": param_count,
+            "trainable_param_count": trainable_param_count,
+            "in_channels": getattr(module, "in_channels", ""),
+            "out_channels": getattr(module, "out_channels", ""),
+            "kernel_size": self._format_attr(getattr(module, "kernel_size", "")),
+            "stride": self._format_attr(getattr(module, "stride", "")),
+            "padding": self._format_attr(getattr(module, "padding", "")),
+            "dilation": self._format_attr(getattr(module, "dilation", "")),
+            "groups": getattr(module, "groups", ""),
+            "bias": bool(getattr(module, "bias", None) is not None),
+            "times_ms": [],
+            "timestamp": time.time(),
         }
+
+    def summary(self):
+        rows = []
+        for idx, (name, record) in enumerate(self.layer_records.items(), start=1):
+            times = np.array(record["times_ms"], dtype=float)
+            if times.size == 0:
+                continue
+            row = {k: v for k, v in record.items() if k != "times_ms"}
+            row.update({
+                "layer_index": idx,
+                "calls": int(times.size),
+                "mean_ms": round(float(np.mean(times)), 6),
+                "std_ms": round(float(np.std(times)), 6),
+                "min_ms": round(float(np.min(times)), 6),
+                "max_ms": round(float(np.max(times)), 6),
+                "p50_ms": round(float(np.percentile(times, 50)), 6),
+                "p95_ms": round(float(np.percentile(times, 95)), 6),
+            })
+            rows.append(row)
+        return rows

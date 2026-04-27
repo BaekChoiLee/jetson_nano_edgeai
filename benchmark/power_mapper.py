@@ -49,7 +49,36 @@ class PowerMapper:
             return
             
         csv_path = os.path.join(self.output_dir, f"layer_power_{model_name}_{runtime}.csv")
-        fieldnames = ["layer_name", "type", "mean_ms", "power_gpu_mw", "power_total_mw"]
+        preferred = [
+            "layer_index",
+            "layer_name",
+            "type",
+            "module_repr",
+            "input_shape",
+            "output_shape",
+            "param_count",
+            "trainable_param_count",
+            "in_channels",
+            "out_channels",
+            "kernel_size",
+            "stride",
+            "padding",
+            "dilation",
+            "groups",
+            "bias",
+            "calls",
+            "mean_ms",
+            "std_ms",
+            "min_ms",
+            "max_ms",
+            "p50_ms",
+            "p95_ms",
+            "power_gpu_mw",
+            "power_total_mw",
+            "timestamp",
+        ]
+        extra = sorted({key for row in mapped_results for key in row.keys()} - set(preferred))
+        fieldnames = [key for key in preferred if any(key in row for row in mapped_results)] + extra
         
         with open(csv_path, "w", newline="") as f:
             writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
