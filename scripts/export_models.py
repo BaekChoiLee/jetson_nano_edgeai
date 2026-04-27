@@ -52,10 +52,8 @@ def main():
     export_to_onnx(resnet50, "resnet50", args.output_dir)
     
     print("=====================================")
-    print("Export Complete! TFLite 및 TensorRT 엔진 변환은 젯슨 기기에서 아래 명령어를 참고하세요.")
-    print("TFLite: python -m tf2onnx.convert --onnx model.onnx --output model.tflite")
-    print("TensorRT: trtexec --onnx=model.onnx --saveEngine=model.engine --fp16")
-    print("ncnn: onnx2ncnn model.onnx model.param model.bin")
+    print("Export Complete! Runtime artifacts can be generated with:")
+    print("python3 scripts/convert_models.py --model-dir ./models --targets tensorrt tflite ncnn")
 
 if __name__ == "__main__":
     main()
