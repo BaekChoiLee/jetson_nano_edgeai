@@ -7,13 +7,35 @@ from pathlib import Path
 
 DEFAULT_MODELS = ["mobilenetv3s", "efficientnetb0", "shufflenetv2", "resnet50"]
 
+COMMON_TOOL_PATHS = {
+    "trtexec": [
+        "/usr/src/tensorrt/bin/trtexec",
+        "/usr/local/tensorrt/bin/trtexec",
+        "/usr/bin/trtexec",
+    ],
+    "onnx2ncnn": [
+        "/usr/local/bin/onnx2ncnn",
+        "/usr/bin/onnx2ncnn",
+    ],
+    "benchmark_model": [
+        "/usr/local/bin/benchmark_model",
+        "/usr/bin/benchmark_model",
+    ],
+}
+
 
 def resolve_tool(env_name, executable):
     override = os.environ.get(env_name)
     if override:
         resolved = shutil.which(override) or override
         return resolved if os.path.exists(resolved) or shutil.which(resolved) else None
-    return shutil.which(executable)
+    resolved = shutil.which(executable)
+    if resolved:
+        return resolved
+    for candidate in COMMON_TOOL_PATHS.get(executable, []):
+        if os.path.exists(candidate):
+            return candidate
+    return None
 
 
 def run_cmd(cmd, description):
