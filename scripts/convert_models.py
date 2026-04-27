@@ -29,7 +29,7 @@ def run_cmd(cmd, description):
     return True
 
 
-def convert_tensorrt(model_name, onnx_path, model_dir):
+def convert_tensorrt(model_name, onnx_path, model_dir, overwrite=False):
     trtexec = resolve_tool("TRTEXEC_PATH", "trtexec")
     if not trtexec:
         print("[Warning] trtexec not found. Skipping TensorRT engine conversion.")
@@ -46,6 +46,9 @@ def convert_tensorrt(model_name, onnx_path, model_dir):
 
     for precision, flags in precision_flags.items():
         engine_path = model_dir / f"{model_name}_{precision}.engine"
+        if engine_path.exists() and not overwrite:
+            print(f"  - [Skip] TensorRT {precision.upper()} engine already exists: {engine_path}")
+            continue
         cmd = [
             trtexec,
             f"--onnx={onnx_path}",
@@ -57,7 +60,7 @@ def convert_tensorrt(model_name, onnx_path, model_dir):
             print(f"    [Done] saved {engine_path}")
 
 
-def convert_ncnn(model_name, onnx_path, model_dir):
+def convert_ncnn(model_name, onnx_path, model_dir, overwrite=False):
     onnx2ncnn = resolve_tool("ONNX2NCNN_PATH", "onnx2ncnn")
     if not onnx2ncnn:
         print("[Warning] onnx2ncnn not found. Skipping ncnn conversion.")
@@ -66,6 +69,9 @@ def convert_ncnn(model_name, onnx_path, model_dir):
 
     param_path = model_dir / f"{model_name}.param"
     bin_path = model_dir / f"{model_name}.bin"
+    if param_path.exists() and bin_path.exists() and not overwrite:
+        print(f"  - [Skip] ncnn model already exists: {param_path} / {bin_path}")
+        return
     ok = run_cmd(
         [onnx2ncnn, str(onnx_path), str(param_path), str(bin_path)],
         f"ncnn model: {param_path.name} / {bin_path.name}",
@@ -74,8 +80,11 @@ def convert_ncnn(model_name, onnx_path, model_dir):
         print(f"    [Done] saved {param_path} and {bin_path}")
 
 
-def convert_tflite(model_name, onnx_path, model_dir):
+def convert_tflite(model_name, onnx_path, model_dir, overwrite=False):
     tflite_path = model_dir / f"{model_name}.tflite"
+    if tflite_path.exists() and not overwrite:
+        print(f"  - [Skip] TFLite model already exists: {tflite_path}")
+        return
 
     onnx2tf = resolve_tool("ONNX2TF_PATH", "onnx2tf")
     tflite_convert = resolve_tool("TFLITE_CONVERT_PATH", "tflite_convert")
@@ -139,6 +148,7 @@ def main():
     parser.add_argument("--model-dir", default="./models")
     parser.add_argument("--models", nargs="+", default=DEFAULT_MODELS)
     parser.add_argument("--targets", nargs="+", default=["tensorrt", "tflite", "ncnn"], choices=["tensorrt", "tflite", "ncnn"])
+    parser.add_argument("--overwrite", action="store_true", help="Regenerate artifacts even when output files already exist.")
     args = parser.parse_args()
 
     model_dir = Path(args.model_dir)
@@ -156,11 +166,11 @@ def main():
 
         print(f"\n[Converting Model: {model_name}]")
         if "tensorrt" in args.targets:
-            convert_tensorrt(model_name, onnx_path, model_dir)
+            convert_tensorrt(model_name, onnx_path, model_dir, overwrite=args.overwrite)
         if "tflite" in args.targets:
-            convert_tflite(model_name, onnx_path, model_dir)
+            convert_tflite(model_name, onnx_path, model_dir, overwrite=args.overwrite)
         if "ncnn" in args.targets:
-            convert_ncnn(model_name, onnx_path, model_dir)
+            convert_ncnn(model_name, onnx_path, model_dir, overwrite=args.overwrite)
 
     print("\n[DONE] Model conversion step finished.")
 

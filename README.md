@@ -54,6 +54,33 @@
 
 ---
 
+## MacBook / Jetson Split Pipeline
+
+TensorRT engine은 Jetson Nano의 GPU, CUDA, TensorRT, JetPack 버전에 종속되므로 Jetson에서 생성합니다. ONNX, TFLite, ncnn 모델은 MacBook에서 미리 만들고 Git LFS로 전달할 수 있습니다.
+
+### MacBook
+
+```bash
+git lfs install
+bash run_pipeline_mac.sh
+git add .gitattributes .gitignore scripts run_pipeline*.sh models
+git commit -m "Add converted model artifacts"
+git push
+```
+
+### Jetson Nano
+
+```bash
+git lfs install
+git pull
+git lfs pull
+bash run_pipeline_jetson.sh
+```
+
+기존 진입점인 `bash run_pipeline.sh`는 Jetson용 파이프라인으로 연결됩니다.
+
+---
+
 ## 📅 Project Roadmap (8 Weeks) 
 * **1~2주차:** 환경 구축(`setup.sh`) 및 자동화 측정 파이프라인 개발 .
 * **3~6주차:** 모델별 전체 런타임 실험 실행 및 원시 데이터셋 완성.
@@ -65,4 +92,3 @@
 ## 💡 Expected Outcomes 
 * TensorRT INT8 적용 시 PyTorch CPU 대비 **5~15배**의 추론 속도 향상 예상.
 * 엣지 AI 개발자를 위한 멀티 런타임 체계적 데이터셋 및 가이드라인 최초 공개.
-
