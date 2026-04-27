@@ -1,6 +1,6 @@
 jetson_nano_edgeai-jh/data/
 
-./results
+results/
 
 __pycache__/
 *.pyc

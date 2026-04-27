@@ -22,11 +22,10 @@ class TegraMonitor:
             return
 
         # 2. tegrastats 명령어를 백그라운드에서 실행
-        # Jetson에서는 일반 사용자로 실행 가능한 경우가 많습니다. 원격 SSH에서는 sudo가
-        # 비밀번호 프롬프트에서 막힐 수 있으므로 먼저 sudo 없이 시도합니다.
+        # Jetson에서는 일반 사용자로 실행 가능한 경우가 많습니다. 원격 SSH에서 sudo를
+        # 자동 실행하면 root 소유 tegrastats가 남을 수 있으므로 sudo는 사용하지 않습니다.
         commands = [
             ['tegrastats', '--interval', str(self.interval_ms)],
-            ['sudo', '-n', 'tegrastats', '--interval', str(self.interval_ms)],
         ]
         last_error = None
         for cmd in commands:
@@ -78,10 +77,7 @@ class TegraMonitor:
                     self._proc.kill()
                     self._proc.wait(timeout=1)
                 except Exception:
-                    try:
-                        subprocess.run(['sudo', '-n', 'kill', '-9', str(self._proc.pid)], stderr=subprocess.DEVNULL)
-                    except Exception:
-                        pass
+                    pass
             finally:
                 try:
                     if self._proc.stdout:
