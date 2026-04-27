@@ -9,11 +9,12 @@ from benchmark.benchmark import BenchmarkMaster
 def main():
     parser = argparse.ArgumentParser(description="Jetson Nano Edge AI Pipeline")
     parser.add_argument("--model", type=str, default="all", help="Model name (all, mobilenetv3s, efficientnetb0, shufflenetv2, resnet50, yolov8n, ssd_mv2)")
-    parser.add_argument("--runtime", type=str, default="all", help="Runtime (all, pytorch_cpu, pytorch_cuda, tensorrt_fp32, tensorrt_fp16, tensorrt_int8, onnxrt_cpu, tflite_cpu, ncnn_vulkan)")
+    parser.add_argument("--runtime", type=str, default="all", help="Runtime (all, pytorch_cpu, pytorch_cuda, tensorrt_fp32, tensorrt_fp16, tensorrt_int8, onnxrt_cpu, onnxrt_cuda, tflite_cpu, ncnn_vulkan)")
     parser.add_argument("--task", type=str, default="cls", choices=["cls", "det", "all"], help="Task type (cls, det, all)")
     parser.add_argument("--power-mode", type=str, default="10w", choices=["5w", "10w"], help="Jetson power mode (5w, 10w)")
     parser.add_argument("--runs", type=int, default=100, help="Number of benchmark iterations")
     parser.add_argument("--warmup", type=int, default=10, help="Number of warmup iterations")
+    parser.add_argument("--cooldown", type=int, default=10, help="Seconds to wait between runtime benchmarks")
     
     args = parser.parse_args()
     
@@ -36,6 +37,7 @@ def main():
             ("tensorrt_fp16", "cuda"),
             ("tensorrt_int8", "cuda"),
             ("onnxrt_cpu", "cpu"),
+            ("onnxrt_cuda", "cuda"),
             ("tflite_cpu", "cpu"),
             ("ncnn_vulkan", "vulkan")
         ]
@@ -63,7 +65,7 @@ def main():
             os.remove(csv_path)
             print(f"  - [OVERWRITE] Removed previous result file: {csv_path}")
 
-        master = BenchmarkMaster(model_name)
+        master = BenchmarkMaster(model_name, power_mode=args.power_mode)
                     
         for rt, dev in runtimes_to_run:
             try:
@@ -73,8 +75,12 @@ def main():
                     warmup=args.warmup, 
                     runs=args.runs
                 )
-                print(f"  - Waiting for cool-down (10s)...")
-                time.sleep(10) # 열 스로틀링 방지용 대기
+                if args.cooldown > 0:
+                    print(f"  - Waiting for cool-down ({args.cooldown}s)...")
+                    time.sleep(args.cooldown) # 열 스로틀링 방지용 대기
+            except NotImplementedError as e:
+                print(f"[Skip] {model_name} on {rt}: {e}")
+                continue
             except Exception as e:
                 import traceback
                 print(f"[Error] {model_name} on {rt} failed: {e}")

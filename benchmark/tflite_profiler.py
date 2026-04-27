@@ -10,6 +10,8 @@ class TFLiteProfilerParser:
     def __init__(self, tflite_model_path, benchmark_tool_path="./benchmark_model"):
         self.tflite_model_path = tflite_model_path
         self.benchmark_tool_path = benchmark_tool_path
+        self.last_output = ""
+        self.last_returncode = None
 
     def run_and_parse(self, runs=100):
         # benchmark_model 실행
@@ -23,12 +25,26 @@ class TFLiteProfilerParser:
         try:
             result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
             output = result.stdout
+            self.last_output = output
+            self.last_returncode = result.returncode
         except FileNotFoundError:
             print(f"[Error] TFLite benchmark_model tool not found at {self.benchmark_tool_path}.")
             print("Please compile TFLite benchmark_model or set the correct path.")
             return []
 
         return self._parse_output(output)
+
+    def parse_mean_latency_ms(self, output=None):
+        output = self.last_output if output is None else output
+        patterns = [
+            r"Inference timings in us:\s*.*?avg=([0-9.]+)",
+            r"avg=([0-9.]+)",
+        ]
+        for pattern in patterns:
+            match = re.search(pattern, output, flags=re.IGNORECASE | re.DOTALL)
+            if match:
+                return float(match.group(1)) / 1000.0
+        return None
 
     def _parse_output(self, output):
         parsed_results = []

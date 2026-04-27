@@ -11,6 +11,8 @@ class NCNNProfilerParser:
         self.param_path = param_path
         self.bin_path = bin_path
         self.benchncnn_path = benchncnn_path
+        self.last_output = ""
+        self.last_returncode = None
 
     def run_and_parse(self, runs=100, threads=4, power=0):
         # benchncnn 실행: usage: benchncnn [loop count] [num threads] [powersave] [gpu device] [cooling down] ...
@@ -28,12 +30,23 @@ class NCNNProfilerParser:
             # benchncnn은 주로 stderr로 프로파일링 정보를 출력함
             result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
             output = result.stdout
+            self.last_output = output
+            self.last_returncode = result.returncode
         except FileNotFoundError:
             print(f"[Error] ncnn benchncnn tool not found at {self.benchncnn_path}.")
             print("Please compile benchncnn or set the correct path.")
             return []
 
         return self._parse_output(output)
+
+    def parse_mean_latency_ms(self, output=None):
+        output = self.last_output if output is None else output
+        # Common benchncnn summary:
+        # min = 1.23  max = 2.34  avg = 1.56
+        match = re.search(r"\bavg\s*=\s*([0-9.]+)", output, flags=re.IGNORECASE)
+        if match:
+            return float(match.group(1))
+        return None
 
     def _parse_output(self, output):
         parsed_results = []
