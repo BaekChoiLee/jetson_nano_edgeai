@@ -67,13 +67,28 @@ class TegraMonitor:
                 # 1. 먼저 프로세스가 아직 살아있는지 확인
                 if self._proc.poll() is None:
                     self._proc.terminate()      # 프로세스 강제 종료 신호
-                    self._proc.wait(timeout=1)  # 종료 대기
-            except (PermissionError, OSError):
+                    try:
+                        self._proc.wait(timeout=1)  # 종료 대기
+                    except subprocess.TimeoutExpired:
+                        self._proc.kill()
+                        self._proc.wait(timeout=1)
+            except (PermissionError, OSError, subprocess.TimeoutExpired):
                 # sudo로 실행된 프로세스는 일반 유저가 terminate() 할 수 없으므로 시스템 명령어로 kill
                 try:
-                    import subprocess
-                    subprocess.run(['sudo', 'kill', str(self._proc.pid)], stderr=subprocess.DEVNULL)
-                except:
+                    self._proc.kill()
+                    self._proc.wait(timeout=1)
+                except Exception:
+                    try:
+                        subprocess.run(['sudo', '-n', 'kill', '-9', str(self._proc.pid)], stderr=subprocess.DEVNULL)
+                    except Exception:
+                        pass
+            finally:
+                try:
+                    if self._proc.stdout:
+                        self._proc.stdout.close()
+                    if self._proc.stderr:
+                        self._proc.stderr.close()
+                except Exception:
                     pass
             
             if self._thread:
