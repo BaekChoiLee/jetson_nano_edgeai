@@ -1,0 +1,2 @@
+Runtime,Device,Mean(ms),P95(ms),FPS,PeakMem(MB),AvgPower(mW)
+onnxrt_cpu,cpu,12.33,12.33,81.12,0,0

@@ -1,0 +1,9 @@
+model,runtime,group_index,group_key,group_label,group_type,mean_ms,power_gpu_mw,power_total_mw,ops
+ssd_mv2,ncnn_vulkan,1,dummy_conv,01. dummy_conv [conv],conv,10.09,0.0,0.0,1
+ssd_mv2,onnxrt_cpu,1,dummy_conv,01. dummy_conv [conv],conv,10.09,0.0,0.0,1
+ssd_mv2,pytorch_cpu,1,dummy_conv,01. dummy_conv [conv],conv,10.09,0.0,0.0,1
+ssd_mv2,pytorch_cuda,1,dummy_conv,01. dummy_conv [conv],conv,10.16,0.0,0.0,1
+ssd_mv2,tensorrt_fp16,1,TensorRT layer 001,001. TensorRT layer 001 [conv],conv,10.16,0.0,0.0,1
+ssd_mv2,tensorrt_fp32,1,TensorRT layer 001,001. TensorRT layer 001 [conv],conv,10.16,0.0,0.0,1
+ssd_mv2,tensorrt_int8,1,TensorRT layer 001,001. TensorRT layer 001 [conv],conv,10.18,0.0,0.0,1
+ssd_mv2,tflite_cpu,1,dummy_conv,01. dummy_conv [conv],conv,10.09,0.0,0.0,1

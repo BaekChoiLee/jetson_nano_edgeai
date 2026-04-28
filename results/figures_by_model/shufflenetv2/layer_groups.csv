@@ -1,0 +1,440 @@
+model,runtime,group_index,group_key,group_label,group_type,mean_ms,power_gpu_mw,power_total_mw,ops
+shufflenetv2,onnxrt_cpu,1,conv1/conv1.0,01. conv1/conv1.0 [conv],conv,3.1238,0.0,0.0,3
+shufflenetv2,onnxrt_cpu,2,maxpool,02. maxpool [pool],pool,1.2046999999999999,0.0,0.0,3
+shufflenetv2,onnxrt_cpu,3,stage2/stage2.0/branch1/branch1.0,03. stage2/stage2.0/branch1/branch1.0 [conv],conv,1.0165,0.0,0.0,3
+shufflenetv2,onnxrt_cpu,4,stage2/stage2.0/branch1/branch1.2,04. stage2/stage2.0/branch1/branch1.2 [conv],conv,0.4017,0.0,0.0,1
+shufflenetv2,onnxrt_cpu,5,stage2/stage2.0/branch2/branch2.0,05. stage2/stage2.0/branch2/branch2.0 [conv],conv,1.468,0.0,0.0,2
+shufflenetv2,onnxrt_cpu,6,stage2/stage2.0/branch2/branch2.3,06. stage2/stage2.0/branch2/branch2.3 [conv],conv,2.2553,0.0,0.0,2
+shufflenetv2,onnxrt_cpu,7,stage2/stage2.0/branch2/branch2.5,07. stage2/stage2.0/branch2/branch2.5 [conv],conv,0.7422,0.0,0.0,1
+shufflenetv2,onnxrt_cpu,8,stage2/stage2.0,08. stage2/stage2.0 [concat/split-shape-Shape-Gather],concat/split-shape-Shape-Gather,1.0534999999999999,0.0,0.0,24
+shufflenetv2,onnxrt_cpu,9,stage2/stage2.1,09. stage2/stage2.1 [eltwise-concat/split-shape-Shape],eltwise-concat/split-shape-Shape,1.4449,0.0,0.0,33
+shufflenetv2,onnxrt_cpu,10,stage2/stage2.1/branch2/branch2.0,10. stage2/stage2.1/branch2/branch2.0 [conv],conv,0.773,0.0,0.0,2
+shufflenetv2,onnxrt_cpu,11,stage2/stage2.1/branch2/branch2.3,11. stage2/stage2.1/branch2/branch2.3 [conv],conv,1.1047,0.0,0.0,2
+shufflenetv2,onnxrt_cpu,12,stage2/stage2.1/branch2/branch2.5,12. stage2/stage2.1/branch2/branch2.5 [conv],conv,0.7657,0.0,0.0,1
+shufflenetv2,onnxrt_cpu,13,stage2/stage2.2,13. stage2/stage2.2 [eltwise-concat/split-shape-Shape],eltwise-concat/split-shape-Shape,1.4158,0.0,0.0,33
+shufflenetv2,onnxrt_cpu,14,stage2/stage2.2/branch2/branch2.0,14. stage2/stage2.2/branch2/branch2.0 [conv],conv,0.7413,0.0,0.0,1
+shufflenetv2,onnxrt_cpu,15,stage2/stage2.2/branch2/branch2.3,15. stage2/stage2.2/branch2/branch2.3 [conv],conv,1.134,0.0,0.0,1
+shufflenetv2,onnxrt_cpu,16,stage2/stage2.2/branch2/branch2.5,16. stage2/stage2.2/branch2/branch2.5 [conv],conv,0.7349,0.0,0.0,2
+shufflenetv2,onnxrt_cpu,17,stage2/stage2.3,17. stage2/stage2.3 [eltwise-concat/split-shape-Shape],eltwise-concat/split-shape-Shape,1.4174999999999998,0.0,0.0,31
+shufflenetv2,onnxrt_cpu,18,stage2/stage2.3/branch2/branch2.0,18. stage2/stage2.3/branch2/branch2.0 [conv],conv,0.8196,0.0,0.0,1
+shufflenetv2,onnxrt_cpu,19,stage2/stage2.3/branch2/branch2.3,19. stage2/stage2.3/branch2/branch2.3 [conv],conv,1.129,0.0,0.0,1
+shufflenetv2,onnxrt_cpu,20,stage2/stage2.3/branch2/branch2.5,20. stage2/stage2.3/branch2/branch2.5 [conv],conv,0.7001,0.0,0.0,1
+shufflenetv2,onnxrt_cpu,21,stage3/stage3.0/branch1/branch1.0,21. stage3/stage3.0/branch1/branch1.0 [conv],conv,1.2691,0.0,0.0,1
+shufflenetv2,onnxrt_cpu,22,stage3/stage3.0/branch1/branch1.2,22. stage3/stage3.0/branch1/branch1.2 [conv],conv,0.8229,0.0,0.0,2
+shufflenetv2,onnxrt_cpu,23,stage3/stage3.0/branch2/branch2.0,23. stage3/stage3.0/branch2/branch2.0 [conv],conv,2.3352000000000004,0.0,0.0,2
+shufflenetv2,onnxrt_cpu,24,stage3/stage3.0/branch2/branch2.3,24. stage3/stage3.0/branch2/branch2.3 [conv],conv,1.2718,0.0,0.0,1
+shufflenetv2,onnxrt_cpu,25,stage3/stage3.0/branch2/branch2.5,25. stage3/stage3.0/branch2/branch2.5 [conv],conv,0.696,0.0,0.0,1
+shufflenetv2,onnxrt_cpu,26,stage3/stage3.0,26. stage3/stage3.0 [concat/split-shape-Shape-Gather],concat/split-shape-Shape-Gather,0.9137,0.0,0.0,24
+shufflenetv2,onnxrt_cpu,27,stage3/stage3.1,27. stage3/stage3.1 [eltwise-concat/split-shape-Shape],eltwise-concat/split-shape-Shape,1.2504,0.0,0.0,32
+shufflenetv2,onnxrt_cpu,28,stage3/stage3.1/branch2/branch2.0,28. stage3/stage3.1/branch2/branch2.0 [conv],conv,0.7817,0.0,0.0,2
+shufflenetv2,onnxrt_cpu,29,stage3/stage3.1/branch2/branch2.3,29. stage3/stage3.1/branch2/branch2.3 [conv],conv,0.8908,0.0,0.0,1
+shufflenetv2,onnxrt_cpu,30,stage3/stage3.1/branch2/branch2.5,30. stage3/stage3.1/branch2/branch2.5 [conv],conv,0.6921,0.0,0.0,1
+shufflenetv2,onnxrt_cpu,31,stage3/stage3.2,31. stage3/stage3.2 [eltwise-concat/split-shape-Shape],eltwise-concat/split-shape-Shape,1.2787000000000002,0.0,0.0,28
+shufflenetv2,onnxrt_cpu,32,stage3/stage3.2/branch2/branch2.0,32. stage3/stage3.2/branch2/branch2.0 [conv],conv,0.7857,0.0,0.0,2
+shufflenetv2,onnxrt_cpu,33,stage3/stage3.2/branch2/branch2.3,33. stage3/stage3.2/branch2/branch2.3 [conv],conv,0.7758,0.0,0.0,1
+shufflenetv2,onnxrt_cpu,34,stage3/stage3.2/branch2/branch2.5,34. stage3/stage3.2/branch2/branch2.5 [conv],conv,0.6843,0.0,0.0,1
+shufflenetv2,onnxrt_cpu,35,stage3/stage3.3,35. stage3/stage3.3 [eltwise-concat/split-shape-Shape],eltwise-concat/split-shape-Shape,1.3334000000000001,0.0,0.0,32
+shufflenetv2,onnxrt_cpu,36,stage3/stage3.3/branch2/branch2.0,36. stage3/stage3.3/branch2/branch2.0 [conv],conv,0.6987,0.0,0.0,2
+shufflenetv2,onnxrt_cpu,37,stage3/stage3.3/branch2/branch2.3,37. stage3/stage3.3/branch2/branch2.3 [conv],conv,0.7966,0.0,0.0,1
+shufflenetv2,onnxrt_cpu,38,stage3/stage3.3/branch2/branch2.5,38. stage3/stage3.3/branch2/branch2.5 [conv],conv,0.6917,0.0,0.0,2
+shufflenetv2,onnxrt_cpu,39,stage3/stage3.4,39. stage3/stage3.4 [eltwise-concat/split-shape-Shape],eltwise-concat/split-shape-Shape,1.2617,0.0,0.0,33
+shufflenetv2,onnxrt_cpu,40,stage3/stage3.4/branch2/branch2.0,40. stage3/stage3.4/branch2/branch2.0 [conv],conv,0.6918,0.0,0.0,1
+shufflenetv2,onnxrt_cpu,41,stage3/stage3.4/branch2/branch2.3,41. stage3/stage3.4/branch2/branch2.3 [conv],conv,0.7658,0.0,0.0,1
+shufflenetv2,onnxrt_cpu,42,stage3/stage3.4/branch2/branch2.5,42. stage3/stage3.4/branch2/branch2.5 [conv],conv,0.6824,0.0,0.0,2
+shufflenetv2,onnxrt_cpu,43,stage3/stage3.5,43. stage3/stage3.5 [eltwise-concat/split-shape-Shape],eltwise-concat/split-shape-Shape,1.3477000000000001,0.0,0.0,32
+shufflenetv2,onnxrt_cpu,44,stage3/stage3.5/branch2/branch2.0,44. stage3/stage3.5/branch2/branch2.0 [conv],conv,0.7013,0.0,0.0,2
+shufflenetv2,onnxrt_cpu,45,stage3/stage3.5/branch2/branch2.3,45. stage3/stage3.5/branch2/branch2.3 [conv],conv,0.7696,0.0,0.0,2
+shufflenetv2,onnxrt_cpu,46,stage3/stage3.5/branch2/branch2.5,46. stage3/stage3.5/branch2/branch2.5 [conv],conv,0.6879,0.0,0.0,1
+shufflenetv2,onnxrt_cpu,47,stage3/stage3.6,47. stage3/stage3.6 [eltwise-concat/split-shape-Shape],eltwise-concat/split-shape-Shape,1.2220999999999997,0.0,0.0,30
+shufflenetv2,onnxrt_cpu,48,stage3/stage3.6/branch2/branch2.0,48. stage3/stage3.6/branch2/branch2.0 [conv],conv,0.6997,0.0,0.0,2
+shufflenetv2,onnxrt_cpu,49,stage3/stage3.6/branch2/branch2.3,49. stage3/stage3.6/branch2/branch2.3 [conv],conv,0.7681,0.0,0.0,1
+shufflenetv2,onnxrt_cpu,50,stage3/stage3.6/branch2/branch2.5,50. stage3/stage3.6/branch2/branch2.5 [conv],conv,0.6782,0.0,0.0,1
+shufflenetv2,onnxrt_cpu,51,stage3/stage3.7,51. stage3/stage3.7 [eltwise-concat/split-shape-Shape],eltwise-concat/split-shape-Shape,1.2141000000000002,0.0,0.0,32
+shufflenetv2,onnxrt_cpu,52,stage3/stage3.7/branch2/branch2.0,52. stage3/stage3.7/branch2/branch2.0 [conv],conv,0.6892,0.0,0.0,2
+shufflenetv2,onnxrt_cpu,53,stage3/stage3.7/branch2/branch2.3,53. stage3/stage3.7/branch2/branch2.3 [conv],conv,0.7661,0.0,0.0,1
+shufflenetv2,onnxrt_cpu,54,stage3/stage3.7/branch2/branch2.5,54. stage3/stage3.7/branch2/branch2.5 [conv],conv,0.6859,0.0,0.0,1
+shufflenetv2,onnxrt_cpu,55,stage4/stage4.0/branch1/branch1.0,55. stage4/stage4.0/branch1/branch1.0 [conv],conv,0.847,0.0,0.0,1
+shufflenetv2,onnxrt_cpu,56,stage4/stage4.0/branch1/branch1.2,56. stage4/stage4.0/branch1/branch1.2 [conv],conv,0.8063,0.0,0.0,1
+shufflenetv2,onnxrt_cpu,57,stage4/stage4.0/branch2/branch2.0,57. stage4/stage4.0/branch2/branch2.0 [conv],conv,2.6948000000000003,0.0,0.0,2
+shufflenetv2,onnxrt_cpu,58,stage4/stage4.0/branch2/branch2.3,58. stage4/stage4.0/branch2/branch2.3 [conv],conv,0.8014,0.0,0.0,1
+shufflenetv2,onnxrt_cpu,59,stage4/stage4.0/branch2/branch2.5,59. stage4/stage4.0/branch2/branch2.5 [conv],conv,0.7957,0.0,0.0,2
+shufflenetv2,onnxrt_cpu,60,stage4/stage4.0,60. stage4/stage4.0 [concat/split-shape-Shape-Gather],concat/split-shape-Shape-Gather,0.8603000000000001,0.0,0.0,24
+shufflenetv2,onnxrt_cpu,61,stage4/stage4.1,61. stage4/stage4.1 [eltwise-concat/split-shape-Shape],eltwise-concat/split-shape-Shape,1.1983000000000001,0.0,0.0,35
+shufflenetv2,onnxrt_cpu,62,stage4/stage4.1/branch2/branch2.0,62. stage4/stage4.1/branch2/branch2.0 [conv],conv,0.8174,0.0,0.0,2
+shufflenetv2,onnxrt_cpu,63,stage4/stage4.1/branch2/branch2.3,63. stage4/stage4.1/branch2/branch2.3 [conv],conv,0.6912,0.0,0.0,1
+shufflenetv2,onnxrt_cpu,64,stage4/stage4.1/branch2/branch2.5,64. stage4/stage4.1/branch2/branch2.5 [conv],conv,0.791,0.0,0.0,2
+shufflenetv2,onnxrt_cpu,65,stage4/stage4.2,65. stage4/stage4.2 [eltwise-concat/split-shape-Shape],eltwise-concat/split-shape-Shape,1.1682,0.0,0.0,33
+shufflenetv2,onnxrt_cpu,66,stage4/stage4.2/branch2/branch2.0,66. stage4/stage4.2/branch2/branch2.0 [conv],conv,0.813,0.0,0.0,2
+shufflenetv2,onnxrt_cpu,67,stage4/stage4.2/branch2/branch2.3,67. stage4/stage4.2/branch2/branch2.3 [conv],conv,0.7485,0.0,0.0,1
+shufflenetv2,onnxrt_cpu,68,stage4/stage4.2/branch2/branch2.5,68. stage4/stage4.2/branch2/branch2.5 [conv],conv,0.7894,0.0,0.0,2
+shufflenetv2,onnxrt_cpu,69,stage4/stage4.3,69. stage4/stage4.3 [eltwise-concat/split-shape-Shape],eltwise-concat/split-shape-Shape,1.1949,0.0,0.0,32
+shufflenetv2,onnxrt_cpu,70,stage4/stage4.3/branch2/branch2.0,70. stage4/stage4.3/branch2/branch2.0 [conv],conv,0.8074,0.0,0.0,2
+shufflenetv2,onnxrt_cpu,71,stage4/stage4.3/branch2/branch2.3,71. stage4/stage4.3/branch2/branch2.3 [conv],conv,0.6804,0.0,0.0,1
+shufflenetv2,onnxrt_cpu,72,stage4/stage4.3/branch2/branch2.5,72. stage4/stage4.3/branch2/branch2.5 [conv],conv,0.795,0.0,0.0,1
+shufflenetv2,onnxrt_cpu,73,conv5/conv5.0,73. conv5/conv5.0 [conv],conv,6.0899,0.0,0.0,2
+shufflenetv2,onnxrt_cpu,74,ReduceMean,74. ReduceMean [pool],pool,0.19319999999999998,0.0,0.0,2
+shufflenetv2,onnxrt_cpu,75,fc,75. fc [fc],fc,1.1776,0.0,0.0,2
+shufflenetv2,pytorch_cpu,1,conv1,01. conv1 [conv-norm-act],conv-norm-act,11.421475,0.0,0.0,3
+shufflenetv2,pytorch_cpu,2,maxpool,02. maxpool [pool],pool,8.509511,0.0,0.0,1
+shufflenetv2,pytorch_cpu,3,stage2.0.branch1,03. stage2.0.branch1 [conv-norm-act],conv-norm-act,9.839782000000001,0.0,0.0,5
+shufflenetv2,pytorch_cpu,4,stage2.0.branch2,04. stage2.0.branch2 [conv-norm-act],conv-norm-act,20.893161,0.0,0.0,8
+shufflenetv2,pytorch_cpu,5,stage2.1.branch2,05. stage2.1.branch2 [conv-norm-act],conv-norm-act,12.93285,0.0,0.0,8
+shufflenetv2,pytorch_cpu,6,stage2.2.branch2,06. stage2.2.branch2 [conv-norm-act],conv-norm-act,12.848912,0.0,0.0,8
+shufflenetv2,pytorch_cpu,7,stage2.3.branch2,07. stage2.3.branch2 [conv-norm-act],conv-norm-act,13.041643,0.0,0.0,8
+shufflenetv2,pytorch_cpu,8,stage3.0.branch1,08. stage3.0.branch1 [conv-norm-act],conv-norm-act,18.355966000000002,0.0,0.0,5
+shufflenetv2,pytorch_cpu,9,stage3.0.branch2,09. stage3.0.branch2 [conv-norm-act],conv-norm-act,22.185825,0.0,0.0,8
+shufflenetv2,pytorch_cpu,10,stage3.1.branch2,10. stage3.1.branch2 [conv-norm-act],conv-norm-act,16.999930000000003,0.0,0.0,8
+shufflenetv2,pytorch_cpu,11,stage3.2.branch2,11. stage3.2.branch2 [conv-norm-act],conv-norm-act,17.129389,0.0,0.0,8
+shufflenetv2,pytorch_cpu,12,stage3.3.branch2,12. stage3.3.branch2 [conv-norm-act],conv-norm-act,17.18112,0.0,0.0,8
+shufflenetv2,pytorch_cpu,13,stage3.4.branch2,13. stage3.4.branch2 [conv-norm-act],conv-norm-act,17.73117,0.0,0.0,8
+shufflenetv2,pytorch_cpu,14,stage3.5.branch2,14. stage3.5.branch2 [conv-norm-act],conv-norm-act,17.692117,0.0,0.0,8
+shufflenetv2,pytorch_cpu,15,stage3.6.branch2,15. stage3.6.branch2 [conv-norm-act],conv-norm-act,17.812041,0.0,0.0,8
+shufflenetv2,pytorch_cpu,16,stage3.7.branch2,16. stage3.7.branch2 [conv-norm-act],conv-norm-act,18.049433,0.0,0.0,8
+shufflenetv2,pytorch_cpu,17,stage4.0.branch1,17. stage4.0.branch1 [conv-norm-act],conv-norm-act,28.694623000000004,0.0,0.0,5
+shufflenetv2,pytorch_cpu,18,stage4.0.branch2,18. stage4.0.branch2 [conv-norm-act],conv-norm-act,33.175271,0.0,0.0,8
+shufflenetv2,pytorch_cpu,19,stage4.1.branch2,19. stage4.1.branch2 [conv-norm-act],conv-norm-act,29.107804,0.0,0.0,8
+shufflenetv2,pytorch_cpu,20,stage4.2.branch2,20. stage4.2.branch2 [conv-norm-act],conv-norm-act,28.732534,0.0,0.0,8
+shufflenetv2,pytorch_cpu,21,stage4.3.branch2,21. stage4.3.branch2 [conv-norm-act],conv-norm-act,28.882893999999997,0.0,0.0,8
+shufflenetv2,pytorch_cpu,22,conv5,22. conv5 [conv-norm-act],conv-norm-act,11.112662,0.0,0.0,3
+shufflenetv2,pytorch_cpu,23,fc,23. fc [fc],fc,8.35895,0.0,0.0,1
+shufflenetv2,pytorch_cuda,1,conv1,01. conv1 [conv-norm-act],conv-norm-act,1.864621,0.0,0.0,3
+shufflenetv2,pytorch_cuda,2,maxpool,02. maxpool [pool],pool,0.707286,0.0,0.0,1
+shufflenetv2,pytorch_cuda,3,stage2.0.branch1,03. stage2.0.branch1 [conv-norm-act],conv-norm-act,1.9015900000000001,0.0,0.0,5
+shufflenetv2,pytorch_cuda,4,stage2.0.branch2,04. stage2.0.branch2 [conv-norm-act],conv-norm-act,3.2682599999999997,0.0,0.0,8
+shufflenetv2,pytorch_cuda,5,stage2.1.branch2,05. stage2.1.branch2 [conv-norm-act],conv-norm-act,3.088323,0.0,0.0,8
+shufflenetv2,pytorch_cuda,6,stage2.2.branch2,06. stage2.2.branch2 [conv-norm-act],conv-norm-act,3.054861,0.0,0.0,8
+shufflenetv2,pytorch_cuda,7,stage2.3.branch2,07. stage2.3.branch2 [conv-norm-act],conv-norm-act,3.045064,0.0,0.0,8
+shufflenetv2,pytorch_cuda,8,stage3.0.branch1,08. stage3.0.branch1 [conv-norm-act],conv-norm-act,1.9159819999999999,0.0,0.0,5
+shufflenetv2,pytorch_cuda,9,stage3.0.branch2,09. stage3.0.branch2 [conv-norm-act],conv-norm-act,3.3302329999999998,0.0,0.0,8
+shufflenetv2,pytorch_cuda,10,stage3.1.branch2,10. stage3.1.branch2 [conv-norm-act],conv-norm-act,3.056731,0.0,0.0,8
+shufflenetv2,pytorch_cuda,11,stage3.2.branch2,11. stage3.2.branch2 [conv-norm-act],conv-norm-act,3.017484,0.0,0.0,8
+shufflenetv2,pytorch_cuda,12,stage3.3.branch2,12. stage3.3.branch2 [conv-norm-act],conv-norm-act,3.0174760000000003,0.0,0.0,8
+shufflenetv2,pytorch_cuda,13,stage3.4.branch2,13. stage3.4.branch2 [conv-norm-act],conv-norm-act,2.997166,0.0,0.0,8
+shufflenetv2,pytorch_cuda,14,stage3.5.branch2,14. stage3.5.branch2 [conv-norm-act],conv-norm-act,3.022594,0.0,0.0,8
+shufflenetv2,pytorch_cuda,15,stage3.6.branch2,15. stage3.6.branch2 [conv-norm-act],conv-norm-act,3.0222919999999998,0.0,0.0,8
+shufflenetv2,pytorch_cuda,16,stage3.7.branch2,16. stage3.7.branch2 [conv-norm-act],conv-norm-act,3.010958,0.0,0.0,8
+shufflenetv2,pytorch_cuda,17,stage4.0.branch1,17. stage4.0.branch1 [conv-norm-act],conv-norm-act,1.86357,0.0,0.0,5
+shufflenetv2,pytorch_cuda,18,stage4.0.branch2,18. stage4.0.branch2 [conv-norm-act],conv-norm-act,3.3032329999999996,0.0,0.0,8
+shufflenetv2,pytorch_cuda,19,stage4.1.branch2,19. stage4.1.branch2 [conv-norm-act],conv-norm-act,3.0512449999999998,0.0,0.0,8
+shufflenetv2,pytorch_cuda,20,stage4.2.branch2,20. stage4.2.branch2 [conv-norm-act],conv-norm-act,3.0323130000000003,0.0,0.0,8
+shufflenetv2,pytorch_cuda,21,stage4.3.branch2,21. stage4.3.branch2 [conv-norm-act],conv-norm-act,3.0017899999999997,0.0,0.0,8
+shufflenetv2,pytorch_cuda,22,conv5,22. conv5 [conv-norm-act],conv-norm-act,1.9289349999999998,0.0,0.0,3
+shufflenetv2,pytorch_cuda,23,fc,23. fc [fc],fc,0.673292,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,1,TensorRT layer 001,001. TensorRT layer 001 [TensorRTLayer],TensorRTLayer,3.5,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,2,TensorRT layer 002,002. TensorRT layer 002 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,3,TensorRT layer 003,003. TensorRT layer 003 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,4,TensorRT layer 004,004. TensorRT layer 004 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,5,TensorRT layer 005,005. TensorRT layer 005 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,6,TensorRT layer 006,006. TensorRT layer 006 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,7,TensorRT layer 007,007. TensorRT layer 007 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,8,TensorRT layer 008,008. TensorRT layer 008 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,9,TensorRT layer 009,009. TensorRT layer 009 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,10,TensorRT layer 010,010. TensorRT layer 010 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,11,TensorRT layer 011,011. TensorRT layer 011 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,12,TensorRT layer 012,012. TensorRT layer 012 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,13,TensorRT layer 013,013. TensorRT layer 013 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,14,TensorRT layer 014,014. TensorRT layer 014 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,15,TensorRT layer 015,015. TensorRT layer 015 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,16,TensorRT layer 016,016. TensorRT layer 016 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,17,TensorRT layer 017,017. TensorRT layer 017 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,18,TensorRT layer 018,018. TensorRT layer 018 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,19,TensorRT layer 019,019. TensorRT layer 019 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,20,TensorRT layer 020,020. TensorRT layer 020 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,21,TensorRT layer 021,021. TensorRT layer 021 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,22,TensorRT layer 022,022. TensorRT layer 022 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,23,TensorRT layer 023,023. TensorRT layer 023 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,24,TensorRT layer 024,024. TensorRT layer 024 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,25,TensorRT layer 025,025. TensorRT layer 025 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,26,TensorRT layer 026,026. TensorRT layer 026 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,27,TensorRT layer 027,027. TensorRT layer 027 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,28,TensorRT layer 028,028. TensorRT layer 028 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,29,TensorRT layer 029,029. TensorRT layer 029 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,30,TensorRT layer 030,030. TensorRT layer 030 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,31,TensorRT layer 031,031. TensorRT layer 031 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,32,TensorRT layer 032,032. TensorRT layer 032 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,33,TensorRT layer 033,033. TensorRT layer 033 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,34,TensorRT layer 034,034. TensorRT layer 034 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,35,TensorRT layer 035,035. TensorRT layer 035 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,36,TensorRT layer 036,036. TensorRT layer 036 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,37,TensorRT layer 037,037. TensorRT layer 037 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,38,TensorRT layer 038,038. TensorRT layer 038 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,39,TensorRT layer 039,039. TensorRT layer 039 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,40,TensorRT layer 040,040. TensorRT layer 040 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,41,TensorRT layer 041,041. TensorRT layer 041 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,42,TensorRT layer 042,042. TensorRT layer 042 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,43,TensorRT layer 043,043. TensorRT layer 043 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,44,TensorRT layer 044,044. TensorRT layer 044 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,45,TensorRT layer 045,045. TensorRT layer 045 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,46,TensorRT layer 046,046. TensorRT layer 046 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,47,TensorRT layer 047,047. TensorRT layer 047 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,48,TensorRT layer 048,048. TensorRT layer 048 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,49,TensorRT layer 049,049. TensorRT layer 049 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,50,TensorRT layer 050,050. TensorRT layer 050 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,51,TensorRT layer 051,051. TensorRT layer 051 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,52,TensorRT layer 052,052. TensorRT layer 052 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,53,TensorRT layer 053,053. TensorRT layer 053 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,54,TensorRT layer 054,054. TensorRT layer 054 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,55,TensorRT layer 055,055. TensorRT layer 055 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,56,TensorRT layer 056,056. TensorRT layer 056 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,57,TensorRT layer 057,057. TensorRT layer 057 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,58,TensorRT layer 058,058. TensorRT layer 058 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,59,TensorRT layer 059,059. TensorRT layer 059 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,60,TensorRT layer 060,060. TensorRT layer 060 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,61,TensorRT layer 061,061. TensorRT layer 061 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,62,TensorRT layer 062,062. TensorRT layer 062 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,63,TensorRT layer 063,063. TensorRT layer 063 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,64,TensorRT layer 064,064. TensorRT layer 064 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,65,TensorRT layer 065,065. TensorRT layer 065 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,66,TensorRT layer 066,066. TensorRT layer 066 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,67,TensorRT layer 067,067. TensorRT layer 067 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,68,TensorRT layer 068,068. TensorRT layer 068 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,69,TensorRT layer 069,069. TensorRT layer 069 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,70,TensorRT layer 070,070. TensorRT layer 070 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,71,TensorRT layer 071,071. TensorRT layer 071 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,72,TensorRT layer 072,072. TensorRT layer 072 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,73,TensorRT layer 073,073. TensorRT layer 073 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,74,TensorRT layer 074,074. TensorRT layer 074 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,75,TensorRT layer 075,075. TensorRT layer 075 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,76,TensorRT layer 076,076. TensorRT layer 076 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,77,TensorRT layer 077,077. TensorRT layer 077 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,78,TensorRT layer 078,078. TensorRT layer 078 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,79,TensorRT layer 079,079. TensorRT layer 079 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,80,TensorRT layer 080,080. TensorRT layer 080 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,81,TensorRT layer 081,081. TensorRT layer 081 [TensorRTLayer],TensorRTLayer,2.0,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,82,TensorRT layer 082,082. TensorRT layer 082 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,83,TensorRT layer 083,083. TensorRT layer 083 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,84,TensorRT layer 084,084. TensorRT layer 084 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,85,TensorRT layer 085,085. TensorRT layer 085 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,86,TensorRT layer 086,086. TensorRT layer 086 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,87,TensorRT layer 087,087. TensorRT layer 087 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,88,TensorRT layer 088,088. TensorRT layer 088 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,89,TensorRT layer 089,089. TensorRT layer 089 [TensorRTLayer],TensorRTLayer,1.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,90,TensorRT layer 090,090. TensorRT layer 090 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,91,TensorRT layer 091,091. TensorRT layer 091 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,92,TensorRT layer 092,092. TensorRT layer 092 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,93,TensorRT layer 093,093. TensorRT layer 093 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,94,TensorRT layer 094,094. TensorRT layer 094 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,95,TensorRT layer 095,095. TensorRT layer 095 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,96,TensorRT layer 096,096. TensorRT layer 096 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,97,TensorRT layer 097,097. TensorRT layer 097 [TensorRTLayer],TensorRTLayer,1.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,98,TensorRT layer 098,098. TensorRT layer 098 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,99,TensorRT layer 099,099. TensorRT layer 099 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,100,TensorRT layer 100,100. TensorRT layer 100 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,101,TensorRT layer 101,101. TensorRT layer 101 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,102,TensorRT layer 102,102. TensorRT layer 102 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,103,TensorRT layer 103,103. TensorRT layer 103 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,104,TensorRT layer 104,104. TensorRT layer 104 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,105,TensorRT layer 105,105. TensorRT layer 105 [TensorRTLayer],TensorRTLayer,2.0,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,106,TensorRT layer 106,106. TensorRT layer 106 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,107,TensorRT layer 107,107. TensorRT layer 107 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,108,TensorRT layer 108,108. TensorRT layer 108 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,109,TensorRT layer 109,109. TensorRT layer 109 [TensorRTLayer],TensorRTLayer,3.5,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,110,TensorRT layer 110,110. TensorRT layer 110 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,111,TensorRT layer 111,111. TensorRT layer 111 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,112,TensorRT layer 112,112. TensorRT layer 112 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1
+shufflenetv2,tensorrt_fp16,113,TensorRT layer 113,113. TensorRT layer 113 [TensorRTLayer],TensorRTLayer,100.0,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,1,TensorRT layer 001,001. TensorRT layer 001 [TensorRTLayer],TensorRTLayer,4.7,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,2,TensorRT layer 002,002. TensorRT layer 002 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,3,TensorRT layer 003,003. TensorRT layer 003 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,4,TensorRT layer 004,004. TensorRT layer 004 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,5,TensorRT layer 005,005. TensorRT layer 005 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,6,TensorRT layer 006,006. TensorRT layer 006 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,7,TensorRT layer 007,007. TensorRT layer 007 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,8,TensorRT layer 008,008. TensorRT layer 008 [TensorRTLayer],TensorRTLayer,2.2,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,9,TensorRT layer 009,009. TensorRT layer 009 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,10,TensorRT layer 010,010. TensorRT layer 010 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,11,TensorRT layer 011,011. TensorRT layer 011 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,12,TensorRT layer 012,012. TensorRT layer 012 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,13,TensorRT layer 013,013. TensorRT layer 013 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,14,TensorRT layer 014,014. TensorRT layer 014 [TensorRTLayer],TensorRTLayer,2.2,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,15,TensorRT layer 015,015. TensorRT layer 015 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,16,TensorRT layer 016,016. TensorRT layer 016 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,17,TensorRT layer 017,017. TensorRT layer 017 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,18,TensorRT layer 018,018. TensorRT layer 018 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,19,TensorRT layer 019,019. TensorRT layer 019 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,20,TensorRT layer 020,020. TensorRT layer 020 [TensorRTLayer],TensorRTLayer,2.2,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,21,TensorRT layer 021,021. TensorRT layer 021 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,22,TensorRT layer 022,022. TensorRT layer 022 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,23,TensorRT layer 023,023. TensorRT layer 023 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,24,TensorRT layer 024,024. TensorRT layer 024 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,25,TensorRT layer 025,025. TensorRT layer 025 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,26,TensorRT layer 026,026. TensorRT layer 026 [TensorRTLayer],TensorRTLayer,2.2,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,27,TensorRT layer 027,027. TensorRT layer 027 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,28,TensorRT layer 028,028. TensorRT layer 028 [TensorRTLayer],TensorRTLayer,2.4,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,29,TensorRT layer 029,029. TensorRT layer 029 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,30,TensorRT layer 030,030. TensorRT layer 030 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,31,TensorRT layer 031,031. TensorRT layer 031 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,32,TensorRT layer 032,032. TensorRT layer 032 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,33,TensorRT layer 033,033. TensorRT layer 033 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,34,TensorRT layer 034,034. TensorRT layer 034 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,35,TensorRT layer 035,035. TensorRT layer 035 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,36,TensorRT layer 036,036. TensorRT layer 036 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,37,TensorRT layer 037,037. TensorRT layer 037 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,38,TensorRT layer 038,038. TensorRT layer 038 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,39,TensorRT layer 039,039. TensorRT layer 039 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,40,TensorRT layer 040,040. TensorRT layer 040 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,41,TensorRT layer 041,041. TensorRT layer 041 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,42,TensorRT layer 042,042. TensorRT layer 042 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,43,TensorRT layer 043,043. TensorRT layer 043 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,44,TensorRT layer 044,044. TensorRT layer 044 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,45,TensorRT layer 045,045. TensorRT layer 045 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,46,TensorRT layer 046,046. TensorRT layer 046 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,47,TensorRT layer 047,047. TensorRT layer 047 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,48,TensorRT layer 048,048. TensorRT layer 048 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,49,TensorRT layer 049,049. TensorRT layer 049 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,50,TensorRT layer 050,050. TensorRT layer 050 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,51,TensorRT layer 051,051. TensorRT layer 051 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,52,TensorRT layer 052,052. TensorRT layer 052 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,53,TensorRT layer 053,053. TensorRT layer 053 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,54,TensorRT layer 054,054. TensorRT layer 054 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,55,TensorRT layer 055,055. TensorRT layer 055 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,56,TensorRT layer 056,056. TensorRT layer 056 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,57,TensorRT layer 057,057. TensorRT layer 057 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,58,TensorRT layer 058,058. TensorRT layer 058 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,59,TensorRT layer 059,059. TensorRT layer 059 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,60,TensorRT layer 060,060. TensorRT layer 060 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,61,TensorRT layer 061,061. TensorRT layer 061 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,62,TensorRT layer 062,062. TensorRT layer 062 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,63,TensorRT layer 063,063. TensorRT layer 063 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,64,TensorRT layer 064,064. TensorRT layer 064 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,65,TensorRT layer 065,065. TensorRT layer 065 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,66,TensorRT layer 066,066. TensorRT layer 066 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,67,TensorRT layer 067,067. TensorRT layer 067 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,68,TensorRT layer 068,068. TensorRT layer 068 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,69,TensorRT layer 069,069. TensorRT layer 069 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,70,TensorRT layer 070,070. TensorRT layer 070 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,71,TensorRT layer 071,071. TensorRT layer 071 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,72,TensorRT layer 072,072. TensorRT layer 072 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,73,TensorRT layer 073,073. TensorRT layer 073 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,74,TensorRT layer 074,074. TensorRT layer 074 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,75,TensorRT layer 075,075. TensorRT layer 075 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,76,TensorRT layer 076,076. TensorRT layer 076 [TensorRTLayer],TensorRTLayer,2.4,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,77,TensorRT layer 077,077. TensorRT layer 077 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,78,TensorRT layer 078,078. TensorRT layer 078 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,79,TensorRT layer 079,079. TensorRT layer 079 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,80,TensorRT layer 080,080. TensorRT layer 080 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,81,TensorRT layer 081,081. TensorRT layer 081 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,82,TensorRT layer 082,082. TensorRT layer 082 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,83,TensorRT layer 083,083. TensorRT layer 083 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,84,TensorRT layer 084,084. TensorRT layer 084 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,85,TensorRT layer 085,085. TensorRT layer 085 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,86,TensorRT layer 086,086. TensorRT layer 086 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,87,TensorRT layer 087,087. TensorRT layer 087 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,88,TensorRT layer 088,088. TensorRT layer 088 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,89,TensorRT layer 089,089. TensorRT layer 089 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,90,TensorRT layer 090,090. TensorRT layer 090 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,91,TensorRT layer 091,091. TensorRT layer 091 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,92,TensorRT layer 092,092. TensorRT layer 092 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,93,TensorRT layer 093,093. TensorRT layer 093 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,94,TensorRT layer 094,094. TensorRT layer 094 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,95,TensorRT layer 095,095. TensorRT layer 095 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,96,TensorRT layer 096,096. TensorRT layer 096 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,97,TensorRT layer 097,097. TensorRT layer 097 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,98,TensorRT layer 098,098. TensorRT layer 098 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,99,TensorRT layer 099,099. TensorRT layer 099 [TensorRTLayer],TensorRTLayer,8.5,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,100,TensorRT layer 100,100. TensorRT layer 100 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,101,TensorRT layer 101,101. TensorRT layer 101 [TensorRTLayer],TensorRTLayer,2.9,0.0,0.0,1
+shufflenetv2,tensorrt_fp32,102,TensorRT layer 102,102. TensorRT layer 102 [TensorRTLayer],TensorRTLayer,100.0,0.0,0.0,1
+shufflenetv2,tensorrt_int8,1,TensorRT layer 001,001. TensorRT layer 001 [TensorRTLayer],TensorRTLayer,3.7,0.0,0.0,1
+shufflenetv2,tensorrt_int8,2,TensorRT layer 002,002. TensorRT layer 002 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1
+shufflenetv2,tensorrt_int8,3,TensorRT layer 003,003. TensorRT layer 003 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+shufflenetv2,tensorrt_int8,4,TensorRT layer 004,004. TensorRT layer 004 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
+shufflenetv2,tensorrt_int8,5,TensorRT layer 005,005. TensorRT layer 005 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
+shufflenetv2,tensorrt_int8,6,TensorRT layer 006,006. TensorRT layer 006 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1
+shufflenetv2,tensorrt_int8,7,TensorRT layer 007,007. TensorRT layer 007 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
+shufflenetv2,tensorrt_int8,8,TensorRT layer 008,008. TensorRT layer 008 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1
+shufflenetv2,tensorrt_int8,9,TensorRT layer 009,009. TensorRT layer 009 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+shufflenetv2,tensorrt_int8,10,TensorRT layer 010,010. TensorRT layer 010 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+shufflenetv2,tensorrt_int8,11,TensorRT layer 011,011. TensorRT layer 011 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
+shufflenetv2,tensorrt_int8,12,TensorRT layer 012,012. TensorRT layer 012 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
+shufflenetv2,tensorrt_int8,13,TensorRT layer 013,013. TensorRT layer 013 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_int8,14,TensorRT layer 014,014. TensorRT layer 014 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1
+shufflenetv2,tensorrt_int8,15,TensorRT layer 015,015. TensorRT layer 015 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+shufflenetv2,tensorrt_int8,16,TensorRT layer 016,016. TensorRT layer 016 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+shufflenetv2,tensorrt_int8,17,TensorRT layer 017,017. TensorRT layer 017 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_int8,18,TensorRT layer 018,018. TensorRT layer 018 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
+shufflenetv2,tensorrt_int8,19,TensorRT layer 019,019. TensorRT layer 019 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_int8,20,TensorRT layer 020,020. TensorRT layer 020 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1
+shufflenetv2,tensorrt_int8,21,TensorRT layer 021,021. TensorRT layer 021 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+shufflenetv2,tensorrt_int8,22,TensorRT layer 022,022. TensorRT layer 022 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+shufflenetv2,tensorrt_int8,23,TensorRT layer 023,023. TensorRT layer 023 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_int8,24,TensorRT layer 024,024. TensorRT layer 024 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
+shufflenetv2,tensorrt_int8,25,TensorRT layer 025,025. TensorRT layer 025 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_int8,26,TensorRT layer 026,026. TensorRT layer 026 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1
+shufflenetv2,tensorrt_int8,27,TensorRT layer 027,027. TensorRT layer 027 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_int8,28,TensorRT layer 028,028. TensorRT layer 028 [TensorRTLayer],TensorRTLayer,1.8,0.0,0.0,1
+shufflenetv2,tensorrt_int8,29,TensorRT layer 029,029. TensorRT layer 029 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+shufflenetv2,tensorrt_int8,30,TensorRT layer 030,030. TensorRT layer 030 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_int8,31,TensorRT layer 031,031. TensorRT layer 031 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
+shufflenetv2,tensorrt_int8,32,TensorRT layer 032,032. TensorRT layer 032 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_int8,33,TensorRT layer 033,033. TensorRT layer 033 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+shufflenetv2,tensorrt_int8,34,TensorRT layer 034,034. TensorRT layer 034 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+shufflenetv2,tensorrt_int8,35,TensorRT layer 035,035. TensorRT layer 035 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+shufflenetv2,tensorrt_int8,36,TensorRT layer 036,036. TensorRT layer 036 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
+shufflenetv2,tensorrt_int8,37,TensorRT layer 037,037. TensorRT layer 037 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+shufflenetv2,tensorrt_int8,38,TensorRT layer 038,038. TensorRT layer 038 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_int8,39,TensorRT layer 039,039. TensorRT layer 039 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+shufflenetv2,tensorrt_int8,40,TensorRT layer 040,040. TensorRT layer 040 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
+shufflenetv2,tensorrt_int8,41,TensorRT layer 041,041. TensorRT layer 041 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_int8,42,TensorRT layer 042,042. TensorRT layer 042 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_int8,43,TensorRT layer 043,043. TensorRT layer 043 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_int8,44,TensorRT layer 044,044. TensorRT layer 044 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+shufflenetv2,tensorrt_int8,45,TensorRT layer 045,045. TensorRT layer 045 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
+shufflenetv2,tensorrt_int8,46,TensorRT layer 046,046. TensorRT layer 046 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_int8,47,TensorRT layer 047,047. TensorRT layer 047 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+shufflenetv2,tensorrt_int8,48,TensorRT layer 048,048. TensorRT layer 048 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+shufflenetv2,tensorrt_int8,49,TensorRT layer 049,049. TensorRT layer 049 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+shufflenetv2,tensorrt_int8,50,TensorRT layer 050,050. TensorRT layer 050 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+shufflenetv2,tensorrt_int8,51,TensorRT layer 051,051. TensorRT layer 051 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
+shufflenetv2,tensorrt_int8,52,TensorRT layer 052,052. TensorRT layer 052 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_int8,53,TensorRT layer 053,053. TensorRT layer 053 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+shufflenetv2,tensorrt_int8,54,TensorRT layer 054,054. TensorRT layer 054 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+shufflenetv2,tensorrt_int8,55,TensorRT layer 055,055. TensorRT layer 055 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_int8,56,TensorRT layer 056,056. TensorRT layer 056 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+shufflenetv2,tensorrt_int8,57,TensorRT layer 057,057. TensorRT layer 057 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
+shufflenetv2,tensorrt_int8,58,TensorRT layer 058,058. TensorRT layer 058 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_int8,59,TensorRT layer 059,059. TensorRT layer 059 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+shufflenetv2,tensorrt_int8,60,TensorRT layer 060,060. TensorRT layer 060 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+shufflenetv2,tensorrt_int8,61,TensorRT layer 061,061. TensorRT layer 061 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_int8,62,TensorRT layer 062,062. TensorRT layer 062 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+shufflenetv2,tensorrt_int8,63,TensorRT layer 063,063. TensorRT layer 063 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
+shufflenetv2,tensorrt_int8,64,TensorRT layer 064,064. TensorRT layer 064 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_int8,65,TensorRT layer 065,065. TensorRT layer 065 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+shufflenetv2,tensorrt_int8,66,TensorRT layer 066,066. TensorRT layer 066 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+shufflenetv2,tensorrt_int8,67,TensorRT layer 067,067. TensorRT layer 067 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+shufflenetv2,tensorrt_int8,68,TensorRT layer 068,068. TensorRT layer 068 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+shufflenetv2,tensorrt_int8,69,TensorRT layer 069,069. TensorRT layer 069 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
+shufflenetv2,tensorrt_int8,70,TensorRT layer 070,070. TensorRT layer 070 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_int8,71,TensorRT layer 071,071. TensorRT layer 071 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+shufflenetv2,tensorrt_int8,72,TensorRT layer 072,072. TensorRT layer 072 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+shufflenetv2,tensorrt_int8,73,TensorRT layer 073,073. TensorRT layer 073 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_int8,74,TensorRT layer 074,074. TensorRT layer 074 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+shufflenetv2,tensorrt_int8,75,TensorRT layer 075,075. TensorRT layer 075 [TensorRTLayer],TensorRTLayer,1.8,0.0,0.0,1
+shufflenetv2,tensorrt_int8,76,TensorRT layer 076,076. TensorRT layer 076 [TensorRTLayer],TensorRTLayer,2.2,0.0,0.0,1
+shufflenetv2,tensorrt_int8,77,TensorRT layer 077,077. TensorRT layer 077 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_int8,78,TensorRT layer 078,078. TensorRT layer 078 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_int8,79,TensorRT layer 079,079. TensorRT layer 079 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_int8,80,TensorRT layer 080,080. TensorRT layer 080 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+shufflenetv2,tensorrt_int8,81,TensorRT layer 081,081. TensorRT layer 081 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_int8,82,TensorRT layer 082,082. TensorRT layer 082 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_int8,83,TensorRT layer 083,083. TensorRT layer 083 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+shufflenetv2,tensorrt_int8,84,TensorRT layer 084,084. TensorRT layer 084 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1
+shufflenetv2,tensorrt_int8,85,TensorRT layer 085,085. TensorRT layer 085 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+shufflenetv2,tensorrt_int8,86,TensorRT layer 086,086. TensorRT layer 086 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+shufflenetv2,tensorrt_int8,87,TensorRT layer 087,087. TensorRT layer 087 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_int8,88,TensorRT layer 088,088. TensorRT layer 088 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_int8,89,TensorRT layer 089,089. TensorRT layer 089 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+shufflenetv2,tensorrt_int8,90,TensorRT layer 090,090. TensorRT layer 090 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1
+shufflenetv2,tensorrt_int8,91,TensorRT layer 091,091. TensorRT layer 091 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+shufflenetv2,tensorrt_int8,92,TensorRT layer 092,092. TensorRT layer 092 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+shufflenetv2,tensorrt_int8,93,TensorRT layer 093,093. TensorRT layer 093 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_int8,94,TensorRT layer 094,094. TensorRT layer 094 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+shufflenetv2,tensorrt_int8,95,TensorRT layer 095,095. TensorRT layer 095 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+shufflenetv2,tensorrt_int8,96,TensorRT layer 096,096. TensorRT layer 096 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1
+shufflenetv2,tensorrt_int8,97,TensorRT layer 097,097. TensorRT layer 097 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+shufflenetv2,tensorrt_int8,98,TensorRT layer 098,098. TensorRT layer 098 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+shufflenetv2,tensorrt_int8,99,TensorRT layer 099,099. TensorRT layer 099 [TensorRTLayer],TensorRTLayer,6.6,0.0,0.0,1
+shufflenetv2,tensorrt_int8,100,TensorRT layer 100,100. TensorRT layer 100 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+shufflenetv2,tensorrt_int8,101,TensorRT layer 101,101. TensorRT layer 101 [TensorRTLayer],TensorRTLayer,2.1,0.0,0.0,1
+shufflenetv2,tensorrt_int8,102,TensorRT layer 102,102. TensorRT layer 102 [TensorRTLayer],TensorRTLayer,100.0,0.0,0.0,1
+shufflenetv2,tflite_cpu,1,dummy_conv,01. dummy_conv [conv],conv,10.09,0.0,0.0,1

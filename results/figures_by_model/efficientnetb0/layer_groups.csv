@@ -1,0 +1,769 @@
+model,runtime,group_index,group_key,group_label,group_type,mean_ms,power_gpu_mw,power_total_mw,ops
+efficientnetb0,onnxrt_cpu,1,features/features.0/features.0.0,01. features.0/features.0.0 [conv],conv,3.7807,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,2,features/features.0/features.0.2/Mul,02. features.0/features.0.2/Mul [act],act,5.0892,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,3,features/features.1/features.1.0/block/block.0/block.0.0,03. features.1/features.1.0/block/block.0/block.0.0 [conv],conv,5.5553,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,4,features/features.1/features.1.0/block/block.0/block.0.2/Mul,04. features.1/features.1.0/block/block.0/block.0.2/Mul [act],act,4.7603,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,5,features/features.1/features.1.0/block/block.1/avgpool,05. features.1/features.1.0/block/block.1/avgpool [pool],pool,0.46149999999999997,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,6,features/features.1/features.1.0/block/block.1/fc1,06. features.1/features.1.0/block/block.1/fc1 [conv],conv,0.0708,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,7,features/features.1/features.1.0/block/block.1/activation/Mul,07. features.1/features.1.0/block/block.1/activation/Mul [act],act,0.041600000000000005,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,8,features/features.1/features.1.0/block/block.1/fc2,08. features.1/features.1.0/block/block.1/fc2 [conv],conv,0.0555,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,9,features/features.1/features.1.0/block/block.1,09. features.1/features.1.0/block/block.1 [eltwise],eltwise,0.5165,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,10,features/features.1/features.1.0/block/block.2/block.2.0,10. features.1/features.1.0/block/block.2/block.2.0 [conv],conv,2.9928000000000003,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,11,features/features.2/features.2.0/block/block.0/block.0.0,11. features.2/features.2.0/block/block.0/block.0.0 [conv],conv,6.5158,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,12,features/features.2/features.2.0/block/block.0/block.0.2/Mul,12. features.2/features.2.0/block/block.0/block.0.2/Mul [act],act,14.3837,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,13,features/features.2/features.2.0/block/block.1/block.1.0,13. features.2/features.2.0/block/block.1/block.1.0 [conv],conv,13.1014,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,14,features/features.2/features.2.0/block/block.1/block.1.2/Mul,14. features.2/features.2.0/block/block.1/block.1.2/Mul [act],act,3.6158000000000006,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,15,features/features.2/features.2.0/block/block.2/avgpool,15. features.2/features.2.0/block/block.2/avgpool [pool],pool,0.37089999999999995,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,16,features/features.2/features.2.0/block/block.2/fc1,16. features.2/features.2.0/block/block.2/fc1 [conv],conv,0.07590000000000001,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,17,features/features.2/features.2.0/block/block.2/activation/Mul,17. features.2/features.2.0/block/block.2/activation/Mul [act],act,0.0403,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,18,features/features.2/features.2.0/block/block.2/fc2,18. features.2/features.2.0/block/block.2/fc2 [conv],conv,0.0599,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,19,features/features.2/features.2.0/block/block.2,19. features.2/features.2.0/block/block.2 [eltwise],eltwise,0.4023,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,20,features/features.2/features.2.0/block/block.3/block.3.0,20. features.2/features.2.0/block/block.3/block.3.0 [conv],conv,2.5107000000000004,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,21,features/features.2/features.2.1/block/block.0/block.0.0,21. features.2/features.2.1/block/block.0/block.0.0 [conv],conv,3.4499,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,22,features/features.2/features.2.1/block/block.0/block.0.2/Mul,22. features.2/features.2.1/block/block.0/block.0.2/Mul [act],act,5.5828999999999995,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,23,features/features.2/features.2.1/block/block.1/block.1.0,23. features.2/features.2.1/block/block.1/block.1.0 [conv],conv,11.029399999999999,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,24,features/features.2/features.2.1/block/block.1/block.1.2/Mul,24. features.2/features.2.1/block/block.1/block.1.2/Mul [act],act,5.3435999999999995,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,25,features/features.2/features.2.1/block/block.2/avgpool,25. features.2/features.2.1/block/block.2/avgpool [pool],pool,0.5055,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,26,features/features.2/features.2.1/block/block.2/fc1,26. features.2/features.2.1/block/block.2/fc1 [conv],conv,0.08109999999999999,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,27,features/features.2/features.2.1/block/block.2/activation/Mul,27. features.2/features.2.1/block/block.2/activation/Mul [act],act,0.0415,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,28,features/features.2/features.2.1/block/block.2/fc2,28. features.2/features.2.1/block/block.2/fc2 [conv],conv,0.0625,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,29,features/features.2/features.2.1/block/block.2,29. features.2/features.2.1/block/block.2 [eltwise],eltwise,0.6638999999999999,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,30,features/features.2/features.2.1/block/block.3/block.3.0,30. features.2/features.2.1/block/block.3/block.3.0 [conv],conv,4.3007,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,31,features/features.3/features.3.0/block/block.0/block.0.0,31. features.3/features.3.0/block/block.0/block.0.0 [conv],conv,3.2152000000000003,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,32,features/features.3/features.3.0/block/block.0/block.0.2/Mul,32. features.3/features.3.0/block/block.0/block.0.2/Mul [act],act,5.5869,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,33,features/features.3/features.3.0/block/block.1/block.1.0,33. features.3/features.3.0/block/block.1/block.1.0 [conv],conv,14.3812,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,34,features/features.3/features.3.0/block/block.1/block.1.2/Mul,34. features.3/features.3.0/block/block.1/block.1.2/Mul [act],act,1.4213,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,35,features/features.3/features.3.0/block/block.2/avgpool,35. features.3/features.3.0/block/block.2/avgpool [pool],pool,0.173,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,36,features/features.3/features.3.0/block/block.2/fc1,36. features.3/features.3.0/block/block.2/fc1 [conv],conv,0.0702,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,37,features/features.3/features.3.0/block/block.2/activation/Mul,37. features.3/features.3.0/block/block.2/activation/Mul [act],act,0.0395,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,38,features/features.3/features.3.0/block/block.2/fc2,38. features.3/features.3.0/block/block.2/fc2 [conv],conv,0.0595,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,39,features/features.3/features.3.0/block/block.2,39. features.3/features.3.0/block/block.2 [eltwise],eltwise,0.168,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,40,features/features.3/features.3.0/block/block.3/block.3.0,40. features.3/features.3.0/block/block.3/block.3.0 [conv],conv,1.2931,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,41,features/features.3/features.3.1/block/block.0/block.0.0,41. features.3/features.3.1/block/block.0/block.0.0 [conv],conv,1.9715,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,42,features/features.3/features.3.1/block/block.0/block.0.2/Mul,42. features.3/features.3.1/block/block.0/block.0.2/Mul [act],act,2.3033000000000006,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,43,features/features.3/features.3.1/block/block.1/block.1.0,43. features.3/features.3.1/block/block.1/block.1.0 [conv],conv,12.6611,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,44,features/features.3/features.3.1/block/block.1/block.1.2/Mul,44. features.3/features.3.1/block/block.1/block.1.2/Mul [act],act,2.4031000000000002,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,45,features/features.3/features.3.1/block/block.2/avgpool,45. features.3/features.3.1/block/block.2/avgpool [pool],pool,0.24539999999999998,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,46,features/features.3/features.3.1/block/block.2/fc1,46. features.3/features.3.1/block/block.2/fc1 [conv],conv,0.0815,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,47,features/features.3/features.3.1/block/block.2/activation/Mul,47. features.3/features.3.1/block/block.2/activation/Mul [act],act,0.0396,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,48,features/features.3/features.3.1/block/block.2/fc2,48. features.3/features.3.1/block/block.2/fc2 [conv],conv,0.0705,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,49,features/features.3/features.3.1/block/block.2,49. features.3/features.3.1/block/block.2 [eltwise],eltwise,0.2496,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,50,features/features.3/features.3.1/block/block.3/block.3.0,50. features.3/features.3.1/block/block.3/block.3.0 [conv],conv,2.1458000000000004,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,51,features/features.4/features.4.0/block/block.0/block.0.0,51. features.4/features.4.0/block/block.0/block.0.0 [conv],conv,1.9093,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,52,features/features.4/features.4.0/block/block.0/block.0.2/Mul,52. features.4/features.4.0/block/block.0/block.0.2/Mul [act],act,2.3638000000000003,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,53,features/features.4/features.4.0/block/block.1/block.1.0,53. features.4/features.4.0/block/block.1/block.1.0 [conv],conv,2.7790000000000004,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,54,features/features.4/features.4.0/block/block.1/block.1.2/Mul,54. features.4/features.4.0/block/block.1/block.1.2/Mul [act],act,0.6265000000000001,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,55,features/features.4/features.4.0/block/block.2/avgpool,55. features.4/features.4.0/block/block.2/avgpool [pool],pool,0.0997,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,56,features/features.4/features.4.0/block/block.2/fc1,56. features.4/features.4.0/block/block.2/fc1 [conv],conv,0.0809,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,57,features/features.4/features.4.0/block/block.2/activation/Mul,57. features.4/features.4.0/block/block.2/activation/Mul [act],act,0.0445,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,58,features/features.4/features.4.0/block/block.2/fc2,58. features.4/features.4.0/block/block.2/fc2 [conv],conv,0.0671,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,59,features/features.4/features.4.0/block/block.2,59. features.4/features.4.0/block/block.2 [eltwise],eltwise,0.1454,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,60,features/features.4/features.4.0/block/block.3/block.3.0,60. features.4/features.4.0/block/block.3/block.3.0 [conv],conv,0.9686,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,61,features/features.4/features.4.1/block/block.0/block.0.0,61. features.4/features.4.1/block/block.0/block.0.0 [conv],conv,1.9389,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,62,features/features.4/features.4.1/block/block.0/block.0.2/Mul,62. features.4/features.4.1/block/block.0/block.0.2/Mul [act],act,1.1863,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,63,features/features.4/features.4.1/block/block.1/block.1.0,63. features.4/features.4.1/block/block.1/block.1.0 [conv],conv,3.0382000000000002,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,64,features/features.4/features.4.1/block/block.1/block.1.2/Mul,64. features.4/features.4.1/block/block.1/block.1.2/Mul [act],act,1.1465,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,65,features/features.4/features.4.1/block/block.2/avgpool,65. features.4/features.4.1/block/block.2/avgpool [pool],pool,0.1384,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,66,features/features.4/features.4.1/block/block.2/fc1,66. features.4/features.4.1/block/block.2/fc1 [conv],conv,0.1232,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,67,features/features.4/features.4.1/block/block.2/activation/Mul,67. features.4/features.4.1/block/block.2/activation/Mul [act],act,0.0399,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,68,features/features.4/features.4.1/block/block.2/fc2,68. features.4/features.4.1/block/block.2/fc2 [conv],conv,0.0998,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,69,features/features.4/features.4.1/block/block.2,69. features.4/features.4.1/block/block.2 [eltwise],eltwise,0.1736,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,70,features/features.4/features.4.1/block/block.3/block.3.0,70. features.4/features.4.1/block/block.3/block.3.0 [conv],conv,2.0331000000000006,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,71,features/features.4/features.4.2/block/block.0/block.0.0,71. features.4/features.4.2/block/block.0/block.0.0 [conv],conv,1.7961,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,72,features/features.4/features.4.2/block/block.0/block.0.2/Mul,72. features.4/features.4.2/block/block.0/block.0.2/Mul [act],act,1.2272,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,73,features/features.4/features.4.2/block/block.1/block.1.0,73. features.4/features.4.2/block/block.1/block.1.0 [conv],conv,3.0442,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,74,features/features.4/features.4.2/block/block.1/block.1.2/Mul,74. features.4/features.4.2/block/block.1/block.1.2/Mul [act],act,1.1522,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,75,features/features.4/features.4.2/block/block.2/avgpool,75. features.4/features.4.2/block/block.2/avgpool [pool],pool,0.1399,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,76,features/features.4/features.4.2/block/block.2/fc1,76. features.4/features.4.2/block/block.2/fc1 [conv],conv,0.1231,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,77,features/features.4/features.4.2/block/block.2/activation/Mul,77. features.4/features.4.2/block/block.2/activation/Mul [act],act,0.0399,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,78,features/features.4/features.4.2/block/block.2/fc2,78. features.4/features.4.2/block/block.2/fc2 [conv],conv,0.0985,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,79,features/features.4/features.4.2/block/block.2,79. features.4/features.4.2/block/block.2 [eltwise],eltwise,0.168,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,80,features/features.4/features.4.2/block/block.3/block.3.0,80. features.4/features.4.2/block/block.3/block.3.0 [conv],conv,2.0079000000000002,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,81,features/features.5/features.5.0/block/block.0/block.0.0,81. features.5/features.5.0/block/block.0/block.0.0 [conv],conv,1.8043,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,82,features/features.5/features.5.0/block/block.0/block.0.2/Mul,82. features.5/features.5.0/block/block.0/block.0.2/Mul [act],act,1.2275,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,83,features/features.5/features.5.0/block/block.1/block.1.0,83. features.5/features.5.0/block/block.1/block.1.0 [conv],conv,8.666,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,84,features/features.5/features.5.0/block/block.1/block.1.2/Mul,84. features.5/features.5.0/block/block.1/block.1.2/Mul [act],act,1.232,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,85,features/features.5/features.5.0/block/block.2/avgpool,85. features.5/features.5.0/block/block.2/avgpool [pool],pool,0.1402,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,86,features/features.5/features.5.0/block/block.2/fc1,86. features.5/features.5.0/block/block.2/fc1 [conv],conv,0.1191,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,87,features/features.5/features.5.0/block/block.2/activation/Mul,87. features.5/features.5.0/block/block.2/activation/Mul [act],act,0.0389,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,88,features/features.5/features.5.0/block/block.2/fc2,88. features.5/features.5.0/block/block.2/fc2 [conv],conv,0.0995,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,89,features/features.5/features.5.0/block/block.2,89. features.5/features.5.0/block/block.2 [eltwise],eltwise,0.1719,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,90,features/features.5/features.5.0/block/block.3/block.3.0,90. features.5/features.5.0/block/block.3/block.3.0 [conv],conv,2.6975,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,91,features/features.5/features.5.1/block/block.0/block.0.0,91. features.5/features.5.1/block/block.0/block.0.0 [conv],conv,3.5351000000000004,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,92,features/features.5/features.5.1/block/block.0/block.0.2/Mul,92. features.5/features.5.1/block/block.0/block.0.2/Mul [act],act,1.7047999999999999,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,93,features/features.5/features.5.1/block/block.1/block.1.0,93. features.5/features.5.1/block/block.1/block.1.0 [conv],conv,12.0435,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,94,features/features.5/features.5.1/block/block.1/block.1.2/Mul,94. features.5/features.5.1/block/block.1/block.1.2/Mul [act],act,1.7917,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,95,features/features.5/features.5.1/block/block.2/avgpool,95. features.5/features.5.1/block/block.2/avgpool [pool],pool,0.1813,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,96,features/features.5/features.5.1/block/block.2/fc1,96. features.5/features.5.1/block/block.2/fc1 [conv],conv,0.1677,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,97,features/features.5/features.5.1/block/block.2/activation/Mul,97. features.5/features.5.1/block/block.2/activation/Mul [act],act,0.041,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,98,features/features.5/features.5.1/block/block.2/fc2,98. features.5/features.5.1/block/block.2/fc2 [conv],conv,0.1907,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,99,features/features.5/features.5.1/block/block.2,99. features.5/features.5.1/block/block.2 [eltwise],eltwise,0.2927,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,100,features/features.5/features.5.1/block/block.3/block.3.0,100. features.5/features.5.1/block/block.3/block.3.0 [conv],conv,3.9471000000000003,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,101,features/features.5/features.5.2/block/block.0/block.0.0,101. features.5/features.5.2/block/block.0/block.0.0 [conv],conv,3.4055,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,102,features/features.5/features.5.2/block/block.0/block.0.2/Mul,102. features.5/features.5.2/block/block.0/block.0.2/Mul [act],act,1.7555,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,103,features/features.5/features.5.2/block/block.1/block.1.0,103. features.5/features.5.2/block/block.1/block.1.0 [conv],conv,12.0086,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,104,features/features.5/features.5.2/block/block.1/block.1.2/Mul,104. features.5/features.5.2/block/block.1/block.1.2/Mul [act],act,1.7691,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,105,features/features.5/features.5.2/block/block.2/avgpool,105. features.5/features.5.2/block/block.2/avgpool [pool],pool,0.1811,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,106,features/features.5/features.5.2/block/block.2/fc1,106. features.5/features.5.2/block/block.2/fc1 [conv],conv,0.173,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,107,features/features.5/features.5.2/block/block.2/activation/Mul,107. features.5/features.5.2/block/block.2/activation/Mul [act],act,0.0407,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,108,features/features.5/features.5.2/block/block.2/fc2,108. features.5/features.5.2/block/block.2/fc2 [conv],conv,0.1872,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,109,features/features.5/features.5.2/block/block.2,109. features.5/features.5.2/block/block.2 [eltwise],eltwise,0.2337,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,110,features/features.5/features.5.2/block/block.3/block.3.0,110. features.5/features.5.2/block/block.3/block.3.0 [conv],conv,3.8534,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,111,features/features.6/features.6.0/block/block.0/block.0.0,111. features.6/features.6.0/block/block.0/block.0.0 [conv],conv,3.6254,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,112,features/features.6/features.6.0/block/block.0/block.0.2/Mul,112. features.6/features.6.0/block/block.0/block.0.2/Mul [act],act,1.6758,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,113,features/features.6/features.6.0/block/block.1/block.1.0,113. features.6/features.6.0/block/block.1/block.1.0 [conv],conv,6.0904,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,114,features/features.6/features.6.0/block/block.1/block.1.2/Mul,114. features.6/features.6.0/block/block.1/block.1.2/Mul [act],act,0.5355,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,115,features/features.6/features.6.0/block/block.2/avgpool,115. features.6/features.6.0/block/block.2/avgpool [pool],pool,0.0941,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,116,features/features.6/features.6.0/block/block.2/fc1,116. features.6/features.6.0/block/block.2/fc1 [conv],conv,0.1597,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,117,features/features.6/features.6.0/block/block.2/activation/Mul,117. features.6/features.6.0/block/block.2/activation/Mul [act],act,0.0402,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,118,features/features.6/features.6.0/block/block.2/fc2,118. features.6/features.6.0/block/block.2/fc2 [conv],conv,0.1991,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,119,features/features.6/features.6.0/block/block.2,119. features.6/features.6.0/block/block.2 [eltwise],eltwise,0.1774,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,120,features/features.6/features.6.0/block/block.3/block.3.0,120. features.6/features.6.0/block/block.3/block.3.0 [conv],conv,1.8218,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,121,features/features.6/features.6.1/block/block.0/block.0.0,121. features.6/features.6.1/block/block.0/block.0.0 [conv],conv,2.8071,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,122,features/features.6/features.6.1/block/block.0/block.0.2/Mul,122. features.6/features.6.1/block/block.0/block.0.2/Mul [act],act,0.7813,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,123,features/features.6/features.6.1/block/block.1/block.1.0,123. features.6/features.6.1/block/block.1/block.1.0 [conv],conv,9.254399999999999,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,124,features/features.6/features.6.1/block/block.1/block.1.2/Mul,124. features.6/features.6.1/block/block.1/block.1.2/Mul [act],act,0.7722,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,125,features/features.6/features.6.1/block/block.2/avgpool,125. features.6/features.6.1/block/block.2/avgpool [pool],pool,0.1202,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,126,features/features.6/features.6.1/block/block.2/fc1,126. features.6/features.6.1/block/block.2/fc1 [conv],conv,0.309,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,127,features/features.6/features.6.1/block/block.2/activation/Mul,127. features.6/features.6.1/block/block.2/activation/Mul [act],act,0.0417,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,128,features/features.6/features.6.1/block/block.2/fc2,128. features.6/features.6.1/block/block.2/fc2 [conv],conv,0.2975,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,129,features/features.6/features.6.1/block/block.2,129. features.6/features.6.1/block/block.2 [eltwise],eltwise,0.2741,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,130,features/features.6/features.6.1/block/block.3/block.3.0,130. features.6/features.6.1/block/block.3/block.3.0 [conv],conv,2.9756,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,131,features/features.6/features.6.2/block/block.0/block.0.0,131. features.6/features.6.2/block/block.0/block.0.0 [conv],conv,2.8882000000000003,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,132,features/features.6/features.6.2/block/block.0/block.0.2/Mul,132. features.6/features.6.2/block/block.0/block.0.2/Mul [act],act,0.7,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,133,features/features.6/features.6.2/block/block.1/block.1.0,133. features.6/features.6.2/block/block.1/block.1.0 [conv],conv,9.1865,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,134,features/features.6/features.6.2/block/block.1/block.1.2/Mul,134. features.6/features.6.2/block/block.1/block.1.2/Mul [act],act,0.7256,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,135,features/features.6/features.6.2/block/block.2/avgpool,135. features.6/features.6.2/block/block.2/avgpool [pool],pool,0.1233,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,136,features/features.6/features.6.2/block/block.2/fc1,136. features.6/features.6.2/block/block.2/fc1 [conv],conv,0.3054,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,137,features/features.6/features.6.2/block/block.2/activation/Mul,137. features.6/features.6.2/block/block.2/activation/Mul [act],act,0.0414,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,138,features/features.6/features.6.2/block/block.2/fc2,138. features.6/features.6.2/block/block.2/fc2 [conv],conv,0.2996,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,139,features/features.6/features.6.2/block/block.2,139. features.6/features.6.2/block/block.2 [eltwise],eltwise,0.2707,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,140,features/features.6/features.6.2/block/block.3/block.3.0,140. features.6/features.6.2/block/block.3/block.3.0 [conv],conv,3.0799000000000003,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,141,features/features.6/features.6.3/block/block.0/block.0.0,141. features.6/features.6.3/block/block.0/block.0.0 [conv],conv,2.9462,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,142,features/features.6/features.6.3/block/block.0/block.0.2/Mul,142. features.6/features.6.3/block/block.0/block.0.2/Mul [act],act,0.7029,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,143,features/features.6/features.6.3/block/block.1/block.1.0,143. features.6/features.6.3/block/block.1/block.1.0 [conv],conv,9.4437,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,144,features/features.6/features.6.3/block/block.1/block.1.2/Mul,144. features.6/features.6.3/block/block.1/block.1.2/Mul [act],act,0.7087,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,145,features/features.6/features.6.3/block/block.2/avgpool,145. features.6/features.6.3/block/block.2/avgpool [pool],pool,0.1208,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,146,features/features.6/features.6.3/block/block.2/fc1,146. features.6/features.6.3/block/block.2/fc1 [conv],conv,0.3034,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,147,features/features.6/features.6.3/block/block.2/activation/Mul,147. features.6/features.6.3/block/block.2/activation/Mul [act],act,0.0419,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,148,features/features.6/features.6.3/block/block.2/fc2,148. features.6/features.6.3/block/block.2/fc2 [conv],conv,0.297,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,149,features/features.6/features.6.3/block/block.2,149. features.6/features.6.3/block/block.2 [eltwise],eltwise,0.275,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,150,features/features.6/features.6.3/block/block.3/block.3.0,150. features.6/features.6.3/block/block.3/block.3.0 [conv],conv,2.8831,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,151,features/features.7/features.7.0/block/block.0/block.0.0,151. features.7/features.7.0/block/block.0/block.0.0 [conv],conv,2.9237,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,152,features/features.7/features.7.0/block/block.0/block.0.2/Mul,152. features.7/features.7.0/block/block.0/block.0.2/Mul [act],act,0.7052999999999999,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,153,features/features.7/features.7.0/block/block.1/block.1.0,153. features.7/features.7.0/block/block.1/block.1.0 [conv],conv,3.2465,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,154,features/features.7/features.7.0/block/block.1/block.1.2/Mul,154. features.7/features.7.0/block/block.1/block.1.2/Mul [act],act,0.7023,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,155,features/features.7/features.7.0/block/block.2/avgpool,155. features.7/features.7.0/block/block.2/avgpool [pool],pool,0.12040000000000001,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,156,features/features.7/features.7.0/block/block.2/fc1,156. features.7/features.7.0/block/block.2/fc1 [conv],conv,0.307,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,157,features/features.7/features.7.0/block/block.2/activation/Mul,157. features.7/features.7.0/block/block.2/activation/Mul [act],act,0.0407,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,158,features/features.7/features.7.0/block/block.2/fc2,158. features.7/features.7.0/block/block.2/fc2 [conv],conv,0.3094,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,159,features/features.7/features.7.0/block/block.2,159. features.7/features.7.0/block/block.2 [eltwise],eltwise,0.2746,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,160,features/features.7/features.7.0/block/block.3/block.3.0,160. features.7/features.7.0/block/block.3/block.3.0 [conv],conv,4.87,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,161,features/features.8/features.8.0,161. features.8/features.8.0 [conv],conv,5.2748,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,162,features/features.8/features.8.2/Mul,162. features.8/features.8.2/Mul [act],act,0.9378,0.0,0.0,3
+efficientnetb0,onnxrt_cpu,163,avgpool,163. avgpool [pool],pool,0.136,0.0,0.0,2
+efficientnetb0,onnxrt_cpu,164,Flatten,164. Flatten [shape],shape,0.0391,0.0,0.0,1
+efficientnetb0,onnxrt_cpu,165,classifier/classifier.1,165. classifier/classifier.1 [fc],fc,1.3621999999999999,0.0,0.0,3
+efficientnetb0,pytorch_cpu,1,features.0,01. features.0 [conv-norm],conv-norm,20.200035,0.0,0.0,3
+efficientnetb0,pytorch_cpu,2,features.1.0.block.0,02. features.1.0.block.0 [conv-norm],conv-norm,34.528836,0.0,0.0,3
+efficientnetb0,pytorch_cpu,3,features.1.0.block.1,03. features.1.0.block.1 [conv-act],conv-act,3.5562229999999997,0.0,0.0,5
+efficientnetb0,pytorch_cpu,4,features.1.0.block.2,04. features.1.0.block.2 [conv-norm],conv-norm,4.569911,0.0,0.0,2
+efficientnetb0,pytorch_cpu,5,features.2.0.block.0,05. features.2.0.block.0 [conv-norm],conv-norm,23.61085,0.0,0.0,3
+efficientnetb0,pytorch_cpu,6,features.2.0.block.1,06. features.2.0.block.1 [conv-norm],conv-norm,73.20027099999999,0.0,0.0,3
+efficientnetb0,pytorch_cpu,7,features.2.0.block.2,07. features.2.0.block.2 [conv-act],conv-act,2.45817,0.0,0.0,5
+efficientnetb0,pytorch_cpu,8,features.2.0.block.3,08. features.2.0.block.3 [conv-norm],conv-norm,4.586771,0.0,0.0,2
+efficientnetb0,pytorch_cpu,9,features.2.1.block.0,09. features.2.1.block.0 [conv-norm],conv-norm,10.416036,0.0,0.0,3
+efficientnetb0,pytorch_cpu,10,features.2.1.block.1,10. features.2.1.block.1 [conv-norm],conv-norm,44.509139,0.0,0.0,3
+efficientnetb0,pytorch_cpu,11,features.2.1.block.2,11. features.2.1.block.2 [conv-act],conv-act,2.6837400000000002,0.0,0.0,5
+efficientnetb0,pytorch_cpu,12,features.2.1.block.3,12. features.2.1.block.3 [conv-norm],conv-norm,6.156255000000001,0.0,0.0,2
+efficientnetb0,pytorch_cpu,13,features.2.1,13. features.2.1 [StochasticDepth],StochasticDepth,0.082533,0.0,0.0,1
+efficientnetb0,pytorch_cpu,14,features.3.0.block.0,14. features.3.0.block.0 [conv-norm],conv-norm,10.286294999999999,0.0,0.0,3
+efficientnetb0,pytorch_cpu,15,features.3.0.block.1,15. features.3.0.block.1 [conv-norm],conv-norm,75.338095,0.0,0.0,3
+efficientnetb0,pytorch_cpu,16,features.3.0.block.2,16. features.3.0.block.2 [conv-act],conv-act,1.671104,0.0,0.0,5
+efficientnetb0,pytorch_cpu,17,features.3.0.block.3,17. features.3.0.block.3 [conv-norm],conv-norm,3.0424179999999996,0.0,0.0,2
+efficientnetb0,pytorch_cpu,18,features.3.1.block.0,18. features.3.1.block.0 [conv-norm],conv-norm,5.694116,0.0,0.0,3
+efficientnetb0,pytorch_cpu,19,features.3.1.block.1,19. features.3.1.block.1 [conv-norm],conv-norm,58.794901,0.0,0.0,3
+efficientnetb0,pytorch_cpu,20,features.3.1.block.2,20. features.3.1.block.2 [conv-act],conv-act,1.6888540000000003,0.0,0.0,5
+efficientnetb0,pytorch_cpu,21,features.3.1.block.3,21. features.3.1.block.3 [conv-norm],conv-norm,4.03779,0.0,0.0,2
+efficientnetb0,pytorch_cpu,22,features.3.1,22. features.3.1 [StochasticDepth],StochasticDepth,0.08784,0.0,0.0,1
+efficientnetb0,pytorch_cpu,23,features.4.0.block.0,23. features.4.0.block.0 [conv-norm],conv-norm,6.059696000000001,0.0,0.0,3
+efficientnetb0,pytorch_cpu,24,features.4.0.block.1,24. features.4.0.block.1 [conv-norm],conv-norm,37.168978,0.0,0.0,3
+efficientnetb0,pytorch_cpu,25,features.4.0.block.2,25. features.4.0.block.2 [conv-act],conv-act,1.205249,0.0,0.0,5
+efficientnetb0,pytorch_cpu,26,features.4.0.block.3,26. features.4.0.block.3 [conv-norm],conv-norm,2.5305500000000003,0.0,0.0,2
+efficientnetb0,pytorch_cpu,27,features.4.1.block.0,27. features.4.1.block.0 [conv-norm],conv-norm,4.644178,0.0,0.0,3
+efficientnetb0,pytorch_cpu,28,features.4.1.block.1,28. features.4.1.block.1 [conv-norm],conv-norm,58.207238000000004,0.0,0.0,3
+efficientnetb0,pytorch_cpu,29,features.4.1.block.2,29. features.4.1.block.2 [conv-act],conv-act,1.439278,0.0,0.0,5
+efficientnetb0,pytorch_cpu,30,features.4.1.block.3,30. features.4.1.block.3 [conv-norm],conv-norm,3.880147,0.0,0.0,2
+efficientnetb0,pytorch_cpu,31,features.4.1,31. features.4.1 [StochasticDepth],StochasticDepth,0.088246,0.0,0.0,1
+efficientnetb0,pytorch_cpu,32,features.4.2.block.0,32. features.4.2.block.0 [conv-norm],conv-norm,4.692119999999999,0.0,0.0,3
+efficientnetb0,pytorch_cpu,33,features.4.2.block.1,33. features.4.2.block.1 [conv-norm],conv-norm,58.987355,0.0,0.0,3
+efficientnetb0,pytorch_cpu,34,features.4.2.block.2,34. features.4.2.block.2 [conv-act],conv-act,1.419346,0.0,0.0,5
+efficientnetb0,pytorch_cpu,35,features.4.2.block.3,35. features.4.2.block.3 [conv-norm],conv-norm,3.862757,0.0,0.0,2
+efficientnetb0,pytorch_cpu,36,features.4.2,36. features.4.2 [StochasticDepth],StochasticDepth,0.079285,0.0,0.0,1
+efficientnetb0,pytorch_cpu,37,features.5.0.block.0,37. features.5.0.block.0 [conv-norm],conv-norm,4.899846,0.0,0.0,3
+efficientnetb0,pytorch_cpu,38,features.5.0.block.1,38. features.5.0.block.1 [conv-norm],conv-norm,71.212719,0.0,0.0,3
+efficientnetb0,pytorch_cpu,39,features.5.0.block.2,39. features.5.0.block.2 [conv-act],conv-act,1.544046,0.0,0.0,5
+efficientnetb0,pytorch_cpu,40,features.5.0.block.3,40. features.5.0.block.3 [conv-norm],conv-norm,4.707526,0.0,0.0,2
+efficientnetb0,pytorch_cpu,41,features.5.1.block.0,41. features.5.1.block.0 [conv-norm],conv-norm,7.724702000000001,0.0,0.0,3
+efficientnetb0,pytorch_cpu,42,features.5.1.block.1,42. features.5.1.block.1 [conv-norm],conv-norm,96.108397,0.0,0.0,3
+efficientnetb0,pytorch_cpu,43,features.5.1.block.2,43. features.5.1.block.2 [conv-act],conv-act,2.0533569999999997,0.0,0.0,5
+efficientnetb0,pytorch_cpu,44,features.5.1.block.3,44. features.5.1.block.3 [conv-norm],conv-norm,6.175801,0.0,0.0,2
+efficientnetb0,pytorch_cpu,45,features.5.1,45. features.5.1 [StochasticDepth],StochasticDepth,0.087154,0.0,0.0,1
+efficientnetb0,pytorch_cpu,46,features.5.2.block.0,46. features.5.2.block.0 [conv-norm],conv-norm,7.9109940000000005,0.0,0.0,3
+efficientnetb0,pytorch_cpu,47,features.5.2.block.1,47. features.5.2.block.1 [conv-norm],conv-norm,97.46397400000001,0.0,0.0,3
+efficientnetb0,pytorch_cpu,48,features.5.2.block.2,48. features.5.2.block.2 [conv-act],conv-act,1.7730499999999998,0.0,0.0,5
+efficientnetb0,pytorch_cpu,49,features.5.2.block.3,49. features.5.2.block.3 [conv-norm],conv-norm,6.0874,0.0,0.0,2
+efficientnetb0,pytorch_cpu,50,features.5.2,50. features.5.2 [StochasticDepth],StochasticDepth,0.08045,0.0,0.0,1
+efficientnetb0,pytorch_cpu,51,features.6.0.block.0,51. features.6.0.block.0 [conv-norm],conv-norm,8.158707,0.0,0.0,3
+efficientnetb0,pytorch_cpu,52,features.6.0.block.1,52. features.6.0.block.1 [conv-norm],conv-norm,87.92162499999999,0.0,0.0,3
+efficientnetb0,pytorch_cpu,53,features.6.0.block.2,53. features.6.0.block.2 [conv-act],conv-act,1.496979,0.0,0.0,5
+efficientnetb0,pytorch_cpu,54,features.6.0.block.3,54. features.6.0.block.3 [conv-norm],conv-norm,3.944523,0.0,0.0,2
+efficientnetb0,pytorch_cpu,55,features.6.1.block.0,55. features.6.1.block.0 [conv-norm],conv-norm,6.129555,0.0,0.0,3
+efficientnetb0,pytorch_cpu,56,features.6.1.block.1,56. features.6.1.block.1 [conv-norm],conv-norm,128.193256,0.0,0.0,3
+efficientnetb0,pytorch_cpu,57,features.6.1.block.2,57. features.6.1.block.2 [conv-act],conv-act,2.044938,0.0,0.0,5
+efficientnetb0,pytorch_cpu,58,features.6.1.block.3,58. features.6.1.block.3 [conv-norm],conv-norm,5.692027,0.0,0.0,2
+efficientnetb0,pytorch_cpu,59,features.6.1,59. features.6.1 [StochasticDepth],StochasticDepth,0.08218,0.0,0.0,1
+efficientnetb0,pytorch_cpu,60,features.6.2.block.0,60. features.6.2.block.0 [conv-norm],conv-norm,6.037133,0.0,0.0,3
+efficientnetb0,pytorch_cpu,61,features.6.2.block.1,61. features.6.2.block.1 [conv-norm],conv-norm,124.58908500000001,0.0,0.0,3
+efficientnetb0,pytorch_cpu,62,features.6.2.block.2,62. features.6.2.block.2 [conv-act],conv-act,1.6920350000000002,0.0,0.0,5
+efficientnetb0,pytorch_cpu,63,features.6.2.block.3,63. features.6.2.block.3 [conv-norm],conv-norm,5.612451999999999,0.0,0.0,2
+efficientnetb0,pytorch_cpu,64,features.6.2,64. features.6.2 [StochasticDepth],StochasticDepth,0.09213,0.0,0.0,1
+efficientnetb0,pytorch_cpu,65,features.6.3.block.0,65. features.6.3.block.0 [conv-norm],conv-norm,5.986356000000001,0.0,0.0,3
+efficientnetb0,pytorch_cpu,66,features.6.3.block.1,66. features.6.3.block.1 [conv-norm],conv-norm,124.687039,0.0,0.0,3
+efficientnetb0,pytorch_cpu,67,features.6.3.block.2,67. features.6.3.block.2 [conv-act],conv-act,1.847774,0.0,0.0,5
+efficientnetb0,pytorch_cpu,68,features.6.3.block.3,68. features.6.3.block.3 [conv-norm],conv-norm,5.387355,0.0,0.0,2
+efficientnetb0,pytorch_cpu,69,features.6.3,69. features.6.3 [StochasticDepth],StochasticDepth,0.083173,0.0,0.0,1
+efficientnetb0,pytorch_cpu,70,features.7.0.block.0,70. features.7.0.block.0 [conv-norm],conv-norm,5.92317,0.0,0.0,3
+efficientnetb0,pytorch_cpu,71,features.7.0.block.1,71. features.7.0.block.1 [conv-norm],conv-norm,113.207553,0.0,0.0,3
+efficientnetb0,pytorch_cpu,72,features.7.0.block.2,72. features.7.0.block.2 [conv-act],conv-act,1.931966,0.0,0.0,5
+efficientnetb0,pytorch_cpu,73,features.7.0.block.3,73. features.7.0.block.3 [conv-norm],conv-norm,8.595737,0.0,0.0,2
+efficientnetb0,pytorch_cpu,74,features.8,74. features.8 [conv-norm],conv-norm,11.144204,0.0,0.0,3
+efficientnetb0,pytorch_cpu,75,avgpool,75. avgpool [pool],pool,0.532235,0.0,0.0,1
+efficientnetb0,pytorch_cpu,76,classifier,76. classifier [fc-Dropout],fc-Dropout,5.118005,0.0,0.0,2
+efficientnetb0,pytorch_cuda,1,features.0,01. features.0 [conv-norm],conv-norm,2.0880780000000003,0.0,0.0,3
+efficientnetb0,pytorch_cuda,2,features.1.0.block.0,02. features.1.0.block.0 [conv-norm],conv-norm,2.697257,0.0,0.0,3
+efficientnetb0,pytorch_cuda,3,features.1.0.block.1,03. features.1.0.block.1 [conv-act],conv-act,2.1574180000000003,0.0,0.0,5
+efficientnetb0,pytorch_cuda,4,features.1.0.block.2,04. features.1.0.block.2 [conv-norm],conv-norm,1.50549,0.0,0.0,2
+efficientnetb0,pytorch_cuda,5,features.2.0.block.0,05. features.2.0.block.0 [conv-norm],conv-norm,3.606305,0.0,0.0,3
+efficientnetb0,pytorch_cuda,6,features.2.0.block.1,06. features.2.0.block.1 [conv-norm],conv-norm,2.212815,0.0,0.0,3
+efficientnetb0,pytorch_cuda,7,features.2.0.block.2,07. features.2.0.block.2 [conv-act],conv-act,2.076182,0.0,0.0,5
+efficientnetb0,pytorch_cuda,8,features.2.0.block.3,08. features.2.0.block.3 [conv-norm],conv-norm,1.159201,0.0,0.0,2
+efficientnetb0,pytorch_cuda,9,features.2.1.block.0,09. features.2.1.block.0 [conv-norm],conv-norm,2.3031520000000003,0.0,0.0,3
+efficientnetb0,pytorch_cuda,10,features.2.1.block.1,10. features.2.1.block.1 [conv-norm],conv-norm,2.960877,0.0,0.0,3
+efficientnetb0,pytorch_cuda,11,features.2.1.block.2,11. features.2.1.block.2 [conv-act],conv-act,2.126559,0.0,0.0,5
+efficientnetb0,pytorch_cuda,12,features.2.1.block.3,12. features.2.1.block.3 [conv-norm],conv-norm,1.30779,0.0,0.0,2
+efficientnetb0,pytorch_cuda,13,features.2.1,13. features.2.1 [StochasticDepth],StochasticDepth,0.142706,0.0,0.0,1
+efficientnetb0,pytorch_cuda,14,features.3.0.block.0,14. features.3.0.block.0 [conv-norm],conv-norm,2.302991,0.0,0.0,3
+efficientnetb0,pytorch_cuda,15,features.3.0.block.1,15. features.3.0.block.1 [conv-norm],conv-norm,1.872068,0.0,0.0,3
+efficientnetb0,pytorch_cuda,16,features.3.0.block.2,16. features.3.0.block.2 [conv-act],conv-act,2.1171580000000003,0.0,0.0,5
+efficientnetb0,pytorch_cuda,17,features.3.0.block.3,17. features.3.0.block.3 [conv-norm],conv-norm,1.042483,0.0,0.0,2
+efficientnetb0,pytorch_cuda,18,features.3.1.block.0,18. features.3.1.block.0 [conv-norm],conv-norm,1.497449,0.0,0.0,3
+efficientnetb0,pytorch_cuda,19,features.3.1.block.1,19. features.3.1.block.1 [conv-norm],conv-norm,2.5345990000000005,0.0,0.0,3
+efficientnetb0,pytorch_cuda,20,features.3.1.block.2,20. features.3.1.block.2 [conv-act],conv-act,2.157327,0.0,0.0,5
+efficientnetb0,pytorch_cuda,21,features.3.1.block.3,21. features.3.1.block.3 [conv-norm],conv-norm,1.194899,0.0,0.0,2
+efficientnetb0,pytorch_cuda,22,features.3.1,22. features.3.1 [StochasticDepth],StochasticDepth,0.141157,0.0,0.0,1
+efficientnetb0,pytorch_cuda,23,features.4.0.block.0,23. features.4.0.block.0 [conv-norm],conv-norm,1.542376,0.0,0.0,3
+efficientnetb0,pytorch_cuda,24,features.4.0.block.1,24. features.4.0.block.1 [conv-norm],conv-norm,1.0639539999999998,0.0,0.0,3
+efficientnetb0,pytorch_cuda,25,features.4.0.block.2,25. features.4.0.block.2 [conv-act],conv-act,2.1398889999999997,0.0,0.0,5
+efficientnetb0,pytorch_cuda,26,features.4.0.block.3,26. features.4.0.block.3 [conv-norm],conv-norm,0.9542980000000001,0.0,0.0,2
+efficientnetb0,pytorch_cuda,27,features.4.1.block.0,27. features.4.1.block.0 [conv-norm],conv-norm,1.366346,0.0,0.0,3
+efficientnetb0,pytorch_cuda,28,features.4.1.block.1,28. features.4.1.block.1 [conv-norm],conv-norm,1.213699,0.0,0.0,3
+efficientnetb0,pytorch_cuda,29,features.4.1.block.2,29. features.4.1.block.2 [conv-act],conv-act,2.113626,0.0,0.0,5
+efficientnetb0,pytorch_cuda,30,features.4.1.block.3,30. features.4.1.block.3 [conv-norm],conv-norm,1.138786,0.0,0.0,2
+efficientnetb0,pytorch_cuda,31,features.4.1,31. features.4.1 [StochasticDepth],StochasticDepth,0.138129,0.0,0.0,1
+efficientnetb0,pytorch_cuda,32,features.4.2.block.0,32. features.4.2.block.0 [conv-norm],conv-norm,1.38182,0.0,0.0,3
+efficientnetb0,pytorch_cuda,33,features.4.2.block.1,33. features.4.2.block.1 [conv-norm],conv-norm,1.223638,0.0,0.0,3
+efficientnetb0,pytorch_cuda,34,features.4.2.block.2,34. features.4.2.block.2 [conv-act],conv-act,2.100996,0.0,0.0,5
+efficientnetb0,pytorch_cuda,35,features.4.2.block.3,35. features.4.2.block.3 [conv-norm],conv-norm,1.151932,0.0,0.0,2
+efficientnetb0,pytorch_cuda,36,features.4.2,36. features.4.2 [StochasticDepth],StochasticDepth,0.134055,0.0,0.0,1
+efficientnetb0,pytorch_cuda,37,features.5.0.block.0,37. features.5.0.block.0 [conv-norm],conv-norm,1.3937739999999998,0.0,0.0,3
+efficientnetb0,pytorch_cuda,38,features.5.0.block.1,38. features.5.0.block.1 [conv-norm],conv-norm,1.676148,0.0,0.0,3
+efficientnetb0,pytorch_cuda,39,features.5.0.block.2,39. features.5.0.block.2 [conv-act],conv-act,2.1139170000000003,0.0,0.0,5
+efficientnetb0,pytorch_cuda,40,features.5.0.block.3,40. features.5.0.block.3 [conv-norm],conv-norm,1.214372,0.0,0.0,2
+efficientnetb0,pytorch_cuda,41,features.5.1.block.0,41. features.5.1.block.0 [conv-norm],conv-norm,1.590125,0.0,0.0,3
+efficientnetb0,pytorch_cuda,42,features.5.1.block.1,42. features.5.1.block.1 [conv-norm],conv-norm,1.9877850000000001,0.0,0.0,3
+efficientnetb0,pytorch_cuda,43,features.5.1.block.2,43. features.5.1.block.2 [conv-act],conv-act,2.100887,0.0,0.0,5
+efficientnetb0,pytorch_cuda,44,features.5.1.block.3,44. features.5.1.block.3 [conv-norm],conv-norm,1.361928,0.0,0.0,2
+efficientnetb0,pytorch_cuda,45,features.5.1,45. features.5.1 [StochasticDepth],StochasticDepth,0.138599,0.0,0.0,1
+efficientnetb0,pytorch_cuda,46,features.5.2.block.0,46. features.5.2.block.0 [conv-norm],conv-norm,1.654355,0.0,0.0,3
+efficientnetb0,pytorch_cuda,47,features.5.2.block.1,47. features.5.2.block.1 [conv-norm],conv-norm,1.9985270000000002,0.0,0.0,3
+efficientnetb0,pytorch_cuda,48,features.5.2.block.2,48. features.5.2.block.2 [conv-act],conv-act,2.123342,0.0,0.0,5
+efficientnetb0,pytorch_cuda,49,features.5.2.block.3,49. features.5.2.block.3 [conv-norm],conv-norm,1.378164,0.0,0.0,2
+efficientnetb0,pytorch_cuda,50,features.5.2,50. features.5.2 [StochasticDepth],StochasticDepth,0.134295,0.0,0.0,1
+efficientnetb0,pytorch_cuda,51,features.6.0.block.0,51. features.6.0.block.0 [conv-norm],conv-norm,1.6179510000000001,0.0,0.0,3
+efficientnetb0,pytorch_cuda,52,features.6.0.block.1,52. features.6.0.block.1 [conv-norm],conv-norm,1.250949,0.0,0.0,3
+efficientnetb0,pytorch_cuda,53,features.6.0.block.2,53. features.6.0.block.2 [conv-act],conv-act,2.123836,0.0,0.0,5
+efficientnetb0,pytorch_cuda,54,features.6.0.block.3,54. features.6.0.block.3 [conv-norm],conv-norm,1.082873,0.0,0.0,2
+efficientnetb0,pytorch_cuda,55,features.6.1.block.0,55. features.6.1.block.0 [conv-norm],conv-norm,1.4937900000000002,0.0,0.0,3
+efficientnetb0,pytorch_cuda,56,features.6.1.block.1,56. features.6.1.block.1 [conv-norm],conv-norm,1.351896,0.0,0.0,3
+efficientnetb0,pytorch_cuda,57,features.6.1.block.2,57. features.6.1.block.2 [conv-act],conv-act,2.111134,0.0,0.0,5
+efficientnetb0,pytorch_cuda,58,features.6.1.block.3,58. features.6.1.block.3 [conv-norm],conv-norm,1.231656,0.0,0.0,2
+efficientnetb0,pytorch_cuda,59,features.6.1,59. features.6.1 [StochasticDepth],StochasticDepth,0.136899,0.0,0.0,1
+efficientnetb0,pytorch_cuda,60,features.6.2.block.0,60. features.6.2.block.0 [conv-norm],conv-norm,1.488267,0.0,0.0,3
+efficientnetb0,pytorch_cuda,61,features.6.2.block.1,61. features.6.2.block.1 [conv-norm],conv-norm,1.352965,0.0,0.0,3
+efficientnetb0,pytorch_cuda,62,features.6.2.block.2,62. features.6.2.block.2 [conv-act],conv-act,2.086875,0.0,0.0,5
+efficientnetb0,pytorch_cuda,63,features.6.2.block.3,63. features.6.2.block.3 [conv-norm],conv-norm,1.229823,0.0,0.0,2
+efficientnetb0,pytorch_cuda,64,features.6.2,64. features.6.2 [StochasticDepth],StochasticDepth,0.134959,0.0,0.0,1
+efficientnetb0,pytorch_cuda,65,features.6.3.block.0,65. features.6.3.block.0 [conv-norm],conv-norm,1.491713,0.0,0.0,3
+efficientnetb0,pytorch_cuda,66,features.6.3.block.1,66. features.6.3.block.1 [conv-norm],conv-norm,1.3728580000000001,0.0,0.0,3
+efficientnetb0,pytorch_cuda,67,features.6.3.block.2,67. features.6.3.block.2 [conv-act],conv-act,2.082988,0.0,0.0,5
+efficientnetb0,pytorch_cuda,68,features.6.3.block.3,68. features.6.3.block.3 [conv-norm],conv-norm,1.226479,0.0,0.0,2
+efficientnetb0,pytorch_cuda,69,features.6.3,69. features.6.3 [StochasticDepth],StochasticDepth,0.136184,0.0,0.0,1
+efficientnetb0,pytorch_cuda,70,features.7.0.block.0,70. features.7.0.block.0 [conv-norm],conv-norm,1.4884709999999999,0.0,0.0,3
+efficientnetb0,pytorch_cuda,71,features.7.0.block.1,71. features.7.0.block.1 [conv-norm],conv-norm,1.073515,0.0,0.0,3
+efficientnetb0,pytorch_cuda,72,features.7.0.block.2,72. features.7.0.block.2 [conv-act],conv-act,2.076488,0.0,0.0,5
+efficientnetb0,pytorch_cuda,73,features.7.0.block.3,73. features.7.0.block.3 [conv-norm],conv-norm,1.5035370000000001,0.0,0.0,2
+efficientnetb0,pytorch_cuda,74,features.8,74. features.8 [conv-norm],conv-norm,1.7908769999999998,0.0,0.0,3
+efficientnetb0,pytorch_cuda,75,avgpool,75. avgpool [pool],pool,0.342241,0.0,0.0,1
+efficientnetb0,pytorch_cuda,76,classifier,76. classifier [fc-Dropout],fc-Dropout,0.9275439999999999,0.0,0.0,2
+efficientnetb0,tensorrt_fp16,1,TensorRT layer 001,001. TensorRT layer 001 [TensorRTLayer],TensorRTLayer,1.9,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,2,TensorRT layer 002,002. TensorRT layer 002 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,3,TensorRT layer 003,003. TensorRT layer 003 [TensorRTLayer],TensorRTLayer,2.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,4,TensorRT layer 004,004. TensorRT layer 004 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,5,TensorRT layer 005,005. TensorRT layer 005 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,6,TensorRT layer 006,006. TensorRT layer 006 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,7,TensorRT layer 007,007. TensorRT layer 007 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,8,TensorRT layer 008,008. TensorRT layer 008 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,9,TensorRT layer 009,009. TensorRT layer 009 [TensorRTLayer],TensorRTLayer,3.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,10,TensorRT layer 010,010. TensorRT layer 010 [TensorRTLayer],TensorRTLayer,2.8,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,11,TensorRT layer 011,011. TensorRT layer 011 [TensorRTLayer],TensorRTLayer,3.7,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,12,TensorRT layer 012,012. TensorRT layer 012 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,13,TensorRT layer 013,013. TensorRT layer 013 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,14,TensorRT layer 014,014. TensorRT layer 014 [TensorRTLayer],TensorRTLayer,1.8,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,15,TensorRT layer 015,015. TensorRT layer 015 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,16,TensorRT layer 016,016. TensorRT layer 016 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,17,TensorRT layer 017,017. TensorRT layer 017 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,18,TensorRT layer 018,018. TensorRT layer 018 [TensorRTLayer],TensorRTLayer,2.4,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,19,TensorRT layer 019,019. TensorRT layer 019 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,20,TensorRT layer 020,020. TensorRT layer 020 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,21,TensorRT layer 021,021. TensorRT layer 021 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,22,TensorRT layer 022,022. TensorRT layer 022 [TensorRTLayer],TensorRTLayer,2.6,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,23,TensorRT layer 023,023. TensorRT layer 023 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,24,TensorRT layer 024,024. TensorRT layer 024 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,25,TensorRT layer 025,025. TensorRT layer 025 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,26,TensorRT layer 026,026. TensorRT layer 026 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,27,TensorRT layer 027,027. TensorRT layer 027 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,28,TensorRT layer 028,028. TensorRT layer 028 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,29,TensorRT layer 029,029. TensorRT layer 029 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,30,TensorRT layer 030,030. TensorRT layer 030 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,31,TensorRT layer 031,031. TensorRT layer 031 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,32,TensorRT layer 032,032. TensorRT layer 032 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,33,TensorRT layer 033,033. TensorRT layer 033 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,34,TensorRT layer 034,034. TensorRT layer 034 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,35,TensorRT layer 035,035. TensorRT layer 035 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,36,TensorRT layer 036,036. TensorRT layer 036 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,37,TensorRT layer 037,037. TensorRT layer 037 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,38,TensorRT layer 038,038. TensorRT layer 038 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,39,TensorRT layer 039,039. TensorRT layer 039 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,40,TensorRT layer 040,040. TensorRT layer 040 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,41,TensorRT layer 041,041. TensorRT layer 041 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,42,TensorRT layer 042,042. TensorRT layer 042 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,43,TensorRT layer 043,043. TensorRT layer 043 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,44,TensorRT layer 044,044. TensorRT layer 044 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,45,TensorRT layer 045,045. TensorRT layer 045 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,46,TensorRT layer 046,046. TensorRT layer 046 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,47,TensorRT layer 047,047. TensorRT layer 047 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,48,TensorRT layer 048,048. TensorRT layer 048 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,49,TensorRT layer 049,049. TensorRT layer 049 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,50,TensorRT layer 050,050. TensorRT layer 050 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,51,TensorRT layer 051,051. TensorRT layer 051 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,52,TensorRT layer 052,052. TensorRT layer 052 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,53,TensorRT layer 053,053. TensorRT layer 053 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,54,TensorRT layer 054,054. TensorRT layer 054 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,55,TensorRT layer 055,055. TensorRT layer 055 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,56,TensorRT layer 056,056. TensorRT layer 056 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,57,TensorRT layer 057,057. TensorRT layer 057 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,58,TensorRT layer 058,058. TensorRT layer 058 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,59,TensorRT layer 059,059. TensorRT layer 059 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,60,TensorRT layer 060,060. TensorRT layer 060 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,61,TensorRT layer 061,061. TensorRT layer 061 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,62,TensorRT layer 062,062. TensorRT layer 062 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,63,TensorRT layer 063,063. TensorRT layer 063 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,64,TensorRT layer 064,064. TensorRT layer 064 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,65,TensorRT layer 065,065. TensorRT layer 065 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,66,TensorRT layer 066,066. TensorRT layer 066 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,67,TensorRT layer 067,067. TensorRT layer 067 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,68,TensorRT layer 068,068. TensorRT layer 068 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,69,TensorRT layer 069,069. TensorRT layer 069 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,70,TensorRT layer 070,070. TensorRT layer 070 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,71,TensorRT layer 071,071. TensorRT layer 071 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,72,TensorRT layer 072,072. TensorRT layer 072 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,73,TensorRT layer 073,073. TensorRT layer 073 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,74,TensorRT layer 074,074. TensorRT layer 074 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,75,TensorRT layer 075,075. TensorRT layer 075 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,76,TensorRT layer 076,076. TensorRT layer 076 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,77,TensorRT layer 077,077. TensorRT layer 077 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,78,TensorRT layer 078,078. TensorRT layer 078 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,79,TensorRT layer 079,079. TensorRT layer 079 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,80,TensorRT layer 080,080. TensorRT layer 080 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,81,TensorRT layer 081,081. TensorRT layer 081 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,82,TensorRT layer 082,082. TensorRT layer 082 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,83,TensorRT layer 083,083. TensorRT layer 083 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,84,TensorRT layer 084,084. TensorRT layer 084 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,85,TensorRT layer 085,085. TensorRT layer 085 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,86,TensorRT layer 086,086. TensorRT layer 086 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,87,TensorRT layer 087,087. TensorRT layer 087 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,88,TensorRT layer 088,088. TensorRT layer 088 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,89,TensorRT layer 089,089. TensorRT layer 089 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,90,TensorRT layer 090,090. TensorRT layer 090 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,91,TensorRT layer 091,091. TensorRT layer 091 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,92,TensorRT layer 092,092. TensorRT layer 092 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,93,TensorRT layer 093,093. TensorRT layer 093 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,94,TensorRT layer 094,094. TensorRT layer 094 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,95,TensorRT layer 095,095. TensorRT layer 095 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,96,TensorRT layer 096,096. TensorRT layer 096 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,97,TensorRT layer 097,097. TensorRT layer 097 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,98,TensorRT layer 098,098. TensorRT layer 098 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,99,TensorRT layer 099,099. TensorRT layer 099 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,100,TensorRT layer 100,100. TensorRT layer 100 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,101,TensorRT layer 101,101. TensorRT layer 101 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,102,TensorRT layer 102,102. TensorRT layer 102 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,103,TensorRT layer 103,103. TensorRT layer 103 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,104,TensorRT layer 104,104. TensorRT layer 104 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,105,TensorRT layer 105,105. TensorRT layer 105 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,106,TensorRT layer 106,106. TensorRT layer 106 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,107,TensorRT layer 107,107. TensorRT layer 107 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,108,TensorRT layer 108,108. TensorRT layer 108 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,109,TensorRT layer 109,109. TensorRT layer 109 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,110,TensorRT layer 110,110. TensorRT layer 110 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,111,TensorRT layer 111,111. TensorRT layer 111 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,112,TensorRT layer 112,112. TensorRT layer 112 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,113,TensorRT layer 113,113. TensorRT layer 113 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,114,TensorRT layer 114,114. TensorRT layer 114 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,115,TensorRT layer 115,115. TensorRT layer 115 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,116,TensorRT layer 116,116. TensorRT layer 116 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,117,TensorRT layer 117,117. TensorRT layer 117 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,118,TensorRT layer 118,118. TensorRT layer 118 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,119,TensorRT layer 119,119. TensorRT layer 119 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,120,TensorRT layer 120,120. TensorRT layer 120 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,121,TensorRT layer 121,121. TensorRT layer 121 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,122,TensorRT layer 122,122. TensorRT layer 122 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,123,TensorRT layer 123,123. TensorRT layer 123 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,124,TensorRT layer 124,124. TensorRT layer 124 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,125,TensorRT layer 125,125. TensorRT layer 125 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,126,TensorRT layer 126,126. TensorRT layer 126 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,127,TensorRT layer 127,127. TensorRT layer 127 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,128,TensorRT layer 128,128. TensorRT layer 128 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,129,TensorRT layer 129,129. TensorRT layer 129 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,130,TensorRT layer 130,130. TensorRT layer 130 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,131,TensorRT layer 131,131. TensorRT layer 131 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,132,TensorRT layer 132,132. TensorRT layer 132 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,133,TensorRT layer 133,133. TensorRT layer 133 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,134,TensorRT layer 134,134. TensorRT layer 134 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,135,TensorRT layer 135,135. TensorRT layer 135 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,136,TensorRT layer 136,136. TensorRT layer 136 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,137,TensorRT layer 137,137. TensorRT layer 137 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,138,TensorRT layer 138,138. TensorRT layer 138 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,139,TensorRT layer 139,139. TensorRT layer 139 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,140,TensorRT layer 140,140. TensorRT layer 140 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,141,TensorRT layer 141,141. TensorRT layer 141 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,142,TensorRT layer 142,142. TensorRT layer 142 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,143,TensorRT layer 143,143. TensorRT layer 143 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,144,TensorRT layer 144,144. TensorRT layer 144 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,145,TensorRT layer 145,145. TensorRT layer 145 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,146,TensorRT layer 146,146. TensorRT layer 146 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,147,TensorRT layer 147,147. TensorRT layer 147 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,148,TensorRT layer 148,148. TensorRT layer 148 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,149,TensorRT layer 149,149. TensorRT layer 149 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,150,TensorRT layer 150,150. TensorRT layer 150 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,151,TensorRT layer 151,151. TensorRT layer 151 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,152,TensorRT layer 152,152. TensorRT layer 152 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,153,TensorRT layer 153,153. TensorRT layer 153 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,154,TensorRT layer 154,154. TensorRT layer 154 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,155,TensorRT layer 155,155. TensorRT layer 155 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,156,TensorRT layer 156,156. TensorRT layer 156 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,157,TensorRT layer 157,157. TensorRT layer 157 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,158,TensorRT layer 158,158. TensorRT layer 158 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,159,TensorRT layer 159,159. TensorRT layer 159 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,160,TensorRT layer 160,160. TensorRT layer 160 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,161,TensorRT layer 161,161. TensorRT layer 161 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,162,TensorRT layer 162,162. TensorRT layer 162 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,163,TensorRT layer 163,163. TensorRT layer 163 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,164,TensorRT layer 164,164. TensorRT layer 164 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,165,TensorRT layer 165,165. TensorRT layer 165 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,166,TensorRT layer 166,166. TensorRT layer 166 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,167,TensorRT layer 167,167. TensorRT layer 167 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,168,TensorRT layer 168,168. TensorRT layer 168 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,169,TensorRT layer 169,169. TensorRT layer 169 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,170,TensorRT layer 170,170. TensorRT layer 170 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,171,TensorRT layer 171,171. TensorRT layer 171 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
+efficientnetb0,tensorrt_fp16,172,TensorRT layer 172,172. TensorRT layer 172 [TensorRTLayer],TensorRTLayer,100.0,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,1,TensorRT layer 001,001. TensorRT layer 001 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,2,TensorRT layer 002,002. TensorRT layer 002 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,3,TensorRT layer 003,003. TensorRT layer 003 [TensorRTLayer],TensorRTLayer,1.8,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,4,TensorRT layer 004,004. TensorRT layer 004 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,5,TensorRT layer 005,005. TensorRT layer 005 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,6,TensorRT layer 006,006. TensorRT layer 006 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,7,TensorRT layer 007,007. TensorRT layer 007 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,8,TensorRT layer 008,008. TensorRT layer 008 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,9,TensorRT layer 009,009. TensorRT layer 009 [TensorRTLayer],TensorRTLayer,2.6,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,10,TensorRT layer 010,010. TensorRT layer 010 [TensorRTLayer],TensorRTLayer,2.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,11,TensorRT layer 011,011. TensorRT layer 011 [TensorRTLayer],TensorRTLayer,3.0,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,12,TensorRT layer 012,012. TensorRT layer 012 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,13,TensorRT layer 013,013. TensorRT layer 013 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,14,TensorRT layer 014,014. TensorRT layer 014 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,15,TensorRT layer 015,015. TensorRT layer 015 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,16,TensorRT layer 016,016. TensorRT layer 016 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,17,TensorRT layer 017,017. TensorRT layer 017 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,18,TensorRT layer 018,018. TensorRT layer 018 [TensorRTLayer],TensorRTLayer,1.9,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,19,TensorRT layer 019,019. TensorRT layer 019 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,20,TensorRT layer 020,020. TensorRT layer 020 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,21,TensorRT layer 021,021. TensorRT layer 021 [TensorRTLayer],TensorRTLayer,2.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,22,TensorRT layer 022,022. TensorRT layer 022 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,23,TensorRT layer 023,023. TensorRT layer 023 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,24,TensorRT layer 024,024. TensorRT layer 024 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,25,TensorRT layer 025,025. TensorRT layer 025 [TensorRTLayer],TensorRTLayer,2.8,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,26,TensorRT layer 026,026. TensorRT layer 026 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,27,TensorRT layer 027,027. TensorRT layer 027 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,28,TensorRT layer 028,028. TensorRT layer 028 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,29,TensorRT layer 029,029. TensorRT layer 029 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,30,TensorRT layer 030,030. TensorRT layer 030 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,31,TensorRT layer 031,031. TensorRT layer 031 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,32,TensorRT layer 032,032. TensorRT layer 032 [TensorRTLayer],TensorRTLayer,3.5,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,33,TensorRT layer 033,033. TensorRT layer 033 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,34,TensorRT layer 034,034. TensorRT layer 034 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,35,TensorRT layer 035,035. TensorRT layer 035 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,36,TensorRT layer 036,036. TensorRT layer 036 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,37,TensorRT layer 037,037. TensorRT layer 037 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,38,TensorRT layer 038,038. TensorRT layer 038 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,39,TensorRT layer 039,039. TensorRT layer 039 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,40,TensorRT layer 040,040. TensorRT layer 040 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,41,TensorRT layer 041,041. TensorRT layer 041 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,42,TensorRT layer 042,042. TensorRT layer 042 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,43,TensorRT layer 043,043. TensorRT layer 043 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,44,TensorRT layer 044,044. TensorRT layer 044 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,45,TensorRT layer 045,045. TensorRT layer 045 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,46,TensorRT layer 046,046. TensorRT layer 046 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,47,TensorRT layer 047,047. TensorRT layer 047 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,48,TensorRT layer 048,048. TensorRT layer 048 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,49,TensorRT layer 049,049. TensorRT layer 049 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,50,TensorRT layer 050,050. TensorRT layer 050 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,51,TensorRT layer 051,051. TensorRT layer 051 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,52,TensorRT layer 052,052. TensorRT layer 052 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,53,TensorRT layer 053,053. TensorRT layer 053 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,54,TensorRT layer 054,054. TensorRT layer 054 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,55,TensorRT layer 055,055. TensorRT layer 055 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,56,TensorRT layer 056,056. TensorRT layer 056 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,57,TensorRT layer 057,057. TensorRT layer 057 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,58,TensorRT layer 058,058. TensorRT layer 058 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,59,TensorRT layer 059,059. TensorRT layer 059 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,60,TensorRT layer 060,060. TensorRT layer 060 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,61,TensorRT layer 061,061. TensorRT layer 061 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,62,TensorRT layer 062,062. TensorRT layer 062 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,63,TensorRT layer 063,063. TensorRT layer 063 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,64,TensorRT layer 064,064. TensorRT layer 064 [TensorRTLayer],TensorRTLayer,2.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,65,TensorRT layer 065,065. TensorRT layer 065 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,66,TensorRT layer 066,066. TensorRT layer 066 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,67,TensorRT layer 067,067. TensorRT layer 067 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,68,TensorRT layer 068,068. TensorRT layer 068 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,69,TensorRT layer 069,069. TensorRT layer 069 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,70,TensorRT layer 070,070. TensorRT layer 070 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,71,TensorRT layer 071,071. TensorRT layer 071 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,72,TensorRT layer 072,072. TensorRT layer 072 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,73,TensorRT layer 073,073. TensorRT layer 073 [TensorRTLayer],TensorRTLayer,3.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,74,TensorRT layer 074,074. TensorRT layer 074 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,75,TensorRT layer 075,075. TensorRT layer 075 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,76,TensorRT layer 076,076. TensorRT layer 076 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,77,TensorRT layer 077,077. TensorRT layer 077 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,78,TensorRT layer 078,078. TensorRT layer 078 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,79,TensorRT layer 079,079. TensorRT layer 079 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,80,TensorRT layer 080,080. TensorRT layer 080 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,81,TensorRT layer 081,081. TensorRT layer 081 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,82,TensorRT layer 082,082. TensorRT layer 082 [TensorRTLayer],TensorRTLayer,3.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,83,TensorRT layer 083,083. TensorRT layer 083 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,84,TensorRT layer 084,084. TensorRT layer 084 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,85,TensorRT layer 085,085. TensorRT layer 085 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,86,TensorRT layer 086,086. TensorRT layer 086 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,87,TensorRT layer 087,087. TensorRT layer 087 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,88,TensorRT layer 088,088. TensorRT layer 088 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,89,TensorRT layer 089,089. TensorRT layer 089 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,90,TensorRT layer 090,090. TensorRT layer 090 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,91,TensorRT layer 091,091. TensorRT layer 091 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,92,TensorRT layer 092,092. TensorRT layer 092 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,93,TensorRT layer 093,093. TensorRT layer 093 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,94,TensorRT layer 094,094. TensorRT layer 094 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,95,TensorRT layer 095,095. TensorRT layer 095 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,96,TensorRT layer 096,096. TensorRT layer 096 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,97,TensorRT layer 097,097. TensorRT layer 097 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,98,TensorRT layer 098,098. TensorRT layer 098 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,99,TensorRT layer 099,099. TensorRT layer 099 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,100,TensorRT layer 100,100. TensorRT layer 100 [TensorRTLayer],TensorRTLayer,2.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,101,TensorRT layer 101,101. TensorRT layer 101 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,102,TensorRT layer 102,102. TensorRT layer 102 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,103,TensorRT layer 103,103. TensorRT layer 103 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,104,TensorRT layer 104,104. TensorRT layer 104 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,105,TensorRT layer 105,105. TensorRT layer 105 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,106,TensorRT layer 106,106. TensorRT layer 106 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,107,TensorRT layer 107,107. TensorRT layer 107 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,108,TensorRT layer 108,108. TensorRT layer 108 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,109,TensorRT layer 109,109. TensorRT layer 109 [TensorRTLayer],TensorRTLayer,2.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,110,TensorRT layer 110,110. TensorRT layer 110 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,111,TensorRT layer 111,111. TensorRT layer 111 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,112,TensorRT layer 112,112. TensorRT layer 112 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,113,TensorRT layer 113,113. TensorRT layer 113 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,114,TensorRT layer 114,114. TensorRT layer 114 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,115,TensorRT layer 115,115. TensorRT layer 115 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,116,TensorRT layer 116,116. TensorRT layer 116 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,117,TensorRT layer 117,117. TensorRT layer 117 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,118,TensorRT layer 118,118. TensorRT layer 118 [TensorRTLayer],TensorRTLayer,2.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,119,TensorRT layer 119,119. TensorRT layer 119 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,120,TensorRT layer 120,120. TensorRT layer 120 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,121,TensorRT layer 121,121. TensorRT layer 121 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,122,TensorRT layer 122,122. TensorRT layer 122 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,123,TensorRT layer 123,123. TensorRT layer 123 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,124,TensorRT layer 124,124. TensorRT layer 124 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,125,TensorRT layer 125,125. TensorRT layer 125 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,126,TensorRT layer 126,126. TensorRT layer 126 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,127,TensorRT layer 127,127. TensorRT layer 127 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,128,TensorRT layer 128,128. TensorRT layer 128 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,129,TensorRT layer 129,129. TensorRT layer 129 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,130,TensorRT layer 130,130. TensorRT layer 130 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,131,TensorRT layer 131,131. TensorRT layer 131 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,132,TensorRT layer 132,132. TensorRT layer 132 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,133,TensorRT layer 133,133. TensorRT layer 133 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,134,TensorRT layer 134,134. TensorRT layer 134 [TensorRTLayer],TensorRTLayer,2.2,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,135,TensorRT layer 135,135. TensorRT layer 135 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,136,TensorRT layer 136,136. TensorRT layer 136 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,137,TensorRT layer 137,137. TensorRT layer 137 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1
+efficientnetb0,tensorrt_fp32,138,TensorRT layer 138,138. TensorRT layer 138 [TensorRTLayer],TensorRTLayer,100.0,0.0,0.0,1
+efficientnetb0,tensorrt_int8,1,TensorRT layer 001,001. TensorRT layer 001 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1
+efficientnetb0,tensorrt_int8,2,TensorRT layer 002,002. TensorRT layer 002 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
+efficientnetb0,tensorrt_int8,3,TensorRT layer 003,003. TensorRT layer 003 [TensorRTLayer],TensorRTLayer,1.8,0.0,0.0,1
+efficientnetb0,tensorrt_int8,4,TensorRT layer 004,004. TensorRT layer 004 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
+efficientnetb0,tensorrt_int8,5,TensorRT layer 005,005. TensorRT layer 005 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
+efficientnetb0,tensorrt_int8,6,TensorRT layer 006,006. TensorRT layer 006 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,7,TensorRT layer 007,007. TensorRT layer 007 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
+efficientnetb0,tensorrt_int8,8,TensorRT layer 008,008. TensorRT layer 008 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+efficientnetb0,tensorrt_int8,9,TensorRT layer 009,009. TensorRT layer 009 [TensorRTLayer],TensorRTLayer,2.6,0.0,0.0,1
+efficientnetb0,tensorrt_int8,10,TensorRT layer 010,010. TensorRT layer 010 [TensorRTLayer],TensorRTLayer,2.3,0.0,0.0,1
+efficientnetb0,tensorrt_int8,11,TensorRT layer 011,011. TensorRT layer 011 [TensorRTLayer],TensorRTLayer,3.0,0.0,0.0,1
+efficientnetb0,tensorrt_int8,12,TensorRT layer 012,012. TensorRT layer 012 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+efficientnetb0,tensorrt_int8,13,TensorRT layer 013,013. TensorRT layer 013 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
+efficientnetb0,tensorrt_int8,14,TensorRT layer 014,014. TensorRT layer 014 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1
+efficientnetb0,tensorrt_int8,15,TensorRT layer 015,015. TensorRT layer 015 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+efficientnetb0,tensorrt_int8,16,TensorRT layer 016,016. TensorRT layer 016 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
+efficientnetb0,tensorrt_int8,17,TensorRT layer 017,017. TensorRT layer 017 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+efficientnetb0,tensorrt_int8,18,TensorRT layer 018,018. TensorRT layer 018 [TensorRTLayer],TensorRTLayer,1.9,0.0,0.0,1
+efficientnetb0,tensorrt_int8,19,TensorRT layer 019,019. TensorRT layer 019 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+efficientnetb0,tensorrt_int8,20,TensorRT layer 020,020. TensorRT layer 020 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
+efficientnetb0,tensorrt_int8,21,TensorRT layer 021,021. TensorRT layer 021 [TensorRTLayer],TensorRTLayer,2.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,22,TensorRT layer 022,022. TensorRT layer 022 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+efficientnetb0,tensorrt_int8,23,TensorRT layer 023,023. TensorRT layer 023 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
+efficientnetb0,tensorrt_int8,24,TensorRT layer 024,024. TensorRT layer 024 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+efficientnetb0,tensorrt_int8,25,TensorRT layer 025,025. TensorRT layer 025 [TensorRTLayer],TensorRTLayer,2.8,0.0,0.0,1
+efficientnetb0,tensorrt_int8,26,TensorRT layer 026,026. TensorRT layer 026 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_int8,27,TensorRT layer 027,027. TensorRT layer 027 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_int8,28,TensorRT layer 028,028. TensorRT layer 028 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
+efficientnetb0,tensorrt_int8,29,TensorRT layer 029,029. TensorRT layer 029 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
+efficientnetb0,tensorrt_int8,30,TensorRT layer 030,030. TensorRT layer 030 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
+efficientnetb0,tensorrt_int8,31,TensorRT layer 031,031. TensorRT layer 031 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+efficientnetb0,tensorrt_int8,32,TensorRT layer 032,032. TensorRT layer 032 [TensorRTLayer],TensorRTLayer,3.5,0.0,0.0,1
+efficientnetb0,tensorrt_int8,33,TensorRT layer 033,033. TensorRT layer 033 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
+efficientnetb0,tensorrt_int8,34,TensorRT layer 034,034. TensorRT layer 034 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_int8,35,TensorRT layer 035,035. TensorRT layer 035 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
+efficientnetb0,tensorrt_int8,36,TensorRT layer 036,036. TensorRT layer 036 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
+efficientnetb0,tensorrt_int8,37,TensorRT layer 037,037. TensorRT layer 037 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
+efficientnetb0,tensorrt_int8,38,TensorRT layer 038,038. TensorRT layer 038 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
+efficientnetb0,tensorrt_int8,39,TensorRT layer 039,039. TensorRT layer 039 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+efficientnetb0,tensorrt_int8,40,TensorRT layer 040,040. TensorRT layer 040 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,41,TensorRT layer 041,041. TensorRT layer 041 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,42,TensorRT layer 042,042. TensorRT layer 042 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+efficientnetb0,tensorrt_int8,43,TensorRT layer 043,043. TensorRT layer 043 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
+efficientnetb0,tensorrt_int8,44,TensorRT layer 044,044. TensorRT layer 044 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+efficientnetb0,tensorrt_int8,45,TensorRT layer 045,045. TensorRT layer 045 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_int8,46,TensorRT layer 046,046. TensorRT layer 046 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+efficientnetb0,tensorrt_int8,47,TensorRT layer 047,047. TensorRT layer 047 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_int8,48,TensorRT layer 048,048. TensorRT layer 048 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_int8,49,TensorRT layer 049,049. TensorRT layer 049 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,50,TensorRT layer 050,050. TensorRT layer 050 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,51,TensorRT layer 051,051. TensorRT layer 051 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+efficientnetb0,tensorrt_int8,52,TensorRT layer 052,052. TensorRT layer 052 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
+efficientnetb0,tensorrt_int8,53,TensorRT layer 053,053. TensorRT layer 053 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+efficientnetb0,tensorrt_int8,54,TensorRT layer 054,054. TensorRT layer 054 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_int8,55,TensorRT layer 055,055. TensorRT layer 055 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+efficientnetb0,tensorrt_int8,56,TensorRT layer 056,056. TensorRT layer 056 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_int8,57,TensorRT layer 057,057. TensorRT layer 057 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_int8,58,TensorRT layer 058,058. TensorRT layer 058 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,59,TensorRT layer 059,059. TensorRT layer 059 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,60,TensorRT layer 060,060. TensorRT layer 060 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+efficientnetb0,tensorrt_int8,61,TensorRT layer 061,061. TensorRT layer 061 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
+efficientnetb0,tensorrt_int8,62,TensorRT layer 062,062. TensorRT layer 062 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+efficientnetb0,tensorrt_int8,63,TensorRT layer 063,063. TensorRT layer 063 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_int8,64,TensorRT layer 064,064. TensorRT layer 064 [TensorRTLayer],TensorRTLayer,2.3,0.0,0.0,1
+efficientnetb0,tensorrt_int8,65,TensorRT layer 065,065. TensorRT layer 065 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_int8,66,TensorRT layer 066,066. TensorRT layer 066 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_int8,67,TensorRT layer 067,067. TensorRT layer 067 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,68,TensorRT layer 068,068. TensorRT layer 068 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,69,TensorRT layer 069,069. TensorRT layer 069 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+efficientnetb0,tensorrt_int8,70,TensorRT layer 070,070. TensorRT layer 070 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
+efficientnetb0,tensorrt_int8,71,TensorRT layer 071,071. TensorRT layer 071 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+efficientnetb0,tensorrt_int8,72,TensorRT layer 072,072. TensorRT layer 072 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+efficientnetb0,tensorrt_int8,73,TensorRT layer 073,073. TensorRT layer 073 [TensorRTLayer],TensorRTLayer,3.3,0.0,0.0,1
+efficientnetb0,tensorrt_int8,74,TensorRT layer 074,074. TensorRT layer 074 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+efficientnetb0,tensorrt_int8,75,TensorRT layer 075,075. TensorRT layer 075 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_int8,76,TensorRT layer 076,076. TensorRT layer 076 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,77,TensorRT layer 077,077. TensorRT layer 077 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,78,TensorRT layer 078,078. TensorRT layer 078 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+efficientnetb0,tensorrt_int8,79,TensorRT layer 079,079. TensorRT layer 079 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+efficientnetb0,tensorrt_int8,80,TensorRT layer 080,080. TensorRT layer 080 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+efficientnetb0,tensorrt_int8,81,TensorRT layer 081,081. TensorRT layer 081 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+efficientnetb0,tensorrt_int8,82,TensorRT layer 082,082. TensorRT layer 082 [TensorRTLayer],TensorRTLayer,3.3,0.0,0.0,1
+efficientnetb0,tensorrt_int8,83,TensorRT layer 083,083. TensorRT layer 083 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+efficientnetb0,tensorrt_int8,84,TensorRT layer 084,084. TensorRT layer 084 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_int8,85,TensorRT layer 085,085. TensorRT layer 085 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,86,TensorRT layer 086,086. TensorRT layer 086 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,87,TensorRT layer 087,087. TensorRT layer 087 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+efficientnetb0,tensorrt_int8,88,TensorRT layer 088,088. TensorRT layer 088 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
+efficientnetb0,tensorrt_int8,89,TensorRT layer 089,089. TensorRT layer 089 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
+efficientnetb0,tensorrt_int8,90,TensorRT layer 090,090. TensorRT layer 090 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+efficientnetb0,tensorrt_int8,91,TensorRT layer 091,091. TensorRT layer 091 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1
+efficientnetb0,tensorrt_int8,92,TensorRT layer 092,092. TensorRT layer 092 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,93,TensorRT layer 093,093. TensorRT layer 093 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,94,TensorRT layer 094,094. TensorRT layer 094 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,95,TensorRT layer 095,095. TensorRT layer 095 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,96,TensorRT layer 096,096. TensorRT layer 096 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
+efficientnetb0,tensorrt_int8,97,TensorRT layer 097,097. TensorRT layer 097 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
+efficientnetb0,tensorrt_int8,98,TensorRT layer 098,098. TensorRT layer 098 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
+efficientnetb0,tensorrt_int8,99,TensorRT layer 099,099. TensorRT layer 099 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,100,TensorRT layer 100,100. TensorRT layer 100 [TensorRTLayer],TensorRTLayer,2.2,0.0,0.0,1
+efficientnetb0,tensorrt_int8,101,TensorRT layer 101,101. TensorRT layer 101 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,102,TensorRT layer 102,102. TensorRT layer 102 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,103,TensorRT layer 103,103. TensorRT layer 103 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,104,TensorRT layer 104,104. TensorRT layer 104 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,105,TensorRT layer 105,105. TensorRT layer 105 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
+efficientnetb0,tensorrt_int8,106,TensorRT layer 106,106. TensorRT layer 106 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+efficientnetb0,tensorrt_int8,107,TensorRT layer 107,107. TensorRT layer 107 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
+efficientnetb0,tensorrt_int8,108,TensorRT layer 108,108. TensorRT layer 108 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,109,TensorRT layer 109,109. TensorRT layer 109 [TensorRTLayer],TensorRTLayer,2.3,0.0,0.0,1
+efficientnetb0,tensorrt_int8,110,TensorRT layer 110,110. TensorRT layer 110 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,111,TensorRT layer 111,111. TensorRT layer 111 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,112,TensorRT layer 112,112. TensorRT layer 112 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,113,TensorRT layer 113,113. TensorRT layer 113 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,114,TensorRT layer 114,114. TensorRT layer 114 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
+efficientnetb0,tensorrt_int8,115,TensorRT layer 115,115. TensorRT layer 115 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+efficientnetb0,tensorrt_int8,116,TensorRT layer 116,116. TensorRT layer 116 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
+efficientnetb0,tensorrt_int8,117,TensorRT layer 117,117. TensorRT layer 117 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,118,TensorRT layer 118,118. TensorRT layer 118 [TensorRTLayer],TensorRTLayer,2.2,0.0,0.0,1
+efficientnetb0,tensorrt_int8,119,TensorRT layer 119,119. TensorRT layer 119 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,120,TensorRT layer 120,120. TensorRT layer 120 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,121,TensorRT layer 121,121. TensorRT layer 121 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,122,TensorRT layer 122,122. TensorRT layer 122 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,123,TensorRT layer 123,123. TensorRT layer 123 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
+efficientnetb0,tensorrt_int8,124,TensorRT layer 124,124. TensorRT layer 124 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+efficientnetb0,tensorrt_int8,125,TensorRT layer 125,125. TensorRT layer 125 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
+efficientnetb0,tensorrt_int8,126,TensorRT layer 126,126. TensorRT layer 126 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,127,TensorRT layer 127,127. TensorRT layer 127 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
+efficientnetb0,tensorrt_int8,128,TensorRT layer 128,128. TensorRT layer 128 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,129,TensorRT layer 129,129. TensorRT layer 129 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,130,TensorRT layer 130,130. TensorRT layer 130 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,131,TensorRT layer 131,131. TensorRT layer 131 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,132,TensorRT layer 132,132. TensorRT layer 132 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,133,TensorRT layer 133,133. TensorRT layer 133 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
+efficientnetb0,tensorrt_int8,134,TensorRT layer 134,134. TensorRT layer 134 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
+efficientnetb0,tensorrt_int8,135,TensorRT layer 135,135. TensorRT layer 135 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,136,TensorRT layer 136,136. TensorRT layer 136 [TensorRTLayer],TensorRTLayer,2.2,0.0,0.0,1
+efficientnetb0,tensorrt_int8,137,TensorRT layer 137,137. TensorRT layer 137 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,138,TensorRT layer 138,138. TensorRT layer 138 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,139,TensorRT layer 139,139. TensorRT layer 139 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1
+efficientnetb0,tensorrt_int8,140,TensorRT layer 140,140. TensorRT layer 140 [TensorRTLayer],TensorRTLayer,100.0,0.0,0.0,1
+efficientnetb0,tflite_cpu,1,dummy_conv,01. dummy_conv [conv],conv,10.09,0.0,0.0,1

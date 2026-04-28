@@ -76,17 +76,36 @@ class TRTExecProfilerParser:
                 seen_profile_header = True
                 continue
 
+            cleaned = self._strip_log_prefix(raw)
+            if self._is_summary_line(cleaned):
+                continue
+
             # Common trtexec profile rows look like:
-            # [I] layer_name: 0.123ms
-            # [I] layer_name 0.123
-            # [I] Conv_0 + Relu_1: 0.123 ms
-            cleaned = re.sub(r"^\[[A-Z]\]\s*", "", raw)
+            # layer_name: 0.123ms
+            # layer_name 0.123
+            # Layer: 0.123 ms
+            # Layer  12.3%  0.123ms
             match = re.match(r"(?P<name>.+?)\s*:\s*(?P<ms>[0-9]*\.?[0-9]+)\s*ms\b", cleaned)
+            if not match:
+                match = re.match(r"(?P<name>.+?)\s+(?P<ms>[0-9]*\.?[0-9]+)\s*ms\b", cleaned)
+            if not match:
+                ms_values = re.findall(r"([0-9]*\.?[0-9]+)\s*ms\b", cleaned)
+                if ms_values:
+                    name = cleaned[: cleaned.rfind(ms_values[-1])].strip(" :-,\t")
+                    match = {"name": name, "ms": float(ms_values[-1])}
             if not match and seen_profile_header:
                 parts = re.split(r"\s{2,}|\t+", cleaned)
                 if len(parts) >= 2:
                     try:
-                        match = {"name": parts[0], "ms": float(parts[-1].replace("ms", ""))}
+                        numeric_parts = []
+                        for part in parts[1:]:
+                            token = part.replace("ms", "").replace("%", "").strip()
+                            try:
+                                numeric_parts.append(float(token))
+                            except ValueError:
+                                pass
+                        if numeric_parts:
+                            match = {"name": parts[0], "ms": numeric_parts[-1]}
                     except ValueError:
                         match = None
 
@@ -100,7 +119,7 @@ class TRTExecProfilerParser:
                 name = match.group("name").strip()
                 mean_ms = float(match.group("ms"))
 
-            if not name or name.lower().startswith(("gpu compute", "enqueue", "h2d", "d2h")):
+            if not name or self._is_summary_line(name):
                 continue
 
             rows.append({
@@ -130,3 +149,29 @@ class TRTExecProfilerParser:
             if token in lowered:
                 return token
         return "TensorRTLayer"
+
+    def _strip_log_prefix(self, line):
+        cleaned = line.strip()
+        # trtexec usually prefixes rows with "[04/28/2026-... ] [I]".
+        cleaned = re.sub(r"^\[[^\]]+\]\s*\[[A-Z]\]\s*", "", cleaned)
+        cleaned = re.sub(r"^\[[A-Z]\]\s*", "", cleaned)
+        return cleaned.strip()
+
+    def _is_summary_line(self, line):
+        lowered = line.lower().strip()
+        if not lowered:
+            return True
+        prefixes = (
+            "gpu compute",
+            "enqueue",
+            "h2d",
+            "d2h",
+            "average on",
+            "sleep time",
+            "throughput",
+            "host latency",
+            "end-to-end",
+            "input binding",
+            "output binding",
+        )
+        return lowered.startswith(prefixes)
