@@ -40,6 +40,27 @@ COMMON_TOOL_PATHS = {
     ],
 }
 
+
+def repo_root():
+    return os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+def common_tool_paths(default_name):
+    root = repo_root()
+    repo_paths = {
+        "benchmark_model": [
+            os.path.join(root, "benchmark_model"),
+            os.path.join(root, "build_tflite", "tools", "benchmark", "benchmark_model"),
+            os.path.join(root, "tensorflow", "bazel-bin", "tensorflow", "lite", "tools", "benchmark", "benchmark_model"),
+        ],
+        "benchncnn": [
+            os.path.join(root, "build_ncnn", "benchmark", "benchncnn"),
+            os.path.join(root, "build_ncnn", "benchncnn"),
+            os.path.join(root, "benchncnn"),
+        ],
+    }
+    return repo_paths.get(default_name, []) + COMMON_TOOL_PATHS.get(default_name, [])
+
 # 각 런타임별 로딩 및 추론 엔진 (예시 구조)
 # 실제 환경에 맞게 각 run_xxx.py 파일에서 함수를 가져오거나 내부에 구현합니다.
 
@@ -131,7 +152,7 @@ class BenchmarkMaster:
         resolved = shutil.which(default_name)
         if resolved:
             return resolved
-        for candidate in COMMON_TOOL_PATHS.get(default_name, []):
+        for candidate in common_tool_paths(default_name):
             if os.path.exists(candidate):
                 return candidate
         raise FileNotFoundError(f"{default_name} tool not found in PATH. Set ${env_name} to its executable path.")

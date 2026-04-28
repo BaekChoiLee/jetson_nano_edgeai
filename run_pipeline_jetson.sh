@@ -9,6 +9,40 @@ cd "$SCRIPT_DIR"
 
 PYTHON_BIN="${PYTHON_BIN:-python3}"
 
+first_executable() {
+    for candidate in "$@"; do
+        if [ -n "$candidate" ] && [ -x "$candidate" ]; then
+            printf '%s' "$candidate"
+            return 0
+        fi
+    done
+    return 1
+}
+
+if [ -z "${BENCHNCNN_PATH:-}" ]; then
+    BENCHNCNN_PATH="$(first_executable \
+        "$SCRIPT_DIR/build_ncnn/benchmark/benchncnn" \
+        "$SCRIPT_DIR/build_ncnn/benchncnn" \
+        "$SCRIPT_DIR/benchncnn" \
+        "/usr/local/bin/benchncnn" \
+        "/usr/bin/benchncnn" || true)"
+    if [ -n "$BENCHNCNN_PATH" ]; then
+        export BENCHNCNN_PATH
+    fi
+fi
+
+if [ -z "${TFLITE_BENCHMARK_MODEL_PATH:-}" ]; then
+    TFLITE_BENCHMARK_MODEL_PATH="$(first_executable \
+        "$SCRIPT_DIR/benchmark_model" \
+        "$SCRIPT_DIR/build_tflite/tools/benchmark/benchmark_model" \
+        "$SCRIPT_DIR/tensorflow/bazel-bin/tensorflow/lite/tools/benchmark/benchmark_model" \
+        "/usr/local/bin/benchmark_model" \
+        "/usr/bin/benchmark_model" || true)"
+    if [ -n "$TFLITE_BENCHMARK_MODEL_PATH" ]; then
+        export TFLITE_BENCHMARK_MODEL_PATH
+    fi
+fi
+
 echo "====================================================="
 echo "Jetson Nano Benchmark Pipeline"
 echo "====================================================="
@@ -35,15 +69,11 @@ echo "[3/4] 벤치마크 실행 중..."
 has_tool() {
     env_name="$1"
     executable="$2"
-    default_path="$3"
     env_value="$(eval "printf '%s' \"\${${env_name}:-}\"")"
     if [ -n "$env_value" ] && [ -x "$env_value" ]; then
         return 0
     fi
     if command -v "$executable" >/dev/null 2>&1; then
-        return 0
-    fi
-    if [ -n "$default_path" ] && [ -x "$default_path" ]; then
         return 0
     fi
     return 1
@@ -64,16 +94,26 @@ if [ -z "${RUNTIMES:-}" ]; then
         fi
     done
 
-    if [ "$missing_tflite" -eq 0 ] && has_tool "TFLITE_BENCHMARK_MODEL_PATH" "benchmark_model" "/usr/local/bin/benchmark_model"; then
+    if [ "$missing_tflite" -eq 0 ] && has_tool "TFLITE_BENCHMARK_MODEL_PATH" "benchmark_model"; then
         RUNTIMES="${RUNTIMES},tflite_cpu"
     else
-        echo "  - [Skip] tflite_cpu: models/*.tflite 또는 benchmark_model이 준비되지 않았습니다."
+        if [ "$missing_tflite" -ne 0 ]; then
+            echo "  - [Skip] tflite_cpu: models/*.tflite 파일이 부족합니다."
+        else
+            echo "  - [Skip] tflite_cpu: benchmark_model 실행 파일을 찾지 못했습니다."
+            echo "    TFLITE_BENCHMARK_MODEL_PATH=/path/to/benchmark_model 로 지정할 수 있습니다."
+        fi
     fi
 
-    if [ "$missing_ncnn" -eq 0 ] && has_tool "BENCHNCNN_PATH" "benchncnn" "/usr/local/bin/benchncnn"; then
+    if [ "$missing_ncnn" -eq 0 ] && has_tool "BENCHNCNN_PATH" "benchncnn"; then
         RUNTIMES="${RUNTIMES},ncnn_vulkan"
     else
-        echo "  - [Skip] ncnn_vulkan: models/*.param/*.bin 또는 benchncnn이 준비되지 않았습니다."
+        if [ "$missing_ncnn" -ne 0 ]; then
+            echo "  - [Skip] ncnn_vulkan: models/*.param 또는 models/*.bin 파일이 부족합니다."
+        else
+            echo "  - [Skip] ncnn_vulkan: benchncnn 실행 파일을 찾지 못했습니다."
+            echo "    BENCHNCNN_PATH=/path/to/benchncnn 로 지정할 수 있습니다."
+        fi
     fi
 fi
 RUNS="${RUNS:-100}"
