@@ -23,6 +23,8 @@ if [ -z "${BENCHNCNN_PATH:-}" ]; then
     BENCHNCNN_PATH="$(first_executable \
         "$SCRIPT_DIR/build_ncnn/benchmark/benchncnn" \
         "$SCRIPT_DIR/build_ncnn/benchncnn" \
+        "$SCRIPT_DIR/build_ncnn/ncnn/build/benchmark/benchncnn" \
+        "$SCRIPT_DIR/build_ncnn/ncnn/build/benchncnn" \
         "$SCRIPT_DIR/benchncnn" \
         "/usr/local/bin/benchncnn" \
         "/usr/bin/benchncnn" || true)"

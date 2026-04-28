@@ -56,6 +56,8 @@ def common_tool_paths(default_name):
         "benchncnn": [
             os.path.join(root, "build_ncnn", "benchmark", "benchncnn"),
             os.path.join(root, "build_ncnn", "benchncnn"),
+            os.path.join(root, "build_ncnn", "ncnn", "build", "benchmark", "benchncnn"),
+            os.path.join(root, "build_ncnn", "ncnn", "build", "benchncnn"),
             os.path.join(root, "benchncnn"),
         ],
     }
@@ -147,7 +149,7 @@ class BenchmarkMaster:
             resolved = shutil.which(override) or override
             if os.path.exists(resolved) or shutil.which(resolved):
                 return resolved
-            raise FileNotFoundError(f"{default_name} tool not found at {override} from ${env_name}")
+            print(f"  - [Warning] {default_name} tool not found at {override} from ${env_name}; trying known paths.")
 
         resolved = shutil.which(default_name)
         if resolved:
