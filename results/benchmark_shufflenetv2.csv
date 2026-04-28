@@ -1,0 +1,7 @@
+timestamp,model,runtime,precision,power_mode,mean_ms,std_ms,min_ms,max_ms,median_ms,power_total_mw_mean,power_gpu_mw_mean,power_cpu_mw_mean,ram_used_mb_mean,gpu_util_pct_mean,gpu_temp_c_mean,co2_kg,accuracy_top1
+2026-04-28T13:29:25.510831,shufflenetv2,pytorch_cuda,N/A,10w,47.22,3.2,45.82,74.18,46.48,0,0,0,2746.93,16.98,9.76,1.0288446871578877e-05,0
+2026-04-28T13:30:17.975647,shufflenetv2,tensorrt_fp32,fp32,10w,10.67,0.0,10.67,10.67,10.67,0,0,0,3397.92,42.45,16.74,2.4190824070873487e-05,0
+2026-04-28T13:31:10.594429,shufflenetv2,tensorrt_fp16,fp16,10w,11.6,0.0,11.6,11.6,11.6,0,0,0,3365.9,37.07,20.12,2.5345400556812927e-05,0
+2026-04-28T13:32:03.013146,shufflenetv2,tensorrt_int8,int8,10w,10.57,0.0,10.57,10.57,10.57,0,0,0,3362.0,38.96,0,2.4816313938571354e-05,0
+2026-04-28T13:32:38.488158,shufflenetv2,onnxrt_cpu,N/A,10w,97.05,14.32,90.85,210.23,93.57,0,0,0,2824.11,0.0,0,2.3531333245960654e-05,0
+2026-04-28T13:33:03.744820,shufflenetv2,ncnn_vulkan,N/A,10w,0.0,0.0,0.0,0.0,0.0,0,0,0,2785.0,0.0,20.0,5.77316421454784e-06,0

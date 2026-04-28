@@ -1,0 +1,218 @@
+[
+    {
+        "runtime": "pytorch_cpu",
+        "device": "cpu",
+        "latency": {
+            "mean_ms": 10.12,
+            "std_ms": 0.2,
+            "min_ms": 10.08,
+            "max_ms": 11.95,
+            "p50_ms": 10.09,
+            "p95_ms": 10.14,
+            "p99_ms": 10.96,
+            "fps": 98.8
+        },
+        "memory": {
+            "peak_usage_mb": 0
+        },
+        "hardware": {},
+        "co2_kg": 1.4599298655452518e-06,
+        "layer_profiles": [
+            {
+                "layer_name": "dummy_conv",
+                "type": "Conv",
+                "mean_ms": 10.12,
+                "timestamp": 1777217668.8412888
+            }
+        ]
+    },
+    {
+        "runtime": "pytorch_cuda",
+        "device": "cuda",
+        "latency": {
+            "mean_ms": 10.23,
+            "std_ms": 0.25,
+            "min_ms": 10.14,
+            "max_ms": 12.31,
+            "p50_ms": 10.17,
+            "p95_ms": 10.36,
+            "p99_ms": 11.26,
+            "fps": 97.75
+        },
+        "memory": {
+            "peak_usage_mb": 0.0
+        },
+        "hardware": {},
+        "co2_kg": 1.5395136911978777e-06,
+        "layer_profiles": [
+            {
+                "layer_name": "dummy_conv",
+                "type": "Conv",
+                "mean_ms": 10.23,
+                "timestamp": 1777217683.6812932
+            }
+        ]
+    },
+    {
+        "runtime": "tensorrt_fp32",
+        "device": "cuda",
+        "latency": {
+            "mean_ms": 10.17,
+            "std_ms": 0.04,
+            "min_ms": 10.14,
+            "max_ms": 10.4,
+            "p50_ms": 10.16,
+            "p95_ms": 10.22,
+            "p99_ms": 10.37,
+            "fps": 98.33
+        },
+        "memory": {
+            "peak_usage_mb": 0.0
+        },
+        "hardware": {},
+        "co2_kg": 1.4671602141444142e-06,
+        "layer_profiles": [
+            {
+                "layer_name": "dummy_conv",
+                "type": "Conv",
+                "mean_ms": 10.17,
+                "timestamp": 1777217698.5092351
+            }
+        ]
+    },
+    {
+        "runtime": "tensorrt_fp16",
+        "device": "cuda",
+        "latency": {
+            "mean_ms": 10.19,
+            "std_ms": 0.06,
+            "min_ms": 10.14,
+            "max_ms": 10.51,
+            "p50_ms": 10.16,
+            "p95_ms": 10.32,
+            "p99_ms": 10.4,
+            "fps": 98.18
+        },
+        "memory": {
+            "peak_usage_mb": 0.0
+        },
+        "hardware": {},
+        "co2_kg": 1.472355495188652e-06,
+        "layer_profiles": [
+            {
+                "layer_name": "dummy_conv",
+                "type": "Conv",
+                "mean_ms": 10.19,
+                "timestamp": 1777217713.2991216
+            }
+        ]
+    },
+    {
+        "runtime": "tensorrt_int8",
+        "device": "cuda",
+        "latency": {
+            "mean_ms": 10.18,
+            "std_ms": 0.14,
+            "min_ms": 10.14,
+            "max_ms": 11.55,
+            "p50_ms": 10.16,
+            "p95_ms": 10.22,
+            "p99_ms": 10.49,
+            "fps": 98.22
+        },
+        "memory": {
+            "peak_usage_mb": 0.0
+        },
+        "hardware": {},
+        "co2_kg": 1.4700038700752427e-06,
+        "layer_profiles": [
+            {
+                "layer_name": "dummy_conv",
+                "type": "Conv",
+                "mean_ms": 10.18,
+                "timestamp": 1777217728.1270907
+            }
+        ]
+    },
+    {
+        "runtime": "onnxrt_cpu",
+        "device": "cpu",
+        "latency": {
+            "mean_ms": 10.09,
+            "std_ms": 0.01,
+            "min_ms": 10.08,
+            "max_ms": 10.17,
+            "p50_ms": 10.08,
+            "p95_ms": 10.1,
+            "p99_ms": 10.13,
+            "fps": 99.13
+        },
+        "memory": {
+            "peak_usage_mb": 0
+        },
+        "hardware": {},
+        "co2_kg": 1.5090428752087676e-06,
+        "layer_profiles": [
+            {
+                "layer_name": "dummy_conv",
+                "type": "Conv",
+                "mean_ms": 10.09,
+                "timestamp": 1777217742.8932967
+            }
+        ]
+    },
+    {
+        "runtime": "tflite_cpu",
+        "device": "cpu",
+        "latency": {
+            "mean_ms": 10.09,
+            "std_ms": 0.02,
+            "min_ms": 10.06,
+            "max_ms": 10.27,
+            "p50_ms": 10.08,
+            "p95_ms": 10.11,
+            "p99_ms": 10.14,
+            "fps": 99.1
+        },
+        "memory": {
+            "peak_usage_mb": 0
+        },
+        "hardware": {},
+        "co2_kg": 1.4615220036396945e-06,
+        "layer_profiles": [
+            {
+                "layer_name": "dummy_conv",
+                "type": "Conv",
+                "mean_ms": 10.09,
+                "timestamp": 1777217757.7273045
+            }
+        ]
+    },
+    {
+        "runtime": "ncnn_vulkan",
+        "device": "vulkan",
+        "latency": {
+            "mean_ms": 10.16,
+            "std_ms": 0.56,
+            "min_ms": 10.08,
+            "max_ms": 15.57,
+            "p50_ms": 10.09,
+            "p95_ms": 10.14,
+            "p99_ms": 11.47,
+            "fps": 98.38
+        },
+        "memory": {
+            "peak_usage_mb": 0
+        },
+        "hardware": {},
+        "co2_kg": 1.5182309667902184e-06,
+        "layer_profiles": [
+            {
+                "layer_name": "dummy_conv",
+                "type": "Conv",
+                "mean_ms": 10.16,
+                "timestamp": 1777217772.5288835
+            }
+        ]
+    }
+]

@@ -1,0 +1,7 @@
+timestamp,model,runtime,precision,power_mode,mean_ms,std_ms,min_ms,max_ms,median_ms,power_total_mw_mean,power_gpu_mw_mean,power_cpu_mw_mean,ram_used_mb_mean,gpu_util_pct_mean,gpu_temp_c_mean,co2_kg,accuracy_top1
+2026-04-28T13:24:50.863432,efficientnetb0,pytorch_cuda,N/A,10w,71.66,6.97,66.68,102.16,68.68,0,0,0,2751.61,33.92,0,1.5732832992409087e-05,0
+2026-04-28T13:25:45.614793,efficientnetb0,tensorrt_fp32,fp32,10w,37.73,0.0,37.73,37.73,37.73,0,0,0,3445.77,44.48,9.62,2.4570465385919482e-05,0
+2026-04-28T13:26:39.626075,efficientnetb0,tensorrt_fp16,fp16,10w,30.49,0.0,30.49,30.49,30.49,0,0,0,3371.79,40.5,11.91,2.3615725000176532e-05,0
+2026-04-28T13:27:34.596351,efficientnetb0,tensorrt_int8,int8,10w,37.69,0.0,37.69,37.69,37.69,0,0,0,3394.16,46.91,11.43,2.2184539197625286e-05,0
+2026-04-28T13:28:30.112908,efficientnetb0,onnxrt_cpu,N/A,10w,333.89,47.6,317.29,697.11,321.8,0,0,0,2759.53,0.0,19.5,5.2644659035673764e-05,0
+2026-04-28T13:28:55.005218,efficientnetb0,ncnn_vulkan,N/A,10w,0.0,0.0,0.0,0.0,0.0,0,0,0,2761.21,0.62,0,5.74001268077878e-06,0

@@ -1,0 +1,7 @@
+layer_name,type,mean_ms,power_gpu_mw,power_total_mw,timestamp
+loop_count,=,100.0,0,0,
+num_threads,=,4.0,0,0,
+powersave,=,0.0,0,0,
+gpu_device,=,0.0,0,0,
+cooling_down,=,1.0,0,0,
+./models/efficientnetb0.param,min,0.0,0,0,

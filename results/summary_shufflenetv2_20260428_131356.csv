@@ -1,0 +1,7 @@
+Runtime,Device,Mean(ms),P95(ms),FPS,PeakMem(MB),AvgPower(mW)
+pytorch_cuda,cuda,49.39,50.16,20.25,11.7,0
+tensorrt_fp32,cuda,10.56,10.56,94.71,0,0
+tensorrt_fp16,cuda,11.49,11.49,87.07,0,0
+tensorrt_int8,cuda,16.85,16.85,59.36,0,0
+onnxrt_cpu,cpu,94.48,97.37,10.58,0,0
+ncnn_vulkan,vulkan,0.0,0.0,0,0,0

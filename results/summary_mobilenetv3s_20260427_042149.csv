@@ -1,0 +1,2 @@
+Runtime,Device,Mean(ms),P95(ms),FPS,PeakMem(MB),AvgPower(mW)
+pytorch_cpu,cpu,10.09,10.11,99.12,0,0

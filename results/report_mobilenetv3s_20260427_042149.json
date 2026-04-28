@@ -1,0 +1,36 @@
+[
+    {
+        "runtime": "pytorch_cpu",
+        "device": "cpu",
+        "latency": {
+            "mean_ms": 10.09,
+            "std_ms": 0.01,
+            "min_ms": 10.08,
+            "max_ms": 10.12,
+            "p50_ms": 10.09,
+            "p95_ms": 10.11,
+            "p99_ms": 10.11,
+            "fps": 99.12
+        },
+        "memory": {
+            "peak_usage_mb": 0
+        },
+        "hardware": {
+            "ram_used_mb_mean": 1487.5,
+            "gpu_util_pct_mean": 0.0,
+            "gpu_temp_c_mean": 24.75,
+            "cpu_temp_c_mean": 35.0
+        },
+        "co2_kg": 6.006614693326391e-07,
+        "layer_profiles": [
+            {
+                "layer_name": "dummy_conv",
+                "type": "Conv",
+                "mean_ms": 10.09,
+                "timestamp": 1777256499.7992725,
+                "power_gpu_mw": 0,
+                "power_total_mw": 0
+            }
+        ]
+    }
+]

@@ -1,0 +1,2 @@
+layer_name,type,mean_ms,power_gpu_mw,power_total_mw
+dummy_conv,Conv,10.17,0,0
