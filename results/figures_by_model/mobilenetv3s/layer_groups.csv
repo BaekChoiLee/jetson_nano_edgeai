@@ -1,471 +1,736 @@
-model,runtime,group_index,group_key,group_label,group_type,mean_ms,power_gpu_mw,power_total_mw,ops
-mobilenetv3s,ncnn_vulkan,1,model inference,01. model inference [min],min,9.72,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,1,features/features.0/features.0.0,01. features.0/features.0.0 [conv],conv,2.4978000000000002,0.0,0.0,3
-mobilenetv3s,onnxrt_cpu,2,features/features.0/features.0.2,02. features.0/features.0.2 [act-eltwise],act-eltwise,0.7953999999999999,0.0,0.0,4
-mobilenetv3s,onnxrt_cpu,3,features/features.1/block/block.0/block.0.0,03. features.1/block/block.0/block.0.0 [conv],conv,2.2638000000000003,0.0,0.0,3
-mobilenetv3s,onnxrt_cpu,4,features/features.1/block/block.1/avgpool,04. features.1/block/block.1/avgpool [pool],pool,0.11710000000000001,0.0,0.0,2
-mobilenetv3s,onnxrt_cpu,5,features/features.1/block/block.1/fc1,05. features.1/block/block.1/fc1 [conv],conv,0.0649,0.0,0.0,2
-mobilenetv3s,onnxrt_cpu,6,features/features.1/block/block.1/fc2,06. features.1/block/block.1/fc2 [conv],conv,0.0528,0.0,0.0,2
-mobilenetv3s,onnxrt_cpu,7,features/features.1/block/block.1,07. features.1/block/block.1 [eltwise],eltwise,0.1214,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,8,features/features.1/block/block.2/block.2.0,08. features.1/block/block.2/block.2.0 [conv],conv,0.4477,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,9,features/features.2/block/block.0/block.0.0,09. features.2/block/block.0/block.0.0 [conv],conv,1.2279,0.0,0.0,2
-mobilenetv3s,onnxrt_cpu,10,features/features.2/block/block.1/block.1.0,10. features.2/block/block.1/block.1.0 [conv],conv,2.7883,0.0,0.0,2
-mobilenetv3s,onnxrt_cpu,11,features/features.2/block/block.2/block.2.0,11. features.2/block/block.2/block.2.0 [conv],conv,0.4428,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,12,features/features.3/block/block.0/block.0.0,12. features.3/block/block.0/block.0.0 [conv],conv,0.5393,0.0,0.0,3
-mobilenetv3s,onnxrt_cpu,13,features/features.3/block/block.1/block.1.0,13. features.3/block/block.1/block.1.0 [conv],conv,1.5659,0.0,0.0,2
-mobilenetv3s,onnxrt_cpu,14,features/features.3/block/block.2/block.2.0,14. features.3/block/block.2/block.2.0 [conv],conv,0.6252,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,15,features/features.4/block/block.0/block.0.0,15. features.4/block/block.0/block.0.0 [conv],conv,0.5387,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,16,features/features.4/block/block.0/block.0.2,16. features.4/block/block.0/block.0.2 [act-eltwise],act-eltwise,0.3856,0.0,0.0,4
-mobilenetv3s,onnxrt_cpu,17,features/features.4/block/block.1/block.1.0,17. features.4/block/block.1/block.1.0 [conv],conv,2.6178,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,18,features/features.4/block/block.1/block.1.2,18. features.4/block/block.1/block.1.2 [act-eltwise],act-eltwise,0.179,0.0,0.0,3
-mobilenetv3s,onnxrt_cpu,19,features/features.4/block/block.2/avgpool,19. features.4/block/block.2/avgpool [pool],pool,0.077,0.0,0.0,2
-mobilenetv3s,onnxrt_cpu,20,features/features.4/block/block.2/fc1,20. features.4/block/block.2/fc1 [conv],conv,0.0752,0.0,0.0,2
-mobilenetv3s,onnxrt_cpu,21,features/features.4/block/block.2/fc2,21. features.4/block/block.2/fc2 [conv],conv,0.0649,0.0,0.0,2
-mobilenetv3s,onnxrt_cpu,22,features/features.4/block/block.2,22. features.4/block/block.2 [eltwise],eltwise,0.0889,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,23,features/features.4/block/block.3/block.3.0,23. features.4/block/block.3/block.3.0 [conv],conv,0.2634,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,24,features/features.5/block/block.0/block.0.0,24. features.5/block/block.0/block.0.0 [conv],conv,0.5307,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,25,features/features.5/block/block.0/block.0.2,25. features.5/block/block.0/block.0.2 [act-eltwise],act-eltwise,0.2838,0.0,0.0,3
-mobilenetv3s,onnxrt_cpu,26,features/features.5/block/block.1/block.1.0,26. features.5/block/block.1/block.1.0 [conv],conv,4.1743999999999994,0.0,0.0,2
-mobilenetv3s,onnxrt_cpu,27,features/features.5/block/block.1/block.1.2,27. features.5/block/block.1/block.1.2 [act-eltwise],act-eltwise,0.2856,0.0,0.0,3
-mobilenetv3s,onnxrt_cpu,28,features/features.5/block/block.2/avgpool,28. features.5/block/block.2/avgpool [pool],pool,0.1067,0.0,0.0,2
-mobilenetv3s,onnxrt_cpu,29,features/features.5/block/block.2/fc1,29. features.5/block/block.2/fc1 [conv],conv,0.1399,0.0,0.0,2
-mobilenetv3s,onnxrt_cpu,30,features/features.5/block/block.2/fc2,30. features.5/block/block.2/fc2 [conv],conv,0.121,0.0,0.0,2
-mobilenetv3s,onnxrt_cpu,31,features/features.5/block/block.2,31. features.5/block/block.2 [eltwise],eltwise,0.1461,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,32,features/features.5/block/block.3/block.3.0,32. features.5/block/block.3/block.3.0 [conv],conv,0.6013,0.0,0.0,2
-mobilenetv3s,onnxrt_cpu,33,features/features.6/block/block.0/block.0.0,33. features.6/block/block.0/block.0.0 [conv],conv,0.5249,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,34,features/features.6/block/block.0/block.0.2,34. features.6/block/block.0/block.0.2 [act-eltwise],act-eltwise,0.2711,0.0,0.0,3
-mobilenetv3s,onnxrt_cpu,35,features/features.6/block/block.1/block.1.0,35. features.6/block/block.1/block.1.0 [conv],conv,4.1565,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,36,features/features.6/block/block.1/block.1.2,36. features.6/block/block.1/block.1.2 [act-eltwise],act-eltwise,0.2693,0.0,0.0,4
-mobilenetv3s,onnxrt_cpu,37,features/features.6/block/block.2/avgpool,37. features.6/block/block.2/avgpool [pool],pool,0.1009,0.0,0.0,2
-mobilenetv3s,onnxrt_cpu,38,features/features.6/block/block.2/fc1,38. features.6/block/block.2/fc1 [conv],conv,0.1414,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,39,features/features.6/block/block.2/fc2,39. features.6/block/block.2/fc2 [conv],conv,0.1218,0.0,0.0,2
-mobilenetv3s,onnxrt_cpu,40,features/features.6/block/block.2,40. features.6/block/block.2 [eltwise],eltwise,0.1479,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,41,features/features.6/block/block.3/block.3.0,41. features.6/block/block.3/block.3.0 [conv],conv,0.5709,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,42,features/features.7/block/block.0/block.0.0,42. features.7/block/block.0/block.0.0 [conv],conv,0.4128,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,43,features/features.7/block/block.0/block.0.2,43. features.7/block/block.0/block.0.2 [act-eltwise],act-eltwise,0.192,0.0,0.0,3
-mobilenetv3s,onnxrt_cpu,44,features/features.7/block/block.1/block.1.0,44. features.7/block/block.1/block.1.0 [conv],conv,2.0921,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,45,features/features.7/block/block.1/block.1.2,45. features.7/block/block.1/block.1.2 [act-eltwise],act-eltwise,0.17049999999999998,0.0,0.0,3
-mobilenetv3s,onnxrt_cpu,46,features/features.7/block/block.2/avgpool,46. features.7/block/block.2/avgpool [pool],pool,0.0805,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,47,features/features.7/block/block.2/fc1,47. features.7/block/block.2/fc1 [conv],conv,0.0886,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,48,features/features.7/block/block.2/fc2,48. features.7/block/block.2/fc2 [conv],conv,0.0697,0.0,0.0,2
-mobilenetv3s,onnxrt_cpu,49,features/features.7/block/block.2,49. features.7/block/block.2 [eltwise],eltwise,0.0893,0.0,0.0,2
-mobilenetv3s,onnxrt_cpu,50,features/features.7/block/block.3/block.3.0,50. features.7/block/block.3/block.3.0 [conv],conv,0.3474,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,51,features/features.8/block/block.0/block.0.0,51. features.8/block/block.0/block.0.0 [conv],conv,0.4019,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,52,features/features.8/block/block.0/block.0.2,52. features.8/block/block.0/block.0.2 [act-eltwise],act-eltwise,0.1951,0.0,0.0,3
-mobilenetv3s,onnxrt_cpu,53,features/features.8/block/block.1/block.1.0,53. features.8/block/block.1/block.1.0 [conv],conv,2.5173,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,54,features/features.8/block/block.1/block.1.2,54. features.8/block/block.1/block.1.2 [act-eltwise],act-eltwise,0.192,0.0,0.0,3
-mobilenetv3s,onnxrt_cpu,55,features/features.8/block/block.2/avgpool,55. features.8/block/block.2/avgpool [pool],pool,0.0806,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,56,features/features.8/block/block.2/fc1,56. features.8/block/block.2/fc1 [conv],conv,0.0853,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,57,features/features.8/block/block.2/fc2,57. features.8/block/block.2/fc2 [conv],conv,0.091,0.0,0.0,2
-mobilenetv3s,onnxrt_cpu,58,features/features.8/block/block.2,58. features.8/block/block.2 [eltwise],eltwise,0.0986,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,59,features/features.8/block/block.3/block.3.0,59. features.8/block/block.3/block.3.0 [conv],conv,0.438,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,60,features/features.9/block/block.0/block.0.0,60. features.9/block/block.0/block.0.0 [conv],conv,0.7242,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,61,features/features.9/block/block.0/block.0.2,61. features.9/block/block.0/block.0.2 [act-eltwise],act-eltwise,0.32789999999999997,0.0,0.0,3
-mobilenetv3s,onnxrt_cpu,62,features/features.9/block/block.1/block.1.0,62. features.9/block/block.1/block.1.0 [conv],conv,2.6002,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,63,features/features.9/block/block.1/block.1.2,63. features.9/block/block.1/block.1.2 [act-eltwise],act-eltwise,0.152,0.0,0.0,3
-mobilenetv3s,onnxrt_cpu,64,features/features.9/block/block.2/avgpool,64. features.9/block/block.2/avgpool [pool],pool,0.0748,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,65,features/features.9/block/block.2/fc1,65. features.9/block/block.2/fc1 [conv],conv,0.1855,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,66,features/features.9/block/block.2/fc2,66. features.9/block/block.2/fc2 [conv],conv,0.20220000000000002,0.0,0.0,2
-mobilenetv3s,onnxrt_cpu,67,features/features.9/block/block.2,67. features.9/block/block.2 [eltwise],eltwise,0.1038,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,68,features/features.9/block/block.3/block.3.0,68. features.9/block/block.3/block.3.0 [conv],conv,0.4955,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,69,features/features.10/block/block.0/block.0.0,69. features.10/block/block.0/block.0.0 [conv],conv,0.7275,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,70,features/features.10/block/block.0/block.0.2,70. features.10/block/block.0/block.0.2 [act-eltwise],act-eltwise,0.2081,0.0,0.0,3
-mobilenetv3s,onnxrt_cpu,71,features/features.10/block/block.1/block.1.0,71. features.10/block/block.1/block.1.0 [conv],conv,4.5605,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,72,features/features.10/block/block.1/block.1.2,72. features.10/block/block.1/block.1.2 [act-eltwise],act-eltwise,0.19829999999999998,0.0,0.0,3
-mobilenetv3s,onnxrt_cpu,73,features/features.10/block/block.2/avgpool,73. features.10/block/block.2/avgpool [pool],pool,0.09369999999999999,0.0,0.0,2
-mobilenetv3s,onnxrt_cpu,74,features/features.10/block/block.2/fc1,74. features.10/block/block.2/fc1 [conv],conv,0.3228,0.0,0.0,2
-mobilenetv3s,onnxrt_cpu,75,features/features.10/block/block.2/fc2,75. features.10/block/block.2/fc2 [conv],conv,0.2837,0.0,0.0,2
-mobilenetv3s,onnxrt_cpu,76,features/features.10/block/block.2,76. features.10/block/block.2 [eltwise],eltwise,0.16349999999999998,0.0,0.0,2
-mobilenetv3s,onnxrt_cpu,77,features/features.10/block/block.3/block.3.0,77. features.10/block/block.3/block.3.0 [conv],conv,0.9134,0.0,0.0,2
-mobilenetv3s,onnxrt_cpu,78,features/features.11/block/block.0/block.0.0,78. features.11/block/block.0/block.0.0 [conv],conv,0.7194,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,79,features/features.11/block/block.0/block.0.2,79. features.11/block/block.0/block.0.2 [act-eltwise],act-eltwise,0.2122,0.0,0.0,3
-mobilenetv3s,onnxrt_cpu,80,features/features.11/block/block.1/block.1.0,80. features.11/block/block.1/block.1.0 [conv],conv,4.5374,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,81,features/features.11/block/block.1/block.1.2,81. features.11/block/block.1/block.1.2 [act-eltwise],act-eltwise,0.1956,0.0,0.0,3
-mobilenetv3s,onnxrt_cpu,82,features/features.11/block/block.2/avgpool,82. features.11/block/block.2/avgpool [pool],pool,0.09269999999999999,0.0,0.0,2
-mobilenetv3s,onnxrt_cpu,83,features/features.11/block/block.2/fc1,83. features.11/block/block.2/fc1 [conv],conv,0.323,0.0,0.0,2
-mobilenetv3s,onnxrt_cpu,84,features/features.11/block/block.2/fc2,84. features.11/block/block.2/fc2 [conv],conv,0.2905,0.0,0.0,2
-mobilenetv3s,onnxrt_cpu,85,features/features.11/block/block.2,85. features.11/block/block.2 [eltwise],eltwise,0.1667,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,86,features/features.11/block/block.3/block.3.0,86. features.11/block/block.3/block.3.0 [conv],conv,0.8456,0.0,0.0,2
-mobilenetv3s,onnxrt_cpu,87,features/features.12/features.12.0,87. features.12/features.12.0 [conv],conv,0.7627999999999999,0.0,0.0,2
-mobilenetv3s,onnxrt_cpu,88,features/features.12/features.12.2,88. features.12/features.12.2 [act-eltwise],act-eltwise,0.2119,0.0,0.0,2
-mobilenetv3s,onnxrt_cpu,89,avgpool,89. avgpool [pool],pool,0.093,0.0,0.0,2
-mobilenetv3s,onnxrt_cpu,90,Flatten,90. Flatten [shape],shape,0.0393,0.0,0.0,1
-mobilenetv3s,onnxrt_cpu,91,classifier/classifier.0,91. classifier/classifier.0 [fc],fc,0.6159,0.0,0.0,3
-mobilenetv3s,onnxrt_cpu,92,classifier/classifier.1,92. classifier/classifier.1 [act-eltwise],act-eltwise,0.10540000000000001,0.0,0.0,3
-mobilenetv3s,onnxrt_cpu,93,classifier/classifier.3,93. classifier/classifier.3 [fc],fc,1.0954,0.0,0.0,2
-mobilenetv3s,pytorch_cpu,1,features.0,01. features.0 [conv-norm-act],conv-norm-act,9.648776999999999,0.0,0.0,3
-mobilenetv3s,pytorch_cpu,2,features.1.block.0,02. features.1.block.0 [conv-norm-act],conv-norm-act,11.499703,0.0,0.0,3
-mobilenetv3s,pytorch_cpu,3,features.1.block.1,03. features.1.block.1 [conv-act],conv-act,1.114838,0.0,0.0,5
-mobilenetv3s,pytorch_cpu,4,features.1.block.2,04. features.1.block.2 [conv-norm],conv-norm,2.186261,0.0,0.0,2
-mobilenetv3s,pytorch_cpu,5,features.2.block.0,05. features.2.block.0 [conv-norm-act],conv-norm-act,3.1298340000000002,0.0,0.0,3
-mobilenetv3s,pytorch_cpu,6,features.2.block.1,06. features.2.block.1 [conv-norm-act],conv-norm-act,18.207487,0.0,0.0,3
-mobilenetv3s,pytorch_cpu,7,features.2.block.2,07. features.2.block.2 [conv-norm],conv-norm,1.778265,0.0,0.0,2
-mobilenetv3s,pytorch_cpu,8,features.3.block.0,08. features.3.block.0 [conv-norm-act],conv-norm-act,1.5905150000000001,0.0,0.0,3
-mobilenetv3s,pytorch_cpu,9,features.3.block.1,09. features.3.block.1 [conv-norm-act],conv-norm-act,13.134513,0.0,0.0,3
-mobilenetv3s,pytorch_cpu,10,features.3.block.2,10. features.3.block.2 [conv-norm],conv-norm,1.9170230000000001,0.0,0.0,2
-mobilenetv3s,pytorch_cpu,11,features.4.block.0,11. features.4.block.0 [conv-norm-act],conv-norm-act,2.056172,0.0,0.0,3
-mobilenetv3s,pytorch_cpu,12,features.4.block.1,12. features.4.block.1 [conv-norm-act],conv-norm-act,19.482281,0.0,0.0,3
-mobilenetv3s,pytorch_cpu,13,features.4.block.2,13. features.4.block.2 [conv-act],conv-act,0.851749,0.0,0.0,5
-mobilenetv3s,pytorch_cpu,14,features.4.block.3,14. features.4.block.3 [conv-norm],conv-norm,1.931223,0.0,0.0,2
-mobilenetv3s,pytorch_cpu,15,features.5.block.0,15. features.5.block.0 [conv-norm-act],conv-norm-act,1.7973599999999998,0.0,0.0,3
-mobilenetv3s,pytorch_cpu,16,features.5.block.1,16. features.5.block.1 [conv-norm-act],conv-norm-act,31.679249,0.0,0.0,3
-mobilenetv3s,pytorch_cpu,17,features.5.block.2,17. features.5.block.2 [conv-act],conv-act,1.074799,0.0,0.0,5
-mobilenetv3s,pytorch_cpu,18,features.5.block.3,18. features.5.block.3 [conv-norm],conv-norm,2.4341209999999998,0.0,0.0,2
-mobilenetv3s,pytorch_cpu,19,features.6.block.0,19. features.6.block.0 [conv-norm-act],conv-norm-act,1.933928,0.0,0.0,3
-mobilenetv3s,pytorch_cpu,20,features.6.block.1,20. features.6.block.1 [conv-norm-act],conv-norm-act,32.559876,0.0,0.0,3
-mobilenetv3s,pytorch_cpu,21,features.6.block.2,21. features.6.block.2 [conv-act],conv-act,1.361231,0.0,0.0,5
-mobilenetv3s,pytorch_cpu,22,features.6.block.3,22. features.6.block.3 [conv-norm],conv-norm,2.216829,0.0,0.0,2
-mobilenetv3s,pytorch_cpu,23,features.7.block.0,23. features.7.block.0 [conv-norm-act],conv-norm-act,1.4594230000000001,0.0,0.0,3
-mobilenetv3s,pytorch_cpu,24,features.7.block.1,24. features.7.block.1 [conv-norm-act],conv-norm-act,16.744779,0.0,0.0,3
-mobilenetv3s,pytorch_cpu,25,features.7.block.2,25. features.7.block.2 [conv-act],conv-act,1.09571,0.0,0.0,5
-mobilenetv3s,pytorch_cpu,26,features.7.block.3,26. features.7.block.3 [conv-norm],conv-norm,2.286262,0.0,0.0,2
-mobilenetv3s,pytorch_cpu,27,features.8.block.0,27. features.8.block.0 [conv-norm-act],conv-norm-act,1.5554480000000002,0.0,0.0,3
-mobilenetv3s,pytorch_cpu,28,features.8.block.1,28. features.8.block.1 [conv-norm-act],conv-norm-act,19.993826000000002,0.0,0.0,3
-mobilenetv3s,pytorch_cpu,29,features.8.block.2,29. features.8.block.2 [conv-act],conv-act,1.100206,0.0,0.0,5
-mobilenetv3s,pytorch_cpu,30,features.8.block.3,30. features.8.block.3 [conv-norm],conv-norm,2.3242279999999997,0.0,0.0,2
-mobilenetv3s,pytorch_cpu,31,features.9.block.0,31. features.9.block.0 [conv-norm-act],conv-norm-act,2.329535,0.0,0.0,3
-mobilenetv3s,pytorch_cpu,32,features.9.block.1,32. features.9.block.1 [conv-norm-act],conv-norm-act,35.030828,0.0,0.0,3
-mobilenetv3s,pytorch_cpu,33,features.9.block.2,33. features.9.block.2 [conv-act],conv-act,1.060959,0.0,0.0,5
-mobilenetv3s,pytorch_cpu,34,features.9.block.3,34. features.9.block.3 [conv-norm],conv-norm,2.525781,0.0,0.0,2
-mobilenetv3s,pytorch_cpu,35,features.10.block.0,35. features.10.block.0 [conv-norm-act],conv-norm-act,2.357748,0.0,0.0,3
-mobilenetv3s,pytorch_cpu,36,features.10.block.1,36. features.10.block.1 [conv-norm-act],conv-norm-act,62.57635199999999,0.0,0.0,3
-mobilenetv3s,pytorch_cpu,37,features.10.block.2,37. features.10.block.2 [conv-act],conv-act,1.926437,0.0,0.0,5
-mobilenetv3s,pytorch_cpu,38,features.10.block.3,38. features.10.block.3 [conv-norm],conv-norm,3.049797,0.0,0.0,2
-mobilenetv3s,pytorch_cpu,39,features.11.block.0,39. features.11.block.0 [conv-norm-act],conv-norm-act,2.30835,0.0,0.0,3
-mobilenetv3s,pytorch_cpu,40,features.11.block.1,40. features.11.block.1 [conv-norm-act],conv-norm-act,60.687179,0.0,0.0,3
-mobilenetv3s,pytorch_cpu,41,features.11.block.2,41. features.11.block.2 [conv-act],conv-act,1.9174000000000002,0.0,0.0,5
-mobilenetv3s,pytorch_cpu,42,features.11.block.3,42. features.11.block.3 [conv-norm],conv-norm,2.776373,0.0,0.0,2
-mobilenetv3s,pytorch_cpu,43,features.12,43. features.12 [conv-norm-act],conv-norm-act,2.234329,0.0,0.0,3
-mobilenetv3s,pytorch_cpu,44,avgpool,44. avgpool [pool],pool,0.353816,0.0,0.0,1
-mobilenetv3s,pytorch_cpu,45,classifier,45. classifier [act-fc-Dropout],act-fc-Dropout,9.789547,0.0,0.0,4
-mobilenetv3s,pytorch_cuda,1,features.0,01. features.0 [conv-norm-act],conv-norm-act,1.8324449999999999,0.0,0.0,3
-mobilenetv3s,pytorch_cuda,2,features.1.block.0,02. features.1.block.0 [conv-norm-act],conv-norm-act,1.103427,0.0,0.0,3
-mobilenetv3s,pytorch_cuda,3,features.1.block.1,03. features.1.block.1 [conv-act],conv-act,2.1914599999999997,0.0,0.0,5
-mobilenetv3s,pytorch_cuda,4,features.1.block.2,04. features.1.block.2 [conv-norm],conv-norm,0.877656,0.0,0.0,2
-mobilenetv3s,pytorch_cuda,5,features.2.block.0,05. features.2.block.0 [conv-norm-act],conv-norm-act,1.4819339999999999,0.0,0.0,3
-mobilenetv3s,pytorch_cuda,6,features.2.block.1,06. features.2.block.1 [conv-norm-act],conv-norm-act,1.0876810000000001,0.0,0.0,3
-mobilenetv3s,pytorch_cuda,7,features.2.block.2,07. features.2.block.2 [conv-norm],conv-norm,0.939842,0.0,0.0,2
-mobilenetv3s,pytorch_cuda,8,features.3.block.0,08. features.3.block.0 [conv-norm-act],conv-norm-act,1.10549,0.0,0.0,3
-mobilenetv3s,pytorch_cuda,9,features.3.block.1,09. features.3.block.1 [conv-norm-act],conv-norm-act,1.1157949999999999,0.0,0.0,3
-mobilenetv3s,pytorch_cuda,10,features.3.block.2,10. features.3.block.2 [conv-norm],conv-norm,0.945043,0.0,0.0,2
-mobilenetv3s,pytorch_cuda,11,features.4.block.0,11. features.4.block.0 [conv-norm-act],conv-norm-act,1.091797,0.0,0.0,3
-mobilenetv3s,pytorch_cuda,12,features.4.block.1,12. features.4.block.1 [conv-norm-act],conv-norm-act,1.035868,0.0,0.0,3
-mobilenetv3s,pytorch_cuda,13,features.4.block.2,13. features.4.block.2 [conv-act],conv-act,2.184667,0.0,0.0,5
-mobilenetv3s,pytorch_cuda,14,features.4.block.3,14. features.4.block.3 [conv-norm],conv-norm,0.946256,0.0,0.0,2
-mobilenetv3s,pytorch_cuda,15,features.5.block.0,15. features.5.block.0 [conv-norm-act],conv-norm-act,1.107336,0.0,0.0,3
-mobilenetv3s,pytorch_cuda,16,features.5.block.1,16. features.5.block.1 [conv-norm-act],conv-norm-act,1.262342,0.0,0.0,3
-mobilenetv3s,pytorch_cuda,17,features.5.block.2,17. features.5.block.2 [conv-act],conv-act,2.078083,0.0,0.0,5
-mobilenetv3s,pytorch_cuda,18,features.5.block.3,18. features.5.block.3 [conv-norm],conv-norm,0.928777,0.0,0.0,2
-mobilenetv3s,pytorch_cuda,19,features.6.block.0,19. features.6.block.0 [conv-norm-act],conv-norm-act,1.079104,0.0,0.0,3
-mobilenetv3s,pytorch_cuda,20,features.6.block.1,20. features.6.block.1 [conv-norm-act],conv-norm-act,1.2605239999999998,0.0,0.0,3
-mobilenetv3s,pytorch_cuda,21,features.6.block.2,21. features.6.block.2 [conv-act],conv-act,2.102159,0.0,0.0,5
-mobilenetv3s,pytorch_cuda,22,features.6.block.3,22. features.6.block.3 [conv-norm],conv-norm,0.929147,0.0,0.0,2
-mobilenetv3s,pytorch_cuda,23,features.7.block.0,23. features.7.block.0 [conv-norm-act],conv-norm-act,1.074884,0.0,0.0,3
-mobilenetv3s,pytorch_cuda,24,features.7.block.1,24. features.7.block.1 [conv-norm-act],conv-norm-act,1.063726,0.0,0.0,3
-mobilenetv3s,pytorch_cuda,25,features.7.block.2,25. features.7.block.2 [conv-act],conv-act,2.086841,0.0,0.0,5
-mobilenetv3s,pytorch_cuda,26,features.7.block.3,26. features.7.block.3 [conv-norm],conv-norm,0.852885,0.0,0.0,2
-mobilenetv3s,pytorch_cuda,27,features.8.block.0,27. features.8.block.0 [conv-norm-act],conv-norm-act,1.068895,0.0,0.0,3
-mobilenetv3s,pytorch_cuda,28,features.8.block.1,28. features.8.block.1 [conv-norm-act],conv-norm-act,1.099629,0.0,0.0,3
-mobilenetv3s,pytorch_cuda,29,features.8.block.2,29. features.8.block.2 [conv-act],conv-act,2.072711,0.0,0.0,5
-mobilenetv3s,pytorch_cuda,30,features.8.block.3,30. features.8.block.3 [conv-norm],conv-norm,0.851972,0.0,0.0,2
-mobilenetv3s,pytorch_cuda,31,features.9.block.0,31. features.9.block.0 [conv-norm-act],conv-norm-act,1.117369,0.0,0.0,3
-mobilenetv3s,pytorch_cuda,32,features.9.block.1,32. features.9.block.1 [conv-norm-act],conv-norm-act,0.988964,0.0,0.0,3
-mobilenetv3s,pytorch_cuda,33,features.9.block.2,33. features.9.block.2 [conv-act],conv-act,2.0560970000000003,0.0,0.0,5
-mobilenetv3s,pytorch_cuda,34,features.9.block.3,34. features.9.block.3 [conv-norm],conv-norm,0.9272309999999999,0.0,0.0,2
-mobilenetv3s,pytorch_cuda,35,features.10.block.0,35. features.10.block.0 [conv-norm-act],conv-norm-act,1.1501000000000001,0.0,0.0,3
-mobilenetv3s,pytorch_cuda,36,features.10.block.1,36. features.10.block.1 [conv-norm-act],conv-norm-act,1.1042049999999999,0.0,0.0,3
-mobilenetv3s,pytorch_cuda,37,features.10.block.2,37. features.10.block.2 [conv-act],conv-act,2.1525489999999996,0.0,0.0,5
-mobilenetv3s,pytorch_cuda,38,features.10.block.3,38. features.10.block.3 [conv-norm],conv-norm,0.924309,0.0,0.0,2
-mobilenetv3s,pytorch_cuda,39,features.11.block.0,39. features.11.block.0 [conv-norm-act],conv-norm-act,1.144641,0.0,0.0,3
-mobilenetv3s,pytorch_cuda,40,features.11.block.1,40. features.11.block.1 [conv-norm-act],conv-norm-act,1.106911,0.0,0.0,3
-mobilenetv3s,pytorch_cuda,41,features.11.block.2,41. features.11.block.2 [conv-act],conv-act,2.139032,0.0,0.0,5
-mobilenetv3s,pytorch_cuda,42,features.11.block.3,42. features.11.block.3 [conv-norm],conv-norm,0.9233499999999999,0.0,0.0,2
-mobilenetv3s,pytorch_cuda,43,features.12,43. features.12 [conv-norm-act],conv-norm-act,1.156337,0.0,0.0,3
-mobilenetv3s,pytorch_cuda,44,avgpool,44. avgpool [pool],pool,0.289096,0.0,0.0,1
-mobilenetv3s,pytorch_cuda,45,classifier,45. classifier [act-fc-Dropout],act-fc-Dropout,1.615277,0.0,0.0,4
-mobilenetv3s,tensorrt_fp16,1,TensorRT layer 001,001. TensorRT layer 001 [TensorRTLayer],TensorRTLayer,4.5,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,2,TensorRT layer 002,002. TensorRT layer 002 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,3,TensorRT layer 003,003. TensorRT layer 003 [TensorRTLayer],TensorRTLayer,1.9,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,4,TensorRT layer 004,004. TensorRT layer 004 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,5,TensorRT layer 005,005. TensorRT layer 005 [TensorRTLayer],TensorRTLayer,2.9,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,6,TensorRT layer 006,006. TensorRT layer 006 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,7,TensorRT layer 007,007. TensorRT layer 007 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,8,TensorRT layer 008,008. TensorRT layer 008 [TensorRTLayer],TensorRTLayer,2.1,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,9,TensorRT layer 009,009. TensorRT layer 009 [TensorRTLayer],TensorRTLayer,2.1,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,10,TensorRT layer 010,010. TensorRT layer 010 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,11,TensorRT layer 011,011. TensorRT layer 011 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,12,TensorRT layer 012,012. TensorRT layer 012 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,13,TensorRT layer 013,013. TensorRT layer 013 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,14,TensorRT layer 014,014. TensorRT layer 014 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,15,TensorRT layer 015,015. TensorRT layer 015 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,16,TensorRT layer 016,016. TensorRT layer 016 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,17,TensorRT layer 017,017. TensorRT layer 017 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,18,TensorRT layer 018,018. TensorRT layer 018 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,19,TensorRT layer 019,019. TensorRT layer 019 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,20,TensorRT layer 020,020. TensorRT layer 020 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,21,TensorRT layer 021,021. TensorRT layer 021 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,22,TensorRT layer 022,022. TensorRT layer 022 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,23,TensorRT layer 023,023. TensorRT layer 023 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,24,TensorRT layer 024,024. TensorRT layer 024 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,25,TensorRT layer 025,025. TensorRT layer 025 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,26,TensorRT layer 026,026. TensorRT layer 026 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,27,TensorRT layer 027,027. TensorRT layer 027 [TensorRTLayer],TensorRTLayer,3.3,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,28,TensorRT layer 028,028. TensorRT layer 028 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,29,TensorRT layer 029,029. TensorRT layer 029 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,30,TensorRT layer 030,030. TensorRT layer 030 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,31,TensorRT layer 031,031. TensorRT layer 031 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,32,TensorRT layer 032,032. TensorRT layer 032 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,33,TensorRT layer 033,033. TensorRT layer 033 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,34,TensorRT layer 034,034. TensorRT layer 034 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,35,TensorRT layer 035,035. TensorRT layer 035 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,36,TensorRT layer 036,036. TensorRT layer 036 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,37,TensorRT layer 037,037. TensorRT layer 037 [TensorRTLayer],TensorRTLayer,2.3,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,38,TensorRT layer 038,038. TensorRT layer 038 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,39,TensorRT layer 039,039. TensorRT layer 039 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,40,TensorRT layer 040,040. TensorRT layer 040 [TensorRTLayer],TensorRTLayer,2.6,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,41,TensorRT layer 041,041. TensorRT layer 041 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,42,TensorRT layer 042,042. TensorRT layer 042 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,43,TensorRT layer 043,043. TensorRT layer 043 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,44,TensorRT layer 044,044. TensorRT layer 044 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,45,TensorRT layer 045,045. TensorRT layer 045 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,46,TensorRT layer 046,046. TensorRT layer 046 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,47,TensorRT layer 047,047. TensorRT layer 047 [TensorRTLayer],TensorRTLayer,2.0,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,48,TensorRT layer 048,048. TensorRT layer 048 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,49,TensorRT layer 049,049. TensorRT layer 049 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,50,TensorRT layer 050,050. TensorRT layer 050 [TensorRTLayer],TensorRTLayer,2.5,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,51,TensorRT layer 051,051. TensorRT layer 051 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,52,TensorRT layer 052,052. TensorRT layer 052 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,53,TensorRT layer 053,053. TensorRT layer 053 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,54,TensorRT layer 054,054. TensorRT layer 054 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,55,TensorRT layer 055,055. TensorRT layer 055 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,56,TensorRT layer 056,056. TensorRT layer 056 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,57,TensorRT layer 057,057. TensorRT layer 057 [TensorRTLayer],TensorRTLayer,2.0,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,58,TensorRT layer 058,058. TensorRT layer 058 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,59,TensorRT layer 059,059. TensorRT layer 059 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,60,TensorRT layer 060,060. TensorRT layer 060 [TensorRTLayer],TensorRTLayer,2.6,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,61,TensorRT layer 061,061. TensorRT layer 061 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,62,TensorRT layer 062,062. TensorRT layer 062 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,63,TensorRT layer 063,063. TensorRT layer 063 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,64,TensorRT layer 064,064. TensorRT layer 064 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,65,TensorRT layer 065,065. TensorRT layer 065 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,66,TensorRT layer 066,066. TensorRT layer 066 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,67,TensorRT layer 067,067. TensorRT layer 067 [TensorRTLayer],TensorRTLayer,2.4,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,68,TensorRT layer 068,068. TensorRT layer 068 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,69,TensorRT layer 069,069. TensorRT layer 069 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,70,TensorRT layer 070,070. TensorRT layer 070 [TensorRTLayer],TensorRTLayer,2.5,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,71,TensorRT layer 071,071. TensorRT layer 071 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,72,TensorRT layer 072,072. TensorRT layer 072 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,73,TensorRT layer 073,073. TensorRT layer 073 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,74,TensorRT layer 074,074. TensorRT layer 074 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,75,TensorRT layer 075,075. TensorRT layer 075 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,76,TensorRT layer 076,076. TensorRT layer 076 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,77,TensorRT layer 077,077. TensorRT layer 077 [TensorRTLayer],TensorRTLayer,3.3,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,78,TensorRT layer 078,078. TensorRT layer 078 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,79,TensorRT layer 079,079. TensorRT layer 079 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,80,TensorRT layer 080,080. TensorRT layer 080 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,81,TensorRT layer 081,081. TensorRT layer 081 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,82,TensorRT layer 082,082. TensorRT layer 082 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,83,TensorRT layer 083,083. TensorRT layer 083 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,84,TensorRT layer 084,084. TensorRT layer 084 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,85,TensorRT layer 085,085. TensorRT layer 085 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,86,TensorRT layer 086,086. TensorRT layer 086 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,87,TensorRT layer 087,087. TensorRT layer 087 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,88,TensorRT layer 088,088. TensorRT layer 088 [TensorRTLayer],TensorRTLayer,3.2,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,89,TensorRT layer 089,089. TensorRT layer 089 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,90,TensorRT layer 090,090. TensorRT layer 090 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,91,TensorRT layer 091,091. TensorRT layer 091 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,92,TensorRT layer 092,092. TensorRT layer 092 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,93,TensorRT layer 093,093. TensorRT layer 093 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,94,TensorRT layer 094,094. TensorRT layer 094 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,95,TensorRT layer 095,095. TensorRT layer 095 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,96,TensorRT layer 096,096. TensorRT layer 096 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,97,TensorRT layer 097,097. TensorRT layer 097 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,98,TensorRT layer 098,098. TensorRT layer 098 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,99,TensorRT layer 099,099. TensorRT layer 099 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,100,TensorRT layer 100,100. TensorRT layer 100 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,101,TensorRT layer 101,101. TensorRT layer 101 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,102,TensorRT layer 102,102. TensorRT layer 102 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
-mobilenetv3s,tensorrt_fp16,103,TensorRT layer 103,103. TensorRT layer 103 [TensorRTLayer],TensorRTLayer,100.0,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,1,TensorRT layer 001,001. TensorRT layer 001 [TensorRTLayer],TensorRTLayer,4.9,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,2,TensorRT layer 002,002. TensorRT layer 002 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,3,TensorRT layer 003,003. TensorRT layer 003 [TensorRTLayer],TensorRTLayer,1.8,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,4,TensorRT layer 004,004. TensorRT layer 004 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,5,TensorRT layer 005,005. TensorRT layer 005 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,6,TensorRT layer 006,006. TensorRT layer 006 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,7,TensorRT layer 007,007. TensorRT layer 007 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,8,TensorRT layer 008,008. TensorRT layer 008 [TensorRTLayer],TensorRTLayer,2.1,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,9,TensorRT layer 009,009. TensorRT layer 009 [TensorRTLayer],TensorRTLayer,2.2,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,10,TensorRT layer 010,010. TensorRT layer 010 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,11,TensorRT layer 011,011. TensorRT layer 011 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,12,TensorRT layer 012,012. TensorRT layer 012 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,13,TensorRT layer 013,013. TensorRT layer 013 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,14,TensorRT layer 014,014. TensorRT layer 014 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,15,TensorRT layer 015,015. TensorRT layer 015 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,16,TensorRT layer 016,016. TensorRT layer 016 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,17,TensorRT layer 017,017. TensorRT layer 017 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,18,TensorRT layer 018,018. TensorRT layer 018 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,19,TensorRT layer 019,019. TensorRT layer 019 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,20,TensorRT layer 020,020. TensorRT layer 020 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,21,TensorRT layer 021,021. TensorRT layer 021 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,22,TensorRT layer 022,022. TensorRT layer 022 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,23,TensorRT layer 023,023. TensorRT layer 023 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,24,TensorRT layer 024,024. TensorRT layer 024 [TensorRTLayer],TensorRTLayer,4.0,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,25,TensorRT layer 025,025. TensorRT layer 025 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,26,TensorRT layer 026,026. TensorRT layer 026 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,27,TensorRT layer 027,027. TensorRT layer 027 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,28,TensorRT layer 028,028. TensorRT layer 028 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,29,TensorRT layer 029,029. TensorRT layer 029 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,30,TensorRT layer 030,030. TensorRT layer 030 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,31,TensorRT layer 031,031. TensorRT layer 031 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,32,TensorRT layer 032,032. TensorRT layer 032 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,33,TensorRT layer 033,033. TensorRT layer 033 [TensorRTLayer],TensorRTLayer,4.0,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,34,TensorRT layer 034,034. TensorRT layer 034 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,35,TensorRT layer 035,035. TensorRT layer 035 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,36,TensorRT layer 036,036. TensorRT layer 036 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,37,TensorRT layer 037,037. TensorRT layer 037 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,38,TensorRT layer 038,038. TensorRT layer 038 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,39,TensorRT layer 039,039. TensorRT layer 039 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,40,TensorRT layer 040,040. TensorRT layer 040 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,41,TensorRT layer 041,041. TensorRT layer 041 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,42,TensorRT layer 042,042. TensorRT layer 042 [TensorRTLayer],TensorRTLayer,2.2,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,43,TensorRT layer 043,043. TensorRT layer 043 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,44,TensorRT layer 044,044. TensorRT layer 044 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,45,TensorRT layer 045,045. TensorRT layer 045 [TensorRTLayer],TensorRTLayer,2.3,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,46,TensorRT layer 046,046. TensorRT layer 046 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,47,TensorRT layer 047,047. TensorRT layer 047 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,48,TensorRT layer 048,048. TensorRT layer 048 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,49,TensorRT layer 049,049. TensorRT layer 049 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,50,TensorRT layer 050,050. TensorRT layer 050 [TensorRTLayer],TensorRTLayer,2.8,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,51,TensorRT layer 051,051. TensorRT layer 051 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,52,TensorRT layer 052,052. TensorRT layer 052 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,53,TensorRT layer 053,053. TensorRT layer 053 [TensorRTLayer],TensorRTLayer,2.5,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,54,TensorRT layer 054,054. TensorRT layer 054 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,55,TensorRT layer 055,055. TensorRT layer 055 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,56,TensorRT layer 056,056. TensorRT layer 056 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,57,TensorRT layer 057,057. TensorRT layer 057 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,58,TensorRT layer 058,058. TensorRT layer 058 [TensorRTLayer],TensorRTLayer,3.9,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,59,TensorRT layer 059,059. TensorRT layer 059 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,60,TensorRT layer 060,060. TensorRT layer 060 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,61,TensorRT layer 061,061. TensorRT layer 061 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,62,TensorRT layer 062,062. TensorRT layer 062 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,63,TensorRT layer 063,063. TensorRT layer 063 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,64,TensorRT layer 064,064. TensorRT layer 064 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,65,TensorRT layer 065,065. TensorRT layer 065 [TensorRTLayer],TensorRTLayer,1.8,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,66,TensorRT layer 066,066. TensorRT layer 066 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,67,TensorRT layer 067,067. TensorRT layer 067 [TensorRTLayer],TensorRTLayer,4.4,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,68,TensorRT layer 068,068. TensorRT layer 068 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,69,TensorRT layer 069,069. TensorRT layer 069 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,70,TensorRT layer 070,070. TensorRT layer 070 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,71,TensorRT layer 071,071. TensorRT layer 071 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,72,TensorRT layer 072,072. TensorRT layer 072 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,73,TensorRT layer 073,073. TensorRT layer 073 [TensorRTLayer],TensorRTLayer,2.0,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,74,TensorRT layer 074,074. TensorRT layer 074 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,75,TensorRT layer 075,075. TensorRT layer 075 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,76,TensorRT layer 076,076. TensorRT layer 076 [TensorRTLayer],TensorRTLayer,3.6,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,77,TensorRT layer 077,077. TensorRT layer 077 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,78,TensorRT layer 078,078. TensorRT layer 078 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,79,TensorRT layer 079,079. TensorRT layer 079 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,80,TensorRT layer 080,080. TensorRT layer 080 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,81,TensorRT layer 081,081. TensorRT layer 081 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,82,TensorRT layer 082,082. TensorRT layer 082 [TensorRTLayer],TensorRTLayer,1.9,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,83,TensorRT layer 083,083. TensorRT layer 083 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,84,TensorRT layer 084,084. TensorRT layer 084 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,85,TensorRT layer 085,085. TensorRT layer 085 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,86,TensorRT layer 086,086. TensorRT layer 086 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,87,TensorRT layer 087,087. TensorRT layer 087 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,88,TensorRT layer 088,088. TensorRT layer 088 [TensorRTLayer],TensorRTLayer,3.1,0.0,0.0,1
-mobilenetv3s,tensorrt_fp32,89,TensorRT layer 089,089. TensorRT layer 089 [TensorRTLayer],TensorRTLayer,100.0,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,1,TensorRT layer 001,001. TensorRT layer 001 [TensorRTLayer],TensorRTLayer,6.0,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,2,TensorRT layer 002,002. TensorRT layer 002 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,3,TensorRT layer 003,003. TensorRT layer 003 [TensorRTLayer],TensorRTLayer,2.4,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,4,TensorRT layer 004,004. TensorRT layer 004 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,5,TensorRT layer 005,005. TensorRT layer 005 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,6,TensorRT layer 006,006. TensorRT layer 006 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,7,TensorRT layer 007,007. TensorRT layer 007 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,8,TensorRT layer 008,008. TensorRT layer 008 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,9,TensorRT layer 009,009. TensorRT layer 009 [TensorRTLayer],TensorRTLayer,2.8,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,10,TensorRT layer 010,010. TensorRT layer 010 [TensorRTLayer],TensorRTLayer,2.8,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,11,TensorRT layer 011,011. TensorRT layer 011 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,12,TensorRT layer 012,012. TensorRT layer 012 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,13,TensorRT layer 013,013. TensorRT layer 013 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,14,TensorRT layer 014,014. TensorRT layer 014 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,15,TensorRT layer 015,015. TensorRT layer 015 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,16,TensorRT layer 016,016. TensorRT layer 016 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,17,TensorRT layer 017,017. TensorRT layer 017 [TensorRTLayer],TensorRTLayer,2.2,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,18,TensorRT layer 018,018. TensorRT layer 018 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,19,TensorRT layer 019,019. TensorRT layer 019 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,20,TensorRT layer 020,020. TensorRT layer 020 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,21,TensorRT layer 021,021. TensorRT layer 021 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,22,TensorRT layer 022,022. TensorRT layer 022 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,23,TensorRT layer 023,023. TensorRT layer 023 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,24,TensorRT layer 024,024. TensorRT layer 024 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,25,TensorRT layer 025,025. TensorRT layer 025 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,26,TensorRT layer 026,026. TensorRT layer 026 [TensorRTLayer],TensorRTLayer,5.0,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,27,TensorRT layer 027,027. TensorRT layer 027 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,28,TensorRT layer 028,028. TensorRT layer 028 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,29,TensorRT layer 029,029. TensorRT layer 029 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,30,TensorRT layer 030,030. TensorRT layer 030 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,31,TensorRT layer 031,031. TensorRT layer 031 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,32,TensorRT layer 032,032. TensorRT layer 032 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,33,TensorRT layer 033,033. TensorRT layer 033 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,34,TensorRT layer 034,034. TensorRT layer 034 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,35,TensorRT layer 035,035. TensorRT layer 035 [TensorRTLayer],TensorRTLayer,5.0,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,36,TensorRT layer 036,036. TensorRT layer 036 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,37,TensorRT layer 037,037. TensorRT layer 037 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,38,TensorRT layer 038,038. TensorRT layer 038 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,39,TensorRT layer 039,039. TensorRT layer 039 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,40,TensorRT layer 040,040. TensorRT layer 040 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,41,TensorRT layer 041,041. TensorRT layer 041 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,42,TensorRT layer 042,042. TensorRT layer 042 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,43,TensorRT layer 043,043. TensorRT layer 043 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,44,TensorRT layer 044,044. TensorRT layer 044 [TensorRTLayer],TensorRTLayer,2.5,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,45,TensorRT layer 045,045. TensorRT layer 045 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,46,TensorRT layer 046,046. TensorRT layer 046 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,47,TensorRT layer 047,047. TensorRT layer 047 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,48,TensorRT layer 048,048. TensorRT layer 048 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,49,TensorRT layer 049,049. TensorRT layer 049 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,50,TensorRT layer 050,050. TensorRT layer 050 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,51,TensorRT layer 051,051. TensorRT layer 051 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,52,TensorRT layer 052,052. TensorRT layer 052 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,53,TensorRT layer 053,053. TensorRT layer 053 [TensorRTLayer],TensorRTLayer,3.0,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,54,TensorRT layer 054,054. TensorRT layer 054 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,55,TensorRT layer 055,055. TensorRT layer 055 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,56,TensorRT layer 056,056. TensorRT layer 056 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,57,TensorRT layer 057,057. TensorRT layer 057 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,58,TensorRT layer 058,058. TensorRT layer 058 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,59,TensorRT layer 059,059. TensorRT layer 059 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,60,TensorRT layer 060,060. TensorRT layer 060 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,61,TensorRT layer 061,061. TensorRT layer 061 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,62,TensorRT layer 062,062. TensorRT layer 062 [TensorRTLayer],TensorRTLayer,3.2,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,63,TensorRT layer 063,063. TensorRT layer 063 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,64,TensorRT layer 064,064. TensorRT layer 064 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,65,TensorRT layer 065,065. TensorRT layer 065 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,66,TensorRT layer 066,066. TensorRT layer 066 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,67,TensorRT layer 067,067. TensorRT layer 067 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,68,TensorRT layer 068,068. TensorRT layer 068 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,69,TensorRT layer 069,069. TensorRT layer 069 [TensorRTLayer],TensorRTLayer,1.9,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,70,TensorRT layer 070,070. TensorRT layer 070 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,71,TensorRT layer 071,071. TensorRT layer 071 [TensorRTLayer],TensorRTLayer,5.1,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,72,TensorRT layer 072,072. TensorRT layer 072 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,73,TensorRT layer 073,073. TensorRT layer 073 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,74,TensorRT layer 074,074. TensorRT layer 074 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,75,TensorRT layer 075,075. TensorRT layer 075 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,76,TensorRT layer 076,076. TensorRT layer 076 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,77,TensorRT layer 077,077. TensorRT layer 077 [TensorRTLayer],TensorRTLayer,2.1,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,78,TensorRT layer 078,078. TensorRT layer 078 [TensorRTLayer],TensorRTLayer,1.8,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,79,TensorRT layer 079,079. TensorRT layer 079 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,80,TensorRT layer 080,080. TensorRT layer 080 [TensorRTLayer],TensorRTLayer,4.8,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,81,TensorRT layer 081,081. TensorRT layer 081 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,82,TensorRT layer 082,082. TensorRT layer 082 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,83,TensorRT layer 083,083. TensorRT layer 083 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,84,TensorRT layer 084,084. TensorRT layer 084 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,85,TensorRT layer 085,085. TensorRT layer 085 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,86,TensorRT layer 086,086. TensorRT layer 086 [TensorRTLayer],TensorRTLayer,2.0,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,87,TensorRT layer 087,087. TensorRT layer 087 [TensorRTLayer],TensorRTLayer,1.8,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,88,TensorRT layer 088,088. TensorRT layer 088 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,89,TensorRT layer 089,089. TensorRT layer 089 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,90,TensorRT layer 090,090. TensorRT layer 090 [TensorRTLayer],TensorRTLayer,1.8,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,91,TensorRT layer 091,091. TensorRT layer 091 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,92,TensorRT layer 092,092. TensorRT layer 092 [TensorRTLayer],TensorRTLayer,3.7,0.0,0.0,1
-mobilenetv3s,tensorrt_int8,93,TensorRT layer 093,093. TensorRT layer 093 [TensorRTLayer],TensorRTLayer,100.0,0.0,0.0,1
-mobilenetv3s,tflite_cpu,1,dummy_conv,01. dummy_conv [conv],conv,10.09,0.0,0.0,1
+model,runtime,group_index,group_key,group_label,group_type,mean_ms,power_gpu_mw,power_total_mw,ops,input_shape,output_shape,param_count
+mobilenetv3s,ncnn_vulkan,1,model inference,"01. model inference [min]
+params 0",min,9.72,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,1,features/features.0/features.0.0,"01. features.0/features.0.0 [conv]
+params 0",conv,2.4978000000000002,0.0,0.0,3,,,0.0
+mobilenetv3s,onnxrt_cpu,2,features/features.0/features.0.2,"02. features.0/features.0.2 [act-eltwise]
+params 0",act-eltwise,0.7953999999999999,0.0,0.0,4,,,0.0
+mobilenetv3s,onnxrt_cpu,3,features/features.1/block/block.0/block.0.0,"03. features.1/block/block.0/block.0.0 [conv]
+params 0",conv,2.2638000000000003,0.0,0.0,3,,,0.0
+mobilenetv3s,onnxrt_cpu,4,features/features.1/block/block.1/avgpool,"04. features.1/block/block.1/avgpool [pool]
+params 0",pool,0.11710000000000001,0.0,0.0,2,,,0.0
+mobilenetv3s,onnxrt_cpu,5,features/features.1/block/block.1/fc1,"05. features.1/block/block.1/fc1 [conv]
+params 0",conv,0.0649,0.0,0.0,2,,,0.0
+mobilenetv3s,onnxrt_cpu,6,features/features.1/block/block.1/fc2,"06. features.1/block/block.1/fc2 [conv]
+params 0",conv,0.0528,0.0,0.0,2,,,0.0
+mobilenetv3s,onnxrt_cpu,7,features/features.1/block/block.1,"07. features.1/block/block.1 [eltwise]
+params 0",eltwise,0.1214,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,8,features/features.1/block/block.2/block.2.0,"08. features.1/block/block.2/block.2.0 [conv]
+params 0",conv,0.4477,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,9,features/features.2/block/block.0/block.0.0,"09. features.2/block/block.0/block.0.0 [conv]
+params 0",conv,1.2279,0.0,0.0,2,,,0.0
+mobilenetv3s,onnxrt_cpu,10,features/features.2/block/block.1/block.1.0,"10. features.2/block/block.1/block.1.0 [conv]
+params 0",conv,2.7883,0.0,0.0,2,,,0.0
+mobilenetv3s,onnxrt_cpu,11,features/features.2/block/block.2/block.2.0,"11. features.2/block/block.2/block.2.0 [conv]
+params 0",conv,0.4428,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,12,features/features.3/block/block.0/block.0.0,"12. features.3/block/block.0/block.0.0 [conv]
+params 0",conv,0.5393,0.0,0.0,3,,,0.0
+mobilenetv3s,onnxrt_cpu,13,features/features.3/block/block.1/block.1.0,"13. features.3/block/block.1/block.1.0 [conv]
+params 0",conv,1.5659,0.0,0.0,2,,,0.0
+mobilenetv3s,onnxrt_cpu,14,features/features.3/block/block.2/block.2.0,"14. features.3/block/block.2/block.2.0 [conv]
+params 0",conv,0.6252,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,15,features/features.4/block/block.0/block.0.0,"15. features.4/block/block.0/block.0.0 [conv]
+params 0",conv,0.5387,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,16,features/features.4/block/block.0/block.0.2,"16. features.4/block/block.0/block.0.2 [act-eltwise]
+params 0",act-eltwise,0.3856,0.0,0.0,4,,,0.0
+mobilenetv3s,onnxrt_cpu,17,features/features.4/block/block.1/block.1.0,"17. features.4/block/block.1/block.1.0 [conv]
+params 0",conv,2.6178,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,18,features/features.4/block/block.1/block.1.2,"18. features.4/block/block.1/block.1.2 [act-eltwise]
+params 0",act-eltwise,0.179,0.0,0.0,3,,,0.0
+mobilenetv3s,onnxrt_cpu,19,features/features.4/block/block.2/avgpool,"19. features.4/block/block.2/avgpool [pool]
+params 0",pool,0.077,0.0,0.0,2,,,0.0
+mobilenetv3s,onnxrt_cpu,20,features/features.4/block/block.2/fc1,"20. features.4/block/block.2/fc1 [conv]
+params 0",conv,0.0752,0.0,0.0,2,,,0.0
+mobilenetv3s,onnxrt_cpu,21,features/features.4/block/block.2/fc2,"21. features.4/block/block.2/fc2 [conv]
+params 0",conv,0.0649,0.0,0.0,2,,,0.0
+mobilenetv3s,onnxrt_cpu,22,features/features.4/block/block.2,"22. features.4/block/block.2 [eltwise]
+params 0",eltwise,0.0889,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,23,features/features.4/block/block.3/block.3.0,"23. features.4/block/block.3/block.3.0 [conv]
+params 0",conv,0.2634,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,24,features/features.5/block/block.0/block.0.0,"24. features.5/block/block.0/block.0.0 [conv]
+params 0",conv,0.5307,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,25,features/features.5/block/block.0/block.0.2,"25. features.5/block/block.0/block.0.2 [act-eltwise]
+params 0",act-eltwise,0.2838,0.0,0.0,3,,,0.0
+mobilenetv3s,onnxrt_cpu,26,features/features.5/block/block.1/block.1.0,"26. features.5/block/block.1/block.1.0 [conv]
+params 0",conv,4.1743999999999994,0.0,0.0,2,,,0.0
+mobilenetv3s,onnxrt_cpu,27,features/features.5/block/block.1/block.1.2,"27. features.5/block/block.1/block.1.2 [act-eltwise]
+params 0",act-eltwise,0.2856,0.0,0.0,3,,,0.0
+mobilenetv3s,onnxrt_cpu,28,features/features.5/block/block.2/avgpool,"28. features.5/block/block.2/avgpool [pool]
+params 0",pool,0.1067,0.0,0.0,2,,,0.0
+mobilenetv3s,onnxrt_cpu,29,features/features.5/block/block.2/fc1,"29. features.5/block/block.2/fc1 [conv]
+params 0",conv,0.1399,0.0,0.0,2,,,0.0
+mobilenetv3s,onnxrt_cpu,30,features/features.5/block/block.2/fc2,"30. features.5/block/block.2/fc2 [conv]
+params 0",conv,0.121,0.0,0.0,2,,,0.0
+mobilenetv3s,onnxrt_cpu,31,features/features.5/block/block.2,"31. features.5/block/block.2 [eltwise]
+params 0",eltwise,0.1461,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,32,features/features.5/block/block.3/block.3.0,"32. features.5/block/block.3/block.3.0 [conv]
+params 0",conv,0.6013,0.0,0.0,2,,,0.0
+mobilenetv3s,onnxrt_cpu,33,features/features.6/block/block.0/block.0.0,"33. features.6/block/block.0/block.0.0 [conv]
+params 0",conv,0.5249,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,34,features/features.6/block/block.0/block.0.2,"34. features.6/block/block.0/block.0.2 [act-eltwise]
+params 0",act-eltwise,0.2711,0.0,0.0,3,,,0.0
+mobilenetv3s,onnxrt_cpu,35,features/features.6/block/block.1/block.1.0,"35. features.6/block/block.1/block.1.0 [conv]
+params 0",conv,4.1565,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,36,features/features.6/block/block.1/block.1.2,"36. features.6/block/block.1/block.1.2 [act-eltwise]
+params 0",act-eltwise,0.2693,0.0,0.0,4,,,0.0
+mobilenetv3s,onnxrt_cpu,37,features/features.6/block/block.2/avgpool,"37. features.6/block/block.2/avgpool [pool]
+params 0",pool,0.1009,0.0,0.0,2,,,0.0
+mobilenetv3s,onnxrt_cpu,38,features/features.6/block/block.2/fc1,"38. features.6/block/block.2/fc1 [conv]
+params 0",conv,0.1414,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,39,features/features.6/block/block.2/fc2,"39. features.6/block/block.2/fc2 [conv]
+params 0",conv,0.1218,0.0,0.0,2,,,0.0
+mobilenetv3s,onnxrt_cpu,40,features/features.6/block/block.2,"40. features.6/block/block.2 [eltwise]
+params 0",eltwise,0.1479,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,41,features/features.6/block/block.3/block.3.0,"41. features.6/block/block.3/block.3.0 [conv]
+params 0",conv,0.5709,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,42,features/features.7/block/block.0/block.0.0,"42. features.7/block/block.0/block.0.0 [conv]
+params 0",conv,0.4128,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,43,features/features.7/block/block.0/block.0.2,"43. features.7/block/block.0/block.0.2 [act-eltwise]
+params 0",act-eltwise,0.192,0.0,0.0,3,,,0.0
+mobilenetv3s,onnxrt_cpu,44,features/features.7/block/block.1/block.1.0,"44. features.7/block/block.1/block.1.0 [conv]
+params 0",conv,2.0921,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,45,features/features.7/block/block.1/block.1.2,"45. features.7/block/block.1/block.1.2 [act-eltwise]
+params 0",act-eltwise,0.17049999999999998,0.0,0.0,3,,,0.0
+mobilenetv3s,onnxrt_cpu,46,features/features.7/block/block.2/avgpool,"46. features.7/block/block.2/avgpool [pool]
+params 0",pool,0.0805,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,47,features/features.7/block/block.2/fc1,"47. features.7/block/block.2/fc1 [conv]
+params 0",conv,0.0886,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,48,features/features.7/block/block.2/fc2,"48. features.7/block/block.2/fc2 [conv]
+params 0",conv,0.0697,0.0,0.0,2,,,0.0
+mobilenetv3s,onnxrt_cpu,49,features/features.7/block/block.2,"49. features.7/block/block.2 [eltwise]
+params 0",eltwise,0.0893,0.0,0.0,2,,,0.0
+mobilenetv3s,onnxrt_cpu,50,features/features.7/block/block.3/block.3.0,"50. features.7/block/block.3/block.3.0 [conv]
+params 0",conv,0.3474,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,51,features/features.8/block/block.0/block.0.0,"51. features.8/block/block.0/block.0.0 [conv]
+params 0",conv,0.4019,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,52,features/features.8/block/block.0/block.0.2,"52. features.8/block/block.0/block.0.2 [act-eltwise]
+params 0",act-eltwise,0.1951,0.0,0.0,3,,,0.0
+mobilenetv3s,onnxrt_cpu,53,features/features.8/block/block.1/block.1.0,"53. features.8/block/block.1/block.1.0 [conv]
+params 0",conv,2.5173,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,54,features/features.8/block/block.1/block.1.2,"54. features.8/block/block.1/block.1.2 [act-eltwise]
+params 0",act-eltwise,0.192,0.0,0.0,3,,,0.0
+mobilenetv3s,onnxrt_cpu,55,features/features.8/block/block.2/avgpool,"55. features.8/block/block.2/avgpool [pool]
+params 0",pool,0.0806,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,56,features/features.8/block/block.2/fc1,"56. features.8/block/block.2/fc1 [conv]
+params 0",conv,0.0853,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,57,features/features.8/block/block.2/fc2,"57. features.8/block/block.2/fc2 [conv]
+params 0",conv,0.091,0.0,0.0,2,,,0.0
+mobilenetv3s,onnxrt_cpu,58,features/features.8/block/block.2,"58. features.8/block/block.2 [eltwise]
+params 0",eltwise,0.0986,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,59,features/features.8/block/block.3/block.3.0,"59. features.8/block/block.3/block.3.0 [conv]
+params 0",conv,0.438,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,60,features/features.9/block/block.0/block.0.0,"60. features.9/block/block.0/block.0.0 [conv]
+params 0",conv,0.7242,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,61,features/features.9/block/block.0/block.0.2,"61. features.9/block/block.0/block.0.2 [act-eltwise]
+params 0",act-eltwise,0.32789999999999997,0.0,0.0,3,,,0.0
+mobilenetv3s,onnxrt_cpu,62,features/features.9/block/block.1/block.1.0,"62. features.9/block/block.1/block.1.0 [conv]
+params 0",conv,2.6002,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,63,features/features.9/block/block.1/block.1.2,"63. features.9/block/block.1/block.1.2 [act-eltwise]
+params 0",act-eltwise,0.152,0.0,0.0,3,,,0.0
+mobilenetv3s,onnxrt_cpu,64,features/features.9/block/block.2/avgpool,"64. features.9/block/block.2/avgpool [pool]
+params 0",pool,0.0748,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,65,features/features.9/block/block.2/fc1,"65. features.9/block/block.2/fc1 [conv]
+params 0",conv,0.1855,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,66,features/features.9/block/block.2/fc2,"66. features.9/block/block.2/fc2 [conv]
+params 0",conv,0.20220000000000002,0.0,0.0,2,,,0.0
+mobilenetv3s,onnxrt_cpu,67,features/features.9/block/block.2,"67. features.9/block/block.2 [eltwise]
+params 0",eltwise,0.1038,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,68,features/features.9/block/block.3/block.3.0,"68. features.9/block/block.3/block.3.0 [conv]
+params 0",conv,0.4955,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,69,features/features.10/block/block.0/block.0.0,"69. features.10/block/block.0/block.0.0 [conv]
+params 0",conv,0.7275,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,70,features/features.10/block/block.0/block.0.2,"70. features.10/block/block.0/block.0.2 [act-eltwise]
+params 0",act-eltwise,0.2081,0.0,0.0,3,,,0.0
+mobilenetv3s,onnxrt_cpu,71,features/features.10/block/block.1/block.1.0,"71. features.10/block/block.1/block.1.0 [conv]
+params 0",conv,4.5605,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,72,features/features.10/block/block.1/block.1.2,"72. features.10/block/block.1/block.1.2 [act-eltwise]
+params 0",act-eltwise,0.19829999999999998,0.0,0.0,3,,,0.0
+mobilenetv3s,onnxrt_cpu,73,features/features.10/block/block.2/avgpool,"73. features.10/block/block.2/avgpool [pool]
+params 0",pool,0.09369999999999999,0.0,0.0,2,,,0.0
+mobilenetv3s,onnxrt_cpu,74,features/features.10/block/block.2/fc1,"74. features.10/block/block.2/fc1 [conv]
+params 0",conv,0.3228,0.0,0.0,2,,,0.0
+mobilenetv3s,onnxrt_cpu,75,features/features.10/block/block.2/fc2,"75. features.10/block/block.2/fc2 [conv]
+params 0",conv,0.2837,0.0,0.0,2,,,0.0
+mobilenetv3s,onnxrt_cpu,76,features/features.10/block/block.2,"76. features.10/block/block.2 [eltwise]
+params 0",eltwise,0.16349999999999998,0.0,0.0,2,,,0.0
+mobilenetv3s,onnxrt_cpu,77,features/features.10/block/block.3/block.3.0,"77. features.10/block/block.3/block.3.0 [conv]
+params 0",conv,0.9134,0.0,0.0,2,,,0.0
+mobilenetv3s,onnxrt_cpu,78,features/features.11/block/block.0/block.0.0,"78. features.11/block/block.0/block.0.0 [conv]
+params 0",conv,0.7194,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,79,features/features.11/block/block.0/block.0.2,"79. features.11/block/block.0/block.0.2 [act-eltwise]
+params 0",act-eltwise,0.2122,0.0,0.0,3,,,0.0
+mobilenetv3s,onnxrt_cpu,80,features/features.11/block/block.1/block.1.0,"80. features.11/block/block.1/block.1.0 [conv]
+params 0",conv,4.5374,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,81,features/features.11/block/block.1/block.1.2,"81. features.11/block/block.1/block.1.2 [act-eltwise]
+params 0",act-eltwise,0.1956,0.0,0.0,3,,,0.0
+mobilenetv3s,onnxrt_cpu,82,features/features.11/block/block.2/avgpool,"82. features.11/block/block.2/avgpool [pool]
+params 0",pool,0.09269999999999999,0.0,0.0,2,,,0.0
+mobilenetv3s,onnxrt_cpu,83,features/features.11/block/block.2/fc1,"83. features.11/block/block.2/fc1 [conv]
+params 0",conv,0.323,0.0,0.0,2,,,0.0
+mobilenetv3s,onnxrt_cpu,84,features/features.11/block/block.2/fc2,"84. features.11/block/block.2/fc2 [conv]
+params 0",conv,0.2905,0.0,0.0,2,,,0.0
+mobilenetv3s,onnxrt_cpu,85,features/features.11/block/block.2,"85. features.11/block/block.2 [eltwise]
+params 0",eltwise,0.1667,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,86,features/features.11/block/block.3/block.3.0,"86. features.11/block/block.3/block.3.0 [conv]
+params 0",conv,0.8456,0.0,0.0,2,,,0.0
+mobilenetv3s,onnxrt_cpu,87,features/features.12/features.12.0,"87. features.12/features.12.0 [conv]
+params 0",conv,0.7627999999999999,0.0,0.0,2,,,0.0
+mobilenetv3s,onnxrt_cpu,88,features/features.12/features.12.2,"88. features.12/features.12.2 [act-eltwise]
+params 0",act-eltwise,0.2119,0.0,0.0,2,,,0.0
+mobilenetv3s,onnxrt_cpu,89,avgpool,"89. avgpool [pool]
+params 0",pool,0.093,0.0,0.0,2,,,0.0
+mobilenetv3s,onnxrt_cpu,90,Flatten,"90. Flatten [shape]
+params 0",shape,0.0393,0.0,0.0,1,,,0.0
+mobilenetv3s,onnxrt_cpu,91,classifier/classifier.0,"91. classifier/classifier.0 [fc]
+params 0",fc,0.6159,0.0,0.0,3,,,0.0
+mobilenetv3s,onnxrt_cpu,92,classifier/classifier.1,"92. classifier/classifier.1 [act-eltwise]
+params 0",act-eltwise,0.10540000000000001,0.0,0.0,3,,,0.0
+mobilenetv3s,onnxrt_cpu,93,classifier/classifier.3,"93. classifier/classifier.3 [fc]
+params 0",fc,1.0954,0.0,0.0,2,,,0.0
+mobilenetv3s,pytorch_cpu,1,features.0.0,"001. features.0.0 [conv-norm-act]
+in 1x3x224x224 | out 1x16x112x112 | params 464",conv-norm-act,9.648776999999999,0.0,0.0,3,1x3x224x224,1x16x112x112,464.0
+mobilenetv3s,pytorch_cpu,2,features.1.block.0.0,"002. features.1.block.0.0 [conv-norm-act]
+in 1x16x112x112 | out 1x16x56x56 | params 176",conv-norm-act,11.499703,0.0,0.0,3,1x16x112x112,1x16x56x56,176.0
+mobilenetv3s,pytorch_cpu,3,features.1.block.1.avgpool,"003. features.1.block.1.avgpool [pool]
+in 1x16x56x56 | out 1x16x1x1 | params 0",pool,0.490834,0.0,0.0,1,1x16x56x56,1x16x1x1,0.0
+mobilenetv3s,pytorch_cpu,4,features.1.block.1.fc1,"004. features.1.block.1.fc1 [conv-act]
+in 1x16x1x1 | out 1x8x1x1 | params 136",conv-act,0.332092,0.0,0.0,2,1x16x1x1,1x8x1x1,136.0
+mobilenetv3s,pytorch_cpu,5,features.1.block.1.fc2,"005. features.1.block.1.fc2 [conv-act]
+in 1x8x1x1 | out 1x16x1x1 | params 144",conv-act,0.291912,0.0,0.0,2,1x8x1x1,1x16x1x1,144.0
+mobilenetv3s,pytorch_cpu,6,features.1.block.2.0,"006. features.1.block.2.0 [conv-norm]
+in 1x16x56x56 | out 1x16x56x56 | params 288",conv-norm,2.186261,0.0,0.0,2,1x16x56x56,1x16x56x56,288.0
+mobilenetv3s,pytorch_cpu,7,features.2.block.0.0,"007. features.2.block.0.0 [conv-norm-act]
+in 1x16x56x56 | out 1x72x56x56 | params 1.3K",conv-norm-act,3.1298340000000002,0.0,0.0,3,1x16x56x56,1x72x56x56,1296.0
+mobilenetv3s,pytorch_cpu,8,features.2.block.1.0,"008. features.2.block.1.0 [conv-norm-act]
+in 1x72x56x56 | out 1x72x28x28 | params 792",conv-norm-act,18.207487,0.0,0.0,3,1x72x56x56,1x72x28x28,792.0
+mobilenetv3s,pytorch_cpu,9,features.2.block.2.0,"009. features.2.block.2.0 [conv-norm]
+in 1x72x28x28 | out 1x24x28x28 | params 1.8K",conv-norm,1.778265,0.0,0.0,2,1x72x28x28,1x24x28x28,1776.0
+mobilenetv3s,pytorch_cpu,10,features.3.block.0.0,"010. features.3.block.0.0 [conv-norm-act]
+in 1x24x28x28 | out 1x88x28x28 | params 2.3K",conv-norm-act,1.5905150000000001,0.0,0.0,3,1x24x28x28,1x88x28x28,2288.0
+mobilenetv3s,pytorch_cpu,11,features.3.block.1.0,"011. features.3.block.1.0 [conv-norm-act]
+in 1x88x28x28 | out 1x88x28x28 | params 968",conv-norm-act,13.134513,0.0,0.0,3,1x88x28x28,1x88x28x28,968.0
+mobilenetv3s,pytorch_cpu,12,features.3.block.2.0,"012. features.3.block.2.0 [conv-norm]
+in 1x88x28x28 | out 1x24x28x28 | params 2.2K",conv-norm,1.9170230000000001,0.0,0.0,2,1x88x28x28,1x24x28x28,2160.0
+mobilenetv3s,pytorch_cpu,13,features.4.block.0.0,"013. features.4.block.0.0 [conv-norm-act]
+in 1x24x28x28 | out 1x96x28x28 | params 2.5K",conv-norm-act,2.056172,0.0,0.0,3,1x24x28x28,1x96x28x28,2496.0
+mobilenetv3s,pytorch_cpu,14,features.4.block.1.0,"014. features.4.block.1.0 [conv-norm-act]
+in 1x96x28x28 | out 1x96x14x14 | params 2.6K",conv-norm-act,19.482281,0.0,0.0,3,1x96x28x28,1x96x14x14,2592.0
+mobilenetv3s,pytorch_cpu,15,features.4.block.2.avgpool,"015. features.4.block.2.avgpool [pool]
+in 1x96x14x14 | out 1x96x1x1 | params 0",pool,0.237935,0.0,0.0,1,1x96x14x14,1x96x1x1,0.0
+mobilenetv3s,pytorch_cpu,16,features.4.block.2.fc1,"016. features.4.block.2.fc1 [conv-act]
+in 1x96x1x1 | out 1x24x1x1 | params 2.3K",conv-act,0.364409,0.0,0.0,2,1x96x1x1,1x24x1x1,2328.0
+mobilenetv3s,pytorch_cpu,17,features.4.block.2.fc2,"017. features.4.block.2.fc2 [conv-act]
+in 1x24x1x1 | out 1x96x1x1 | params 2.4K",conv-act,0.24940500000000002,0.0,0.0,2,1x24x1x1,1x96x1x1,2400.0
+mobilenetv3s,pytorch_cpu,18,features.4.block.3.0,"018. features.4.block.3.0 [conv-norm]
+in 1x96x14x14 | out 1x40x14x14 | params 3.9K",conv-norm,1.931223,0.0,0.0,2,1x96x14x14,1x40x14x14,3920.0
+mobilenetv3s,pytorch_cpu,19,features.5.block.0.0,"019. features.5.block.0.0 [conv-norm-act]
+in 1x40x14x14 | out 1x240x14x14 | params 10.1K",conv-norm-act,1.7973599999999998,0.0,0.0,3,1x40x14x14,1x240x14x14,10080.0
+mobilenetv3s,pytorch_cpu,20,features.5.block.1.0,"020. features.5.block.1.0 [conv-norm-act]
+in 1x240x14x14 | out 1x240x14x14 | params 6.5K",conv-norm-act,31.679249,0.0,0.0,3,1x240x14x14,1x240x14x14,6480.0
+mobilenetv3s,pytorch_cpu,21,features.5.block.2.avgpool,"021. features.5.block.2.avgpool [pool]
+in 1x240x14x14 | out 1x240x1x1 | params 0",pool,0.365684,0.0,0.0,1,1x240x14x14,1x240x1x1,0.0
+mobilenetv3s,pytorch_cpu,22,features.5.block.2.fc1,"022. features.5.block.2.fc1 [conv-act]
+in 1x240x1x1 | out 1x64x1x1 | params 15.4K",conv-act,0.35661600000000004,0.0,0.0,2,1x240x1x1,1x64x1x1,15424.0
+mobilenetv3s,pytorch_cpu,23,features.5.block.2.fc2,"023. features.5.block.2.fc2 [conv-act]
+in 1x64x1x1 | out 1x240x1x1 | params 15.6K",conv-act,0.352499,0.0,0.0,2,1x64x1x1,1x240x1x1,15600.0
+mobilenetv3s,pytorch_cpu,24,features.5.block.3.0,"024. features.5.block.3.0 [conv-norm]
+in 1x240x14x14 | out 1x40x14x14 | params 9.7K",conv-norm,2.4341209999999998,0.0,0.0,2,1x240x14x14,1x40x14x14,9680.0
+mobilenetv3s,pytorch_cpu,25,features.6.block.0.0,"025. features.6.block.0.0 [conv-norm-act]
+in 1x40x14x14 | out 1x240x14x14 | params 10.1K",conv-norm-act,1.933928,0.0,0.0,3,1x40x14x14,1x240x14x14,10080.0
+mobilenetv3s,pytorch_cpu,26,features.6.block.1.0,"026. features.6.block.1.0 [conv-norm-act]
+in 1x240x14x14 | out 1x240x14x14 | params 6.5K",conv-norm-act,32.559876,0.0,0.0,3,1x240x14x14,1x240x14x14,6480.0
+mobilenetv3s,pytorch_cpu,27,features.6.block.2.avgpool,"027. features.6.block.2.avgpool [pool]
+in 1x240x14x14 | out 1x240x1x1 | params 0",pool,0.535366,0.0,0.0,1,1x240x14x14,1x240x1x1,0.0
+mobilenetv3s,pytorch_cpu,28,features.6.block.2.fc1,"028. features.6.block.2.fc1 [conv-act]
+in 1x240x1x1 | out 1x64x1x1 | params 15.4K",conv-act,0.384532,0.0,0.0,2,1x240x1x1,1x64x1x1,15424.0
+mobilenetv3s,pytorch_cpu,29,features.6.block.2.fc2,"029. features.6.block.2.fc2 [conv-act]
+in 1x64x1x1 | out 1x240x1x1 | params 15.6K",conv-act,0.441333,0.0,0.0,2,1x64x1x1,1x240x1x1,15600.0
+mobilenetv3s,pytorch_cpu,30,features.6.block.3.0,"030. features.6.block.3.0 [conv-norm]
+in 1x240x14x14 | out 1x40x14x14 | params 9.7K",conv-norm,2.216829,0.0,0.0,2,1x240x14x14,1x40x14x14,9680.0
+mobilenetv3s,pytorch_cpu,31,features.7.block.0.0,"031. features.7.block.0.0 [conv-norm-act]
+in 1x40x14x14 | out 1x120x14x14 | params 5.0K",conv-norm-act,1.4594230000000001,0.0,0.0,3,1x40x14x14,1x120x14x14,5040.0
+mobilenetv3s,pytorch_cpu,32,features.7.block.1.0,"032. features.7.block.1.0 [conv-norm-act]
+in 1x120x14x14 | out 1x120x14x14 | params 3.2K",conv-norm-act,16.744779,0.0,0.0,3,1x120x14x14,1x120x14x14,3240.0
+mobilenetv3s,pytorch_cpu,33,features.7.block.2.avgpool,"033. features.7.block.2.avgpool [pool]
+in 1x120x14x14 | out 1x120x1x1 | params 0",pool,0.234303,0.0,0.0,1,1x120x14x14,1x120x1x1,0.0
+mobilenetv3s,pytorch_cpu,34,features.7.block.2.fc1,"034. features.7.block.2.fc1 [conv-act]
+in 1x120x1x1 | out 1x32x1x1 | params 3.9K",conv-act,0.312181,0.0,0.0,2,1x120x1x1,1x32x1x1,3872.0
+mobilenetv3s,pytorch_cpu,35,features.7.block.2.fc2,"035. features.7.block.2.fc2 [conv-act]
+in 1x32x1x1 | out 1x120x1x1 | params 4.0K",conv-act,0.549226,0.0,0.0,2,1x32x1x1,1x120x1x1,3960.0
+mobilenetv3s,pytorch_cpu,36,features.7.block.3.0,"036. features.7.block.3.0 [conv-norm]
+in 1x120x14x14 | out 1x48x14x14 | params 5.9K",conv-norm,2.286262,0.0,0.0,2,1x120x14x14,1x48x14x14,5856.0
+mobilenetv3s,pytorch_cpu,37,features.8.block.0.0,"037. features.8.block.0.0 [conv-norm-act]
+in 1x48x14x14 | out 1x144x14x14 | params 7.2K",conv-norm-act,1.5554480000000002,0.0,0.0,3,1x48x14x14,1x144x14x14,7200.0
+mobilenetv3s,pytorch_cpu,38,features.8.block.1.0,"038. features.8.block.1.0 [conv-norm-act]
+in 1x144x14x14 | out 1x144x14x14 | params 3.9K",conv-norm-act,19.993826000000002,0.0,0.0,3,1x144x14x14,1x144x14x14,3888.0
+mobilenetv3s,pytorch_cpu,39,features.8.block.2.avgpool,"039. features.8.block.2.avgpool [pool]
+in 1x144x14x14 | out 1x144x1x1 | params 0",pool,0.391027,0.0,0.0,1,1x144x14x14,1x144x1x1,0.0
+mobilenetv3s,pytorch_cpu,40,features.8.block.2.fc1,"040. features.8.block.2.fc1 [conv-act]
+in 1x144x1x1 | out 1x40x1x1 | params 5.8K",conv-act,0.423143,0.0,0.0,2,1x144x1x1,1x40x1x1,5800.0
+mobilenetv3s,pytorch_cpu,41,features.8.block.2.fc2,"041. features.8.block.2.fc2 [conv-act]
+in 1x40x1x1 | out 1x144x1x1 | params 5.9K",conv-act,0.286036,0.0,0.0,2,1x40x1x1,1x144x1x1,5904.0
+mobilenetv3s,pytorch_cpu,42,features.8.block.3.0,"042. features.8.block.3.0 [conv-norm]
+in 1x144x14x14 | out 1x48x14x14 | params 7.0K",conv-norm,2.3242279999999997,0.0,0.0,2,1x144x14x14,1x48x14x14,7008.0
+mobilenetv3s,pytorch_cpu,43,features.9.block.0.0,"043. features.9.block.0.0 [conv-norm-act]
+in 1x48x14x14 | out 1x288x14x14 | params 14.4K",conv-norm-act,2.329535,0.0,0.0,3,1x48x14x14,1x288x14x14,14400.0
+mobilenetv3s,pytorch_cpu,44,features.9.block.1.0,"044. features.9.block.1.0 [conv-norm-act]
+in 1x288x14x14 | out 1x288x7x7 | params 7.8K",conv-norm-act,35.030828,0.0,0.0,3,1x288x14x14,1x288x7x7,7776.0
+mobilenetv3s,pytorch_cpu,45,features.9.block.2.avgpool,"045. features.9.block.2.avgpool [pool]
+in 1x288x7x7 | out 1x288x1x1 | params 0",pool,0.271142,0.0,0.0,1,1x288x7x7,1x288x1x1,0.0
+mobilenetv3s,pytorch_cpu,46,features.9.block.2.fc1,"046. features.9.block.2.fc1 [conv-act]
+in 1x288x1x1 | out 1x72x1x1 | params 20.8K",conv-act,0.436175,0.0,0.0,2,1x288x1x1,1x72x1x1,20808.0
+mobilenetv3s,pytorch_cpu,47,features.9.block.2.fc2,"047. features.9.block.2.fc2 [conv-act]
+in 1x72x1x1 | out 1x288x1x1 | params 21.0K",conv-act,0.353642,0.0,0.0,2,1x72x1x1,1x288x1x1,21024.0
+mobilenetv3s,pytorch_cpu,48,features.9.block.3.0,"048. features.9.block.3.0 [conv-norm]
+in 1x288x7x7 | out 1x96x7x7 | params 27.8K",conv-norm,2.525781,0.0,0.0,2,1x288x7x7,1x96x7x7,27840.0
+mobilenetv3s,pytorch_cpu,49,features.10.block.0.0,"049. features.10.block.0.0 [conv-norm-act]
+in 1x96x7x7 | out 1x576x7x7 | params 56.4K",conv-norm-act,2.357748,0.0,0.0,3,1x96x7x7,1x576x7x7,56448.0
+mobilenetv3s,pytorch_cpu,50,features.10.block.1.0,"050. features.10.block.1.0 [conv-norm-act]
+in 1x576x7x7 | out 1x576x7x7 | params 15.6K",conv-norm-act,62.57635199999999,0.0,0.0,3,1x576x7x7,1x576x7x7,15552.0
+mobilenetv3s,pytorch_cpu,51,features.10.block.2.avgpool,"051. features.10.block.2.avgpool [pool]
+in 1x576x7x7 | out 1x576x1x1 | params 0",pool,0.345279,0.0,0.0,1,1x576x7x7,1x576x1x1,0.0
+mobilenetv3s,pytorch_cpu,52,features.10.block.2.fc1,"052. features.10.block.2.fc1 [conv-act]
+in 1x576x1x1 | out 1x144x1x1 | params 83.1K",conv-act,0.712345,0.0,0.0,2,1x576x1x1,1x144x1x1,83088.0
+mobilenetv3s,pytorch_cpu,53,features.10.block.2.fc2,"053. features.10.block.2.fc2 [conv-act]
+in 1x144x1x1 | out 1x576x1x1 | params 83.5K",conv-act,0.8688130000000001,0.0,0.0,2,1x144x1x1,1x576x1x1,83520.0
+mobilenetv3s,pytorch_cpu,54,features.10.block.3.0,"054. features.10.block.3.0 [conv-norm]
+in 1x576x7x7 | out 1x96x7x7 | params 55.5K",conv-norm,3.049797,0.0,0.0,2,1x576x7x7,1x96x7x7,55488.0
+mobilenetv3s,pytorch_cpu,55,features.11.block.0.0,"055. features.11.block.0.0 [conv-norm-act]
+in 1x96x7x7 | out 1x576x7x7 | params 56.4K",conv-norm-act,2.30835,0.0,0.0,3,1x96x7x7,1x576x7x7,56448.0
+mobilenetv3s,pytorch_cpu,56,features.11.block.1.0,"056. features.11.block.1.0 [conv-norm-act]
+in 1x576x7x7 | out 1x576x7x7 | params 15.6K",conv-norm-act,60.687179,0.0,0.0,3,1x576x7x7,1x576x7x7,15552.0
+mobilenetv3s,pytorch_cpu,57,features.11.block.2.avgpool,"057. features.11.block.2.avgpool [pool]
+in 1x576x7x7 | out 1x576x1x1 | params 0",pool,0.40063,0.0,0.0,1,1x576x7x7,1x576x1x1,0.0
+mobilenetv3s,pytorch_cpu,58,features.11.block.2.fc1,"058. features.11.block.2.fc1 [conv-act]
+in 1x576x1x1 | out 1x144x1x1 | params 83.1K",conv-act,0.8225830000000001,0.0,0.0,2,1x576x1x1,1x144x1x1,83088.0
+mobilenetv3s,pytorch_cpu,59,features.11.block.2.fc2,"059. features.11.block.2.fc2 [conv-act]
+in 1x144x1x1 | out 1x576x1x1 | params 83.5K",conv-act,0.694187,0.0,0.0,2,1x144x1x1,1x576x1x1,83520.0
+mobilenetv3s,pytorch_cpu,60,features.11.block.3.0,"060. features.11.block.3.0 [conv-norm]
+in 1x576x7x7 | out 1x96x7x7 | params 55.5K",conv-norm,2.776373,0.0,0.0,2,1x576x7x7,1x96x7x7,55488.0
+mobilenetv3s,pytorch_cpu,61,features.12.0,"061. features.12.0 [conv-norm-act]
+in 1x96x7x7 | out 1x576x7x7 | params 56.4K",conv-norm-act,2.234329,0.0,0.0,3,1x96x7x7,1x576x7x7,56448.0
+mobilenetv3s,pytorch_cpu,62,avgpool,"062. avgpool [pool]
+in 1x576x7x7 | out 1x576x1x1 | params 0",pool,0.353816,0.0,0.0,1,1x576x7x7,1x576x1x1,0.0
+mobilenetv3s,pytorch_cpu,63,classifier.0,"063. classifier.0 [act-fc]
+in 1x576 | out 1x1024 | params 590.8K",act-fc,2.9880259999999996,0.0,0.0,2,1x576,1x1024,590848.0
+mobilenetv3s,pytorch_cpu,64,classifier.2,"064. classifier.2 [Dropout]
+in 1x1024 | out 1x1024 | params 0",Dropout,0.078441,0.0,0.0,1,1x1024,1x1024,0.0
+mobilenetv3s,pytorch_cpu,65,classifier.3,"065. classifier.3 [fc]
+in 1x1024 | out 1x1000 | params 1.02M",fc,6.72308,0.0,0.0,1,1x1024,1x1000,1025000.0
+mobilenetv3s,pytorch_cuda,1,features.0.0,"001. features.0.0 [conv-norm-act]
+in 1x3x224x224 | out 1x16x112x112 | params 464",conv-norm-act,1.8324449999999999,0.0,0.0,3,1x3x224x224,1x16x112x112,464.0
+mobilenetv3s,pytorch_cuda,2,features.1.block.0.0,"002. features.1.block.0.0 [conv-norm-act]
+in 1x16x112x112 | out 1x16x56x56 | params 176",conv-norm-act,1.103427,0.0,0.0,3,1x16x112x112,1x16x56x56,176.0
+mobilenetv3s,pytorch_cuda,3,features.1.block.1.avgpool,"003. features.1.block.1.avgpool [pool]
+in 1x16x56x56 | out 1x16x1x1 | params 0",pool,0.307092,0.0,0.0,1,1x16x56x56,1x16x1x1,0.0
+mobilenetv3s,pytorch_cuda,4,features.1.block.1.fc1,"004. features.1.block.1.fc1 [conv-act]
+in 1x16x1x1 | out 1x8x1x1 | params 136",conv-act,1.012295,0.0,0.0,2,1x16x1x1,1x8x1x1,136.0
+mobilenetv3s,pytorch_cuda,5,features.1.block.1.fc2,"005. features.1.block.1.fc2 [conv-act]
+in 1x8x1x1 | out 1x16x1x1 | params 144",conv-act,0.8720729999999999,0.0,0.0,2,1x8x1x1,1x16x1x1,144.0
+mobilenetv3s,pytorch_cuda,6,features.1.block.2.0,"006. features.1.block.2.0 [conv-norm]
+in 1x16x56x56 | out 1x16x56x56 | params 288",conv-norm,0.877656,0.0,0.0,2,1x16x56x56,1x16x56x56,288.0
+mobilenetv3s,pytorch_cuda,7,features.2.block.0.0,"007. features.2.block.0.0 [conv-norm-act]
+in 1x16x56x56 | out 1x72x56x56 | params 1.3K",conv-norm-act,1.4819339999999999,0.0,0.0,3,1x16x56x56,1x72x56x56,1296.0
+mobilenetv3s,pytorch_cuda,8,features.2.block.1.0,"008. features.2.block.1.0 [conv-norm-act]
+in 1x72x56x56 | out 1x72x28x28 | params 792",conv-norm-act,1.0876810000000001,0.0,0.0,3,1x72x56x56,1x72x28x28,792.0
+mobilenetv3s,pytorch_cuda,9,features.2.block.2.0,"009. features.2.block.2.0 [conv-norm]
+in 1x72x28x28 | out 1x24x28x28 | params 1.8K",conv-norm,0.939842,0.0,0.0,2,1x72x28x28,1x24x28x28,1776.0
+mobilenetv3s,pytorch_cuda,10,features.3.block.0.0,"010. features.3.block.0.0 [conv-norm-act]
+in 1x24x28x28 | out 1x88x28x28 | params 2.3K",conv-norm-act,1.10549,0.0,0.0,3,1x24x28x28,1x88x28x28,2288.0
+mobilenetv3s,pytorch_cuda,11,features.3.block.1.0,"011. features.3.block.1.0 [conv-norm-act]
+in 1x88x28x28 | out 1x88x28x28 | params 968",conv-norm-act,1.1157949999999999,0.0,0.0,3,1x88x28x28,1x88x28x28,968.0
+mobilenetv3s,pytorch_cuda,12,features.3.block.2.0,"012. features.3.block.2.0 [conv-norm]
+in 1x88x28x28 | out 1x24x28x28 | params 2.2K",conv-norm,0.945043,0.0,0.0,2,1x88x28x28,1x24x28x28,2160.0
+mobilenetv3s,pytorch_cuda,13,features.4.block.0.0,"013. features.4.block.0.0 [conv-norm-act]
+in 1x24x28x28 | out 1x96x28x28 | params 2.5K",conv-norm-act,1.091797,0.0,0.0,3,1x24x28x28,1x96x28x28,2496.0
+mobilenetv3s,pytorch_cuda,14,features.4.block.1.0,"014. features.4.block.1.0 [conv-norm-act]
+in 1x96x28x28 | out 1x96x14x14 | params 2.6K",conv-norm-act,1.035868,0.0,0.0,3,1x96x28x28,1x96x14x14,2592.0
+mobilenetv3s,pytorch_cuda,15,features.4.block.2.avgpool,"015. features.4.block.2.avgpool [pool]
+in 1x96x14x14 | out 1x96x1x1 | params 0",pool,0.302291,0.0,0.0,1,1x96x14x14,1x96x1x1,0.0
+mobilenetv3s,pytorch_cuda,16,features.4.block.2.fc1,"016. features.4.block.2.fc1 [conv-act]
+in 1x96x1x1 | out 1x24x1x1 | params 2.3K",conv-act,0.967972,0.0,0.0,2,1x96x1x1,1x24x1x1,2328.0
+mobilenetv3s,pytorch_cuda,17,features.4.block.2.fc2,"017. features.4.block.2.fc2 [conv-act]
+in 1x24x1x1 | out 1x96x1x1 | params 2.4K",conv-act,0.914404,0.0,0.0,2,1x24x1x1,1x96x1x1,2400.0
+mobilenetv3s,pytorch_cuda,18,features.4.block.3.0,"018. features.4.block.3.0 [conv-norm]
+in 1x96x14x14 | out 1x40x14x14 | params 3.9K",conv-norm,0.946256,0.0,0.0,2,1x96x14x14,1x40x14x14,3920.0
+mobilenetv3s,pytorch_cuda,19,features.5.block.0.0,"019. features.5.block.0.0 [conv-norm-act]
+in 1x40x14x14 | out 1x240x14x14 | params 10.1K",conv-norm-act,1.107336,0.0,0.0,3,1x40x14x14,1x240x14x14,10080.0
+mobilenetv3s,pytorch_cuda,20,features.5.block.1.0,"020. features.5.block.1.0 [conv-norm-act]
+in 1x240x14x14 | out 1x240x14x14 | params 6.5K",conv-norm-act,1.262342,0.0,0.0,3,1x240x14x14,1x240x14x14,6480.0
+mobilenetv3s,pytorch_cuda,21,features.5.block.2.avgpool,"021. features.5.block.2.avgpool [pool]
+in 1x240x14x14 | out 1x240x1x1 | params 0",pool,0.288669,0.0,0.0,1,1x240x14x14,1x240x1x1,0.0
+mobilenetv3s,pytorch_cuda,22,features.5.block.2.fc1,"022. features.5.block.2.fc1 [conv-act]
+in 1x240x1x1 | out 1x64x1x1 | params 15.4K",conv-act,0.956923,0.0,0.0,2,1x240x1x1,1x64x1x1,15424.0
+mobilenetv3s,pytorch_cuda,23,features.5.block.2.fc2,"023. features.5.block.2.fc2 [conv-act]
+in 1x64x1x1 | out 1x240x1x1 | params 15.6K",conv-act,0.8324910000000001,0.0,0.0,2,1x64x1x1,1x240x1x1,15600.0
+mobilenetv3s,pytorch_cuda,24,features.5.block.3.0,"024. features.5.block.3.0 [conv-norm]
+in 1x240x14x14 | out 1x40x14x14 | params 9.7K",conv-norm,0.928777,0.0,0.0,2,1x240x14x14,1x40x14x14,9680.0
+mobilenetv3s,pytorch_cuda,25,features.6.block.0.0,"025. features.6.block.0.0 [conv-norm-act]
+in 1x40x14x14 | out 1x240x14x14 | params 10.1K",conv-norm-act,1.079104,0.0,0.0,3,1x40x14x14,1x240x14x14,10080.0
+mobilenetv3s,pytorch_cuda,26,features.6.block.1.0,"026. features.6.block.1.0 [conv-norm-act]
+in 1x240x14x14 | out 1x240x14x14 | params 6.5K",conv-norm-act,1.2605239999999998,0.0,0.0,3,1x240x14x14,1x240x14x14,6480.0
+mobilenetv3s,pytorch_cuda,27,features.6.block.2.avgpool,"027. features.6.block.2.avgpool [pool]
+in 1x240x14x14 | out 1x240x1x1 | params 0",pool,0.288663,0.0,0.0,1,1x240x14x14,1x240x1x1,0.0
+mobilenetv3s,pytorch_cuda,28,features.6.block.2.fc1,"028. features.6.block.2.fc1 [conv-act]
+in 1x240x1x1 | out 1x64x1x1 | params 15.4K",conv-act,0.963897,0.0,0.0,2,1x240x1x1,1x64x1x1,15424.0
+mobilenetv3s,pytorch_cuda,29,features.6.block.2.fc2,"029. features.6.block.2.fc2 [conv-act]
+in 1x64x1x1 | out 1x240x1x1 | params 15.6K",conv-act,0.849599,0.0,0.0,2,1x64x1x1,1x240x1x1,15600.0
+mobilenetv3s,pytorch_cuda,30,features.6.block.3.0,"030. features.6.block.3.0 [conv-norm]
+in 1x240x14x14 | out 1x40x14x14 | params 9.7K",conv-norm,0.929147,0.0,0.0,2,1x240x14x14,1x40x14x14,9680.0
+mobilenetv3s,pytorch_cuda,31,features.7.block.0.0,"031. features.7.block.0.0 [conv-norm-act]
+in 1x40x14x14 | out 1x120x14x14 | params 5.0K",conv-norm-act,1.074884,0.0,0.0,3,1x40x14x14,1x120x14x14,5040.0
+mobilenetv3s,pytorch_cuda,32,features.7.block.1.0,"032. features.7.block.1.0 [conv-norm-act]
+in 1x120x14x14 | out 1x120x14x14 | params 3.2K",conv-norm-act,1.063726,0.0,0.0,3,1x120x14x14,1x120x14x14,3240.0
+mobilenetv3s,pytorch_cuda,33,features.7.block.2.avgpool,"033. features.7.block.2.avgpool [pool]
+in 1x120x14x14 | out 1x120x1x1 | params 0",pool,0.29458,0.0,0.0,1,1x120x14x14,1x120x1x1,0.0
+mobilenetv3s,pytorch_cuda,34,features.7.block.2.fc1,"034. features.7.block.2.fc1 [conv-act]
+in 1x120x1x1 | out 1x32x1x1 | params 3.9K",conv-act,0.87476,0.0,0.0,2,1x120x1x1,1x32x1x1,3872.0
+mobilenetv3s,pytorch_cuda,35,features.7.block.2.fc2,"035. features.7.block.2.fc2 [conv-act]
+in 1x32x1x1 | out 1x120x1x1 | params 4.0K",conv-act,0.917501,0.0,0.0,2,1x32x1x1,1x120x1x1,3960.0
+mobilenetv3s,pytorch_cuda,36,features.7.block.3.0,"036. features.7.block.3.0 [conv-norm]
+in 1x120x14x14 | out 1x48x14x14 | params 5.9K",conv-norm,0.852885,0.0,0.0,2,1x120x14x14,1x48x14x14,5856.0
+mobilenetv3s,pytorch_cuda,37,features.8.block.0.0,"037. features.8.block.0.0 [conv-norm-act]
+in 1x48x14x14 | out 1x144x14x14 | params 7.2K",conv-norm-act,1.068895,0.0,0.0,3,1x48x14x14,1x144x14x14,7200.0
+mobilenetv3s,pytorch_cuda,38,features.8.block.1.0,"038. features.8.block.1.0 [conv-norm-act]
+in 1x144x14x14 | out 1x144x14x14 | params 3.9K",conv-norm-act,1.099629,0.0,0.0,3,1x144x14x14,1x144x14x14,3888.0
+mobilenetv3s,pytorch_cuda,39,features.8.block.2.avgpool,"039. features.8.block.2.avgpool [pool]
+in 1x144x14x14 | out 1x144x1x1 | params 0",pool,0.290952,0.0,0.0,1,1x144x14x14,1x144x1x1,0.0
+mobilenetv3s,pytorch_cuda,40,features.8.block.2.fc1,"040. features.8.block.2.fc1 [conv-act]
+in 1x144x1x1 | out 1x40x1x1 | params 5.8K",conv-act,0.942583,0.0,0.0,2,1x144x1x1,1x40x1x1,5800.0
+mobilenetv3s,pytorch_cuda,41,features.8.block.2.fc2,"041. features.8.block.2.fc2 [conv-act]
+in 1x40x1x1 | out 1x144x1x1 | params 5.9K",conv-act,0.839176,0.0,0.0,2,1x40x1x1,1x144x1x1,5904.0
+mobilenetv3s,pytorch_cuda,42,features.8.block.3.0,"042. features.8.block.3.0 [conv-norm]
+in 1x144x14x14 | out 1x48x14x14 | params 7.0K",conv-norm,0.851972,0.0,0.0,2,1x144x14x14,1x48x14x14,7008.0
+mobilenetv3s,pytorch_cuda,43,features.9.block.0.0,"043. features.9.block.0.0 [conv-norm-act]
+in 1x48x14x14 | out 1x288x14x14 | params 14.4K",conv-norm-act,1.117369,0.0,0.0,3,1x48x14x14,1x288x14x14,14400.0
+mobilenetv3s,pytorch_cuda,44,features.9.block.1.0,"044. features.9.block.1.0 [conv-norm-act]
+in 1x288x14x14 | out 1x288x7x7 | params 7.8K",conv-norm-act,0.988964,0.0,0.0,3,1x288x14x14,1x288x7x7,7776.0
+mobilenetv3s,pytorch_cuda,45,features.9.block.2.avgpool,"045. features.9.block.2.avgpool [pool]
+in 1x288x7x7 | out 1x288x1x1 | params 0",pool,0.290156,0.0,0.0,1,1x288x7x7,1x288x1x1,0.0
+mobilenetv3s,pytorch_cuda,46,features.9.block.2.fc1,"046. features.9.block.2.fc1 [conv-act]
+in 1x288x1x1 | out 1x72x1x1 | params 20.8K",conv-act,0.9381330000000001,0.0,0.0,2,1x288x1x1,1x72x1x1,20808.0
+mobilenetv3s,pytorch_cuda,47,features.9.block.2.fc2,"047. features.9.block.2.fc2 [conv-act]
+in 1x72x1x1 | out 1x288x1x1 | params 21.0K",conv-act,0.827808,0.0,0.0,2,1x72x1x1,1x288x1x1,21024.0
+mobilenetv3s,pytorch_cuda,48,features.9.block.3.0,"048. features.9.block.3.0 [conv-norm]
+in 1x288x7x7 | out 1x96x7x7 | params 27.8K",conv-norm,0.9272309999999999,0.0,0.0,2,1x288x7x7,1x96x7x7,27840.0
+mobilenetv3s,pytorch_cuda,49,features.10.block.0.0,"049. features.10.block.0.0 [conv-norm-act]
+in 1x96x7x7 | out 1x576x7x7 | params 56.4K",conv-norm-act,1.1501000000000001,0.0,0.0,3,1x96x7x7,1x576x7x7,56448.0
+mobilenetv3s,pytorch_cuda,50,features.10.block.1.0,"050. features.10.block.1.0 [conv-norm-act]
+in 1x576x7x7 | out 1x576x7x7 | params 15.6K",conv-norm-act,1.1042049999999999,0.0,0.0,3,1x576x7x7,1x576x7x7,15552.0
+mobilenetv3s,pytorch_cuda,51,features.10.block.2.avgpool,"051. features.10.block.2.avgpool [pool]
+in 1x576x7x7 | out 1x576x1x1 | params 0",pool,0.290077,0.0,0.0,1,1x576x7x7,1x576x1x1,0.0
+mobilenetv3s,pytorch_cuda,52,features.10.block.2.fc1,"052. features.10.block.2.fc1 [conv-act]
+in 1x576x1x1 | out 1x144x1x1 | params 83.1K",conv-act,0.956646,0.0,0.0,2,1x576x1x1,1x144x1x1,83088.0
+mobilenetv3s,pytorch_cuda,53,features.10.block.2.fc2,"053. features.10.block.2.fc2 [conv-act]
+in 1x144x1x1 | out 1x576x1x1 | params 83.5K",conv-act,0.905826,0.0,0.0,2,1x144x1x1,1x576x1x1,83520.0
+mobilenetv3s,pytorch_cuda,54,features.10.block.3.0,"054. features.10.block.3.0 [conv-norm]
+in 1x576x7x7 | out 1x96x7x7 | params 55.5K",conv-norm,0.924309,0.0,0.0,2,1x576x7x7,1x96x7x7,55488.0
+mobilenetv3s,pytorch_cuda,55,features.11.block.0.0,"055. features.11.block.0.0 [conv-norm-act]
+in 1x96x7x7 | out 1x576x7x7 | params 56.4K",conv-norm-act,1.144641,0.0,0.0,3,1x96x7x7,1x576x7x7,56448.0
+mobilenetv3s,pytorch_cuda,56,features.11.block.1.0,"056. features.11.block.1.0 [conv-norm-act]
+in 1x576x7x7 | out 1x576x7x7 | params 15.6K",conv-norm-act,1.106911,0.0,0.0,3,1x576x7x7,1x576x7x7,15552.0
+mobilenetv3s,pytorch_cuda,57,features.11.block.2.avgpool,"057. features.11.block.2.avgpool [pool]
+in 1x576x7x7 | out 1x576x1x1 | params 0",pool,0.293994,0.0,0.0,1,1x576x7x7,1x576x1x1,0.0
+mobilenetv3s,pytorch_cuda,58,features.11.block.2.fc1,"058. features.11.block.2.fc1 [conv-act]
+in 1x576x1x1 | out 1x144x1x1 | params 83.1K",conv-act,0.94836,0.0,0.0,2,1x576x1x1,1x144x1x1,83088.0
+mobilenetv3s,pytorch_cuda,59,features.11.block.2.fc2,"059. features.11.block.2.fc2 [conv-act]
+in 1x144x1x1 | out 1x576x1x1 | params 83.5K",conv-act,0.896678,0.0,0.0,2,1x144x1x1,1x576x1x1,83520.0
+mobilenetv3s,pytorch_cuda,60,features.11.block.3.0,"060. features.11.block.3.0 [conv-norm]
+in 1x576x7x7 | out 1x96x7x7 | params 55.5K",conv-norm,0.9233499999999999,0.0,0.0,2,1x576x7x7,1x96x7x7,55488.0
+mobilenetv3s,pytorch_cuda,61,features.12.0,"061. features.12.0 [conv-norm-act]
+in 1x96x7x7 | out 1x576x7x7 | params 56.4K",conv-norm-act,1.156337,0.0,0.0,3,1x96x7x7,1x576x7x7,56448.0
+mobilenetv3s,pytorch_cuda,62,avgpool,"062. avgpool [pool]
+in 1x576x7x7 | out 1x576x1x1 | params 0",pool,0.289096,0.0,0.0,1,1x576x7x7,1x576x1x1,0.0
+mobilenetv3s,pytorch_cuda,63,classifier.0,"063. classifier.0 [act-fc]
+in 1x576 | out 1x1024 | params 590.8K",act-fc,0.841423,0.0,0.0,2,1x576,1x1024,590848.0
+mobilenetv3s,pytorch_cuda,64,classifier.2,"064. classifier.2 [Dropout]
+in 1x1024 | out 1x1024 | params 0",Dropout,0.144522,0.0,0.0,1,1x1024,1x1024,0.0
+mobilenetv3s,pytorch_cuda,65,classifier.3,"065. classifier.3 [fc]
+in 1x1024 | out 1x1000 | params 1.02M",fc,0.629332,0.0,0.0,1,1x1024,1x1000,1025000.0
+mobilenetv3s,tensorrt_fp16,1,TensorRT layer 001,001. TensorRT layer 001 [TensorRTLayer],TensorRTLayer,4.5,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,2,TensorRT layer 002,002. TensorRT layer 002 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,3,TensorRT layer 003,003. TensorRT layer 003 [TensorRTLayer],TensorRTLayer,1.9,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,4,TensorRT layer 004,004. TensorRT layer 004 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,5,TensorRT layer 005,005. TensorRT layer 005 [TensorRTLayer],TensorRTLayer,2.9,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,6,TensorRT layer 006,006. TensorRT layer 006 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,7,TensorRT layer 007,007. TensorRT layer 007 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,8,TensorRT layer 008,008. TensorRT layer 008 [TensorRTLayer],TensorRTLayer,2.1,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,9,TensorRT layer 009,009. TensorRT layer 009 [TensorRTLayer],TensorRTLayer,2.1,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,10,TensorRT layer 010,010. TensorRT layer 010 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,11,TensorRT layer 011,011. TensorRT layer 011 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,12,TensorRT layer 012,012. TensorRT layer 012 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,13,TensorRT layer 013,013. TensorRT layer 013 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,14,TensorRT layer 014,014. TensorRT layer 014 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,15,TensorRT layer 015,015. TensorRT layer 015 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,16,TensorRT layer 016,016. TensorRT layer 016 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,17,TensorRT layer 017,017. TensorRT layer 017 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,18,TensorRT layer 018,018. TensorRT layer 018 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,19,TensorRT layer 019,019. TensorRT layer 019 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,20,TensorRT layer 020,020. TensorRT layer 020 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,21,TensorRT layer 021,021. TensorRT layer 021 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,22,TensorRT layer 022,022. TensorRT layer 022 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,23,TensorRT layer 023,023. TensorRT layer 023 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,24,TensorRT layer 024,024. TensorRT layer 024 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,25,TensorRT layer 025,025. TensorRT layer 025 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,26,TensorRT layer 026,026. TensorRT layer 026 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,27,TensorRT layer 027,027. TensorRT layer 027 [TensorRTLayer],TensorRTLayer,3.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,28,TensorRT layer 028,028. TensorRT layer 028 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,29,TensorRT layer 029,029. TensorRT layer 029 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,30,TensorRT layer 030,030. TensorRT layer 030 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,31,TensorRT layer 031,031. TensorRT layer 031 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,32,TensorRT layer 032,032. TensorRT layer 032 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,33,TensorRT layer 033,033. TensorRT layer 033 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,34,TensorRT layer 034,034. TensorRT layer 034 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,35,TensorRT layer 035,035. TensorRT layer 035 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,36,TensorRT layer 036,036. TensorRT layer 036 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,37,TensorRT layer 037,037. TensorRT layer 037 [TensorRTLayer],TensorRTLayer,2.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,38,TensorRT layer 038,038. TensorRT layer 038 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,39,TensorRT layer 039,039. TensorRT layer 039 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,40,TensorRT layer 040,040. TensorRT layer 040 [TensorRTLayer],TensorRTLayer,2.6,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,41,TensorRT layer 041,041. TensorRT layer 041 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,42,TensorRT layer 042,042. TensorRT layer 042 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,43,TensorRT layer 043,043. TensorRT layer 043 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,44,TensorRT layer 044,044. TensorRT layer 044 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,45,TensorRT layer 045,045. TensorRT layer 045 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,46,TensorRT layer 046,046. TensorRT layer 046 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,47,TensorRT layer 047,047. TensorRT layer 047 [TensorRTLayer],TensorRTLayer,2.0,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,48,TensorRT layer 048,048. TensorRT layer 048 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,49,TensorRT layer 049,049. TensorRT layer 049 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,50,TensorRT layer 050,050. TensorRT layer 050 [TensorRTLayer],TensorRTLayer,2.5,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,51,TensorRT layer 051,051. TensorRT layer 051 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,52,TensorRT layer 052,052. TensorRT layer 052 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,53,TensorRT layer 053,053. TensorRT layer 053 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,54,TensorRT layer 054,054. TensorRT layer 054 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,55,TensorRT layer 055,055. TensorRT layer 055 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,56,TensorRT layer 056,056. TensorRT layer 056 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,57,TensorRT layer 057,057. TensorRT layer 057 [TensorRTLayer],TensorRTLayer,2.0,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,58,TensorRT layer 058,058. TensorRT layer 058 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,59,TensorRT layer 059,059. TensorRT layer 059 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,60,TensorRT layer 060,060. TensorRT layer 060 [TensorRTLayer],TensorRTLayer,2.6,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,61,TensorRT layer 061,061. TensorRT layer 061 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,62,TensorRT layer 062,062. TensorRT layer 062 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,63,TensorRT layer 063,063. TensorRT layer 063 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,64,TensorRT layer 064,064. TensorRT layer 064 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,65,TensorRT layer 065,065. TensorRT layer 065 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,66,TensorRT layer 066,066. TensorRT layer 066 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,67,TensorRT layer 067,067. TensorRT layer 067 [TensorRTLayer],TensorRTLayer,2.4,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,68,TensorRT layer 068,068. TensorRT layer 068 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,69,TensorRT layer 069,069. TensorRT layer 069 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,70,TensorRT layer 070,070. TensorRT layer 070 [TensorRTLayer],TensorRTLayer,2.5,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,71,TensorRT layer 071,071. TensorRT layer 071 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,72,TensorRT layer 072,072. TensorRT layer 072 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,73,TensorRT layer 073,073. TensorRT layer 073 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,74,TensorRT layer 074,074. TensorRT layer 074 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,75,TensorRT layer 075,075. TensorRT layer 075 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,76,TensorRT layer 076,076. TensorRT layer 076 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,77,TensorRT layer 077,077. TensorRT layer 077 [TensorRTLayer],TensorRTLayer,3.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,78,TensorRT layer 078,078. TensorRT layer 078 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,79,TensorRT layer 079,079. TensorRT layer 079 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,80,TensorRT layer 080,080. TensorRT layer 080 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,81,TensorRT layer 081,081. TensorRT layer 081 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,82,TensorRT layer 082,082. TensorRT layer 082 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,83,TensorRT layer 083,083. TensorRT layer 083 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,84,TensorRT layer 084,084. TensorRT layer 084 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,85,TensorRT layer 085,085. TensorRT layer 085 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,86,TensorRT layer 086,086. TensorRT layer 086 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,87,TensorRT layer 087,087. TensorRT layer 087 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,88,TensorRT layer 088,088. TensorRT layer 088 [TensorRTLayer],TensorRTLayer,3.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,89,TensorRT layer 089,089. TensorRT layer 089 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,90,TensorRT layer 090,090. TensorRT layer 090 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,91,TensorRT layer 091,091. TensorRT layer 091 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,92,TensorRT layer 092,092. TensorRT layer 092 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,93,TensorRT layer 093,093. TensorRT layer 093 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,94,TensorRT layer 094,094. TensorRT layer 094 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,95,TensorRT layer 095,095. TensorRT layer 095 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,96,TensorRT layer 096,096. TensorRT layer 096 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,97,TensorRT layer 097,097. TensorRT layer 097 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,98,TensorRT layer 098,098. TensorRT layer 098 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,99,TensorRT layer 099,099. TensorRT layer 099 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,100,TensorRT layer 100,100. TensorRT layer 100 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,101,TensorRT layer 101,101. TensorRT layer 101 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,102,TensorRT layer 102,102. TensorRT layer 102 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp16,103,TensorRT layer 103,103. TensorRT layer 103 [TensorRTLayer],TensorRTLayer,100.0,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,1,TensorRT layer 001,001. TensorRT layer 001 [TensorRTLayer],TensorRTLayer,4.9,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,2,TensorRT layer 002,002. TensorRT layer 002 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,3,TensorRT layer 003,003. TensorRT layer 003 [TensorRTLayer],TensorRTLayer,1.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,4,TensorRT layer 004,004. TensorRT layer 004 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,5,TensorRT layer 005,005. TensorRT layer 005 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,6,TensorRT layer 006,006. TensorRT layer 006 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,7,TensorRT layer 007,007. TensorRT layer 007 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,8,TensorRT layer 008,008. TensorRT layer 008 [TensorRTLayer],TensorRTLayer,2.1,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,9,TensorRT layer 009,009. TensorRT layer 009 [TensorRTLayer],TensorRTLayer,2.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,10,TensorRT layer 010,010. TensorRT layer 010 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,11,TensorRT layer 011,011. TensorRT layer 011 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,12,TensorRT layer 012,012. TensorRT layer 012 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,13,TensorRT layer 013,013. TensorRT layer 013 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,14,TensorRT layer 014,014. TensorRT layer 014 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,15,TensorRT layer 015,015. TensorRT layer 015 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,16,TensorRT layer 016,016. TensorRT layer 016 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,17,TensorRT layer 017,017. TensorRT layer 017 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,18,TensorRT layer 018,018. TensorRT layer 018 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,19,TensorRT layer 019,019. TensorRT layer 019 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,20,TensorRT layer 020,020. TensorRT layer 020 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,21,TensorRT layer 021,021. TensorRT layer 021 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,22,TensorRT layer 022,022. TensorRT layer 022 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,23,TensorRT layer 023,023. TensorRT layer 023 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,24,TensorRT layer 024,024. TensorRT layer 024 [TensorRTLayer],TensorRTLayer,4.0,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,25,TensorRT layer 025,025. TensorRT layer 025 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,26,TensorRT layer 026,026. TensorRT layer 026 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,27,TensorRT layer 027,027. TensorRT layer 027 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,28,TensorRT layer 028,028. TensorRT layer 028 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,29,TensorRT layer 029,029. TensorRT layer 029 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,30,TensorRT layer 030,030. TensorRT layer 030 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,31,TensorRT layer 031,031. TensorRT layer 031 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,32,TensorRT layer 032,032. TensorRT layer 032 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,33,TensorRT layer 033,033. TensorRT layer 033 [TensorRTLayer],TensorRTLayer,4.0,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,34,TensorRT layer 034,034. TensorRT layer 034 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,35,TensorRT layer 035,035. TensorRT layer 035 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,36,TensorRT layer 036,036. TensorRT layer 036 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,37,TensorRT layer 037,037. TensorRT layer 037 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,38,TensorRT layer 038,038. TensorRT layer 038 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,39,TensorRT layer 039,039. TensorRT layer 039 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,40,TensorRT layer 040,040. TensorRT layer 040 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,41,TensorRT layer 041,041. TensorRT layer 041 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,42,TensorRT layer 042,042. TensorRT layer 042 [TensorRTLayer],TensorRTLayer,2.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,43,TensorRT layer 043,043. TensorRT layer 043 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,44,TensorRT layer 044,044. TensorRT layer 044 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,45,TensorRT layer 045,045. TensorRT layer 045 [TensorRTLayer],TensorRTLayer,2.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,46,TensorRT layer 046,046. TensorRT layer 046 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,47,TensorRT layer 047,047. TensorRT layer 047 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,48,TensorRT layer 048,048. TensorRT layer 048 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,49,TensorRT layer 049,049. TensorRT layer 049 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,50,TensorRT layer 050,050. TensorRT layer 050 [TensorRTLayer],TensorRTLayer,2.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,51,TensorRT layer 051,051. TensorRT layer 051 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,52,TensorRT layer 052,052. TensorRT layer 052 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,53,TensorRT layer 053,053. TensorRT layer 053 [TensorRTLayer],TensorRTLayer,2.5,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,54,TensorRT layer 054,054. TensorRT layer 054 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,55,TensorRT layer 055,055. TensorRT layer 055 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,56,TensorRT layer 056,056. TensorRT layer 056 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,57,TensorRT layer 057,057. TensorRT layer 057 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,58,TensorRT layer 058,058. TensorRT layer 058 [TensorRTLayer],TensorRTLayer,3.9,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,59,TensorRT layer 059,059. TensorRT layer 059 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,60,TensorRT layer 060,060. TensorRT layer 060 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,61,TensorRT layer 061,061. TensorRT layer 061 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,62,TensorRT layer 062,062. TensorRT layer 062 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,63,TensorRT layer 063,063. TensorRT layer 063 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,64,TensorRT layer 064,064. TensorRT layer 064 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,65,TensorRT layer 065,065. TensorRT layer 065 [TensorRTLayer],TensorRTLayer,1.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,66,TensorRT layer 066,066. TensorRT layer 066 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,67,TensorRT layer 067,067. TensorRT layer 067 [TensorRTLayer],TensorRTLayer,4.4,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,68,TensorRT layer 068,068. TensorRT layer 068 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,69,TensorRT layer 069,069. TensorRT layer 069 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,70,TensorRT layer 070,070. TensorRT layer 070 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,71,TensorRT layer 071,071. TensorRT layer 071 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,72,TensorRT layer 072,072. TensorRT layer 072 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,73,TensorRT layer 073,073. TensorRT layer 073 [TensorRTLayer],TensorRTLayer,2.0,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,74,TensorRT layer 074,074. TensorRT layer 074 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,75,TensorRT layer 075,075. TensorRT layer 075 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,76,TensorRT layer 076,076. TensorRT layer 076 [TensorRTLayer],TensorRTLayer,3.6,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,77,TensorRT layer 077,077. TensorRT layer 077 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,78,TensorRT layer 078,078. TensorRT layer 078 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,79,TensorRT layer 079,079. TensorRT layer 079 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,80,TensorRT layer 080,080. TensorRT layer 080 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,81,TensorRT layer 081,081. TensorRT layer 081 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,82,TensorRT layer 082,082. TensorRT layer 082 [TensorRTLayer],TensorRTLayer,1.9,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,83,TensorRT layer 083,083. TensorRT layer 083 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,84,TensorRT layer 084,084. TensorRT layer 084 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,85,TensorRT layer 085,085. TensorRT layer 085 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,86,TensorRT layer 086,086. TensorRT layer 086 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,87,TensorRT layer 087,087. TensorRT layer 087 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,88,TensorRT layer 088,088. TensorRT layer 088 [TensorRTLayer],TensorRTLayer,3.1,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_fp32,89,TensorRT layer 089,089. TensorRT layer 089 [TensorRTLayer],TensorRTLayer,100.0,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,1,TensorRT layer 001,001. TensorRT layer 001 [TensorRTLayer],TensorRTLayer,6.0,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,2,TensorRT layer 002,002. TensorRT layer 002 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,3,TensorRT layer 003,003. TensorRT layer 003 [TensorRTLayer],TensorRTLayer,2.4,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,4,TensorRT layer 004,004. TensorRT layer 004 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,5,TensorRT layer 005,005. TensorRT layer 005 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,6,TensorRT layer 006,006. TensorRT layer 006 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,7,TensorRT layer 007,007. TensorRT layer 007 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,8,TensorRT layer 008,008. TensorRT layer 008 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,9,TensorRT layer 009,009. TensorRT layer 009 [TensorRTLayer],TensorRTLayer,2.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,10,TensorRT layer 010,010. TensorRT layer 010 [TensorRTLayer],TensorRTLayer,2.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,11,TensorRT layer 011,011. TensorRT layer 011 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,12,TensorRT layer 012,012. TensorRT layer 012 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,13,TensorRT layer 013,013. TensorRT layer 013 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,14,TensorRT layer 014,014. TensorRT layer 014 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,15,TensorRT layer 015,015. TensorRT layer 015 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,16,TensorRT layer 016,016. TensorRT layer 016 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,17,TensorRT layer 017,017. TensorRT layer 017 [TensorRTLayer],TensorRTLayer,2.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,18,TensorRT layer 018,018. TensorRT layer 018 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,19,TensorRT layer 019,019. TensorRT layer 019 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,20,TensorRT layer 020,020. TensorRT layer 020 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,21,TensorRT layer 021,021. TensorRT layer 021 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,22,TensorRT layer 022,022. TensorRT layer 022 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,23,TensorRT layer 023,023. TensorRT layer 023 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,24,TensorRT layer 024,024. TensorRT layer 024 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,25,TensorRT layer 025,025. TensorRT layer 025 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,26,TensorRT layer 026,026. TensorRT layer 026 [TensorRTLayer],TensorRTLayer,5.0,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,27,TensorRT layer 027,027. TensorRT layer 027 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,28,TensorRT layer 028,028. TensorRT layer 028 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,29,TensorRT layer 029,029. TensorRT layer 029 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,30,TensorRT layer 030,030. TensorRT layer 030 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,31,TensorRT layer 031,031. TensorRT layer 031 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,32,TensorRT layer 032,032. TensorRT layer 032 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,33,TensorRT layer 033,033. TensorRT layer 033 [TensorRTLayer],TensorRTLayer,1.0,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,34,TensorRT layer 034,034. TensorRT layer 034 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,35,TensorRT layer 035,035. TensorRT layer 035 [TensorRTLayer],TensorRTLayer,5.0,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,36,TensorRT layer 036,036. TensorRT layer 036 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,37,TensorRT layer 037,037. TensorRT layer 037 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,38,TensorRT layer 038,038. TensorRT layer 038 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,39,TensorRT layer 039,039. TensorRT layer 039 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,40,TensorRT layer 040,040. TensorRT layer 040 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,41,TensorRT layer 041,041. TensorRT layer 041 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,42,TensorRT layer 042,042. TensorRT layer 042 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,43,TensorRT layer 043,043. TensorRT layer 043 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,44,TensorRT layer 044,044. TensorRT layer 044 [TensorRTLayer],TensorRTLayer,2.5,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,45,TensorRT layer 045,045. TensorRT layer 045 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,46,TensorRT layer 046,046. TensorRT layer 046 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,47,TensorRT layer 047,047. TensorRT layer 047 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,48,TensorRT layer 048,048. TensorRT layer 048 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,49,TensorRT layer 049,049. TensorRT layer 049 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,50,TensorRT layer 050,050. TensorRT layer 050 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,51,TensorRT layer 051,051. TensorRT layer 051 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,52,TensorRT layer 052,052. TensorRT layer 052 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,53,TensorRT layer 053,053. TensorRT layer 053 [TensorRTLayer],TensorRTLayer,3.0,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,54,TensorRT layer 054,054. TensorRT layer 054 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,55,TensorRT layer 055,055. TensorRT layer 055 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,56,TensorRT layer 056,056. TensorRT layer 056 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,57,TensorRT layer 057,057. TensorRT layer 057 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,58,TensorRT layer 058,058. TensorRT layer 058 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,59,TensorRT layer 059,059. TensorRT layer 059 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,60,TensorRT layer 060,060. TensorRT layer 060 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,61,TensorRT layer 061,061. TensorRT layer 061 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,62,TensorRT layer 062,062. TensorRT layer 062 [TensorRTLayer],TensorRTLayer,3.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,63,TensorRT layer 063,063. TensorRT layer 063 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,64,TensorRT layer 064,064. TensorRT layer 064 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,65,TensorRT layer 065,065. TensorRT layer 065 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,66,TensorRT layer 066,066. TensorRT layer 066 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,67,TensorRT layer 067,067. TensorRT layer 067 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,68,TensorRT layer 068,068. TensorRT layer 068 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,69,TensorRT layer 069,069. TensorRT layer 069 [TensorRTLayer],TensorRTLayer,1.9,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,70,TensorRT layer 070,070. TensorRT layer 070 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,71,TensorRT layer 071,071. TensorRT layer 071 [TensorRTLayer],TensorRTLayer,5.1,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,72,TensorRT layer 072,072. TensorRT layer 072 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,73,TensorRT layer 073,073. TensorRT layer 073 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,74,TensorRT layer 074,074. TensorRT layer 074 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,75,TensorRT layer 075,075. TensorRT layer 075 [TensorRTLayer],TensorRTLayer,0.7,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,76,TensorRT layer 076,076. TensorRT layer 076 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,77,TensorRT layer 077,077. TensorRT layer 077 [TensorRTLayer],TensorRTLayer,2.1,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,78,TensorRT layer 078,078. TensorRT layer 078 [TensorRTLayer],TensorRTLayer,1.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,79,TensorRT layer 079,079. TensorRT layer 079 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,80,TensorRT layer 080,080. TensorRT layer 080 [TensorRTLayer],TensorRTLayer,4.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,81,TensorRT layer 081,081. TensorRT layer 081 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,82,TensorRT layer 082,082. TensorRT layer 082 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,83,TensorRT layer 083,083. TensorRT layer 083 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,84,TensorRT layer 084,084. TensorRT layer 084 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,85,TensorRT layer 085,085. TensorRT layer 085 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,86,TensorRT layer 086,086. TensorRT layer 086 [TensorRTLayer],TensorRTLayer,2.0,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,87,TensorRT layer 087,087. TensorRT layer 087 [TensorRTLayer],TensorRTLayer,1.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,88,TensorRT layer 088,088. TensorRT layer 088 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,89,TensorRT layer 089,089. TensorRT layer 089 [TensorRTLayer],TensorRTLayer,0.3,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,90,TensorRT layer 090,090. TensorRT layer 090 [TensorRTLayer],TensorRTLayer,1.8,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,91,TensorRT layer 091,091. TensorRT layer 091 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,92,TensorRT layer 092,092. TensorRT layer 092 [TensorRTLayer],TensorRTLayer,3.7,0.0,0.0,1,,,
+mobilenetv3s,tensorrt_int8,93,TensorRT layer 093,093. TensorRT layer 093 [TensorRTLayer],TensorRTLayer,100.0,0.0,0.0,1,,,
+mobilenetv3s,tflite_cpu,1,dummy_conv,"01. dummy_conv [conv]
+params 0",conv,10.09,0.0,0.0,1,,,0.0

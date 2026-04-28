@@ -1,260 +1,405 @@
-model,runtime,group_index,group_key,group_label,group_type,mean_ms,power_gpu_mw,power_total_mw,ops
-resnet50,onnxrt_cpu,1,conv1,01. conv1 [conv],conv,28.9701,0.0,0.0,3
-resnet50,onnxrt_cpu,2,maxpool,02. maxpool [pool],pool,3.58,0.0,0.0,3
-resnet50,onnxrt_cpu,3,layer1/layer1.0/conv1,03. layer1/layer1.0/conv1 [conv],conv,3.4645,0.0,0.0,3
-resnet50,onnxrt_cpu,4,layer1/layer1.0/conv2,04. layer1/layer1.0/conv2 [conv],conv,26.0024,0.0,0.0,2
-resnet50,onnxrt_cpu,5,layer1/layer1.0/downsample/downsample.0,05. layer1/layer1.0/downsample/downsample.0 [conv],conv,11.403699999999999,0.0,0.0,3
-resnet50,onnxrt_cpu,6,layer1/layer1.0/conv3,06. layer1/layer1.0/conv3 [conv],conv,14.040899999999999,0.0,0.0,3
-resnet50,onnxrt_cpu,7,layer1/layer1.1/conv1,07. layer1/layer1.1/conv1 [conv],conv,12.918,0.0,0.0,2
-resnet50,onnxrt_cpu,8,layer1/layer1.1/conv2,08. layer1/layer1.1/conv2 [conv],conv,26.127,0.0,0.0,3
-resnet50,onnxrt_cpu,9,layer1/layer1.1/conv3,09. layer1/layer1.1/conv3 [conv],conv,14.2181,0.0,0.0,3
-resnet50,onnxrt_cpu,10,layer1/layer1.2/conv1,10. layer1/layer1.2/conv1 [conv],conv,13.0596,0.0,0.0,2
-resnet50,onnxrt_cpu,11,layer1/layer1.2/conv2,11. layer1/layer1.2/conv2 [conv],conv,26.2625,0.0,0.0,2
-resnet50,onnxrt_cpu,12,layer1/layer1.2/conv3,12. layer1/layer1.2/conv3 [conv],conv,13.8651,0.0,0.0,3
-resnet50,onnxrt_cpu,13,layer2/layer2.0/conv1,13. layer2/layer2.0/conv1 [conv],conv,23.029799999999998,0.0,0.0,2
-resnet50,onnxrt_cpu,14,layer2/layer2.0/conv2,14. layer2/layer2.0/conv2 [conv],conv,26.1457,0.0,0.0,2
-resnet50,onnxrt_cpu,15,layer2/layer2.0/downsample/downsample.0,15. layer2/layer2.0/downsample/downsample.0 [conv],conv,22.2384,0.0,0.0,3
-resnet50,onnxrt_cpu,16,layer2/layer2.0/conv3,16. layer2/layer2.0/conv3 [conv],conv,12.2255,0.0,0.0,2
-resnet50,onnxrt_cpu,17,layer2/layer2.1/conv1,17. layer2/layer2.1/conv1 [conv],conv,11.4725,0.0,0.0,2
-resnet50,onnxrt_cpu,18,layer2/layer2.1/conv2,18. layer2/layer2.1/conv2 [conv],conv,24.5077,0.0,0.0,2
-resnet50,onnxrt_cpu,19,layer2/layer2.1/conv3,19. layer2/layer2.1/conv3 [conv],conv,12.2045,0.0,0.0,3
-resnet50,onnxrt_cpu,20,layer2/layer2.2/conv1,20. layer2/layer2.2/conv1 [conv],conv,11.4277,0.0,0.0,2
-resnet50,onnxrt_cpu,21,layer2/layer2.2/conv2,21. layer2/layer2.2/conv2 [conv],conv,24.8351,0.0,0.0,3
-resnet50,onnxrt_cpu,22,layer2/layer2.2/conv3,22. layer2/layer2.2/conv3 [conv],conv,12.460799999999999,0.0,0.0,3
-resnet50,onnxrt_cpu,23,layer2/layer2.3/conv1,23. layer2/layer2.3/conv1 [conv],conv,11.9499,0.0,0.0,2
-resnet50,onnxrt_cpu,24,layer2/layer2.3/conv2,24. layer2/layer2.3/conv2 [conv],conv,25.5066,0.0,0.0,2
-resnet50,onnxrt_cpu,25,layer2/layer2.3/conv3,25. layer2/layer2.3/conv3 [conv],conv,12.477599999999999,0.0,0.0,3
-resnet50,onnxrt_cpu,26,layer3/layer3.0/conv1,26. layer3/layer3.0/conv1 [conv],conv,22.8662,0.0,0.0,2
-resnet50,onnxrt_cpu,27,layer3/layer3.0/conv2,27. layer3/layer3.0/conv2 [conv],conv,28.2628,0.0,0.0,3
-resnet50,onnxrt_cpu,28,layer3/layer3.0/downsample/downsample.0,28. layer3/layer3.0/downsample/downsample.0 [conv],conv,24.0582,0.0,0.0,3
-resnet50,onnxrt_cpu,29,layer3/layer3.0/conv3,29. layer3/layer3.0/conv3 [conv],conv,12.3882,0.0,0.0,2
-resnet50,onnxrt_cpu,30,layer3/layer3.1/conv1,30. layer3/layer3.1/conv1 [conv],conv,11.6921,0.0,0.0,3
-resnet50,onnxrt_cpu,31,layer3/layer3.1/conv2,31. layer3/layer3.1/conv2 [conv],conv,26.93,0.0,0.0,2
-resnet50,onnxrt_cpu,32,layer3/layer3.1/conv3,32. layer3/layer3.1/conv3 [conv],conv,12.0801,0.0,0.0,3
-resnet50,onnxrt_cpu,33,layer3/layer3.2/conv1,33. layer3/layer3.2/conv1 [conv],conv,11.6046,0.0,0.0,3
-resnet50,onnxrt_cpu,34,layer3/layer3.2/conv2,34. layer3/layer3.2/conv2 [conv],conv,26.693,0.0,0.0,2
-resnet50,onnxrt_cpu,35,layer3/layer3.2/conv3,35. layer3/layer3.2/conv3 [conv],conv,12.3833,0.0,0.0,2
-resnet50,onnxrt_cpu,36,layer3/layer3.3/conv1,36. layer3/layer3.3/conv1 [conv],conv,11.8364,0.0,0.0,3
-resnet50,onnxrt_cpu,37,layer3/layer3.3/conv2,37. layer3/layer3.3/conv2 [conv],conv,26.772299999999998,0.0,0.0,3
-resnet50,onnxrt_cpu,38,layer3/layer3.3/conv3,38. layer3/layer3.3/conv3 [conv],conv,12.1888,0.0,0.0,2
-resnet50,onnxrt_cpu,39,layer3/layer3.4/conv1,39. layer3/layer3.4/conv1 [conv],conv,11.869399999999999,0.0,0.0,3
-resnet50,onnxrt_cpu,40,layer3/layer3.4/conv2,40. layer3/layer3.4/conv2 [conv],conv,27.1584,0.0,0.0,3
-resnet50,onnxrt_cpu,41,layer3/layer3.4/conv3,41. layer3/layer3.4/conv3 [conv],conv,12.362499999999999,0.0,0.0,2
-resnet50,onnxrt_cpu,42,layer3/layer3.5/conv1,42. layer3/layer3.5/conv1 [conv],conv,12.0109,0.0,0.0,3
-resnet50,onnxrt_cpu,43,layer3/layer3.5/conv2,43. layer3/layer3.5/conv2 [conv],conv,27.2511,0.0,0.0,2
-resnet50,onnxrt_cpu,44,layer3/layer3.5/conv3,44. layer3/layer3.5/conv3 [conv],conv,12.4418,0.0,0.0,2
-resnet50,onnxrt_cpu,45,layer4/layer4.0/conv1,45. layer4/layer4.0/conv1 [conv],conv,22.8673,0.0,0.0,2
-resnet50,onnxrt_cpu,46,layer4/layer4.0/conv2,46. layer4/layer4.0/conv2 [conv],conv,30.0281,0.0,0.0,3
-resnet50,onnxrt_cpu,47,layer4/layer4.0/downsample/downsample.0,47. layer4/layer4.0/downsample/downsample.0 [conv],conv,25.831899999999997,0.0,0.0,3
-resnet50,onnxrt_cpu,48,layer4/layer4.0/conv3,48. layer4/layer4.0/conv3 [conv],conv,14.2911,0.0,0.0,2
-resnet50,onnxrt_cpu,49,layer4/layer4.1/conv1,49. layer4/layer4.1/conv1 [conv],conv,15.800799999999999,0.0,0.0,3
-resnet50,onnxrt_cpu,50,layer4/layer4.1/conv2,50. layer4/layer4.1/conv2 [conv],conv,29.9235,0.0,0.0,2
-resnet50,onnxrt_cpu,51,layer4/layer4.1/conv3,51. layer4/layer4.1/conv3 [conv],conv,14.070799999999998,0.0,0.0,3
-resnet50,onnxrt_cpu,52,layer4/layer4.2/conv1,52. layer4/layer4.2/conv1 [conv],conv,15.288400000000001,0.0,0.0,2
-resnet50,onnxrt_cpu,53,layer4/layer4.2/conv2,53. layer4/layer4.2/conv2 [conv],conv,29.6375,0.0,0.0,2
-resnet50,onnxrt_cpu,54,layer4/layer4.2/conv3,54. layer4/layer4.2/conv3 [conv],conv,13.7236,0.0,0.0,2
-resnet50,onnxrt_cpu,55,avgpool,55. avgpool [pool],pool,0.19649999999999998,0.0,0.0,3
-resnet50,onnxrt_cpu,56,Flatten,56. Flatten [shape],shape,0.0403,0.0,0.0,1
-resnet50,onnxrt_cpu,57,fc,57. fc [fc],fc,2.0125,0.0,0.0,2
-resnet50,pytorch_cpu,1,dummy_conv,01. dummy_conv [conv],conv,10.09,0.0,0.0,1
-resnet50,pytorch_cuda,1,conv1,01. conv1 [conv],conv,2.913617,0.0,0.0,1
-resnet50,pytorch_cuda,2,bn1,02. bn1 [norm],norm,0.807098,0.0,0.0,1
-resnet50,pytorch_cuda,3,relu,03. relu [act],act,0.494536,0.0,0.0,1
-resnet50,pytorch_cuda,4,maxpool,04. maxpool [pool],pool,1.515171,0.0,0.0,1
-resnet50,pytorch_cuda,5,layer1.0,05. layer1.0 [conv-norm-act],conv-norm-act,6.736928999999999,0.0,0.0,7
-resnet50,pytorch_cuda,6,layer1.0.downsample,06. layer1.0.downsample [conv-norm],conv-norm,2.557964,0.0,0.0,2
-resnet50,pytorch_cuda,7,layer1.1,07. layer1.1 [conv-norm-act],conv-norm-act,7.5787819999999995,0.0,0.0,7
-resnet50,pytorch_cuda,8,layer1.2,08. layer1.2 [conv-norm-act],conv-norm-act,7.518345000000001,0.0,0.0,7
-resnet50,pytorch_cuda,9,layer2.0,09. layer2.0 [conv-norm-act],conv-norm-act,10.541737,0.0,0.0,7
-resnet50,pytorch_cuda,10,layer2.0.downsample,10. layer2.0.downsample [conv-norm],conv-norm,3.732185,0.0,0.0,2
-resnet50,pytorch_cuda,11,layer2.1,11. layer2.1 [conv-norm-act],conv-norm-act,7.322694,0.0,0.0,7
-resnet50,pytorch_cuda,12,layer2.2,12. layer2.2 [conv-norm-act],conv-norm-act,7.287432999999999,0.0,0.0,7
-resnet50,pytorch_cuda,13,layer2.3,13. layer2.3 [conv-norm-act],conv-norm-act,7.280822999999999,0.0,0.0,7
-resnet50,pytorch_cuda,14,layer3.0,14. layer3.0 [conv-norm-act],conv-norm-act,12.061242,0.0,0.0,7
-resnet50,pytorch_cuda,15,layer3.0.downsample,15. layer3.0.downsample [conv-norm],conv-norm,4.230961,0.0,0.0,2
-resnet50,pytorch_cuda,16,layer3.1,16. layer3.1 [conv-norm-act],conv-norm-act,7.955655999999999,0.0,0.0,7
-resnet50,pytorch_cuda,17,layer3.2,17. layer3.2 [conv-norm-act],conv-norm-act,7.891918,0.0,0.0,7
-resnet50,pytorch_cuda,18,layer3.3,18. layer3.3 [conv-norm-act],conv-norm-act,7.934670999999999,0.0,0.0,7
-resnet50,pytorch_cuda,19,layer3.4,19. layer3.4 [conv-norm-act],conv-norm-act,7.878184,0.0,0.0,7
-resnet50,pytorch_cuda,20,layer3.5,20. layer3.5 [conv-norm-act],conv-norm-act,7.897101999999999,0.0,0.0,7
-resnet50,pytorch_cuda,21,layer4.0,21. layer4.0 [conv-norm-act],conv-norm-act,12.991496000000001,0.0,0.0,7
-resnet50,pytorch_cuda,22,layer4.0.downsample,22. layer4.0.downsample [conv-norm],conv-norm,4.614032000000001,0.0,0.0,2
-resnet50,pytorch_cuda,23,layer4.1,23. layer4.1 [conv-norm-act],conv-norm-act,11.138728,0.0,0.0,7
-resnet50,pytorch_cuda,24,layer4.2,24. layer4.2 [conv-norm-act],conv-norm-act,11.113254000000001,0.0,0.0,7
-resnet50,pytorch_cuda,25,avgpool,25. avgpool [pool],pool,0.496198,0.0,0.0,1
-resnet50,pytorch_cuda,26,fc,26. fc [fc],fc,1.00085,0.0,0.0,1
-resnet50,tensorrt_fp16,1,TensorRT layer 001,001. TensorRT layer 001 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1
-resnet50,tensorrt_fp16,2,TensorRT layer 002,002. TensorRT layer 002 [TensorRTLayer],TensorRTLayer,3.6,0.0,0.0,1
-resnet50,tensorrt_fp16,3,TensorRT layer 003,003. TensorRT layer 003 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
-resnet50,tensorrt_fp16,4,TensorRT layer 004,004. TensorRT layer 004 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1
-resnet50,tensorrt_fp16,5,TensorRT layer 005,005. TensorRT layer 005 [TensorRTLayer],TensorRTLayer,1.8,0.0,0.0,1
-resnet50,tensorrt_fp16,6,TensorRT layer 006,006. TensorRT layer 006 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1
-resnet50,tensorrt_fp16,7,TensorRT layer 007,007. TensorRT layer 007 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1
-resnet50,tensorrt_fp16,8,TensorRT layer 008,008. TensorRT layer 008 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1
-resnet50,tensorrt_fp16,9,TensorRT layer 009,009. TensorRT layer 009 [TensorRTLayer],TensorRTLayer,1.8,0.0,0.0,1
-resnet50,tensorrt_fp16,10,TensorRT layer 010,010. TensorRT layer 010 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1
-resnet50,tensorrt_fp16,11,TensorRT layer 011,011. TensorRT layer 011 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1
-resnet50,tensorrt_fp16,12,TensorRT layer 012,012. TensorRT layer 012 [TensorRTLayer],TensorRTLayer,1.8,0.0,0.0,1
-resnet50,tensorrt_fp16,13,TensorRT layer 013,013. TensorRT layer 013 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1
-resnet50,tensorrt_fp16,14,TensorRT layer 014,014. TensorRT layer 014 [TensorRTLayer],TensorRTLayer,2.1,0.0,0.0,1
-resnet50,tensorrt_fp16,15,TensorRT layer 015,015. TensorRT layer 015 [TensorRTLayer],TensorRTLayer,2.4,0.0,0.0,1
-resnet50,tensorrt_fp16,16,TensorRT layer 016,016. TensorRT layer 016 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1
-resnet50,tensorrt_fp16,17,TensorRT layer 017,017. TensorRT layer 017 [TensorRTLayer],TensorRTLayer,2.4,0.0,0.0,1
-resnet50,tensorrt_fp16,18,TensorRT layer 018,018. TensorRT layer 018 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1
-resnet50,tensorrt_fp16,19,TensorRT layer 019,019. TensorRT layer 019 [TensorRTLayer],TensorRTLayer,1.8,0.0,0.0,1
-resnet50,tensorrt_fp16,20,TensorRT layer 020,020. TensorRT layer 020 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1
-resnet50,tensorrt_fp16,21,TensorRT layer 021,021. TensorRT layer 021 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1
-resnet50,tensorrt_fp16,22,TensorRT layer 022,022. TensorRT layer 022 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1
-resnet50,tensorrt_fp16,23,TensorRT layer 023,023. TensorRT layer 023 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1
-resnet50,tensorrt_fp16,24,TensorRT layer 024,024. TensorRT layer 024 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1
-resnet50,tensorrt_fp16,25,TensorRT layer 025,025. TensorRT layer 025 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1
-resnet50,tensorrt_fp16,26,TensorRT layer 026,026. TensorRT layer 026 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1
-resnet50,tensorrt_fp16,27,TensorRT layer 027,027. TensorRT layer 027 [TensorRTLayer],TensorRTLayer,2.2,0.0,0.0,1
-resnet50,tensorrt_fp16,28,TensorRT layer 028,028. TensorRT layer 028 [TensorRTLayer],TensorRTLayer,2.7,0.0,0.0,1
-resnet50,tensorrt_fp16,29,TensorRT layer 029,029. TensorRT layer 029 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1
-resnet50,tensorrt_fp16,30,TensorRT layer 030,030. TensorRT layer 030 [TensorRTLayer],TensorRTLayer,2.6,0.0,0.0,1
-resnet50,tensorrt_fp16,31,TensorRT layer 031,031. TensorRT layer 031 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
-resnet50,tensorrt_fp16,32,TensorRT layer 032,032. TensorRT layer 032 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1
-resnet50,tensorrt_fp16,33,TensorRT layer 033,033. TensorRT layer 033 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1
-resnet50,tensorrt_fp16,34,TensorRT layer 034,034. TensorRT layer 034 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
-resnet50,tensorrt_fp16,35,TensorRT layer 035,035. TensorRT layer 035 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1
-resnet50,tensorrt_fp16,36,TensorRT layer 036,036. TensorRT layer 036 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1
-resnet50,tensorrt_fp16,37,TensorRT layer 037,037. TensorRT layer 037 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
-resnet50,tensorrt_fp16,38,TensorRT layer 038,038. TensorRT layer 038 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1
-resnet50,tensorrt_fp16,39,TensorRT layer 039,039. TensorRT layer 039 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1
-resnet50,tensorrt_fp16,40,TensorRT layer 040,040. TensorRT layer 040 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
-resnet50,tensorrt_fp16,41,TensorRT layer 041,041. TensorRT layer 041 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1
-resnet50,tensorrt_fp16,42,TensorRT layer 042,042. TensorRT layer 042 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1
-resnet50,tensorrt_fp16,43,TensorRT layer 043,043. TensorRT layer 043 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
-resnet50,tensorrt_fp16,44,TensorRT layer 044,044. TensorRT layer 044 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1
-resnet50,tensorrt_fp16,45,TensorRT layer 045,045. TensorRT layer 045 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1
-resnet50,tensorrt_fp16,46,TensorRT layer 046,046. TensorRT layer 046 [TensorRTLayer],TensorRTLayer,2.4,0.0,0.0,1
-resnet50,tensorrt_fp16,47,TensorRT layer 047,047. TensorRT layer 047 [TensorRTLayer],TensorRTLayer,5.2,0.0,0.0,1
-resnet50,tensorrt_fp16,48,TensorRT layer 048,048. TensorRT layer 048 [TensorRTLayer],TensorRTLayer,2.5,0.0,0.0,1
-resnet50,tensorrt_fp16,49,TensorRT layer 049,049. TensorRT layer 049 [TensorRTLayer],TensorRTLayer,4.8,0.0,0.0,1
-resnet50,tensorrt_fp16,50,TensorRT layer 050,050. TensorRT layer 050 [TensorRTLayer],TensorRTLayer,1.9,0.0,0.0,1
-resnet50,tensorrt_fp16,51,TensorRT layer 051,051. TensorRT layer 051 [TensorRTLayer],TensorRTLayer,2.5,0.0,0.0,1
-resnet50,tensorrt_fp16,52,TensorRT layer 052,052. TensorRT layer 052 [TensorRTLayer],TensorRTLayer,2.5,0.0,0.0,1
-resnet50,tensorrt_fp16,53,TensorRT layer 053,053. TensorRT layer 053 [TensorRTLayer],TensorRTLayer,1.9,0.0,0.0,1
-resnet50,tensorrt_fp16,54,TensorRT layer 054,054. TensorRT layer 054 [TensorRTLayer],TensorRTLayer,2.4,0.0,0.0,1
-resnet50,tensorrt_fp16,55,TensorRT layer 055,055. TensorRT layer 055 [TensorRTLayer],TensorRTLayer,2.5,0.0,0.0,1
-resnet50,tensorrt_fp16,56,TensorRT layer 056,056. TensorRT layer 056 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1
-resnet50,tensorrt_fp16,57,TensorRT layer 057,057. TensorRT layer 057 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
-resnet50,tensorrt_fp16,58,TensorRT layer 058,058. TensorRT layer 058 [TensorRTLayer],TensorRTLayer,100.0,0.0,0.0,1
-resnet50,tensorrt_fp32,1,TensorRT layer 001,001. TensorRT layer 001 [TensorRTLayer],TensorRTLayer,3.1,0.0,0.0,1
-resnet50,tensorrt_fp32,2,TensorRT layer 002,002. TensorRT layer 002 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
-resnet50,tensorrt_fp32,3,TensorRT layer 003,003. TensorRT layer 003 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
-resnet50,tensorrt_fp32,4,TensorRT layer 004,004. TensorRT layer 004 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1
-resnet50,tensorrt_fp32,5,TensorRT layer 005,005. TensorRT layer 005 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1
-resnet50,tensorrt_fp32,6,TensorRT layer 006,006. TensorRT layer 006 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1
-resnet50,tensorrt_fp32,7,TensorRT layer 007,007. TensorRT layer 007 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1
-resnet50,tensorrt_fp32,8,TensorRT layer 008,008. TensorRT layer 008 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1
-resnet50,tensorrt_fp32,9,TensorRT layer 009,009. TensorRT layer 009 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1
-resnet50,tensorrt_fp32,10,TensorRT layer 010,010. TensorRT layer 010 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1
-resnet50,tensorrt_fp32,11,TensorRT layer 011,011. TensorRT layer 011 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1
-resnet50,tensorrt_fp32,12,TensorRT layer 012,012. TensorRT layer 012 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1
-resnet50,tensorrt_fp32,13,TensorRT layer 013,013. TensorRT layer 013 [TensorRTLayer],TensorRTLayer,2.2,0.0,0.0,1
-resnet50,tensorrt_fp32,14,TensorRT layer 014,014. TensorRT layer 014 [TensorRTLayer],TensorRTLayer,2.6,0.0,0.0,1
-resnet50,tensorrt_fp32,15,TensorRT layer 015,015. TensorRT layer 015 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1
-resnet50,tensorrt_fp32,16,TensorRT layer 016,016. TensorRT layer 016 [TensorRTLayer],TensorRTLayer,2.6,0.0,0.0,1
-resnet50,tensorrt_fp32,17,TensorRT layer 017,017. TensorRT layer 017 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
-resnet50,tensorrt_fp32,18,TensorRT layer 018,018. TensorRT layer 018 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1
-resnet50,tensorrt_fp32,19,TensorRT layer 019,019. TensorRT layer 019 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1
-resnet50,tensorrt_fp32,20,TensorRT layer 020,020. TensorRT layer 020 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
-resnet50,tensorrt_fp32,21,TensorRT layer 021,021. TensorRT layer 021 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1
-resnet50,tensorrt_fp32,22,TensorRT layer 022,022. TensorRT layer 022 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1
-resnet50,tensorrt_fp32,23,TensorRT layer 023,023. TensorRT layer 023 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
-resnet50,tensorrt_fp32,24,TensorRT layer 024,024. TensorRT layer 024 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1
-resnet50,tensorrt_fp32,25,TensorRT layer 025,025. TensorRT layer 025 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1
-resnet50,tensorrt_fp32,26,TensorRT layer 026,026. TensorRT layer 026 [TensorRTLayer],TensorRTLayer,2.3,0.0,0.0,1
-resnet50,tensorrt_fp32,27,TensorRT layer 027,027. TensorRT layer 027 [TensorRTLayer],TensorRTLayer,2.9,0.0,0.0,1
-resnet50,tensorrt_fp32,28,TensorRT layer 028,028. TensorRT layer 028 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1
-resnet50,tensorrt_fp32,29,TensorRT layer 029,029. TensorRT layer 029 [TensorRTLayer],TensorRTLayer,2.7,0.0,0.0,1
-resnet50,tensorrt_fp32,30,TensorRT layer 030,030. TensorRT layer 030 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
-resnet50,tensorrt_fp32,31,TensorRT layer 031,031. TensorRT layer 031 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1
-resnet50,tensorrt_fp32,32,TensorRT layer 032,032. TensorRT layer 032 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1
-resnet50,tensorrt_fp32,33,TensorRT layer 033,033. TensorRT layer 033 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
-resnet50,tensorrt_fp32,34,TensorRT layer 034,034. TensorRT layer 034 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1
-resnet50,tensorrt_fp32,35,TensorRT layer 035,035. TensorRT layer 035 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1
-resnet50,tensorrt_fp32,36,TensorRT layer 036,036. TensorRT layer 036 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
-resnet50,tensorrt_fp32,37,TensorRT layer 037,037. TensorRT layer 037 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1
-resnet50,tensorrt_fp32,38,TensorRT layer 038,038. TensorRT layer 038 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1
-resnet50,tensorrt_fp32,39,TensorRT layer 039,039. TensorRT layer 039 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
-resnet50,tensorrt_fp32,40,TensorRT layer 040,040. TensorRT layer 040 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1
-resnet50,tensorrt_fp32,41,TensorRT layer 041,041. TensorRT layer 041 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1
-resnet50,tensorrt_fp32,42,TensorRT layer 042,042. TensorRT layer 042 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
-resnet50,tensorrt_fp32,43,TensorRT layer 043,043. TensorRT layer 043 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1
-resnet50,tensorrt_fp32,44,TensorRT layer 044,044. TensorRT layer 044 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1
-resnet50,tensorrt_fp32,45,TensorRT layer 045,045. TensorRT layer 045 [TensorRTLayer],TensorRTLayer,2.6,0.0,0.0,1
-resnet50,tensorrt_fp32,46,TensorRT layer 046,046. TensorRT layer 046 [TensorRTLayer],TensorRTLayer,4.8,0.0,0.0,1
-resnet50,tensorrt_fp32,47,TensorRT layer 047,047. TensorRT layer 047 [TensorRTLayer],TensorRTLayer,2.6,0.0,0.0,1
-resnet50,tensorrt_fp32,48,TensorRT layer 048,048. TensorRT layer 048 [TensorRTLayer],TensorRTLayer,5.1,0.0,0.0,1
-resnet50,tensorrt_fp32,49,TensorRT layer 049,049. TensorRT layer 049 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1
-resnet50,tensorrt_fp32,50,TensorRT layer 050,050. TensorRT layer 050 [TensorRTLayer],TensorRTLayer,2.4,0.0,0.0,1
-resnet50,tensorrt_fp32,51,TensorRT layer 051,051. TensorRT layer 051 [TensorRTLayer],TensorRTLayer,2.7,0.0,0.0,1
-resnet50,tensorrt_fp32,52,TensorRT layer 052,052. TensorRT layer 052 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1
-resnet50,tensorrt_fp32,53,TensorRT layer 053,053. TensorRT layer 053 [TensorRTLayer],TensorRTLayer,2.4,0.0,0.0,1
-resnet50,tensorrt_fp32,54,TensorRT layer 054,054. TensorRT layer 054 [TensorRTLayer],TensorRTLayer,2.7,0.0,0.0,1
-resnet50,tensorrt_fp32,55,TensorRT layer 055,055. TensorRT layer 055 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
-resnet50,tensorrt_fp32,56,TensorRT layer 056,056. TensorRT layer 056 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
-resnet50,tensorrt_fp32,57,TensorRT layer 057,057. TensorRT layer 057 [TensorRTLayer],TensorRTLayer,100.0,0.0,0.0,1
-resnet50,tensorrt_int8,1,TensorRT layer 001,001. TensorRT layer 001 [TensorRTLayer],TensorRTLayer,3.1,0.0,0.0,1
-resnet50,tensorrt_int8,2,TensorRT layer 002,002. TensorRT layer 002 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1
-resnet50,tensorrt_int8,3,TensorRT layer 003,003. TensorRT layer 003 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1
-resnet50,tensorrt_int8,4,TensorRT layer 004,004. TensorRT layer 004 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1
-resnet50,tensorrt_int8,5,TensorRT layer 005,005. TensorRT layer 005 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1
-resnet50,tensorrt_int8,6,TensorRT layer 006,006. TensorRT layer 006 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1
-resnet50,tensorrt_int8,7,TensorRT layer 007,007. TensorRT layer 007 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1
-resnet50,tensorrt_int8,8,TensorRT layer 008,008. TensorRT layer 008 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1
-resnet50,tensorrt_int8,9,TensorRT layer 009,009. TensorRT layer 009 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1
-resnet50,tensorrt_int8,10,TensorRT layer 010,010. TensorRT layer 010 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1
-resnet50,tensorrt_int8,11,TensorRT layer 011,011. TensorRT layer 011 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1
-resnet50,tensorrt_int8,12,TensorRT layer 012,012. TensorRT layer 012 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1
-resnet50,tensorrt_int8,13,TensorRT layer 013,013. TensorRT layer 013 [TensorRTLayer],TensorRTLayer,2.2,0.0,0.0,1
-resnet50,tensorrt_int8,14,TensorRT layer 014,014. TensorRT layer 014 [TensorRTLayer],TensorRTLayer,2.6,0.0,0.0,1
-resnet50,tensorrt_int8,15,TensorRT layer 015,015. TensorRT layer 015 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1
-resnet50,tensorrt_int8,16,TensorRT layer 016,016. TensorRT layer 016 [TensorRTLayer],TensorRTLayer,2.6,0.0,0.0,1
-resnet50,tensorrt_int8,17,TensorRT layer 017,017. TensorRT layer 017 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
-resnet50,tensorrt_int8,18,TensorRT layer 018,018. TensorRT layer 018 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1
-resnet50,tensorrt_int8,19,TensorRT layer 019,019. TensorRT layer 019 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1
-resnet50,tensorrt_int8,20,TensorRT layer 020,020. TensorRT layer 020 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
-resnet50,tensorrt_int8,21,TensorRT layer 021,021. TensorRT layer 021 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1
-resnet50,tensorrt_int8,22,TensorRT layer 022,022. TensorRT layer 022 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1
-resnet50,tensorrt_int8,23,TensorRT layer 023,023. TensorRT layer 023 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1
-resnet50,tensorrt_int8,24,TensorRT layer 024,024. TensorRT layer 024 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1
-resnet50,tensorrt_int8,25,TensorRT layer 025,025. TensorRT layer 025 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1
-resnet50,tensorrt_int8,26,TensorRT layer 026,026. TensorRT layer 026 [TensorRTLayer],TensorRTLayer,2.3,0.0,0.0,1
-resnet50,tensorrt_int8,27,TensorRT layer 027,027. TensorRT layer 027 [TensorRTLayer],TensorRTLayer,2.9,0.0,0.0,1
-resnet50,tensorrt_int8,28,TensorRT layer 028,028. TensorRT layer 028 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1
-resnet50,tensorrt_int8,29,TensorRT layer 029,029. TensorRT layer 029 [TensorRTLayer],TensorRTLayer,2.7,0.0,0.0,1
-resnet50,tensorrt_int8,30,TensorRT layer 030,030. TensorRT layer 030 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
-resnet50,tensorrt_int8,31,TensorRT layer 031,031. TensorRT layer 031 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1
-resnet50,tensorrt_int8,32,TensorRT layer 032,032. TensorRT layer 032 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1
-resnet50,tensorrt_int8,33,TensorRT layer 033,033. TensorRT layer 033 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
-resnet50,tensorrt_int8,34,TensorRT layer 034,034. TensorRT layer 034 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1
-resnet50,tensorrt_int8,35,TensorRT layer 035,035. TensorRT layer 035 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1
-resnet50,tensorrt_int8,36,TensorRT layer 036,036. TensorRT layer 036 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
-resnet50,tensorrt_int8,37,TensorRT layer 037,037. TensorRT layer 037 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1
-resnet50,tensorrt_int8,38,TensorRT layer 038,038. TensorRT layer 038 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1
-resnet50,tensorrt_int8,39,TensorRT layer 039,039. TensorRT layer 039 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
-resnet50,tensorrt_int8,40,TensorRT layer 040,040. TensorRT layer 040 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1
-resnet50,tensorrt_int8,41,TensorRT layer 041,041. TensorRT layer 041 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1
-resnet50,tensorrt_int8,42,TensorRT layer 042,042. TensorRT layer 042 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
-resnet50,tensorrt_int8,43,TensorRT layer 043,043. TensorRT layer 043 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1
-resnet50,tensorrt_int8,44,TensorRT layer 044,044. TensorRT layer 044 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1
-resnet50,tensorrt_int8,45,TensorRT layer 045,045. TensorRT layer 045 [TensorRTLayer],TensorRTLayer,2.6,0.0,0.0,1
-resnet50,tensorrt_int8,46,TensorRT layer 046,046. TensorRT layer 046 [TensorRTLayer],TensorRTLayer,4.8,0.0,0.0,1
-resnet50,tensorrt_int8,47,TensorRT layer 047,047. TensorRT layer 047 [TensorRTLayer],TensorRTLayer,2.7,0.0,0.0,1
-resnet50,tensorrt_int8,48,TensorRT layer 048,048. TensorRT layer 048 [TensorRTLayer],TensorRTLayer,5.2,0.0,0.0,1
-resnet50,tensorrt_int8,49,TensorRT layer 049,049. TensorRT layer 049 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
-resnet50,tensorrt_int8,50,TensorRT layer 050,050. TensorRT layer 050 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
-resnet50,tensorrt_int8,51,TensorRT layer 051,051. TensorRT layer 051 [TensorRTLayer],TensorRTLayer,2.4,0.0,0.0,1
-resnet50,tensorrt_int8,52,TensorRT layer 052,052. TensorRT layer 052 [TensorRTLayer],TensorRTLayer,2.7,0.0,0.0,1
-resnet50,tensorrt_int8,53,TensorRT layer 053,053. TensorRT layer 053 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
-resnet50,tensorrt_int8,54,TensorRT layer 054,054. TensorRT layer 054 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1
-resnet50,tensorrt_int8,55,TensorRT layer 055,055. TensorRT layer 055 [TensorRTLayer],TensorRTLayer,2.4,0.0,0.0,1
-resnet50,tensorrt_int8,56,TensorRT layer 056,056. TensorRT layer 056 [TensorRTLayer],TensorRTLayer,2.7,0.0,0.0,1
-resnet50,tensorrt_int8,57,TensorRT layer 057,057. TensorRT layer 057 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1
-resnet50,tensorrt_int8,58,TensorRT layer 058,058. TensorRT layer 058 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1
-resnet50,tensorrt_int8,59,TensorRT layer 059,059. TensorRT layer 059 [TensorRTLayer],TensorRTLayer,100.0,0.0,0.0,1
-resnet50,tflite_cpu,1,dummy_conv,01. dummy_conv [conv],conv,10.09,0.0,0.0,1
+model,runtime,group_index,group_key,group_label,group_type,mean_ms,power_gpu_mw,power_total_mw,ops,input_shape,output_shape,param_count
+resnet50,onnxrt_cpu,1,conv1,"01. conv1 [conv]
+params 0",conv,28.9701,0.0,0.0,3,,,0.0
+resnet50,onnxrt_cpu,2,maxpool,"02. maxpool [pool]
+params 0",pool,3.58,0.0,0.0,3,,,0.0
+resnet50,onnxrt_cpu,3,layer1/layer1.0/conv1,"03. layer1/layer1.0/conv1 [conv]
+params 0",conv,3.4645,0.0,0.0,3,,,0.0
+resnet50,onnxrt_cpu,4,layer1/layer1.0/conv2,"04. layer1/layer1.0/conv2 [conv]
+params 0",conv,26.0024,0.0,0.0,2,,,0.0
+resnet50,onnxrt_cpu,5,layer1/layer1.0/downsample/downsample.0,"05. layer1/layer1.0/downsample/downsample.0 [conv]
+params 0",conv,11.403699999999999,0.0,0.0,3,,,0.0
+resnet50,onnxrt_cpu,6,layer1/layer1.0/conv3,"06. layer1/layer1.0/conv3 [conv]
+params 0",conv,14.040899999999999,0.0,0.0,3,,,0.0
+resnet50,onnxrt_cpu,7,layer1/layer1.1/conv1,"07. layer1/layer1.1/conv1 [conv]
+params 0",conv,12.918,0.0,0.0,2,,,0.0
+resnet50,onnxrt_cpu,8,layer1/layer1.1/conv2,"08. layer1/layer1.1/conv2 [conv]
+params 0",conv,26.127,0.0,0.0,3,,,0.0
+resnet50,onnxrt_cpu,9,layer1/layer1.1/conv3,"09. layer1/layer1.1/conv3 [conv]
+params 0",conv,14.2181,0.0,0.0,3,,,0.0
+resnet50,onnxrt_cpu,10,layer1/layer1.2/conv1,"10. layer1/layer1.2/conv1 [conv]
+params 0",conv,13.0596,0.0,0.0,2,,,0.0
+resnet50,onnxrt_cpu,11,layer1/layer1.2/conv2,"11. layer1/layer1.2/conv2 [conv]
+params 0",conv,26.2625,0.0,0.0,2,,,0.0
+resnet50,onnxrt_cpu,12,layer1/layer1.2/conv3,"12. layer1/layer1.2/conv3 [conv]
+params 0",conv,13.8651,0.0,0.0,3,,,0.0
+resnet50,onnxrt_cpu,13,layer2/layer2.0/conv1,"13. layer2/layer2.0/conv1 [conv]
+params 0",conv,23.029799999999998,0.0,0.0,2,,,0.0
+resnet50,onnxrt_cpu,14,layer2/layer2.0/conv2,"14. layer2/layer2.0/conv2 [conv]
+params 0",conv,26.1457,0.0,0.0,2,,,0.0
+resnet50,onnxrt_cpu,15,layer2/layer2.0/downsample/downsample.0,"15. layer2/layer2.0/downsample/downsample.0 [conv]
+params 0",conv,22.2384,0.0,0.0,3,,,0.0
+resnet50,onnxrt_cpu,16,layer2/layer2.0/conv3,"16. layer2/layer2.0/conv3 [conv]
+params 0",conv,12.2255,0.0,0.0,2,,,0.0
+resnet50,onnxrt_cpu,17,layer2/layer2.1/conv1,"17. layer2/layer2.1/conv1 [conv]
+params 0",conv,11.4725,0.0,0.0,2,,,0.0
+resnet50,onnxrt_cpu,18,layer2/layer2.1/conv2,"18. layer2/layer2.1/conv2 [conv]
+params 0",conv,24.5077,0.0,0.0,2,,,0.0
+resnet50,onnxrt_cpu,19,layer2/layer2.1/conv3,"19. layer2/layer2.1/conv3 [conv]
+params 0",conv,12.2045,0.0,0.0,3,,,0.0
+resnet50,onnxrt_cpu,20,layer2/layer2.2/conv1,"20. layer2/layer2.2/conv1 [conv]
+params 0",conv,11.4277,0.0,0.0,2,,,0.0
+resnet50,onnxrt_cpu,21,layer2/layer2.2/conv2,"21. layer2/layer2.2/conv2 [conv]
+params 0",conv,24.8351,0.0,0.0,3,,,0.0
+resnet50,onnxrt_cpu,22,layer2/layer2.2/conv3,"22. layer2/layer2.2/conv3 [conv]
+params 0",conv,12.460799999999999,0.0,0.0,3,,,0.0
+resnet50,onnxrt_cpu,23,layer2/layer2.3/conv1,"23. layer2/layer2.3/conv1 [conv]
+params 0",conv,11.9499,0.0,0.0,2,,,0.0
+resnet50,onnxrt_cpu,24,layer2/layer2.3/conv2,"24. layer2/layer2.3/conv2 [conv]
+params 0",conv,25.5066,0.0,0.0,2,,,0.0
+resnet50,onnxrt_cpu,25,layer2/layer2.3/conv3,"25. layer2/layer2.3/conv3 [conv]
+params 0",conv,12.477599999999999,0.0,0.0,3,,,0.0
+resnet50,onnxrt_cpu,26,layer3/layer3.0/conv1,"26. layer3/layer3.0/conv1 [conv]
+params 0",conv,22.8662,0.0,0.0,2,,,0.0
+resnet50,onnxrt_cpu,27,layer3/layer3.0/conv2,"27. layer3/layer3.0/conv2 [conv]
+params 0",conv,28.2628,0.0,0.0,3,,,0.0
+resnet50,onnxrt_cpu,28,layer3/layer3.0/downsample/downsample.0,"28. layer3/layer3.0/downsample/downsample.0 [conv]
+params 0",conv,24.0582,0.0,0.0,3,,,0.0
+resnet50,onnxrt_cpu,29,layer3/layer3.0/conv3,"29. layer3/layer3.0/conv3 [conv]
+params 0",conv,12.3882,0.0,0.0,2,,,0.0
+resnet50,onnxrt_cpu,30,layer3/layer3.1/conv1,"30. layer3/layer3.1/conv1 [conv]
+params 0",conv,11.6921,0.0,0.0,3,,,0.0
+resnet50,onnxrt_cpu,31,layer3/layer3.1/conv2,"31. layer3/layer3.1/conv2 [conv]
+params 0",conv,26.93,0.0,0.0,2,,,0.0
+resnet50,onnxrt_cpu,32,layer3/layer3.1/conv3,"32. layer3/layer3.1/conv3 [conv]
+params 0",conv,12.0801,0.0,0.0,3,,,0.0
+resnet50,onnxrt_cpu,33,layer3/layer3.2/conv1,"33. layer3/layer3.2/conv1 [conv]
+params 0",conv,11.6046,0.0,0.0,3,,,0.0
+resnet50,onnxrt_cpu,34,layer3/layer3.2/conv2,"34. layer3/layer3.2/conv2 [conv]
+params 0",conv,26.693,0.0,0.0,2,,,0.0
+resnet50,onnxrt_cpu,35,layer3/layer3.2/conv3,"35. layer3/layer3.2/conv3 [conv]
+params 0",conv,12.3833,0.0,0.0,2,,,0.0
+resnet50,onnxrt_cpu,36,layer3/layer3.3/conv1,"36. layer3/layer3.3/conv1 [conv]
+params 0",conv,11.8364,0.0,0.0,3,,,0.0
+resnet50,onnxrt_cpu,37,layer3/layer3.3/conv2,"37. layer3/layer3.3/conv2 [conv]
+params 0",conv,26.772299999999998,0.0,0.0,3,,,0.0
+resnet50,onnxrt_cpu,38,layer3/layer3.3/conv3,"38. layer3/layer3.3/conv3 [conv]
+params 0",conv,12.1888,0.0,0.0,2,,,0.0
+resnet50,onnxrt_cpu,39,layer3/layer3.4/conv1,"39. layer3/layer3.4/conv1 [conv]
+params 0",conv,11.869399999999999,0.0,0.0,3,,,0.0
+resnet50,onnxrt_cpu,40,layer3/layer3.4/conv2,"40. layer3/layer3.4/conv2 [conv]
+params 0",conv,27.1584,0.0,0.0,3,,,0.0
+resnet50,onnxrt_cpu,41,layer3/layer3.4/conv3,"41. layer3/layer3.4/conv3 [conv]
+params 0",conv,12.362499999999999,0.0,0.0,2,,,0.0
+resnet50,onnxrt_cpu,42,layer3/layer3.5/conv1,"42. layer3/layer3.5/conv1 [conv]
+params 0",conv,12.0109,0.0,0.0,3,,,0.0
+resnet50,onnxrt_cpu,43,layer3/layer3.5/conv2,"43. layer3/layer3.5/conv2 [conv]
+params 0",conv,27.2511,0.0,0.0,2,,,0.0
+resnet50,onnxrt_cpu,44,layer3/layer3.5/conv3,"44. layer3/layer3.5/conv3 [conv]
+params 0",conv,12.4418,0.0,0.0,2,,,0.0
+resnet50,onnxrt_cpu,45,layer4/layer4.0/conv1,"45. layer4/layer4.0/conv1 [conv]
+params 0",conv,22.8673,0.0,0.0,2,,,0.0
+resnet50,onnxrt_cpu,46,layer4/layer4.0/conv2,"46. layer4/layer4.0/conv2 [conv]
+params 0",conv,30.0281,0.0,0.0,3,,,0.0
+resnet50,onnxrt_cpu,47,layer4/layer4.0/downsample/downsample.0,"47. layer4/layer4.0/downsample/downsample.0 [conv]
+params 0",conv,25.831899999999997,0.0,0.0,3,,,0.0
+resnet50,onnxrt_cpu,48,layer4/layer4.0/conv3,"48. layer4/layer4.0/conv3 [conv]
+params 0",conv,14.2911,0.0,0.0,2,,,0.0
+resnet50,onnxrt_cpu,49,layer4/layer4.1/conv1,"49. layer4/layer4.1/conv1 [conv]
+params 0",conv,15.800799999999999,0.0,0.0,3,,,0.0
+resnet50,onnxrt_cpu,50,layer4/layer4.1/conv2,"50. layer4/layer4.1/conv2 [conv]
+params 0",conv,29.9235,0.0,0.0,2,,,0.0
+resnet50,onnxrt_cpu,51,layer4/layer4.1/conv3,"51. layer4/layer4.1/conv3 [conv]
+params 0",conv,14.070799999999998,0.0,0.0,3,,,0.0
+resnet50,onnxrt_cpu,52,layer4/layer4.2/conv1,"52. layer4/layer4.2/conv1 [conv]
+params 0",conv,15.288400000000001,0.0,0.0,2,,,0.0
+resnet50,onnxrt_cpu,53,layer4/layer4.2/conv2,"53. layer4/layer4.2/conv2 [conv]
+params 0",conv,29.6375,0.0,0.0,2,,,0.0
+resnet50,onnxrt_cpu,54,layer4/layer4.2/conv3,"54. layer4/layer4.2/conv3 [conv]
+params 0",conv,13.7236,0.0,0.0,2,,,0.0
+resnet50,onnxrt_cpu,55,avgpool,"55. avgpool [pool]
+params 0",pool,0.19649999999999998,0.0,0.0,3,,,0.0
+resnet50,onnxrt_cpu,56,Flatten,"56. Flatten [shape]
+params 0",shape,0.0403,0.0,0.0,1,,,0.0
+resnet50,onnxrt_cpu,57,fc,"57. fc [fc]
+params 0",fc,2.0125,0.0,0.0,2,,,0.0
+resnet50,pytorch_cpu,1,dummy_conv,"001. dummy_conv [conv]
+params 0",conv,10.09,0.0,0.0,1,,,0.0
+resnet50,pytorch_cuda,1,conv1,"001. conv1 [conv-norm-act]
+in 1x3x224x224 | out 1x64x112x112 | params 9.5K",conv-norm-act,4.215250999999999,0.0,0.0,3,1x3x224x224,1x64x112x112,9536.0
+resnet50,pytorch_cuda,2,maxpool,"002. maxpool [pool]
+in 1x64x112x112 | out 1x64x56x56 | params 0",pool,1.515171,0.0,0.0,1,1x64x112x112,1x64x56x56,0.0
+resnet50,pytorch_cuda,3,layer1.0.conv1,"003. layer1.0.conv1 [conv-norm-act]
+in 1x64x56x56 | out 1x64x56x56 | params 4.2K",conv-norm-act,1.795854,0.0,0.0,3,1x64x56x56,1x64x56x56,4224.0
+resnet50,pytorch_cuda,4,layer1.0.conv2,"004. layer1.0.conv2 [conv-norm]
+in 1x64x56x56 | out 1x64x56x56 | params 37.0K",conv-norm,2.341133,0.0,0.0,2,1x64x56x56,1x64x56x56,36992.0
+resnet50,pytorch_cuda,5,layer1.0.conv3,"005. layer1.0.conv3 [conv-norm]
+in 1x64x56x56 | out 1x256x56x56 | params 16.9K",conv-norm,2.599942,0.0,0.0,2,1x64x56x56,1x256x56x56,16896.0
+resnet50,pytorch_cuda,6,layer1.0.downsample.0,"006. layer1.0.downsample.0 [conv-norm]
+in 1x64x56x56 | out 1x256x56x56 | params 16.9K",conv-norm,2.557964,0.0,0.0,2,1x64x56x56,1x256x56x56,16896.0
+resnet50,pytorch_cuda,7,layer1.1.conv1,"007. layer1.1.conv1 [conv-norm-act]
+in 1x256x56x56 | out 1x64x56x56 | params 16.5K",conv-norm-act,2.689794,0.0,0.0,3,1x256x56x56,1x64x56x56,16512.0
+resnet50,pytorch_cuda,8,layer1.1.conv2,"008. layer1.1.conv2 [conv-norm]
+in 1x64x56x56 | out 1x64x56x56 | params 37.0K",conv-norm,2.323064,0.0,0.0,2,1x64x56x56,1x64x56x56,36992.0
+resnet50,pytorch_cuda,9,layer1.1.conv3,"009. layer1.1.conv3 [conv-norm]
+in 1x64x56x56 | out 1x256x56x56 | params 16.9K",conv-norm,2.565924,0.0,0.0,2,1x64x56x56,1x256x56x56,16896.0
+resnet50,pytorch_cuda,10,layer1.2.conv1,"010. layer1.2.conv1 [conv-norm-act]
+in 1x256x56x56 | out 1x64x56x56 | params 16.5K",conv-norm-act,2.668477,0.0,0.0,3,1x256x56x56,1x64x56x56,16512.0
+resnet50,pytorch_cuda,11,layer1.2.conv2,"011. layer1.2.conv2 [conv-norm]
+in 1x64x56x56 | out 1x64x56x56 | params 37.0K",conv-norm,2.289523,0.0,0.0,2,1x64x56x56,1x64x56x56,36992.0
+resnet50,pytorch_cuda,12,layer1.2.conv3,"012. layer1.2.conv3 [conv-norm]
+in 1x64x56x56 | out 1x256x56x56 | params 16.9K",conv-norm,2.560345,0.0,0.0,2,1x64x56x56,1x256x56x56,16896.0
+resnet50,pytorch_cuda,13,layer2.0.conv1,"013. layer2.0.conv1 [conv-norm-act]
+in 1x256x56x56 | out 1x128x56x56 | params 33.0K",conv-norm-act,3.240735,0.0,0.0,3,1x256x56x56,1x128x56x56,33024.0
+resnet50,pytorch_cuda,14,layer2.0.conv2,"014. layer2.0.conv2 [conv-norm]
+in 1x128x56x56 | out 1x128x28x28 | params 147.7K",conv-norm,4.986987,0.0,0.0,2,1x128x56x56,1x128x28x28,147712.0
+resnet50,pytorch_cuda,15,layer2.0.conv3,"015. layer2.0.conv3 [conv-norm]
+in 1x128x28x28 | out 1x512x28x28 | params 66.6K",conv-norm,2.314015,0.0,0.0,2,1x128x28x28,1x512x28x28,66560.0
+resnet50,pytorch_cuda,16,layer2.0.downsample.0,"016. layer2.0.downsample.0 [conv-norm]
+in 1x256x56x56 | out 1x512x28x28 | params 132.1K",conv-norm,3.732185,0.0,0.0,2,1x256x56x56,1x512x28x28,132096.0
+resnet50,pytorch_cuda,17,layer2.1.conv1,"017. layer2.1.conv1 [conv-norm-act]
+in 1x512x28x28 | out 1x128x28x28 | params 65.8K",conv-norm-act,2.649215,0.0,0.0,3,1x512x28x28,1x128x28x28,65792.0
+resnet50,pytorch_cuda,18,layer2.1.conv2,"018. layer2.1.conv2 [conv-norm]
+in 1x128x28x28 | out 1x128x28x28 | params 147.7K",conv-norm,2.366427,0.0,0.0,2,1x128x28x28,1x128x28x28,147712.0
+resnet50,pytorch_cuda,19,layer2.1.conv3,"019. layer2.1.conv3 [conv-norm]
+in 1x128x28x28 | out 1x512x28x28 | params 66.6K",conv-norm,2.307052,0.0,0.0,2,1x128x28x28,1x512x28x28,66560.0
+resnet50,pytorch_cuda,20,layer2.2.conv1,"020. layer2.2.conv1 [conv-norm-act]
+in 1x512x28x28 | out 1x128x28x28 | params 65.8K",conv-norm-act,2.640526,0.0,0.0,3,1x512x28x28,1x128x28x28,65792.0
+resnet50,pytorch_cuda,21,layer2.2.conv2,"021. layer2.2.conv2 [conv-norm]
+in 1x128x28x28 | out 1x128x28x28 | params 147.7K",conv-norm,2.3518499999999998,0.0,0.0,2,1x128x28x28,1x128x28x28,147712.0
+resnet50,pytorch_cuda,22,layer2.2.conv3,"022. layer2.2.conv3 [conv-norm]
+in 1x128x28x28 | out 1x512x28x28 | params 66.6K",conv-norm,2.295057,0.0,0.0,2,1x128x28x28,1x512x28x28,66560.0
+resnet50,pytorch_cuda,23,layer2.3.conv1,"023. layer2.3.conv1 [conv-norm-act]
+in 1x512x28x28 | out 1x128x28x28 | params 65.8K",conv-norm-act,2.628406,0.0,0.0,3,1x512x28x28,1x128x28x28,65792.0
+resnet50,pytorch_cuda,24,layer2.3.conv2,"024. layer2.3.conv2 [conv-norm]
+in 1x128x28x28 | out 1x128x28x28 | params 147.7K",conv-norm,2.3418520000000003,0.0,0.0,2,1x128x28x28,1x128x28x28,147712.0
+resnet50,pytorch_cuda,25,layer2.3.conv3,"025. layer2.3.conv3 [conv-norm]
+in 1x128x28x28 | out 1x512x28x28 | params 66.6K",conv-norm,2.310565,0.0,0.0,2,1x128x28x28,1x512x28x28,66560.0
+resnet50,pytorch_cuda,26,layer3.0.conv1,"026. layer3.0.conv1 [conv-norm-act]
+in 1x512x28x28 | out 1x256x28x28 | params 131.6K",conv-norm-act,4.028751,0.0,0.0,3,1x512x28x28,1x256x28x28,131584.0
+resnet50,pytorch_cuda,27,layer3.0.conv2,"027. layer3.0.conv2 [conv-norm]
+in 1x256x28x28 | out 1x256x14x14 | params 590.3K",conv-norm,5.500522,0.0,0.0,2,1x256x28x28,1x256x14x14,590336.0
+resnet50,pytorch_cuda,28,layer3.0.conv3,"028. layer3.0.conv3 [conv-norm]
+in 1x256x14x14 | out 1x1024x14x14 | params 264.2K",conv-norm,2.531969,0.0,0.0,2,1x256x14x14,1x1024x14x14,264192.0
+resnet50,pytorch_cuda,29,layer3.0.downsample.0,"029. layer3.0.downsample.0 [conv-norm]
+in 1x512x28x28 | out 1x1024x14x14 | params 526.3K",conv-norm,4.230961,0.0,0.0,2,1x512x28x28,1x1024x14x14,526336.0
+resnet50,pytorch_cuda,30,layer3.1.conv1,"030. layer3.1.conv1 [conv-norm-act]
+in 1x1024x14x14 | out 1x256x14x14 | params 262.7K",conv-norm-act,2.760916,0.0,0.0,3,1x1024x14x14,1x256x14x14,262656.0
+resnet50,pytorch_cuda,31,layer3.1.conv2,"031. layer3.1.conv2 [conv-norm]
+in 1x256x14x14 | out 1x256x14x14 | params 590.3K",conv-norm,2.671179,0.0,0.0,2,1x256x14x14,1x256x14x14,590336.0
+resnet50,pytorch_cuda,32,layer3.1.conv3,"032. layer3.1.conv3 [conv-norm]
+in 1x256x14x14 | out 1x1024x14x14 | params 264.2K",conv-norm,2.523561,0.0,0.0,2,1x256x14x14,1x1024x14x14,264192.0
+resnet50,pytorch_cuda,33,layer3.2.conv1,"033. layer3.2.conv1 [conv-norm-act]
+in 1x1024x14x14 | out 1x256x14x14 | params 262.7K",conv-norm-act,2.7368599999999996,0.0,0.0,3,1x1024x14x14,1x256x14x14,262656.0
+resnet50,pytorch_cuda,34,layer3.2.conv2,"034. layer3.2.conv2 [conv-norm]
+in 1x256x14x14 | out 1x256x14x14 | params 590.3K",conv-norm,2.647995,0.0,0.0,2,1x256x14x14,1x256x14x14,590336.0
+resnet50,pytorch_cuda,35,layer3.2.conv3,"035. layer3.2.conv3 [conv-norm]
+in 1x256x14x14 | out 1x1024x14x14 | params 264.2K",conv-norm,2.507063,0.0,0.0,2,1x256x14x14,1x1024x14x14,264192.0
+resnet50,pytorch_cuda,36,layer3.3.conv1,"036. layer3.3.conv1 [conv-norm-act]
+in 1x1024x14x14 | out 1x256x14x14 | params 262.7K",conv-norm-act,2.7244219999999997,0.0,0.0,3,1x1024x14x14,1x256x14x14,262656.0
+resnet50,pytorch_cuda,37,layer3.3.conv2,"037. layer3.3.conv2 [conv-norm]
+in 1x256x14x14 | out 1x256x14x14 | params 590.3K",conv-norm,2.6314200000000003,0.0,0.0,2,1x256x14x14,1x256x14x14,590336.0
+resnet50,pytorch_cuda,38,layer3.3.conv3,"038. layer3.3.conv3 [conv-norm]
+in 1x256x14x14 | out 1x1024x14x14 | params 264.2K",conv-norm,2.578829,0.0,0.0,2,1x256x14x14,1x1024x14x14,264192.0
+resnet50,pytorch_cuda,39,layer3.4.conv1,"039. layer3.4.conv1 [conv-norm-act]
+in 1x1024x14x14 | out 1x256x14x14 | params 262.7K",conv-norm-act,2.731011,0.0,0.0,3,1x1024x14x14,1x256x14x14,262656.0
+resnet50,pytorch_cuda,40,layer3.4.conv2,"040. layer3.4.conv2 [conv-norm]
+in 1x256x14x14 | out 1x256x14x14 | params 590.3K",conv-norm,2.6322349999999997,0.0,0.0,2,1x256x14x14,1x256x14x14,590336.0
+resnet50,pytorch_cuda,41,layer3.4.conv3,"041. layer3.4.conv3 [conv-norm]
+in 1x256x14x14 | out 1x1024x14x14 | params 264.2K",conv-norm,2.514938,0.0,0.0,2,1x256x14x14,1x1024x14x14,264192.0
+resnet50,pytorch_cuda,42,layer3.5.conv1,"042. layer3.5.conv1 [conv-norm-act]
+in 1x1024x14x14 | out 1x256x14x14 | params 262.7K",conv-norm-act,2.73456,0.0,0.0,3,1x1024x14x14,1x256x14x14,262656.0
+resnet50,pytorch_cuda,43,layer3.5.conv2,"043. layer3.5.conv2 [conv-norm]
+in 1x256x14x14 | out 1x256x14x14 | params 590.3K",conv-norm,2.648257,0.0,0.0,2,1x256x14x14,1x256x14x14,590336.0
+resnet50,pytorch_cuda,44,layer3.5.conv3,"044. layer3.5.conv3 [conv-norm]
+in 1x256x14x14 | out 1x1024x14x14 | params 264.2K",conv-norm,2.514285,0.0,0.0,2,1x256x14x14,1x1024x14x14,264192.0
+resnet50,pytorch_cuda,45,layer4.0.conv1,"045. layer4.0.conv1 [conv-norm-act]
+in 1x1024x14x14 | out 1x512x14x14 | params 525.3K",conv-norm-act,4.323458,0.0,0.0,3,1x1024x14x14,1x512x14x14,525312.0
+resnet50,pytorch_cuda,46,layer4.0.conv2,"046. layer4.0.conv2 [conv-norm]
+in 1x512x14x14 | out 1x512x7x7 | params 2.36M",conv-norm,5.973051000000001,0.0,0.0,2,1x512x14x14,1x512x7x7,2360320.0
+resnet50,pytorch_cuda,47,layer4.0.conv3,"047. layer4.0.conv3 [conv-norm]
+in 1x512x7x7 | out 1x2048x7x7 | params 1.05M",conv-norm,2.6949870000000002,0.0,0.0,2,1x512x7x7,1x2048x7x7,1052672.0
+resnet50,pytorch_cuda,48,layer4.0.downsample.0,"048. layer4.0.downsample.0 [conv-norm]
+in 1x1024x14x14 | out 1x2048x7x7 | params 2.10M",conv-norm,4.614032000000001,0.0,0.0,2,1x1024x14x14,1x2048x7x7,2101248.0
+resnet50,pytorch_cuda,49,layer4.1.conv1,"049. layer4.1.conv1 [conv-norm-act]
+in 1x2048x7x7 | out 1x512x7x7 | params 1.05M",conv-norm-act,3.02979,0.0,0.0,3,1x2048x7x7,1x512x7x7,1049600.0
+resnet50,pytorch_cuda,50,layer4.1.conv2,"050. layer4.1.conv2 [conv-norm]
+in 1x512x7x7 | out 1x512x7x7 | params 2.36M",conv-norm,5.394444,0.0,0.0,2,1x512x7x7,1x512x7x7,2360320.0
+resnet50,pytorch_cuda,51,layer4.1.conv3,"051. layer4.1.conv3 [conv-norm]
+in 1x512x7x7 | out 1x2048x7x7 | params 1.05M",conv-norm,2.714494,0.0,0.0,2,1x512x7x7,1x2048x7x7,1052672.0
+resnet50,pytorch_cuda,52,layer4.2.conv1,"052. layer4.2.conv1 [conv-norm-act]
+in 1x2048x7x7 | out 1x512x7x7 | params 1.05M",conv-norm-act,3.020083,0.0,0.0,3,1x2048x7x7,1x512x7x7,1049600.0
+resnet50,pytorch_cuda,53,layer4.2.conv2,"053. layer4.2.conv2 [conv-norm]
+in 1x512x7x7 | out 1x512x7x7 | params 2.36M",conv-norm,5.377129,0.0,0.0,2,1x512x7x7,1x512x7x7,2360320.0
+resnet50,pytorch_cuda,54,layer4.2.conv3,"054. layer4.2.conv3 [conv-norm]
+in 1x512x7x7 | out 1x2048x7x7 | params 1.05M",conv-norm,2.716042,0.0,0.0,2,1x512x7x7,1x2048x7x7,1052672.0
+resnet50,pytorch_cuda,55,avgpool,"055. avgpool [pool]
+in 1x2048x7x7 | out 1x2048x1x1 | params 0",pool,0.496198,0.0,0.0,1,1x2048x7x7,1x2048x1x1,0.0
+resnet50,pytorch_cuda,56,fc,"056. fc [fc]
+in 1x2048 | out 1x1000 | params 2.05M",fc,1.00085,0.0,0.0,1,1x2048,1x1000,2049000.0
+resnet50,tensorrt_fp16,1,TensorRT layer 001,001. TensorRT layer 001 [TensorRTLayer],TensorRTLayer,0.9,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,2,TensorRT layer 002,002. TensorRT layer 002 [TensorRTLayer],TensorRTLayer,3.6,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,3,TensorRT layer 003,003. TensorRT layer 003 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,4,TensorRT layer 004,004. TensorRT layer 004 [TensorRTLayer],TensorRTLayer,0.5,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,5,TensorRT layer 005,005. TensorRT layer 005 [TensorRTLayer],TensorRTLayer,1.8,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,6,TensorRT layer 006,006. TensorRT layer 006 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,7,TensorRT layer 007,007. TensorRT layer 007 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,8,TensorRT layer 008,008. TensorRT layer 008 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,9,TensorRT layer 009,009. TensorRT layer 009 [TensorRTLayer],TensorRTLayer,1.8,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,10,TensorRT layer 010,010. TensorRT layer 010 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,11,TensorRT layer 011,011. TensorRT layer 011 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,12,TensorRT layer 012,012. TensorRT layer 012 [TensorRTLayer],TensorRTLayer,1.8,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,13,TensorRT layer 013,013. TensorRT layer 013 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,14,TensorRT layer 014,014. TensorRT layer 014 [TensorRTLayer],TensorRTLayer,2.1,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,15,TensorRT layer 015,015. TensorRT layer 015 [TensorRTLayer],TensorRTLayer,2.4,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,16,TensorRT layer 016,016. TensorRT layer 016 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,17,TensorRT layer 017,017. TensorRT layer 017 [TensorRTLayer],TensorRTLayer,2.4,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,18,TensorRT layer 018,018. TensorRT layer 018 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,19,TensorRT layer 019,019. TensorRT layer 019 [TensorRTLayer],TensorRTLayer,1.8,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,20,TensorRT layer 020,020. TensorRT layer 020 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,21,TensorRT layer 021,021. TensorRT layer 021 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,22,TensorRT layer 022,022. TensorRT layer 022 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,23,TensorRT layer 023,023. TensorRT layer 023 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,24,TensorRT layer 024,024. TensorRT layer 024 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,25,TensorRT layer 025,025. TensorRT layer 025 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,26,TensorRT layer 026,026. TensorRT layer 026 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,27,TensorRT layer 027,027. TensorRT layer 027 [TensorRTLayer],TensorRTLayer,2.2,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,28,TensorRT layer 028,028. TensorRT layer 028 [TensorRTLayer],TensorRTLayer,2.7,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,29,TensorRT layer 029,029. TensorRT layer 029 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,30,TensorRT layer 030,030. TensorRT layer 030 [TensorRTLayer],TensorRTLayer,2.6,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,31,TensorRT layer 031,031. TensorRT layer 031 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,32,TensorRT layer 032,032. TensorRT layer 032 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,33,TensorRT layer 033,033. TensorRT layer 033 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,34,TensorRT layer 034,034. TensorRT layer 034 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,35,TensorRT layer 035,035. TensorRT layer 035 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,36,TensorRT layer 036,036. TensorRT layer 036 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,37,TensorRT layer 037,037. TensorRT layer 037 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,38,TensorRT layer 038,038. TensorRT layer 038 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,39,TensorRT layer 039,039. TensorRT layer 039 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,40,TensorRT layer 040,040. TensorRT layer 040 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,41,TensorRT layer 041,041. TensorRT layer 041 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,42,TensorRT layer 042,042. TensorRT layer 042 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,43,TensorRT layer 043,043. TensorRT layer 043 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,44,TensorRT layer 044,044. TensorRT layer 044 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,45,TensorRT layer 045,045. TensorRT layer 045 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,46,TensorRT layer 046,046. TensorRT layer 046 [TensorRTLayer],TensorRTLayer,2.4,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,47,TensorRT layer 047,047. TensorRT layer 047 [TensorRTLayer],TensorRTLayer,5.2,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,48,TensorRT layer 048,048. TensorRT layer 048 [TensorRTLayer],TensorRTLayer,2.5,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,49,TensorRT layer 049,049. TensorRT layer 049 [TensorRTLayer],TensorRTLayer,4.8,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,50,TensorRT layer 050,050. TensorRT layer 050 [TensorRTLayer],TensorRTLayer,1.9,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,51,TensorRT layer 051,051. TensorRT layer 051 [TensorRTLayer],TensorRTLayer,2.5,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,52,TensorRT layer 052,052. TensorRT layer 052 [TensorRTLayer],TensorRTLayer,2.5,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,53,TensorRT layer 053,053. TensorRT layer 053 [TensorRTLayer],TensorRTLayer,1.9,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,54,TensorRT layer 054,054. TensorRT layer 054 [TensorRTLayer],TensorRTLayer,2.4,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,55,TensorRT layer 055,055. TensorRT layer 055 [TensorRTLayer],TensorRTLayer,2.5,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,56,TensorRT layer 056,056. TensorRT layer 056 [TensorRTLayer],TensorRTLayer,0.2,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,57,TensorRT layer 057,057. TensorRT layer 057 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1,,,
+resnet50,tensorrt_fp16,58,TensorRT layer 058,058. TensorRT layer 058 [TensorRTLayer],TensorRTLayer,100.0,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,1,TensorRT layer 001,001. TensorRT layer 001 [TensorRTLayer],TensorRTLayer,3.1,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,2,TensorRT layer 002,002. TensorRT layer 002 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,3,TensorRT layer 003,003. TensorRT layer 003 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,4,TensorRT layer 004,004. TensorRT layer 004 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,5,TensorRT layer 005,005. TensorRT layer 005 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,6,TensorRT layer 006,006. TensorRT layer 006 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,7,TensorRT layer 007,007. TensorRT layer 007 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,8,TensorRT layer 008,008. TensorRT layer 008 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,9,TensorRT layer 009,009. TensorRT layer 009 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,10,TensorRT layer 010,010. TensorRT layer 010 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,11,TensorRT layer 011,011. TensorRT layer 011 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,12,TensorRT layer 012,012. TensorRT layer 012 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,13,TensorRT layer 013,013. TensorRT layer 013 [TensorRTLayer],TensorRTLayer,2.2,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,14,TensorRT layer 014,014. TensorRT layer 014 [TensorRTLayer],TensorRTLayer,2.6,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,15,TensorRT layer 015,015. TensorRT layer 015 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,16,TensorRT layer 016,016. TensorRT layer 016 [TensorRTLayer],TensorRTLayer,2.6,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,17,TensorRT layer 017,017. TensorRT layer 017 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,18,TensorRT layer 018,018. TensorRT layer 018 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,19,TensorRT layer 019,019. TensorRT layer 019 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,20,TensorRT layer 020,020. TensorRT layer 020 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,21,TensorRT layer 021,021. TensorRT layer 021 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,22,TensorRT layer 022,022. TensorRT layer 022 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,23,TensorRT layer 023,023. TensorRT layer 023 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,24,TensorRT layer 024,024. TensorRT layer 024 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,25,TensorRT layer 025,025. TensorRT layer 025 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,26,TensorRT layer 026,026. TensorRT layer 026 [TensorRTLayer],TensorRTLayer,2.3,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,27,TensorRT layer 027,027. TensorRT layer 027 [TensorRTLayer],TensorRTLayer,2.9,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,28,TensorRT layer 028,028. TensorRT layer 028 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,29,TensorRT layer 029,029. TensorRT layer 029 [TensorRTLayer],TensorRTLayer,2.7,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,30,TensorRT layer 030,030. TensorRT layer 030 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,31,TensorRT layer 031,031. TensorRT layer 031 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,32,TensorRT layer 032,032. TensorRT layer 032 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,33,TensorRT layer 033,033. TensorRT layer 033 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,34,TensorRT layer 034,034. TensorRT layer 034 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,35,TensorRT layer 035,035. TensorRT layer 035 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,36,TensorRT layer 036,036. TensorRT layer 036 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,37,TensorRT layer 037,037. TensorRT layer 037 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,38,TensorRT layer 038,038. TensorRT layer 038 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,39,TensorRT layer 039,039. TensorRT layer 039 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,40,TensorRT layer 040,040. TensorRT layer 040 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,41,TensorRT layer 041,041. TensorRT layer 041 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,42,TensorRT layer 042,042. TensorRT layer 042 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,43,TensorRT layer 043,043. TensorRT layer 043 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,44,TensorRT layer 044,044. TensorRT layer 044 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,45,TensorRT layer 045,045. TensorRT layer 045 [TensorRTLayer],TensorRTLayer,2.6,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,46,TensorRT layer 046,046. TensorRT layer 046 [TensorRTLayer],TensorRTLayer,4.8,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,47,TensorRT layer 047,047. TensorRT layer 047 [TensorRTLayer],TensorRTLayer,2.6,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,48,TensorRT layer 048,048. TensorRT layer 048 [TensorRTLayer],TensorRTLayer,5.1,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,49,TensorRT layer 049,049. TensorRT layer 049 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,50,TensorRT layer 050,050. TensorRT layer 050 [TensorRTLayer],TensorRTLayer,2.4,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,51,TensorRT layer 051,051. TensorRT layer 051 [TensorRTLayer],TensorRTLayer,2.7,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,52,TensorRT layer 052,052. TensorRT layer 052 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,53,TensorRT layer 053,053. TensorRT layer 053 [TensorRTLayer],TensorRTLayer,2.4,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,54,TensorRT layer 054,054. TensorRT layer 054 [TensorRTLayer],TensorRTLayer,2.7,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,55,TensorRT layer 055,055. TensorRT layer 055 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,56,TensorRT layer 056,056. TensorRT layer 056 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1,,,
+resnet50,tensorrt_fp32,57,TensorRT layer 057,057. TensorRT layer 057 [TensorRTLayer],TensorRTLayer,100.0,0.0,0.0,1,,,
+resnet50,tensorrt_int8,1,TensorRT layer 001,001. TensorRT layer 001 [TensorRTLayer],TensorRTLayer,3.1,0.0,0.0,1,,,
+resnet50,tensorrt_int8,2,TensorRT layer 002,002. TensorRT layer 002 [TensorRTLayer],TensorRTLayer,0.6,0.0,0.0,1,,,
+resnet50,tensorrt_int8,3,TensorRT layer 003,003. TensorRT layer 003 [TensorRTLayer],TensorRTLayer,0.4,0.0,0.0,1,,,
+resnet50,tensorrt_int8,4,TensorRT layer 004,004. TensorRT layer 004 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1,,,
+resnet50,tensorrt_int8,5,TensorRT layer 005,005. TensorRT layer 005 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1,,,
+resnet50,tensorrt_int8,6,TensorRT layer 006,006. TensorRT layer 006 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1,,,
+resnet50,tensorrt_int8,7,TensorRT layer 007,007. TensorRT layer 007 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1,,,
+resnet50,tensorrt_int8,8,TensorRT layer 008,008. TensorRT layer 008 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1,,,
+resnet50,tensorrt_int8,9,TensorRT layer 009,009. TensorRT layer 009 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1,,,
+resnet50,tensorrt_int8,10,TensorRT layer 010,010. TensorRT layer 010 [TensorRTLayer],TensorRTLayer,1.1,0.0,0.0,1,,,
+resnet50,tensorrt_int8,11,TensorRT layer 011,011. TensorRT layer 011 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1,,,
+resnet50,tensorrt_int8,12,TensorRT layer 012,012. TensorRT layer 012 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1,,,
+resnet50,tensorrt_int8,13,TensorRT layer 013,013. TensorRT layer 013 [TensorRTLayer],TensorRTLayer,2.2,0.0,0.0,1,,,
+resnet50,tensorrt_int8,14,TensorRT layer 014,014. TensorRT layer 014 [TensorRTLayer],TensorRTLayer,2.6,0.0,0.0,1,,,
+resnet50,tensorrt_int8,15,TensorRT layer 015,015. TensorRT layer 015 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1,,,
+resnet50,tensorrt_int8,16,TensorRT layer 016,016. TensorRT layer 016 [TensorRTLayer],TensorRTLayer,2.6,0.0,0.0,1,,,
+resnet50,tensorrt_int8,17,TensorRT layer 017,017. TensorRT layer 017 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1,,,
+resnet50,tensorrt_int8,18,TensorRT layer 018,018. TensorRT layer 018 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1,,,
+resnet50,tensorrt_int8,19,TensorRT layer 019,019. TensorRT layer 019 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1,,,
+resnet50,tensorrt_int8,20,TensorRT layer 020,020. TensorRT layer 020 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1,,,
+resnet50,tensorrt_int8,21,TensorRT layer 021,021. TensorRT layer 021 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1,,,
+resnet50,tensorrt_int8,22,TensorRT layer 022,022. TensorRT layer 022 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1,,,
+resnet50,tensorrt_int8,23,TensorRT layer 023,023. TensorRT layer 023 [TensorRTLayer],TensorRTLayer,1.2,0.0,0.0,1,,,
+resnet50,tensorrt_int8,24,TensorRT layer 024,024. TensorRT layer 024 [TensorRTLayer],TensorRTLayer,1.7,0.0,0.0,1,,,
+resnet50,tensorrt_int8,25,TensorRT layer 025,025. TensorRT layer 025 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1,,,
+resnet50,tensorrt_int8,26,TensorRT layer 026,026. TensorRT layer 026 [TensorRTLayer],TensorRTLayer,2.3,0.0,0.0,1,,,
+resnet50,tensorrt_int8,27,TensorRT layer 027,027. TensorRT layer 027 [TensorRTLayer],TensorRTLayer,2.9,0.0,0.0,1,,,
+resnet50,tensorrt_int8,28,TensorRT layer 028,028. TensorRT layer 028 [TensorRTLayer],TensorRTLayer,1.4,0.0,0.0,1,,,
+resnet50,tensorrt_int8,29,TensorRT layer 029,029. TensorRT layer 029 [TensorRTLayer],TensorRTLayer,2.7,0.0,0.0,1,,,
+resnet50,tensorrt_int8,30,TensorRT layer 030,030. TensorRT layer 030 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1,,,
+resnet50,tensorrt_int8,31,TensorRT layer 031,031. TensorRT layer 031 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1,,,
+resnet50,tensorrt_int8,32,TensorRT layer 032,032. TensorRT layer 032 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1,,,
+resnet50,tensorrt_int8,33,TensorRT layer 033,033. TensorRT layer 033 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1,,,
+resnet50,tensorrt_int8,34,TensorRT layer 034,034. TensorRT layer 034 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1,,,
+resnet50,tensorrt_int8,35,TensorRT layer 035,035. TensorRT layer 035 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1,,,
+resnet50,tensorrt_int8,36,TensorRT layer 036,036. TensorRT layer 036 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1,,,
+resnet50,tensorrt_int8,37,TensorRT layer 037,037. TensorRT layer 037 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1,,,
+resnet50,tensorrt_int8,38,TensorRT layer 038,038. TensorRT layer 038 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1,,,
+resnet50,tensorrt_int8,39,TensorRT layer 039,039. TensorRT layer 039 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1,,,
+resnet50,tensorrt_int8,40,TensorRT layer 040,040. TensorRT layer 040 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1,,,
+resnet50,tensorrt_int8,41,TensorRT layer 041,041. TensorRT layer 041 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1,,,
+resnet50,tensorrt_int8,42,TensorRT layer 042,042. TensorRT layer 042 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1,,,
+resnet50,tensorrt_int8,43,TensorRT layer 043,043. TensorRT layer 043 [TensorRTLayer],TensorRTLayer,1.6,0.0,0.0,1,,,
+resnet50,tensorrt_int8,44,TensorRT layer 044,044. TensorRT layer 044 [TensorRTLayer],TensorRTLayer,1.5,0.0,0.0,1,,,
+resnet50,tensorrt_int8,45,TensorRT layer 045,045. TensorRT layer 045 [TensorRTLayer],TensorRTLayer,2.6,0.0,0.0,1,,,
+resnet50,tensorrt_int8,46,TensorRT layer 046,046. TensorRT layer 046 [TensorRTLayer],TensorRTLayer,4.8,0.0,0.0,1,,,
+resnet50,tensorrt_int8,47,TensorRT layer 047,047. TensorRT layer 047 [TensorRTLayer],TensorRTLayer,2.7,0.0,0.0,1,,,
+resnet50,tensorrt_int8,48,TensorRT layer 048,048. TensorRT layer 048 [TensorRTLayer],TensorRTLayer,5.2,0.0,0.0,1,,,
+resnet50,tensorrt_int8,49,TensorRT layer 049,049. TensorRT layer 049 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1,,,
+resnet50,tensorrt_int8,50,TensorRT layer 050,050. TensorRT layer 050 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1,,,
+resnet50,tensorrt_int8,51,TensorRT layer 051,051. TensorRT layer 051 [TensorRTLayer],TensorRTLayer,2.4,0.0,0.0,1,,,
+resnet50,tensorrt_int8,52,TensorRT layer 052,052. TensorRT layer 052 [TensorRTLayer],TensorRTLayer,2.7,0.0,0.0,1,,,
+resnet50,tensorrt_int8,53,TensorRT layer 053,053. TensorRT layer 053 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1,,,
+resnet50,tensorrt_int8,54,TensorRT layer 054,054. TensorRT layer 054 [TensorRTLayer],TensorRTLayer,1.3,0.0,0.0,1,,,
+resnet50,tensorrt_int8,55,TensorRT layer 055,055. TensorRT layer 055 [TensorRTLayer],TensorRTLayer,2.4,0.0,0.0,1,,,
+resnet50,tensorrt_int8,56,TensorRT layer 056,056. TensorRT layer 056 [TensorRTLayer],TensorRTLayer,2.7,0.0,0.0,1,,,
+resnet50,tensorrt_int8,57,TensorRT layer 057,057. TensorRT layer 057 [TensorRTLayer],TensorRTLayer,0.1,0.0,0.0,1,,,
+resnet50,tensorrt_int8,58,TensorRT layer 058,058. TensorRT layer 058 [TensorRTLayer],TensorRTLayer,0.8,0.0,0.0,1,,,
+resnet50,tensorrt_int8,59,TensorRT layer 059,059. TensorRT layer 059 [TensorRTLayer],TensorRTLayer,100.0,0.0,0.0,1,,,
+resnet50,tflite_cpu,1,dummy_conv,"01. dummy_conv [conv]
+params 0",conv,10.09,0.0,0.0,1,,,0.0

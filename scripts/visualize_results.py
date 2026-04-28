@@ -126,7 +126,7 @@ def load_layer_profiles(results_dir):
         return pd.DataFrame()
 
     df = pd.concat(frames, ignore_index=True)
-    for col in ["layer_index", "mean_ms", "power_gpu_mw", "power_total_mw"]:
+    for col in ["layer_index", "mean_ms", "power_gpu_mw", "power_total_mw", "param_count", "trainable_param_count"]:
         if col in df.columns:
             df[col] = pd.to_numeric(df[col], errors="coerce")
     df["layer_name"] = df["layer_name"].astype(str)
@@ -155,7 +155,7 @@ def norm_type(layer_type, layer_name=""):
         return "inference-summary"
     if any(tok in text for tok in ["batchnorm", "layernorm", "instancenorm", "groupnorm", "norm"]):
         return "norm"
-    if any(tok in text for tok in ["relu", "gelu", "sigmoid", "hardswish", "hardsigmoid", "swish", "activation", "clip"]):
+    if any(tok in text for tok in ["relu", "gelu", "sigmoid", "hardswish", "hardsigmoid", "swish", "silu", "activation", "clip"]):
         return "act"
     if any(tok in text for tok in ["conv", "convolution", "fusedconv"]):
         return "conv"
@@ -204,6 +204,85 @@ def parent_key(layer_name, runtime):
     return name
 
 
+def is_blank(value):
+    if value is None or pd.isna(value):
+        return True
+    text = str(value).strip()
+    return text == "" or text.lower() == "nan"
+
+
+def first_value(series):
+    for value in series:
+        if not is_blank(value):
+            return str(value)
+    return ""
+
+
+def last_value(series):
+    for value in reversed(list(series)):
+        if not is_blank(value):
+            return str(value)
+    return ""
+
+
+def format_params(value):
+    if pd.isna(value):
+        return "0"
+    try:
+        number = int(float(value))
+    except (TypeError, ValueError):
+        return str(value)
+    if number >= 1_000_000:
+        return f"{number / 1_000_000:.2f}M"
+    if number >= 1_000:
+        return f"{number / 1_000:.1f}K"
+    return str(number)
+
+
+def metadata_label(base_label, input_shape="", output_shape="", param_count=0):
+    parts = [base_label]
+    meta = []
+    if input_shape:
+        meta.append(f"in {input_shape}")
+    if output_shape:
+        meta.append(f"out {output_shape}")
+    meta.append(f"params {format_params(param_count)}")
+    parts.append(" | ".join(meta))
+    return "\n".join(parts)
+
+
+def pytorch_group_key(layer_name, layer_type, active_key):
+    name = str(layer_name)
+    op_type = norm_type(layer_type, name)
+
+    if op_type in {"conv", "fc", "pool"}:
+        match = re.match(r"^(?P<prefix>.+)\.(?P<kind>conv|bn|fc)(?P<num>\d+)$", name)
+        if match:
+            return f"{match.group('prefix')}.{match.group('kind')}{match.group('num')}", True
+        match = re.match(r"^(?P<prefix>.+)\.(?P<num>\d+)$", name)
+        if match:
+            return f"{match.group('prefix')}.{match.group('num')}", True
+        return name, True
+
+    if op_type == "norm":
+        match = re.match(r"^(?P<prefix>.+)\.bn(?P<num>\d+)$", name)
+        if match:
+            return f"{match.group('prefix')}.conv{match.group('num')}", False
+        match = re.match(r"^(?P<prefix>.+)\.(?P<num>\d+)$", name)
+        if match:
+            previous = int(match.group("num")) - 1
+            return f"{match.group('prefix')}.{previous}", False
+        return active_key or name, False
+
+    if op_type == "act":
+        return active_key or name, False
+
+    if "downsample.1" in name:
+        return name.replace("downsample.1", "downsample.0"), False
+
+    return name, True
+
+
 def summarize_ops(types):
     order = ["conv", "norm", "act", "pool", "fc", "eltwise", "concat/split", "shape", "softmax"]
     unique = []
@@ -249,12 +328,22 @@ def group_layers(layer_df):
                 })
             continue
 
+        if str(runtime).startswith("pytorch"):
+            rows.extend(group_pytorch_layers(model, runtime, sub))
+            continue
+
         sub["op_group"] = [parent_key(name, runtime) for name in sub["layer_name"]]
         sub["op_type"] = [norm_type(t, n) for t, n in zip(sub["type"], sub["layer_name"])]
         for group_index, (key, group) in enumerate(sub.groupby("op_group", sort=False), start=1):
             op_types = list(group["op_type"])
             label_type = summarize_ops(op_types)
-            label = f"{group_index:02d}. {shorten_label(key)} [{label_type}]"
+            param_count = group["param_count"].sum() if "param_count" in group else 0
+            label = metadata_label(
+                f"{group_index:02d}. {shorten_label(key)} [{label_type}]",
+                first_value(group["input_shape"]) if "input_shape" in group else "",
+                last_value(group["output_shape"]) if "output_shape" in group else "",
+                param_count,
+            )
             rows.append({
                 "model": model,
                 "runtime": runtime,
@@ -266,8 +355,54 @@ def group_layers(layer_df):
                 "power_gpu_mw": group["power_gpu_mw"].mean() if "power_gpu_mw" in group else np.nan,
                 "power_total_mw": group["power_total_mw"].mean() if "power_total_mw" in group else np.nan,
                 "ops": len(group),
+                "input_shape": first_value(group["input_shape"]) if "input_shape" in group else "",
+                "output_shape": last_value(group["output_shape"]) if "output_shape" in group else "",
+                "param_count": param_count,
             })
     return pd.DataFrame(rows)
+
+
+def group_pytorch_layers(model, runtime, sub):
+    rows = []
+    active_key = None
+    sub = sub.sort_values("layer_index").copy()
+    group_keys = []
+
+    for _, row in sub.iterrows():
+        key, starts_new = pytorch_group_key(row["layer_name"], row["type"], active_key)
+        if starts_new or active_key is None:
+            active_key = key
+        group_keys.append(key)
+
+    sub["op_group"] = group_keys
+    sub["op_type"] = [norm_type(t, n) for t, n in zip(sub["type"], sub["layer_name"])]
+
+    for group_index, (key, group) in enumerate(sub.groupby("op_group", sort=False), start=1):
+        op_types = list(group["op_type"])
+        label_type = summarize_ops(op_types)
+        param_count = group["param_count"].sum() if "param_count" in group else 0
+        label = metadata_label(
+            f"{group_index:03d}. {shorten_label(key)} [{label_type}]",
+            first_value(group["input_shape"]) if "input_shape" in group else "",
+            last_value(group["output_shape"]) if "output_shape" in group else "",
+            param_count,
+        )
+        rows.append({
+            "model": model,
+            "runtime": runtime,
+            "group_index": group_index,
+            "group_key": key,
+            "group_label": label,
+            "group_type": label_type,
+            "mean_ms": group["mean_ms"].sum(),
+            "power_gpu_mw": group["power_gpu_mw"].mean() if "power_gpu_mw" in group else np.nan,
+            "power_total_mw": group["power_total_mw"].mean() if "power_total_mw" in group else np.nan,
+            "ops": len(group),
+            "input_shape": first_value(group["input_shape"]) if "input_shape" in group else "",
+            "output_shape": last_value(group["output_shape"]) if "output_shape" in group else "",
+            "param_count": param_count,
+        })
+    return rows
 
 
 def shorten_label(label, max_len=58):
