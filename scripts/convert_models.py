@@ -1,7 +1,9 @@
 import argparse
+import importlib.util
 import os
 import shutil
 import subprocess
+import tempfile
 from pathlib import Path
 
 
@@ -51,13 +53,39 @@ def run_cmd(cmd, description):
     return True
 
 
+def module_available(module_name):
+    return importlib.util.find_spec(module_name) is not None
+
+
+def prepare_onnx_for_converter(onnx_path):
+    external_data_path = Path(str(onnx_path) + ".data")
+    if not external_data_path.exists():
+        return onnx_path, None
+
+    if not module_available("onnx"):
+        print("[Warning] ONNX model uses external data, but Python package 'onnx' is not installed.")
+        print("          Install onnx or export an ONNX file with embedded weights.")
+        return onnx_path, None
+
+    import onnx
+    from onnx.external_data_helper import convert_model_from_external_data
+
+    temp_dir = tempfile.TemporaryDirectory()
+    embedded_path = Path(temp_dir.name) / onnx_path.name
+    model = onnx.load(str(onnx_path), load_external_data=True)
+    convert_model_from_external_data(model)
+    onnx.save(model, str(embedded_path))
+    return embedded_path, temp_dir
+
+
 def convert_tensorrt(model_name, onnx_path, model_dir, overwrite=False):
     trtexec = resolve_tool("TRTEXEC_PATH", "trtexec")
     if not trtexec:
         print("[Warning] trtexec not found. Skipping TensorRT engine conversion.")
         print("          Set TRTEXEC_PATH if trtexec is not in PATH.")
-        return
+        return False
 
+    converted = True
     precision_flags = {
         "fp32": [],
         "fp16": ["--fp16"],
@@ -80,6 +108,8 @@ def convert_tensorrt(model_name, onnx_path, model_dir, overwrite=False):
         ok = run_cmd(cmd, f"TensorRT {precision.upper()} engine: {engine_path.name}")
         if ok:
             print(f"    [Done] saved {engine_path}")
+        converted = converted and ok
+    return converted
 
 
 def convert_ncnn(model_name, onnx_path, model_dir, overwrite=False):
@@ -87,26 +117,32 @@ def convert_ncnn(model_name, onnx_path, model_dir, overwrite=False):
     if not onnx2ncnn:
         print("[Warning] onnx2ncnn not found. Skipping ncnn conversion.")
         print("          Set ONNX2NCNN_PATH if onnx2ncnn is not in PATH.")
-        return
+        return False
 
     param_path = model_dir / f"{model_name}.param"
     bin_path = model_dir / f"{model_name}.bin"
     if param_path.exists() and bin_path.exists() and not overwrite:
         print(f"  - [Skip] ncnn model already exists: {param_path} / {bin_path}")
-        return
-    ok = run_cmd(
-        [onnx2ncnn, str(onnx_path), str(param_path), str(bin_path)],
-        f"ncnn model: {param_path.name} / {bin_path.name}",
-    )
+        return True
+    converted_onnx_path, temp_dir = prepare_onnx_for_converter(onnx_path)
+    try:
+        ok = run_cmd(
+            [onnx2ncnn, str(converted_onnx_path), str(param_path), str(bin_path)],
+            f"ncnn model: {param_path.name} / {bin_path.name}",
+        )
+    finally:
+        if temp_dir:
+            temp_dir.cleanup()
     if ok:
         print(f"    [Done] saved {param_path} and {bin_path}")
+    return ok and param_path.exists() and bin_path.exists()
 
 
 def convert_tflite(model_name, onnx_path, model_dir, overwrite=False):
     tflite_path = model_dir / f"{model_name}.tflite"
     if tflite_path.exists() and not overwrite:
         print(f"  - [Skip] TFLite model already exists: {tflite_path}")
-        return
+        return True
 
     onnx2tf = resolve_tool("ONNX2TF_PATH", "onnx2tf")
     tflite_convert = resolve_tool("TFLITE_CONVERT_PATH", "tflite_convert")
@@ -117,6 +153,11 @@ def convert_tflite(model_name, onnx_path, model_dir, overwrite=False):
             f"TensorFlow SavedModel for TFLite: {saved_model_dir.name}",
         )
         if ok:
+            generated_tflite = saved_model_dir / f"{model_name}_float32.tflite"
+            if generated_tflite.exists():
+                shutil.copy2(generated_tflite, tflite_path)
+                print(f"    [Done] saved {tflite_path}")
+                return True
             ok = run_cmd(
                 [
                     tflite_convert,
@@ -127,9 +168,9 @@ def convert_tflite(model_name, onnx_path, model_dir, overwrite=False):
             )
             if ok:
                 print(f"    [Done] saved {tflite_path}")
-        return
+        return ok and tflite_path.exists()
 
-    onnx_tf_available = shutil.which("python3") is not None
+    onnx_tf_available = module_available("onnx_tf")
     if onnx_tf_available and tflite_convert:
         saved_model_dir = model_dir / f"{model_name}_saved_model"
         ok = run_cmd(
@@ -156,13 +197,14 @@ def convert_tflite(model_name, onnx_path, model_dir, overwrite=False):
             )
             if ok:
                 print(f"    [Done] saved {tflite_path}")
-        return
+        return ok and tflite_path.exists()
 
     print("[Warning] TFLite conversion tools not found. Skipping TFLite conversion.")
     print("          Supported paths:")
     print("          - onnx2tf + tflite_convert")
     print("          - python3 -m onnx_tf.backend + tflite_convert")
     print("          Set ONNX2TF_PATH or TFLITE_CONVERT_PATH if needed.")
+    return False
 
 
 def main():
@@ -171,6 +213,7 @@ def main():
     parser.add_argument("--models", nargs="+", default=DEFAULT_MODELS)
     parser.add_argument("--targets", nargs="+", default=["tensorrt", "tflite", "ncnn"], choices=["tensorrt", "tflite", "ncnn"])
     parser.add_argument("--overwrite", action="store_true", help="Regenerate artifacts even when output files already exist.")
+    parser.add_argument("--strict", action="store_true", help="Exit with an error if any requested conversion target is missing.")
     args = parser.parse_args()
 
     model_dir = Path(args.model_dir)
@@ -180,19 +223,31 @@ def main():
     print(f"Targets: {args.targets}")
     print("=====================================")
 
+    failures = []
     for model_name in args.models:
         onnx_path = model_dir / f"{model_name}.onnx"
         if not onnx_path.exists():
             print(f"[Skip] ONNX model not found: {onnx_path}")
+            if args.strict:
+                failures.append(f"{model_name}: missing ONNX")
             continue
 
         print(f"\n[Converting Model: {model_name}]")
         if "tensorrt" in args.targets:
-            convert_tensorrt(model_name, onnx_path, model_dir, overwrite=args.overwrite)
+            if not convert_tensorrt(model_name, onnx_path, model_dir, overwrite=args.overwrite):
+                failures.append(f"{model_name}: tensorrt")
         if "tflite" in args.targets:
-            convert_tflite(model_name, onnx_path, model_dir, overwrite=args.overwrite)
+            if not convert_tflite(model_name, onnx_path, model_dir, overwrite=args.overwrite):
+                failures.append(f"{model_name}: tflite")
         if "ncnn" in args.targets:
-            convert_ncnn(model_name, onnx_path, model_dir, overwrite=args.overwrite)
+            if not convert_ncnn(model_name, onnx_path, model_dir, overwrite=args.overwrite):
+                failures.append(f"{model_name}: ncnn")
+
+    if failures and args.strict:
+        print("\n[ERROR] Requested conversions did not complete:")
+        for failure in failures:
+            print(f"  - {failure}")
+        raise SystemExit(1)
 
     print("\n[DONE] Model conversion step finished.")
 

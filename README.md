@@ -60,6 +60,25 @@ TensorRT engine은 Jetson Nano의 GPU, CUDA, TensorRT, JetPack 버전에 종속�
 
 ### MacBook
 
+필요 도구 예시:
+
+```bash
+brew install git-lfs ncnn
+
+# TensorFlow/TFLite 변환은 Python 3.10/3.11 가상환경 권장
+python3.11 -m venv .venv-convert
+source .venv-convert/bin/activate
+pip install --upgrade pip
+pip install tensorflow tf-keras onnx onnx-tf onnx2tf
+```
+
+`brew install ncnn` 후 `onnx2ncnn`이 PATH에 없으면 경로를 확인해 환경변수로 넘깁니다.
+
+```bash
+find /opt/homebrew -name onnx2ncnn 2>/dev/null
+ONNX2NCNN_PATH=/path/to/onnx2ncnn bash run_pipeline_mac.sh
+```
+
 ```bash
 git lfs install
 bash run_pipeline_mac.sh
@@ -74,6 +93,22 @@ git push
 git lfs install
 git pull
 git lfs pull
+bash run_pipeline_jetson.sh
+```
+
+`run_pipeline_jetson.sh`는 기본적으로 준비된 런타임만 실행합니다. MacBook에서 `.tflite`, `.param`, `.bin`이 생성되어 있고 Jetson에 `benchmark_model`, `benchncnn`이 설치되어 있으면 `tflite_cpu`, `ncnn_vulkan`도 자동으로 포함됩니다.
+
+수동으로 전체 런타임을 지정할 수도 있습니다.
+
+```bash
+RUNTIMES=pytorch_cuda,tensorrt_fp32,tensorrt_fp16,tensorrt_int8,onnxrt_cpu,tflite_cpu,ncnn_vulkan bash run_pipeline_jetson.sh
+```
+
+도구가 PATH 밖에 있으면 경로를 환경변수로 지정합니다.
+
+```bash
+TFLITE_BENCHMARK_MODEL_PATH=/path/to/benchmark_model \
+BENCHNCNN_PATH=/path/to/benchncnn \
 bash run_pipeline_jetson.sh
 ```
 

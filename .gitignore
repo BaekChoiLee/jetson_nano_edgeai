@@ -5,6 +5,11 @@ results/
 __pycache__/
 *.pyc
 
+.tools/
+
 models/*_saved_model/
 models/*.log
 models/*.cache
+
+.venv-convert/
+.tools/

@@ -6,6 +6,18 @@ import time
 # benchmark 디렉토리에 있는 모듈 임포트
 from benchmark.benchmark import BenchmarkMaster
 
+RUNTIME_DEVICE = {
+    "pytorch_cpu": "cpu",
+    "pytorch_cuda": "cuda",
+    "tensorrt_fp32": "cuda",
+    "tensorrt_fp16": "cuda",
+    "tensorrt_int8": "cuda",
+    "onnxrt_cpu": "cpu",
+    "onnxrt_cuda": "cuda",
+    "tflite_cpu": "cpu",
+    "ncnn_vulkan": "vulkan",
+}
+
 def main():
     parser = argparse.ArgumentParser(description="Jetson Nano Edge AI Pipeline")
     parser.add_argument("--model", type=str, default="all", help="Model name (all, mobilenetv3s, efficientnetb0, shufflenetv2, resnet50, yolov8n, ssd_mv2)")
@@ -30,22 +42,12 @@ def main():
         
     runtimes_to_run = []
     if args.runtime == "all":
-        runtimes_to_run = [
-            ("pytorch_cpu", "cpu"),
-            ("pytorch_cuda", "cuda"),
-            ("tensorrt_fp32", "cuda"),
-            ("tensorrt_fp16", "cuda"),
-            ("tensorrt_int8", "cuda"),
-            ("onnxrt_cpu", "cpu"),
-            ("onnxrt_cuda", "cuda"),
-            ("tflite_cpu", "cpu"),
-            ("ncnn_vulkan", "vulkan")
-        ]
+        runtimes_to_run = list(RUNTIME_DEVICE.items())
     else:
-        # 단일 런타임 지정 시 device 매핑
-        dev = "cuda" if "cuda" in args.runtime or "fp" in args.runtime or "int8" in args.runtime else "cpu"
-        if "vulkan" in args.runtime: dev = "vulkan"
-        runtimes_to_run.append((args.runtime, dev))
+        for runtime_name in [item.strip() for item in args.runtime.split(",") if item.strip()]:
+            if runtime_name not in RUNTIME_DEVICE:
+                raise ValueError(f"Unknown runtime: {runtime_name}. Available: {sorted(RUNTIME_DEVICE)}")
+            runtimes_to_run.append((runtime_name, RUNTIME_DEVICE[runtime_name]))
 
     print(f"=====================================")
     print(f"Starting Benchmark Pipeline")

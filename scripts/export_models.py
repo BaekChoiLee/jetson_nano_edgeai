@@ -10,17 +10,29 @@ def export_to_onnx(model, model_name, output_dir):
     onnx_path = os.path.join(output_dir, f"{model_name}.onnx")
     
     print(f"Exporting {model_name} to ONNX...")
-    torch.onnx.export(
-        model, 
-        dummy_input, 
-        onnx_path,
-        export_params=True,
-        opset_version=12,
-        do_constant_folding=True,
-        input_names=['input'],
-        output_names=['output'],
-        dynamic_axes={'input': {0: 'batch_size'}, 'output': {0: 'batch_size'}}
-    )
+    export_kwargs = {
+        "export_params": True,
+        "opset_version": 12,
+        "do_constant_folding": True,
+        "input_names": ["input"],
+        "output_names": ["output"],
+        "dynamic_axes": {"input": {0: "batch_size"}, "output": {0: "batch_size"}},
+    }
+    try:
+        torch.onnx.export(
+            model,
+            dummy_input,
+            onnx_path,
+            dynamo=False,
+            **export_kwargs,
+        )
+    except TypeError:
+        torch.onnx.export(
+            model,
+            dummy_input,
+            onnx_path,
+            **export_kwargs,
+        )
     print(f"[Done] Saved ONNX to {onnx_path}")
     return onnx_path
 

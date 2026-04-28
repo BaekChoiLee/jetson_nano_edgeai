@@ -14,16 +14,17 @@ class NCNNProfilerParser:
         self.last_output = ""
         self.last_returncode = None
 
-    def run_and_parse(self, runs=100, threads=4, power=0):
-        # benchncnn 실행: usage: benchncnn [loop count] [num threads] [powersave] [gpu device] [cooling down] ...
+    def run_and_parse(self, runs=100, threads=4, power=0, gpu_device=0, shape="224,224,3"):
+        # benchncnn 실행: usage: benchncnn [loop count] [num threads] [powersave] [gpu device] [cooling down] [(key=value)...]
         cmd = [
             self.benchncnn_path,
             str(runs),
             str(threads),
             str(power),
-            "-1", # gpu device
-            "1", # cooling down
-            self.param_path
+            str(gpu_device),
+            "1",  # cooling down
+            f"param={self.param_path}",
+            f"shape=[{shape}]",
         ]
         
         try:

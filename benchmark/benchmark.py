@@ -24,6 +24,22 @@ try:
 except ImportError:
     OfflineEmissionsTracker = None
 
+COMMON_TOOL_PATHS = {
+    "trtexec": [
+        "/usr/src/tensorrt/bin/trtexec",
+        "/usr/local/tensorrt/bin/trtexec",
+        "/usr/bin/trtexec",
+    ],
+    "benchmark_model": [
+        "/usr/local/bin/benchmark_model",
+        "/usr/bin/benchmark_model",
+    ],
+    "benchncnn": [
+        "/usr/local/bin/benchncnn",
+        "/usr/bin/benchncnn",
+    ],
+}
+
 # 각 런타임별 로딩 및 추론 엔진 (예시 구조)
 # 실제 환경에 맞게 각 run_xxx.py 파일에서 함수를 가져오거나 내부에 구현합니다.
 
@@ -115,6 +131,9 @@ class BenchmarkMaster:
         resolved = shutil.which(default_name)
         if resolved:
             return resolved
+        for candidate in COMMON_TOOL_PATHS.get(default_name, []):
+            if os.path.exists(candidate):
+                return candidate
         raise FileNotFoundError(f"{default_name} tool not found in PATH. Set ${env_name} to its executable path.")
 
     def _require_file(self, path, description):
