@@ -1,0 +1,69 @@
+# ============================================================================
+# Jetson Benchmark .gitignore
+# 팀원 재현 원칙: 코드 + 모델 원본(.onnx/.tflite/.pt) + 데이터셋 = git push
+#                 장치 종속 (.engine) + 측정 산출물 (results/) = 재생성/Release
+# ============================================================================
+
+# --- 벤치마크 산출물 (재현 가능, 25GB) ---
+results/
+all_summaries*.json
+compile_fresh_summaries.py
+
+# --- TRT 엔진 (장치 종속, 각자 build_trt.sh로 재빌드) ---
+models/*.engine
+models/trt_cache/
+models/*_saved_model/
+models/*_onnx2tf/
+models/*.broken_pnnx
+models/*_calib.cache
+
+# --- 실험/중간 산출물 ---
+models/*_sim.onnx
+models/*_fpinput.onnx
+models/*_trim.onnx
+
+# --- 로그/임시 ---
+*.log
+*.trtexec.log
+*.tmp
+rebenchmark_background.log
+rebenchmark_live.log
+accuracy_live.log
+accuracy_fix.log
+eval.log
+strict_matrix.log
+qv*.log
+week*_run.log
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# --- IDE/OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- Git LFS 후보 (현재 제외, 필요시 나중에 LFS track 추가) ---
+# *.onnx
+# *.tflite
+
+# --- 대용량 중간 데이터 (캘리브레이션 NPY 등) ---
+calibration_image_sample_data_*.npy
+
+# --- 개별 통합 전 파일 ---
+tmp_res.log
+fix_*.sh
+fetch_summaries.py
+
+# --- Engine backups (pre-fix snapshots, reproducible via build_trt.sh) ---
+models/*.engine.bak_*
+models/*.engine.bak.*
+models/*.bak
+models/*.bak_*
+models/*.bak.*

@@ -1,0 +1,8 @@
+# Git LFS tracking for large model weights (>100 MB GitHub hard limit)
+# Run once per clone: `git lfs install` (requires git-lfs installed)
+
+# Split model archives (tar.gz parts)
+models.tar.gz.part_* filter=lfs diff=lfs merge=lfs -text
+
+# Result archives
+results.tar.gz filter=lfs diff=lfs merge=lfs -text

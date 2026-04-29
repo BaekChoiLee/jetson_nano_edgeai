@@ -1,0 +1,25 @@
+# Jetson Nano JetPack 4.6.1 (CUDA 10.2, cuDNN 8.2, TensorRT 8.0.1.6)
+# Python 3.8 / ARM64. torch/torchvision/tensorrt/tensorflow come from NVIDIA wheels, not pip index.
+# Run setup/install_onnxrt.sh, setup/install_ncnn.sh, setup/install_tflite.sh for native deps.
+
+# --- Core numeric/vision (install via pip) ---
+numpy==1.24.4
+opencv-python==4.13.0.88
+pycocotools==2.0.7
+
+# --- Model formats / optimization ---
+onnx==1.14.0
+onnxsim==0.4.36
+
+# --- Runtimes available via pip (others built from source) ---
+onnxruntime-gpu==1.11.0           # install via setup/install_onnxrt_gpu.sh (NVIDIA wheel)
+tflite-runtime==2.13.0            # for tflite-cpu path
+ultralytics==8.0.239              # YOLOv8n export + pre/post
+
+# --- NOT from pip: use NVIDIA JetPack wheels / source build ---
+# torch==1.13.0a0+git7c98e70      # https://forums.developer.nvidia.com (PyTorch for JetPack)
+# torchvision==0.14.0a0+5ce4506   # build from source matching torch
+# tensorrt==8.0.1.6               # apt install tensorrt (JetPack default)
+# tensorflow==2.4.1               # pip wheel from NVIDIA index (--extra-index-url)
+# pycuda                          # apt or pip (requires CUDA dev headers)
+# ncnn (Python bindings)          # setup/install_ncnn.sh (build from source)
