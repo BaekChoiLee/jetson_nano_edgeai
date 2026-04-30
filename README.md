@@ -102,22 +102,25 @@ cat models.tar.gz.part_* > models.tar.gz
 tar xzf models.tar.gz
 rm models.tar.gz    # 디스크 절약 (선택)
 
-# 3. 환경 설치 (Jetson Nano에서)
+# 3. 최신 결과 복원 (선택, JSON/CSV만 포함)
+tar xzf results.tar.gz
+
+# 4. 환경 설치 (Jetson Nano에서)
 bash setup/setup_env.sh
 bash setup/install_onnxrt.sh
 bash setup/install_ncnn.sh
 bash setup/install_tflite.sh
 
-# 4. 추가 의존성 (수동 설치 필요)
+# 5. 추가 의존성 (수동 설치 필요)
 pip3 install pycocotools pycuda psutil
 
-# 5. COCO 데이터 준비 (detection accuracy에 필요)
+# 6. COCO 데이터 준비 (detection accuracy에 필요)
 # → 아래 "COCO 데이터 준비" 섹션 참조
 
-# 6. 확인 (dry-run)
+# 7. 확인 (dry-run)
 bash run_all.sh --dry-run
 
-# 7. 풀 벤치마크 실행 (132가지, 약 6-7시간 소요)
+# 8. 풀 벤치마크 실행 (132가지, 약 6-7시간 소요)
 bash run_all.sh
 ```
 
