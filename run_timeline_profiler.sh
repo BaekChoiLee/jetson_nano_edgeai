@@ -2,12 +2,16 @@
 # Jetson Nano 타임라인 프로파일링 전용 스크립트
 # 기존 벤치마크 결과에 전혀 영향을 주지 않고, results/layer_timelines/ 폴더에 크롬 트레이스(.json)만 저장합니다.
 
-cd ~/jetson-benchmark
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+cd "$SCRIPT_DIR"
 
-OUT_DIR="results/layer_timelines"
+OUT_DIR="${LAYER_TIMELINE_OUT_DIR:-results/layer_timelines}"
 mkdir -p "$OUT_DIR"
 
 MODELS=("mobilenetv3_small" "resnet50" "efficientnet_b0" "yolov8n" "shufflenet_v2_x1_0" "ssd_mobilenet_v2")
+if [ -n "${MODELS_OVERRIDE:-}" ]; then
+    read -r -a MODELS <<< "$MODELS_OVERRIDE"
+fi
 
 echo "=================================================="
 echo "  [Timeline Profiling] Safe Extraction Started"

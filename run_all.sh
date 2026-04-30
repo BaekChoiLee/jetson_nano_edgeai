@@ -22,12 +22,17 @@ POWER_MODES=("10w" "5w")
 COOL_DOWN=60          # seconds between experiments
 NUM_WARMUP=10
 NUM_RUNS=100
+LAYER_NUM_WARMUP="${LAYER_NUM_WARMUP:-10}"
+LAYER_NUM_RUNS="${LAYER_NUM_RUNS:-50}"
 THERMAL_WAIT=30       # seconds to wait after power mode change
 PROJECT_DIR="$(cd "$(dirname "$0")" && pwd)"
 MODEL_DIR="${PROJECT_DIR}/models"
 RESULTS_DIR="${PROJECT_DIR}/results"
 DATA_DIR="${PROJECT_DIR}/data/imagenet_val"
 COCO_DIR="${PROJECT_DIR}/data/coco_val"
+DETAILED_LAYERS=false
+INCLUDE_LAYER_POWER=false
+INCLUDE_LAYER_TIMELINES=false
 
 # No skip combos — let all runtimes run; failures are recorded as error results
 SKIP_COMBOS=()
@@ -76,6 +81,9 @@ while [[ $# -gt 0 ]]; do
         --week)        TARGET_WEEK="$2"; shift 2;;
         --skip-convert) SKIP_CONVERT=true; shift;;
         --skip-setup)  SKIP_SETUP=true; shift;;
+        --detailed-layers) DETAILED_LAYERS=true; shift;;
+        --include-layer-power) INCLUDE_LAYER_POWER=true; shift;;
+        --include-layer-timelines) INCLUDE_LAYER_TIMELINES=true; shift;;
         --dry-run)     DRY_RUN=true; shift;;
         --help)
             echo "Usage: $0 [OPTIONS]"
@@ -85,6 +93,11 @@ while [[ $# -gt 0 ]]; do
             echo "  --week N          Run models assigned to week N (3, 4, 5, or 6)"
             echo "  --skip-convert    Skip model conversion step"
             echo "  --skip-setup      Skip environment verification"
+            echo "  --detailed-layers Run 6x11 runtime-aware layer profiling after Step 4"
+            echo "  --include-layer-power"
+            echo "                    Include slow Layer Amplification power profiling"
+            echo "  --include-layer-timelines"
+            echo "                    Export TRT/PyTorch timeline JSON traces"
             echo "  --dry-run         Print what would be done without executing"
             echo "  --help            Show this help"
             echo ""
@@ -137,6 +150,9 @@ echo "  Runs:        ${NUM_RUNS}"
 echo "  Cool-down:   ${COOL_DOWN}s"
 echo "  Project:     ${PROJECT_DIR}"
 echo "  Dry run:     ${DRY_RUN}"
+echo "  Detailed layers: ${DETAILED_LAYERS}"
+echo "  Layer power: ${INCLUDE_LAYER_POWER}"
+echo "  Layer timelines: ${INCLUDE_LAYER_TIMELINES}"
 echo "  Skip combos: ${SKIP_COMBOS[*]}"
 echo "============================================"
 echo ""
@@ -489,6 +505,44 @@ for MODEL in "${MODELS[@]}"; do
         }
     fi
 done
+
+# Optional detailed layer extraction:
+# - architecture/*.csv: module shapes/params summary
+# - layer_runtime/*.csv/json: runtime-aware layer/node/operator latency for 11 runtimes
+# - layer_power/*.csv/json: optional slow layer energy profiling
+# - layer_timelines/*.json: optional Chrome trace / TRT profile export
+if [ "$DETAILED_LAYERS" = true ] || [ "$INCLUDE_LAYER_POWER" = true ] || [ "$INCLUDE_LAYER_TIMELINES" = true ]; then
+    echo ""
+    echo "=== Step 4b: Detailed Layer Extraction ==="
+    DETAIL_ARGS=(
+        --results-dir "$RESULTS_DIR/detailed_layers"
+        --num-warmup "$LAYER_NUM_WARMUP"
+        --num-runs "$LAYER_NUM_RUNS"
+    )
+
+    if [ -n "$SINGLE_MODEL" ]; then
+        DETAIL_ARGS+=(--model "$SINGLE_MODEL")
+    fi
+    if [ "$DETAILED_LAYERS" != true ]; then
+        DETAIL_ARGS+=(--skip-runtime)
+    fi
+    if [ "$INCLUDE_LAYER_POWER" = true ]; then
+        DETAIL_ARGS+=(--include-power)
+    fi
+    if [ "$INCLUDE_LAYER_TIMELINES" = true ]; then
+        DETAIL_ARGS+=(--include-timelines)
+    fi
+    if [ "$DRY_RUN" = true ]; then
+        DETAIL_ARGS+=(--dry-run)
+    fi
+
+    if [ "$DRY_RUN" = true ]; then
+        echo "  [DRY] bash run_detailed_layers.sh ${DETAIL_ARGS[*]}"
+    fi
+    MODELS_OVERRIDE="${MODELS[*]}" bash run_detailed_layers.sh "${DETAIL_ARGS[@]}" || {
+        echo "  [WARN] Detailed layer extraction failed"
+    }
+fi
 
 # ============================================
 # Done

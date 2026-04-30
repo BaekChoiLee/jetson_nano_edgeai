@@ -157,6 +157,12 @@ ln -s /path/to/val2017 data/coco_val/images
 # 변환 건너뛰기 (이미 .engine 파일이 있을 때)
 ./run_all.sh --skip-convert
 
+# 상세 레이어 런타임 분석까지 함께 실행
+./run_all.sh --detailed-layers
+
+# 매우 느린 레이어별 전력/에너지 분석과 타임라인까지 포함
+./run_all.sh --detailed-layers --include-layer-power --include-layer-timelines
+
 # 먼저 뭘 하는지 확인만
 ./run_all.sh --dry-run
 ```
@@ -174,6 +180,61 @@ ln -s /path/to/val2017 data/coco_val/images
 5. **Step 4: 레이어별 분석** — 6모델 전부 (분류: PyTorch forward hooks, 탐지: torch.autograd.profiler)
 
 결과는 `results/` 폴더에 JSON + CSV로 저장됨.
+
+## 상세 레이어 데이터 추출
+
+기본 `run_all.sh`의 Step 4는 모델별 요약 레이어 CSV를 만듭니다. 보고서용으로 런타임별 병목을 더 자세히 보려면 새 진입점인 `run_detailed_layers.sh`를 사용합니다.
+
+```bash
+# 6모델 × 11런타임 상세 layer/node/operator latency
+bash run_detailed_layers.sh
+
+# 특정 모델만
+bash run_detailed_layers.sh --model yolov8n
+
+# 특정 런타임만
+bash run_detailed_layers.sh --runtime tensorrt_fp16
+
+# 전력/에너지까지 포함 (느림, Layer Amplification Loop)
+bash run_detailed_layers.sh --include-power
+
+# Chrome trace / TensorRT profile JSON까지 포함
+bash run_detailed_layers.sh --include-timelines
+```
+
+출력 구조:
+
+```text
+results/detailed_layers_<timestamp>/
+├── architecture/                         # PyTorch/TorchScript module summary
+│   └── <model>_layers.csv                # layer_name/type/params/input/output/latency
+├── layer_runtime/
+│   ├── <model>_<runtime>.csv             # rank, layer/node/op, mean/std/min/max, samples
+│   └── <model>_<runtime>.json            # same records + metadata
+├── consolidated_layer_runtime_detailed.csv
+├── layer_power/                          # --include-power 사용 시
+│   └── <model>_layer_power.csv/json      # latency, power, energy_per_run_mj
+└── layer_timelines/                      # --include-timelines 사용 시
+    └── *.json                            # chrome://tracing 또는 TRT profile viewer용
+```
+
+`layer_runtime`의 granularity는 런타임별로 다릅니다.
+
+| 런타임 | granularity |
+|--------|-------------|
+| pytorch_cpu / pytorch_cuda | PyTorch operator |
+| tensorrt_fp32 / fp16 / int8 | TensorRT layer |
+| onnxrt_cuda / onnxrt_trt | ONNX Runtime node |
+| tflite_cpu / tflite_gpu | TFLite node |
+| ncnn_cpu / ncnn_vulkan | ncnn layer |
+
+TFLite/ncnn 레이어 단위 profiling은 별도 도구가 필요합니다.
+
+```bash
+bash setup/build_layer_tools.sh
+export TFLITE_BENCHMARK_MODEL_BIN=$HOME/tensorflow-2.13.0/bazel-bin/tensorflow/lite/tools/benchmark/benchmark_model
+export NCNN_BENCHNCNN_BIN=$HOME/ncnn/build_bench/benchmark/benchncnn
+```
 
 ## 모델 파일 (tar 내)
 

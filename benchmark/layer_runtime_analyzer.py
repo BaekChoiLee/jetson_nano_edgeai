@@ -989,6 +989,7 @@ def _write_csv(path, model_name, runtime, records):
     fields = [
         "model",
         "runtime",
+        "rank",
         "layer_name",
         "backend",
         "granularity",
@@ -997,6 +998,8 @@ def _write_csv(path, model_name, runtime, records):
         "min_ms",
         "max_ms",
         "samples",
+        "percent_total_ms",
+        "cumulative_percent_ms",
     ]
     with open(path, "w", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=fields)
@@ -1006,6 +1009,29 @@ def _write_csv(path, model_name, runtime, records):
             row["model"] = model_name
             row["runtime"] = runtime
             writer.writerow(row)
+
+
+def _enrich_records(records):
+    """Add rank and contribution columns to per-layer timing records."""
+    if not records:
+        return []
+
+    enriched = [dict(r) for r in records]
+    enriched.sort(key=lambda r: float(r.get("mean_ms") or 0.0), reverse=True)
+    total_ms = sum(float(r.get("mean_ms") or 0.0) for r in enriched)
+    cumulative = 0.0
+
+    for idx, row in enumerate(enriched, 1):
+        mean_ms = float(row.get("mean_ms") or 0.0)
+        cumulative += mean_ms
+        row["rank"] = idx
+        row["percent_total_ms"] = (
+            round((mean_ms / total_ms) * 100.0, 6) if total_ms > 0 else 0.0
+        )
+        row["cumulative_percent_ms"] = (
+            round((cumulative / total_ms) * 100.0, 6) if total_ms > 0 else 0.0
+        )
+    return enriched
 
 
 def main():
@@ -1052,12 +1078,17 @@ def main():
             tflite_benchmark_bin=args.tflite_benchmark_bin,
             ncnn_benchmark_bin=args.ncnn_benchmark_bin,
         )
-        records = result.get("records", [])
+        records = _enrich_records(result.get("records", []))
         meta["status"] = result.get("status", "error")
         meta["backend"] = result.get("backend", "")
         meta["granularity"] = result.get("granularity", "")
         meta["records_count"] = len(records)
         meta["error"] = result.get("error", "")
+        meta["schema_version"] = "layer_runtime_v2"
+        meta["records"] = records
+        meta["total_mean_ms"] = round(
+            sum(float(r.get("mean_ms") or 0.0) for r in records), 6
+        )
         for k in (
             "device_used",
             "engine_path",
@@ -1079,6 +1110,9 @@ def main():
     except Exception as e:
         meta["status"] = "error"
         meta["error"] = str(e)
+        meta["schema_version"] = "layer_runtime_v2"
+        meta["records"] = []
+        meta["total_mean_ms"] = 0.0
         _write_csv(args.output_csv, args.model, args.runtime, [])
 
     with open(args.output_json, "w") as f:
