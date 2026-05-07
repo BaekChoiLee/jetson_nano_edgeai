@@ -1,0 +1,481 @@
+==================================================
+  Detailed Layer Extraction
+==================================================
+  project:        /Users/hobongs/Desktop/HoBong_study/26-1/탄중/temp/jetson_nano_edgeai
+  model_dir:      models
+  results:        results/detailed_layers_20260507_134130
+  models:         mobilenetv3_small resnet50 efficientnet_b0 shufflenet_v2_x1_0 yolov8n ssd_mobilenet_v2
+  runtimes:       pytorch_cpu pytorch_cuda tensorrt_fp32 tensorrt_fp16 tensorrt_int8 onnxrt_cuda onnxrt_trt tflite_cpu tflite_gpu ncnn_cpu ncnn_vulkan
+  warmup/runs:    10 / 50
+  include_power:  0
+  timelines:      0
+==================================================
+
+[1/4] architecture-level PyTorch/TorchScript layer summary
+  [architecture] mobilenetv3_small
+/opt/homebrew/anaconda3/lib/python3.13/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/homebrew/anaconda3/lib/python3.13/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=MobileNet_V3_Small_Weights.IMAGENET1K_V1`. You can also use `weights=MobileNet_V3_Small_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+
+======================================================================
+  Layer Analysis: mobilenetv3_small on cpu
+  141 layers, 20 runs each
+======================================================================
+  Rank  Layer                               Type            Mean(ms)   Params
+  ----- ----------------------------------- --------------- ---------- ----------
+  1     features.10.block.1.0               Conv2d          25.1427    14,400
+  2     features.11.block.1.0               Conv2d          23.7999    14,400
+  3     features.9.block.1.0                Conv2d          11.5718    7,200
+  4     features.5.block.1.0                Conv2d          10.1401    6,000
+  5     features.6.block.1.0                Conv2d          10.0855    6,000
+  6     features.8.block.1.0                Conv2d          6.1554     3,600
+  7     features.7.block.1.0                Conv2d          5.1135     3,000
+  8     features.4.block.1.0                Conv2d          4.1925     2,400
+  9     features.2.block.1.0                Conv2d          3.2352     648
+  10    features.1.block.0.0                Conv2d          1.0306     144
+
+  Total layer time: 107.11 ms
+
+  Full results saved to: results/detailed_layers_20260507_134130/architecture/mobilenetv3_small_layers.csv
+  Chart saved to: results/detailed_layers_20260507_134130/architecture/mobilenetv3_small_layers.png
+  [architecture] resnet50
+/opt/homebrew/anaconda3/lib/python3.13/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/homebrew/anaconda3/lib/python3.13/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+
+======================================================================
+  Layer Analysis: resnet50 on cpu
+  126 layers, 20 runs each
+======================================================================
+  Rank  Layer                               Type            Mean(ms)   Params
+  ----- ----------------------------------- --------------- ---------- ----------
+  1     conv1                               Conv2d          1.0881     9,408
+  2     layer1.0.conv2                      Conv2d          0.8404     36,864
+  3     layer1.1.conv2                      Conv2d          0.8046     36,864
+  4     layer3.0.conv2                      Conv2d          0.7897     589,824
+  5     layer2.0.conv2                      Conv2d          0.7860     147,456
+  6     layer1.2.conv2                      Conv2d          0.7691     36,864
+  7     layer4.1.conv2                      Conv2d          0.7066     2,359,296
+  8     layer2.3.conv2                      Conv2d          0.6776     147,456
+  9     maxpool                             MaxPool2d       0.6710     0
+  10    layer2.1.conv2                      Conv2d          0.6710     147,456
+
+  Total layer time: 32.17 ms
+
+  Full results saved to: results/detailed_layers_20260507_134130/architecture/resnet50_layers.csv
+  Chart saved to: results/detailed_layers_20260507_134130/architecture/resnet50_layers.png
+  [architecture] efficientnet_b0
+/opt/homebrew/anaconda3/lib/python3.13/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/homebrew/anaconda3/lib/python3.13/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=EfficientNet_B0_Weights.IMAGENET1K_V1`. You can also use `weights=EfficientNet_B0_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+
+======================================================================
+  Layer Analysis: efficientnet_b0 on cpu
+  223 layers, 20 runs each
+======================================================================
+  Rank  Layer                               Type            Mean(ms)   Params
+  ----- ----------------------------------- --------------- ---------- ----------
+  1     features.6.3.block.1.0              Conv2d          46.5188    28,800
+  2     features.6.2.block.1.0              Conv2d          44.3655    28,800
+  3     features.6.1.block.1.0              Conv2d          44.1571    28,800
+  4     features.5.1.block.1.0              Conv2d          28.4991    16,800
+  5     features.5.2.block.1.0              Conv2d          27.2683    16,800
+  6     features.6.0.block.1.0              Conv2d          26.4869    16,800
+  7     features.5.0.block.1.0              Conv2d          19.7693    12,000
+  8     features.3.1.block.1.0              Conv2d          10.6348    6,000
+  9     features.4.0.block.1.0              Conv2d          9.5888     2,160
+  10    features.3.0.block.1.0              Conv2d          7.7098     3,600
+
+  Total layer time: 290.32 ms
+
+  Full results saved to: results/detailed_layers_20260507_134130/architecture/efficientnet_b0_layers.csv
+  Chart saved to: results/detailed_layers_20260507_134130/architecture/efficientnet_b0_layers.png
+  [architecture] shufflenet_v2_x1_0
+/opt/homebrew/anaconda3/lib/python3.13/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/homebrew/anaconda3/lib/python3.13/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ShuffleNet_V2_X1_0_Weights.IMAGENET1K_V1`. You can also use `weights=ShuffleNet_V2_X1_0_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+
+======================================================================
+  Layer Analysis: shufflenet_v2_x1_0 on cpu
+  151 layers, 20 runs each
+======================================================================
+  Rank  Layer                               Type            Mean(ms)   Params
+  ----- ----------------------------------- --------------- ---------- ----------
+  1     stage4.0.branch1.0                  Conv2d          9.9127     2,088
+  2     stage4.0.branch2.3                  Conv2d          9.4871     2,088
+  3     stage3.0.branch1.0                  Conv2d          4.9956     1,044
+  4     stage3.0.branch2.3                  Conv2d          4.7978     1,044
+  5     stage2.0.branch2.3                  Conv2d          2.5951     522
+  6     stage2.0.branch1.0                  Conv2d          1.1178     216
+  7     conv1.0                             Conv2d          0.3604     648
+  8     maxpool                             MaxPool2d       0.3216     0
+  9     stage3.2.branch2.5                  Conv2d          0.2704     13,456
+  10    fc                                  Linear          0.2443     1,025,000
+
+  Total layer time: 42.73 ms
+
+  Full results saved to: results/detailed_layers_20260507_134130/architecture/shufflenet_v2_x1_0_layers.csv
+  Chart saved to: results/detailed_layers_20260507_134130/architecture/shufflenet_v2_x1_0_layers.png
+  [architecture] yolov8n
+Traceback (most recent call last):
+  File "/Users/hobongs/Desktop/HoBong_study/26-1/탄중/temp/jetson_nano_edgeai/benchmark/layer_analyzer.py", line 261, in <module>
+    analyze_layers(args.model, args.device, args.num_runs, args.output_dir, args.model_dir)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hobongs/Desktop/HoBong_study/26-1/탄중/temp/jetson_nano_edgeai/benchmark/layer_analyzer.py", line 186, in analyze_layers
+    raise FileNotFoundError(f"TorchScript file not found: {ts_path}")
+FileNotFoundError: TorchScript file not found: models/yolov8n.torchscript
+    [warn] architecture profile failed for yolov8n
+  [architecture] ssd_mobilenet_v2
+Traceback (most recent call last):
+  File "/Users/hobongs/Desktop/HoBong_study/26-1/탄중/temp/jetson_nano_edgeai/benchmark/layer_analyzer.py", line 261, in <module>
+    analyze_layers(args.model, args.device, args.num_runs, args.output_dir, args.model_dir)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hobongs/Desktop/HoBong_study/26-1/탄중/temp/jetson_nano_edgeai/benchmark/layer_analyzer.py", line 186, in analyze_layers
+    raise FileNotFoundError(f"TorchScript file not found: {ts_path}")
+FileNotFoundError: TorchScript file not found: models/ssd_mobilenet_v2.torchscript
+    [warn] architecture profile failed for ssd_mobilenet_v2
+
+[2/4] runtime-aware per-layer/per-node profiling
+  [runtime] mobilenetv3_small / pytorch_cpu
+[layer-runtime] mobilenetv3_small/pytorch_cpu status=ok records=46
+  [runtime] mobilenetv3_small / pytorch_cuda
+[layer-runtime] mobilenetv3_small/pytorch_cuda status=ok records=46
+  [runtime] mobilenetv3_small / tensorrt_fp32
+[layer-runtime] mobilenetv3_small/tensorrt_fp32 status=error records=0
+  error: No module named 'tensorrt'
+  [runtime] mobilenetv3_small / tensorrt_fp16
+[layer-runtime] mobilenetv3_small/tensorrt_fp16 status=error records=0
+  error: No module named 'tensorrt'
+  [runtime] mobilenetv3_small / tensorrt_int8
+[layer-runtime] mobilenetv3_small/tensorrt_int8 status=error records=0
+  error: No module named 'tensorrt'
+  [runtime] mobilenetv3_small / onnxrt_cuda
+[layer-runtime] mobilenetv3_small/onnxrt_cuda status=error records=0
+  error: ONNX not found for mobilenetv3_small: ['models/mobilenetv3_small.onnx']
+  [runtime] mobilenetv3_small / onnxrt_trt
+[layer-runtime] mobilenetv3_small/onnxrt_trt status=error records=0
+  error: ONNX not found for mobilenetv3_small: ['models/mobilenetv3_small.onnx']
+  [runtime] mobilenetv3_small / tflite_cpu
+[layer-runtime] mobilenetv3_small/tflite_cpu status=error records=0
+  error: TFLite model not found for mobilenetv3_small: ['models/mobilenetv3_small.tflite']
+  [runtime] mobilenetv3_small / tflite_gpu
+[layer-runtime] mobilenetv3_small/tflite_gpu status=error records=0
+  error: TFLite model not found for mobilenetv3_small: ['models/mobilenetv3_small.tflite']
+  [runtime] mobilenetv3_small / ncnn_cpu
+[layer-runtime] mobilenetv3_small/ncnn_cpu status=error records=0
+  error: ncnn model files not found for mobilenetv3_small: [('models/mobilenetv3_small_ncnn_model/model.param', 'models/mobilenetv3_small_ncnn_model/model.bin'), ('models/mobilenetv3_small.ncnn.param', 'models/mobilenetv3_small.ncnn.bin'), ('models/mobilenetv3_small.param', 'models/mobilenetv3_small.bin')]
+  [runtime] mobilenetv3_small / ncnn_vulkan
+[layer-runtime] mobilenetv3_small/ncnn_vulkan status=error records=0
+  error: ncnn model files not found for mobilenetv3_small: [('models/mobilenetv3_small_ncnn_model/model.param', 'models/mobilenetv3_small_ncnn_model/model.bin'), ('models/mobilenetv3_small.ncnn.param', 'models/mobilenetv3_small.ncnn.bin'), ('models/mobilenetv3_small.param', 'models/mobilenetv3_small.bin')]
+  [runtime] resnet50 / pytorch_cpu
+Downloading: "https://download.pytorch.org/models/resnet50-11ad3fa6.pth" to /Users/hobongs/.cache/torch/hub/checkpoints/resnet50-11ad3fa6.pth
+  0%|          | 0.00/97.8M [00:00<?, ?B/s]  1%|          | 1.12M/97.8M [00:00<00:12, 8.31MB/s]  2%|▏         | 2.00M/97.8M [00:00<00:15, 6.64MB/s]  3%|▎         | 2.75M/97.8M [00:00<00:18, 5.44MB/s]  3%|▎         | 3.38M/97.8M [00:00<00:20, 4.92MB/s]  4%|▍         | 3.88M/97.8M [00:00<00:23, 4.16MB/s]  4%|▍         | 4.38M/97.8M [00:01<00:26, 3.73MB/s]  5%|▍         | 4.75M/97.8M [00:01<00:26, 3.71MB/s]  5%|▌         | 5.12M/97.8M [00:01<00:26, 3.66MB/s]  6%|▌         | 5.50M/97.8M [00:01<00:29, 3.29MB/s]  6%|▌         | 5.88M/97.8M [00:01<00:28, 3.36MB/s]  6%|▋         | 6.25M/97.8M [00:01<00:32, 3.00MB/s]  7%|▋         | 6.62M/97.8M [00:01<00:37, 2.57MB/s]  7%|▋         | 7.25M/97.8M [00:01<00:29, 3.21MB/s]  8%|▊         | 7.62M/97.8M [00:02<00:28, 3.30MB/s]  8%|▊         | 8.00M/97.8M [00:02<00:27, 3.36MB/s]  9%|▊         | 8.38M/97.8M [00:02<00:31, 2.93MB/s]  9%|▉         | 9.00M/97.8M [00:02<00:25, 3.61MB/s] 10%|▉         | 9.50M/97.8M [00:02<00:24, 3.80MB/s] 10%|█         | 10.0M/97.8M [00:02<00:32, 2.88MB/s] 11%|█         | 10.6M/97.8M [00:03<00:26, 3.50MB/s] 12%|█▏        | 11.2M/97.8M [00:03<00:25, 3.60MB/s] 12%|█▏        | 11.8M/97.8M [00:03<00:24, 3.67MB/s] 13%|█▎        | 12.2M/97.8M [00:03<00:28, 3.15MB/s] 13%|█▎        | 12.9M/97.8M [00:03<00:25, 3.44MB/s] 14%|█▎        | 13.2M/97.8M [00:03<00:26, 3.41MB/s] 14%|█▍        | 13.6M/97.8M [00:04<00:29, 3.02MB/s] 14%|█▍        | 14.1M/97.8M [00:04<00:25, 3.48MB/s] 15%|█▍        | 14.6M/97.8M [00:04<00:22, 3.81MB/s] 15%|█▌        | 15.1M/97.8M [00:04<00:22, 3.80MB/s] 16%|█▌        | 15.6M/97.8M [00:04<00:26, 3.30MB/s] 16%|█▋        | 16.1M/97.8M [00:04<00:23, 3.66MB/s] 17%|█▋        | 16.6M/97.8M [00:04<00:26, 3.21MB/s] 17%|█▋        | 17.0M/97.8M [00:05<00:28, 2.93MB/s] 18%|█▊        | 17.8M/97.8M [00:05<00:22, 3.65MB/s] 19%|█▊        | 18.1M/97.8M [00:05<00:23, 3.50MB/s] 19%|█▉        | 18.6M/97.8M [00:05<00:28, 2.96MB/s] 20%|█▉        | 19.4M/97.8M [00:05<00:25, 3.27MB/s] 20%|██        | 20.0M/97.8M [00:05<00:21, 3.76MB/s] 21%|██        | 20.5M/97.8M [00:06<00:25, 3.16MB/s] 21%|██▏       | 20.9M/97.8M [00:06<00:24, 3.29MB/s] 22%|██▏       | 21.2M/97.8M [00:06<00:23, 3.41MB/s] 22%|██▏       | 21.6M/97.8M [00:06<00:23, 3.36MB/s] 22%|██▏       | 22.0M/97.8M [00:06<00:25, 3.08MB/s] 23%|██▎       | 22.4M/97.8M [00:06<00:28, 2.81MB/s] 23%|██▎       | 22.9M/97.8M [00:06<00:25, 3.13MB/s] 24%|██▍       | 23.4M/97.8M [00:07<00:26, 2.95MB/s] 24%|██▍       | 23.9M/97.8M [00:07<00:23, 3.24MB/s] 25%|██▍       | 24.4M/97.8M [00:07<00:22, 3.40MB/s] 25%|██▌       | 24.8M/97.8M [00:07<00:21, 3.51MB/s] 26%|██▌       | 25.1M/97.8M [00:07<00:24, 3.12MB/s] 26%|██▌       | 25.5M/97.8M [00:07<00:25, 3.00MB/s] 26%|██▋       | 25.9M/97.8M [00:07<00:27, 2.77MB/s] 27%|██▋       | 26.4M/97.8M [00:08<00:28, 2.67MB/s] 27%|██▋       | 26.9M/97.8M [00:08<00:23, 3.11MB/s] 28%|██▊       | 27.2M/97.8M [00:08<00:22, 3.25MB/s] 29%|██▊       | 27.9M/97.8M [00:08<00:18, 3.96MB/s] 29%|██▉       | 28.4M/97.8M [00:08<00:20, 3.49MB/s] 29%|██▉       | 28.8M/97.8M [00:08<00:20, 3.50MB/s] 30%|██▉       | 29.1M/97.8M [00:08<00:22, 3.25MB/s] 30%|███       | 29.8M/97.8M [00:09<00:18, 3.85MB/s] 31%|███       | 30.2M/97.8M [00:09<00:20, 3.46MB/s] 32%|███▏      | 30.9M/97.8M [00:09<00:19, 3.63MB/s] 32%|███▏      | 31.5M/97.8M [00:09<00:18, 3.70MB/s] 33%|███▎      | 31.9M/97.8M [00:09<00:21, 3.19MB/s] 33%|███▎      | 32.8M/97.8M [00:09<00:17, 4.00MB/s] 34%|███▍      | 33.2M/97.8M [00:10<00:20, 3.36MB/s] 34%|███▍      | 33.6M/97.8M [00:10<00:20, 3.31MB/s] 35%|███▍      | 34.1M/97.8M [00:10<00:18, 3.59MB/s] 35%|███▌      | 34.5M/97.8M [00:10<00:18, 3.53MB/s] 36%|███▌      | 34.9M/97.8M [00:10<00:19, 3.46MB/s] 36%|███▌      | 35.2M/97.8M [00:10<00:23, 2.83MB/s] 36%|███▋      | 35.6M/97.8M [00:10<00:22, 2.86MB/s] 37%|███▋      | 36.0M/97.8M [00:11<00:22, 2.86MB/s] 37%|███▋      | 36.4M/97.8M [00:11<00:26, 2.46MB/s] 38%|███▊      | 36.8M/97.8M [00:11<00:31, 2.06MB/s] 38%|███▊      | 37.4M/97.8M [00:11<00:23, 2.70MB/s] 39%|███▊      | 37.8M/97.8M [00:11<00:23, 2.73MB/s] 39%|███▉      | 38.1M/97.8M [00:12<00:31, 2.01MB/s] 39%|███▉      | 38.6M/97.8M [00:12<00:27, 2.26MB/s] 40%|███▉      | 38.9M/97.8M [00:12<00:29, 2.09MB/s] 40%|████      | 39.5M/97.8M [00:12<00:22, 2.69MB/s] 41%|████      | 40.0M/97.8M [00:13<00:38, 1.56MB/s] 42%|████▏     | 40.6M/97.8M [00:13<00:28, 2.13MB/s] 42%|████▏     | 41.0M/97.8M [00:13<00:28, 2.08MB/s] 42%|████▏     | 41.5M/97.8M [00:13<00:30, 1.92MB/s] 43%|████▎     | 41.8M/97.8M [00:14<00:31, 1.86MB/s] 43%|████▎     | 42.1M/97.8M [00:14<00:29, 1.95MB/s] 44%|████▎     | 42.6M/97.8M [00:14<00:32, 1.77MB/s] 44%|████▍     | 43.2M/97.8M [00:14<00:25, 2.22MB/s] 44%|████▍     | 43.5M/97.8M [00:14<00:28, 2.00MB/s] 45%|████▍     | 43.9M/97.8M [00:15<00:26, 2.12MB/s] 45%|████▌     | 44.2M/97.8M [00:15<00:33, 1.67MB/s] 46%|████▌     | 44.5M/97.8M [00:15<00:34, 1.62MB/s] 46%|████▌     | 45.1M/97.8M [00:15<00:23, 2.38MB/s] 47%|████▋     | 45.5M/97.8M [00:15<00:21, 2.56MB/s] 47%|████▋     | 45.9M/97.8M [00:16<00:26, 2.06MB/s] 47%|████▋     | 46.2M/97.8M [00:16<00:25, 2.10MB/s] 48%|████▊     | 46.9M/97.8M [00:16<00:20, 2.61MB/s] 48%|████▊     | 47.4M/97.8M [00:16<00:19, 2.70MB/s] 49%|████▉     | 48.0M/97.8M [00:16<00:15, 3.32MB/s] 49%|████▉     | 48.4M/97.8M [00:17<00:19, 2.65MB/s] 50%|████▉     | 48.8M/97.8M [00:17<00:20, 2.49MB/s] 51%|█████     | 49.6M/97.8M [00:17<00:19, 2.53MB/s] 51%|█████     | 50.0M/97.8M [00:17<00:19, 2.61MB/s] 52%|█████▏    | 50.4M/97.8M [00:17<00:20, 2.45MB/s] 52%|█████▏    | 50.6M/97.8M [00:18<00:22, 2.21MB/s] 52%|█████▏    | 50.9M/97.8M [00:18<00:28, 1.75MB/s] 53%|█████▎    | 51.5M/97.8M [00:18<00:19, 2.50MB/s] 53%|█████▎    | 51.9M/97.8M [00:18<00:18, 2.57MB/s] 53%|█████▎    | 52.2M/97.8M [00:18<00:21, 2.19MB/s] 54%|█████▍    | 53.0M/97.8M [00:19<00:15, 3.07MB/s] 55%|█████▍    | 53.4M/97.8M [00:19<00:15, 2.97MB/s] 55%|█████▍    | 53.8M/97.8M [00:19<00:17, 2.64MB/s] 55%|█████▌    | 54.1M/97.8M [00:19<00:18, 2.43MB/s] 56%|█████▌    | 54.5M/97.8M [00:19<00:23, 1.97MB/s] 57%|█████▋    | 55.4M/97.8M [00:20<00:15, 2.94MB/s] 57%|█████▋    | 56.0M/97.8M [00:20<00:14, 2.93MB/s] 58%|█████▊    | 56.4M/97.8M [00:20<00:16, 2.71MB/s] 58%|█████▊    | 56.8M/97.8M [00:20<00:16, 2.64MB/s] 58%|█████▊    | 57.1M/97.8M [00:20<00:16, 2.57MB/s] 59%|█████▉    | 57.5M/97.8M [00:20<00:17, 2.42MB/s] 60%|█████▉    | 58.6M/97.8M [00:21<00:09, 4.12MB/s] 60%|██████    | 59.1M/97.8M [00:21<00:12, 3.34MB/s] 61%|██████    | 59.6M/97.8M [00:21<00:11, 3.35MB/s] 61%|██████▏   | 60.1M/97.8M [00:21<00:12, 3.23MB/s] 62%|██████▏   | 60.5M/97.8M [00:21<00:13, 2.81MB/s] 62%|██████▏   | 60.9M/97.8M [00:22<00:16, 2.38MB/s] 63%|██████▎   | 61.8M/97.8M [00:22<00:13, 2.71MB/s] 64%|██████▎   | 62.1M/97.8M [00:22<00:14, 2.60MB/s] 64%|██████▍   | 62.5M/97.8M [00:22<00:15, 2.46MB/s] 64%|██████▍   | 62.8M/97.8M [00:22<00:16, 2.27MB/s] 64%|██████▍   | 63.0M/97.8M [00:23<00:18, 1.98MB/s] 65%|██████▍   | 63.5M/97.8M [00:23<00:14, 2.40MB/s] 65%|██████▌   | 63.8M/97.8M [00:23<00:17, 2.09MB/s] 66%|██████▌   | 64.1M/97.8M [00:23<00:16, 2.20MB/s] 66%|██████▌   | 64.5M/97.8M [00:23<00:15, 2.21MB/s] 66%|██████▋   | 64.9M/97.8M [00:23<00:15, 2.17MB/s] 67%|██████▋   | 65.1M/97.8M [00:24<00:15, 2.22MB/s] 67%|██████▋   | 65.6M/97.8M [00:24<00:12, 2.70MB/s] 67%|██████▋   | 66.0M/97.8M [00:24<00:16, 2.05MB/s] 68%|██████▊   | 66.5M/97.8M [00:24<00:12, 2.57MB/s] 68%|██████▊   | 66.9M/97.8M [00:24<00:12, 2.59MB/s] 69%|██████▉   | 67.2M/97.8M [00:24<00:11, 2.70MB/s] 69%|██████▉   | 67.6M/97.8M [00:24<00:11, 2.74MB/s] 70%|██████▉   | 68.0M/97.8M [00:25<00:10, 2.90MB/s] 70%|██████▉   | 68.4M/97.8M [00:25<00:09, 3.11MB/s] 70%|███████   | 68.8M/97.8M [00:25<00:09, 3.22MB/s] 71%|███████   | 69.1M/97.8M [00:25<00:10, 2.96MB/s] 71%|███████▏  | 69.9M/97.8M [00:25<00:07, 4.02MB/s] 72%|███████▏  | 70.4M/97.8M [00:25<00:07, 3.61MB/s] 72%|███████▏  | 70.8M/97.8M [00:25<00:07, 3.58MB/s] 73%|███████▎  | 71.1M/97.8M [00:26<00:09, 3.08MB/s] 74%|███████▎  | 72.0M/97.8M [00:26<00:06, 4.01MB/s] 74%|███████▍  | 72.5M/97.8M [00:26<00:06, 3.84MB/s] 75%|███████▍  | 73.0M/97.8M [00:26<00:07, 3.31MB/s] 75%|███████▌  | 73.5M/97.8M [00:26<00:07, 3.56MB/s] 76%|███████▌  | 73.9M/97.8M [00:26<00:06, 3.60MB/s] 76%|███████▌  | 74.2M/97.8M [00:26<00:07, 3.41MB/s] 76%|███████▋  | 74.6M/97.8M [00:27<00:08, 2.93MB/s] 77%|███████▋  | 75.1M/97.8M [00:27<00:06, 3.40MB/s] 77%|███████▋  | 75.6M/97.8M [00:27<00:06, 3.62MB/s] 78%|███████▊  | 76.1M/97.8M [00:27<00:07, 3.00MB/s] 79%|███████▊  | 76.9M/97.8M [00:27<00:06, 3.32MB/s] 79%|███████▉  | 77.2M/97.8M [00:27<00:06, 3.40MB/s] 80%|███████▉  | 77.8M/97.8M [00:28<00:06, 3.08MB/s] 80%|████████  | 78.4M/97.8M [00:28<00:05, 3.72MB/s] 81%|████████  | 78.9M/97.8M [00:28<00:05, 3.78MB/s] 81%|████████  | 79.4M/97.8M [00:28<00:06, 2.90MB/s] 82%|████████▏ | 79.9M/97.8M [00:28<00:06, 3.05MB/s] 82%|████████▏ | 80.5M/97.8M [00:28<00:05, 3.43MB/s] 83%|████████▎ | 81.0M/97.8M [00:29<00:04, 3.75MB/s] 83%|████████▎ | 81.5M/97.8M [00:29<00:05, 3.39MB/s] 84%|████████▎ | 81.9M/97.8M [00:29<00:04, 3.46MB/s] 84%|████████▍ | 82.2M/97.8M [00:29<00:04, 3.45MB/s] 85%|████████▍ | 82.8M/97.8M [00:29<00:05, 3.03MB/s] 85%|████████▌ | 83.4M/97.8M [00:29<00:04, 3.52MB/s] 86%|████████▌ | 83.8M/97.8M [00:29<00:04, 3.60MB/s] 86%|████████▌ | 84.1M/97.8M [00:29<00:04, 3.54MB/s] 86%|████████▋ | 84.5M/97.8M [00:30<00:04, 3.05MB/s] 87%|████████▋ | 85.0M/97.8M [00:30<00:03, 3.48MB/s] 87%|████████▋ | 85.5M/97.8M [00:30<00:03, 3.44MB/s] 88%|████████▊ | 86.0M/97.8M [00:30<00:03, 3.68MB/s] 88%|████████▊ | 86.4M/97.8M [00:30<00:03, 3.13MB/s] 89%|████████▉ | 87.0M/97.8M [00:30<00:03, 3.77MB/s] 89%|████████▉ | 87.5M/97.8M [00:31<00:03, 3.44MB/s] 90%|████████▉ | 88.0M/97.8M [00:31<00:03, 3.24MB/s] 90%|█████████ | 88.4M/97.8M [00:31<00:02, 3.32MB/s] 91%|█████████ | 88.8M/97.8M [00:31<00:02, 3.16MB/s] 91%|█████████▏| 89.2M/97.8M [00:31<00:02, 3.53MB/s] 92%|█████████▏| 89.6M/97.8M [00:31<00:02, 3.18MB/s] 92%|█████████▏| 90.2M/97.8M [00:31<00:02, 3.65MB/s] 93%|█████████▎| 90.8M/97.8M [00:31<00:01, 4.01MB/s] 93%|█████████▎| 91.2M/97.8M [00:32<00:01, 3.67MB/s] 94%|█████████▎| 91.6M/97.8M [00:32<00:01, 3.32MB/s] 94%|█████████▍| 92.1M/97.8M [00:32<00:01, 3.68MB/s] 95%|█████████▍| 92.5M/97.8M [00:32<00:01, 3.45MB/s] 95%|█████████▌| 93.0M/97.8M [00:32<00:01, 3.72MB/s] 95%|█████████▌| 93.4M/97.8M [00:32<00:01, 2.78MB/s] 96%|█████████▌| 93.9M/97.8M [00:33<00:01, 3.21MB/s] 96%|█████████▋| 94.2M/97.8M [00:33<00:01, 3.32MB/s] 97%|█████████▋| 94.6M/97.8M [00:33<00:01, 2.82MB/s] 97%|█████████▋| 95.1M/97.8M [00:33<00:00, 3.25MB/s] 98%|█████████▊| 95.5M/97.8M [00:33<00:00, 3.31MB/s] 98%|█████████▊| 95.9M/97.8M [00:33<00:00, 3.32MB/s] 98%|█████████▊| 96.2M/97.8M [00:33<00:00, 2.85MB/s] 99%|█████████▉| 96.8M/97.8M [00:33<00:00, 3.29MB/s] 99%|█████████▉| 97.1M/97.8M [00:34<00:00, 3.44MB/s]100%|█████████▉| 97.6M/97.8M [00:34<00:00, 3.40MB/s]100%|██████████| 97.8M/97.8M [00:34<00:00, 2.99MB/s]
+[layer-runtime] resnet50/pytorch_cpu status=ok records=36
+  [runtime] resnet50 / pytorch_cuda
+[layer-runtime] resnet50/pytorch_cuda status=ok records=36
+  [runtime] resnet50 / tensorrt_fp32
+[layer-runtime] resnet50/tensorrt_fp32 status=error records=0
+  error: No module named 'tensorrt'
+  [runtime] resnet50 / tensorrt_fp16
+[layer-runtime] resnet50/tensorrt_fp16 status=error records=0
+  error: No module named 'tensorrt'
+  [runtime] resnet50 / tensorrt_int8
+[layer-runtime] resnet50/tensorrt_int8 status=error records=0
+  error: No module named 'tensorrt'
+  [runtime] resnet50 / onnxrt_cuda
+[layer-runtime] resnet50/onnxrt_cuda status=error records=0
+  error: ONNX not found for resnet50: ['models/resnet50.onnx']
+  [runtime] resnet50 / onnxrt_trt
+[layer-runtime] resnet50/onnxrt_trt status=error records=0
+  error: ONNX not found for resnet50: ['models/resnet50.onnx']
+  [runtime] resnet50 / tflite_cpu
+[layer-runtime] resnet50/tflite_cpu status=error records=0
+  error: TFLite model not found for resnet50: ['models/resnet50.tflite']
+  [runtime] resnet50 / tflite_gpu
+[layer-runtime] resnet50/tflite_gpu status=error records=0
+  error: TFLite model not found for resnet50: ['models/resnet50.tflite']
+  [runtime] resnet50 / ncnn_cpu
+[layer-runtime] resnet50/ncnn_cpu status=error records=0
+  error: ncnn model files not found for resnet50: [('models/resnet50_ncnn_model/model.param', 'models/resnet50_ncnn_model/model.bin'), ('models/resnet50.ncnn.param', 'models/resnet50.ncnn.bin'), ('models/resnet50.param', 'models/resnet50.bin')]
+  [runtime] resnet50 / ncnn_vulkan
+[layer-runtime] resnet50/ncnn_vulkan status=error records=0
+  error: ncnn model files not found for resnet50: [('models/resnet50_ncnn_model/model.param', 'models/resnet50_ncnn_model/model.bin'), ('models/resnet50.ncnn.param', 'models/resnet50.ncnn.bin'), ('models/resnet50.param', 'models/resnet50.bin')]
+  [runtime] efficientnet_b0 / pytorch_cpu
+[layer-runtime] efficientnet_b0/pytorch_cpu status=ok records=42
+  [runtime] efficientnet_b0 / pytorch_cuda
+[layer-runtime] efficientnet_b0/pytorch_cuda status=ok records=42
+  [runtime] efficientnet_b0 / tensorrt_fp32
+[layer-runtime] efficientnet_b0/tensorrt_fp32 status=error records=0
+  error: No module named 'tensorrt'
+  [runtime] efficientnet_b0 / tensorrt_fp16
+[layer-runtime] efficientnet_b0/tensorrt_fp16 status=error records=0
+  error: No module named 'tensorrt'
+  [runtime] efficientnet_b0 / tensorrt_int8
+[layer-runtime] efficientnet_b0/tensorrt_int8 status=error records=0
+  error: No module named 'tensorrt'
+  [runtime] efficientnet_b0 / onnxrt_cuda
+[layer-runtime] efficientnet_b0/onnxrt_cuda status=error records=0
+  error: ONNX not found for efficientnet_b0: ['models/efficientnet_b0.onnx']
+  [runtime] efficientnet_b0 / onnxrt_trt
+[layer-runtime] efficientnet_b0/onnxrt_trt status=error records=0
+  error: ONNX not found for efficientnet_b0: ['models/efficientnet_b0.onnx']
+  [runtime] efficientnet_b0 / tflite_cpu
+[layer-runtime] efficientnet_b0/tflite_cpu status=error records=0
+  error: TFLite model not found for efficientnet_b0: ['models/efficientnet_b0.tflite']
+  [runtime] efficientnet_b0 / tflite_gpu
+[layer-runtime] efficientnet_b0/tflite_gpu status=error records=0
+  error: TFLite model not found for efficientnet_b0: ['models/efficientnet_b0.tflite']
+  [runtime] efficientnet_b0 / ncnn_cpu
+[layer-runtime] efficientnet_b0/ncnn_cpu status=error records=0
+  error: ncnn model files not found for efficientnet_b0: [('models/efficientnet_b0_ncnn_model/model.param', 'models/efficientnet_b0_ncnn_model/model.bin'), ('models/efficientnet_b0.ncnn.param', 'models/efficientnet_b0.ncnn.bin'), ('models/efficientnet_b0.param', 'models/efficientnet_b0.bin')]
+  [runtime] efficientnet_b0 / ncnn_vulkan
+[layer-runtime] efficientnet_b0/ncnn_vulkan status=error records=0
+  error: ncnn model files not found for efficientnet_b0: [('models/efficientnet_b0_ncnn_model/model.param', 'models/efficientnet_b0_ncnn_model/model.bin'), ('models/efficientnet_b0.ncnn.param', 'models/efficientnet_b0.ncnn.bin'), ('models/efficientnet_b0.param', 'models/efficientnet_b0.bin')]
+  [runtime] shufflenet_v2_x1_0 / pytorch_cpu
+[layer-runtime] shufflenet_v2_x1_0/pytorch_cpu status=ok records=42
+  [runtime] shufflenet_v2_x1_0 / pytorch_cuda
+[layer-runtime] shufflenet_v2_x1_0/pytorch_cuda status=ok records=42
+  [runtime] shufflenet_v2_x1_0 / tensorrt_fp32
+[layer-runtime] shufflenet_v2_x1_0/tensorrt_fp32 status=error records=0
+  error: No module named 'tensorrt'
+  [runtime] shufflenet_v2_x1_0 / tensorrt_fp16
+[layer-runtime] shufflenet_v2_x1_0/tensorrt_fp16 status=error records=0
+  error: No module named 'tensorrt'
+  [runtime] shufflenet_v2_x1_0 / tensorrt_int8
+[layer-runtime] shufflenet_v2_x1_0/tensorrt_int8 status=error records=0
+  error: No module named 'tensorrt'
+  [runtime] shufflenet_v2_x1_0 / onnxrt_cuda
+[layer-runtime] shufflenet_v2_x1_0/onnxrt_cuda status=error records=0
+  error: ONNX not found for shufflenet_v2_x1_0: ['models/shufflenet_v2_x1_0.onnx']
+  [runtime] shufflenet_v2_x1_0 / onnxrt_trt
+[layer-runtime] shufflenet_v2_x1_0/onnxrt_trt status=error records=0
+  error: ONNX not found for shufflenet_v2_x1_0: ['models/shufflenet_v2_x1_0.onnx']
+  [runtime] shufflenet_v2_x1_0 / tflite_cpu
+[layer-runtime] shufflenet_v2_x1_0/tflite_cpu status=error records=0
+  error: TFLite model not found for shufflenet_v2_x1_0: ['models/shufflenet_v2_x1_0.tflite']
+  [runtime] shufflenet_v2_x1_0 / tflite_gpu
+[layer-runtime] shufflenet_v2_x1_0/tflite_gpu status=error records=0
+  error: TFLite model not found for shufflenet_v2_x1_0: ['models/shufflenet_v2_x1_0.tflite']
+  [runtime] shufflenet_v2_x1_0 / ncnn_cpu
+[layer-runtime] shufflenet_v2_x1_0/ncnn_cpu status=error records=0
+  error: ncnn model files not found for shufflenet_v2_x1_0: [('models/shufflenet_v2_x1_0_ncnn_model/model.param', 'models/shufflenet_v2_x1_0_ncnn_model/model.bin'), ('models/shufflenet_v2_x1_0.ncnn.param', 'models/shufflenet_v2_x1_0.ncnn.bin'), ('models/shufflenet_v2_x1_0.param', 'models/shufflenet_v2_x1_0.bin')]
+  [runtime] shufflenet_v2_x1_0 / ncnn_vulkan
+[layer-runtime] shufflenet_v2_x1_0/ncnn_vulkan status=error records=0
+  error: ncnn model files not found for shufflenet_v2_x1_0: [('models/shufflenet_v2_x1_0_ncnn_model/model.param', 'models/shufflenet_v2_x1_0_ncnn_model/model.bin'), ('models/shufflenet_v2_x1_0.ncnn.param', 'models/shufflenet_v2_x1_0.ncnn.bin'), ('models/shufflenet_v2_x1_0.param', 'models/shufflenet_v2_x1_0.bin')]
+  [runtime] yolov8n / pytorch_cpu
+[layer-runtime] yolov8n/pytorch_cpu status=error records=0
+  error: TorchScript not found: models/yolov8n.torchscript
+  [runtime] yolov8n / pytorch_cuda
+[layer-runtime] yolov8n/pytorch_cuda status=error records=0
+  error: TorchScript not found: models/yolov8n.torchscript
+  [runtime] yolov8n / tensorrt_fp32
+[layer-runtime] yolov8n/tensorrt_fp32 status=error records=0
+  error: No module named 'tensorrt'
+  [runtime] yolov8n / tensorrt_fp16
+[layer-runtime] yolov8n/tensorrt_fp16 status=error records=0
+  error: No module named 'tensorrt'
+  [runtime] yolov8n / tensorrt_int8
+[layer-runtime] yolov8n/tensorrt_int8 status=error records=0
+  error: No module named 'tensorrt'
+  [runtime] yolov8n / onnxrt_cuda
+[layer-runtime] yolov8n/onnxrt_cuda status=error records=0
+  error: ONNX not found for yolov8n: ['models/yolov8n.onnx']
+  [runtime] yolov8n / onnxrt_trt
+[layer-runtime] yolov8n/onnxrt_trt status=error records=0
+  error: ONNX not found for yolov8n: ['models/yolov8n.onnx']
+  [runtime] yolov8n / tflite_cpu
+[layer-runtime] yolov8n/tflite_cpu status=error records=0
+  error: TFLite model not found for yolov8n: ['models/yolov8n.tflite', 'models/yolov8n_fp16.tflite', 'models/yolov8n_float32.tflite']
+  [runtime] yolov8n / tflite_gpu
+[layer-runtime] yolov8n/tflite_gpu status=error records=0
+  error: TFLite model not found for yolov8n: ['models/yolov8n.tflite', 'models/yolov8n_fp16.tflite', 'models/yolov8n_float32.tflite']
+  [runtime] yolov8n / ncnn_cpu
+[layer-runtime] yolov8n/ncnn_cpu status=error records=0
+  error: ncnn model files not found for yolov8n: [('models/yolov8n_ncnn_model/model.param', 'models/yolov8n_ncnn_model/model.bin'), ('models/yolov8n.ncnn.param', 'models/yolov8n.ncnn.bin'), ('models/yolov8n.param', 'models/yolov8n.bin')]
+  [runtime] yolov8n / ncnn_vulkan
+[layer-runtime] yolov8n/ncnn_vulkan status=error records=0
+  error: ncnn model files not found for yolov8n: [('models/yolov8n_ncnn_model/model.param', 'models/yolov8n_ncnn_model/model.bin'), ('models/yolov8n.ncnn.param', 'models/yolov8n.ncnn.bin'), ('models/yolov8n.param', 'models/yolov8n.bin')]
+  [runtime] ssd_mobilenet_v2 / pytorch_cpu
+[layer-runtime] ssd_mobilenet_v2/pytorch_cpu status=error records=0
+  error: TorchScript not found: models/ssd_mobilenet_v2.torchscript
+  [runtime] ssd_mobilenet_v2 / pytorch_cuda
+[layer-runtime] ssd_mobilenet_v2/pytorch_cuda status=error records=0
+  error: TorchScript not found: models/ssd_mobilenet_v2.torchscript
+  [runtime] ssd_mobilenet_v2 / tensorrt_fp32
+[layer-runtime] ssd_mobilenet_v2/tensorrt_fp32 status=error records=0
+  error: No module named 'tensorrt'
+  [runtime] ssd_mobilenet_v2 / tensorrt_fp16
+[layer-runtime] ssd_mobilenet_v2/tensorrt_fp16 status=error records=0
+  error: No module named 'tensorrt'
+  [runtime] ssd_mobilenet_v2 / tensorrt_int8
+[layer-runtime] ssd_mobilenet_v2/tensorrt_int8 status=error records=0
+  error: No module named 'tensorrt'
+  [runtime] ssd_mobilenet_v2 / onnxrt_cuda
+[layer-runtime] ssd_mobilenet_v2/onnxrt_cuda status=error records=0
+  error: ONNX not found for ssd_mobilenet_v2: ['models/ssd_mobilenet_v2_raw.onnx', 'models/ssd_mobilenet_v2_effnms.onnx', 'models/ssd_mobilenet_v2.onnx', 'models/ssd_mobilenet_v2.onnx']
+  [runtime] ssd_mobilenet_v2 / onnxrt_trt
+[layer-runtime] ssd_mobilenet_v2/onnxrt_trt status=error records=0
+  error: ONNX not found for ssd_mobilenet_v2: ['models/ssd_mobilenet_v2_raw.onnx', 'models/ssd_mobilenet_v2_effnms.onnx', 'models/ssd_mobilenet_v2.onnx', 'models/ssd_mobilenet_v2.onnx']
+  [runtime] ssd_mobilenet_v2 / tflite_cpu
+[layer-runtime] ssd_mobilenet_v2/tflite_cpu status=error records=0
+  error: TFLite model not found for ssd_mobilenet_v2: ['models/ssd_mobilenet_v2.tflite', 'models/ssd_mobilenet_v2_raw.tflite', 'models/ssd_mobilenet_v2_float32.tflite']
+  [runtime] ssd_mobilenet_v2 / tflite_gpu
+[layer-runtime] ssd_mobilenet_v2/tflite_gpu status=error records=0
+  error: TFLite model not found for ssd_mobilenet_v2: ['models/ssd_mobilenet_v2.tflite', 'models/ssd_mobilenet_v2_raw.tflite', 'models/ssd_mobilenet_v2_float32.tflite']
+  [runtime] ssd_mobilenet_v2 / ncnn_cpu
+[layer-runtime] ssd_mobilenet_v2/ncnn_cpu status=error records=0
+  error: ncnn model files not found for ssd_mobilenet_v2: [('models/ssd_mobilenet_v2_ncnn_model/model.param', 'models/ssd_mobilenet_v2_ncnn_model/model.bin'), ('models/ssd_mobilenet_v2.ncnn.param', 'models/ssd_mobilenet_v2.ncnn.bin'), ('models/ssd_mobilenet_v2.param', 'models/ssd_mobilenet_v2.bin'), ('models/ssd_mobilenet_v2.ncnn.param', 'models/ssd_mobilenet_v2.ncnn.bin'), ('models/ssd_mobilenet_v2_raw.param', 'models/ssd_mobilenet_v2_raw.bin'), ('models/ssd_mobilenet_v2_raw.ncnn.param', 'models/ssd_mobilenet_v2_raw.ncnn.bin')]
+  [runtime] ssd_mobilenet_v2 / ncnn_vulkan
+[layer-runtime] ssd_mobilenet_v2/ncnn_vulkan status=error records=0
+  error: ncnn model files not found for ssd_mobilenet_v2: [('models/ssd_mobilenet_v2_ncnn_model/model.param', 'models/ssd_mobilenet_v2_ncnn_model/model.bin'), ('models/ssd_mobilenet_v2.ncnn.param', 'models/ssd_mobilenet_v2.ncnn.bin'), ('models/ssd_mobilenet_v2.param', 'models/ssd_mobilenet_v2.bin'), ('models/ssd_mobilenet_v2.ncnn.param', 'models/ssd_mobilenet_v2.ncnn.bin'), ('models/ssd_mobilenet_v2_raw.param', 'models/ssd_mobilenet_v2_raw.bin'), ('models/ssd_mobilenet_v2_raw.ncnn.param', 'models/ssd_mobilenet_v2_raw.ncnn.bin')]
+  [saved] results/detailed_layers_20260507_134130/consolidated_layer_runtime_detailed.csv
+[3/4] layer power skipped
+[4/4] timeline traces skipped
+
+[DONE] detailed layer data saved to: results/detailed_layers_20260507_134130
+results/detailed_layers_20260507_134130/architecture/efficientnet_b0_layers.csv
+results/detailed_layers_20260507_134130/architecture/efficientnet_b0_layers.png
+results/detailed_layers_20260507_134130/architecture/mobilenetv3_small_layers.csv
+results/detailed_layers_20260507_134130/architecture/mobilenetv3_small_layers.png
+results/detailed_layers_20260507_134130/architecture/resnet50_layers.csv
+results/detailed_layers_20260507_134130/architecture/resnet50_layers.png
+results/detailed_layers_20260507_134130/architecture/shufflenet_v2_x1_0_layers.csv
+results/detailed_layers_20260507_134130/architecture/shufflenet_v2_x1_0_layers.png
+results/detailed_layers_20260507_134130/consolidated_layer_runtime_detailed.csv
+results/detailed_layers_20260507_134130/layer_runtime/efficientnet_b0_ncnn_cpu.csv
+results/detailed_layers_20260507_134130/layer_runtime/efficientnet_b0_ncnn_cpu.json
+results/detailed_layers_20260507_134130/layer_runtime/efficientnet_b0_ncnn_vulkan.csv
+results/detailed_layers_20260507_134130/layer_runtime/efficientnet_b0_ncnn_vulkan.json
+results/detailed_layers_20260507_134130/layer_runtime/efficientnet_b0_onnxrt_cuda.csv
+results/detailed_layers_20260507_134130/layer_runtime/efficientnet_b0_onnxrt_cuda.json
+results/detailed_layers_20260507_134130/layer_runtime/efficientnet_b0_onnxrt_trt.csv
+results/detailed_layers_20260507_134130/layer_runtime/efficientnet_b0_onnxrt_trt.json
+results/detailed_layers_20260507_134130/layer_runtime/efficientnet_b0_pytorch_cpu.csv
+results/detailed_layers_20260507_134130/layer_runtime/efficientnet_b0_pytorch_cpu.json
+results/detailed_layers_20260507_134130/layer_runtime/efficientnet_b0_pytorch_cuda.csv
+results/detailed_layers_20260507_134130/layer_runtime/efficientnet_b0_pytorch_cuda.json
+results/detailed_layers_20260507_134130/layer_runtime/efficientnet_b0_tensorrt_fp16.csv
+results/detailed_layers_20260507_134130/layer_runtime/efficientnet_b0_tensorrt_fp16.json
+results/detailed_layers_20260507_134130/layer_runtime/efficientnet_b0_tensorrt_fp32.csv
+results/detailed_layers_20260507_134130/layer_runtime/efficientnet_b0_tensorrt_fp32.json
+results/detailed_layers_20260507_134130/layer_runtime/efficientnet_b0_tensorrt_int8.csv
+results/detailed_layers_20260507_134130/layer_runtime/efficientnet_b0_tensorrt_int8.json
+results/detailed_layers_20260507_134130/layer_runtime/efficientnet_b0_tflite_cpu.csv
+results/detailed_layers_20260507_134130/layer_runtime/efficientnet_b0_tflite_cpu.json
+results/detailed_layers_20260507_134130/layer_runtime/efficientnet_b0_tflite_gpu.csv
+results/detailed_layers_20260507_134130/layer_runtime/efficientnet_b0_tflite_gpu.json
+results/detailed_layers_20260507_134130/layer_runtime/mobilenetv3_small_ncnn_cpu.csv
+results/detailed_layers_20260507_134130/layer_runtime/mobilenetv3_small_ncnn_cpu.json
+results/detailed_layers_20260507_134130/layer_runtime/mobilenetv3_small_ncnn_vulkan.csv
+results/detailed_layers_20260507_134130/layer_runtime/mobilenetv3_small_ncnn_vulkan.json
+results/detailed_layers_20260507_134130/layer_runtime/mobilenetv3_small_onnxrt_cuda.csv
+results/detailed_layers_20260507_134130/layer_runtime/mobilenetv3_small_onnxrt_cuda.json
+results/detailed_layers_20260507_134130/layer_runtime/mobilenetv3_small_onnxrt_trt.csv
+results/detailed_layers_20260507_134130/layer_runtime/mobilenetv3_small_onnxrt_trt.json
+results/detailed_layers_20260507_134130/layer_runtime/mobilenetv3_small_pytorch_cpu.csv
+results/detailed_layers_20260507_134130/layer_runtime/mobilenetv3_small_pytorch_cpu.json
+results/detailed_layers_20260507_134130/layer_runtime/mobilenetv3_small_pytorch_cuda.csv
+results/detailed_layers_20260507_134130/layer_runtime/mobilenetv3_small_pytorch_cuda.json
+results/detailed_layers_20260507_134130/layer_runtime/mobilenetv3_small_tensorrt_fp16.csv
+results/detailed_layers_20260507_134130/layer_runtime/mobilenetv3_small_tensorrt_fp16.json
+results/detailed_layers_20260507_134130/layer_runtime/mobilenetv3_small_tensorrt_fp32.csv
+results/detailed_layers_20260507_134130/layer_runtime/mobilenetv3_small_tensorrt_fp32.json
+results/detailed_layers_20260507_134130/layer_runtime/mobilenetv3_small_tensorrt_int8.csv
+results/detailed_layers_20260507_134130/layer_runtime/mobilenetv3_small_tensorrt_int8.json
+results/detailed_layers_20260507_134130/layer_runtime/mobilenetv3_small_tflite_cpu.csv
+results/detailed_layers_20260507_134130/layer_runtime/mobilenetv3_small_tflite_cpu.json
+results/detailed_layers_20260507_134130/layer_runtime/mobilenetv3_small_tflite_gpu.csv
+results/detailed_layers_20260507_134130/layer_runtime/mobilenetv3_small_tflite_gpu.json
+results/detailed_layers_20260507_134130/layer_runtime/resnet50_ncnn_cpu.csv
+results/detailed_layers_20260507_134130/layer_runtime/resnet50_ncnn_cpu.json
+results/detailed_layers_20260507_134130/layer_runtime/resnet50_ncnn_vulkan.csv
+results/detailed_layers_20260507_134130/layer_runtime/resnet50_ncnn_vulkan.json
+results/detailed_layers_20260507_134130/layer_runtime/resnet50_onnxrt_cuda.csv
+results/detailed_layers_20260507_134130/layer_runtime/resnet50_onnxrt_cuda.json
+results/detailed_layers_20260507_134130/layer_runtime/resnet50_onnxrt_trt.csv
+results/detailed_layers_20260507_134130/layer_runtime/resnet50_onnxrt_trt.json
+results/detailed_layers_20260507_134130/layer_runtime/resnet50_pytorch_cpu.csv
+results/detailed_layers_20260507_134130/layer_runtime/resnet50_pytorch_cpu.json
+results/detailed_layers_20260507_134130/layer_runtime/resnet50_pytorch_cuda.csv
+results/detailed_layers_20260507_134130/layer_runtime/resnet50_pytorch_cuda.json
+results/detailed_layers_20260507_134130/layer_runtime/resnet50_tensorrt_fp16.csv
+results/detailed_layers_20260507_134130/layer_runtime/resnet50_tensorrt_fp16.json
+results/detailed_layers_20260507_134130/layer_runtime/resnet50_tensorrt_fp32.csv
+results/detailed_layers_20260507_134130/layer_runtime/resnet50_tensorrt_fp32.json
+results/detailed_layers_20260507_134130/layer_runtime/resnet50_tensorrt_int8.csv
+results/detailed_layers_20260507_134130/layer_runtime/resnet50_tensorrt_int8.json
+results/detailed_layers_20260507_134130/layer_runtime/resnet50_tflite_cpu.csv
+results/detailed_layers_20260507_134130/layer_runtime/resnet50_tflite_cpu.json
+results/detailed_layers_20260507_134130/layer_runtime/resnet50_tflite_gpu.csv
+results/detailed_layers_20260507_134130/layer_runtime/resnet50_tflite_gpu.json
+results/detailed_layers_20260507_134130/layer_runtime/shufflenet_v2_x1_0_ncnn_cpu.csv
+results/detailed_layers_20260507_134130/layer_runtime/shufflenet_v2_x1_0_ncnn_cpu.json
+results/detailed_layers_20260507_134130/layer_runtime/shufflenet_v2_x1_0_ncnn_vulkan.csv
+results/detailed_layers_20260507_134130/layer_runtime/shufflenet_v2_x1_0_ncnn_vulkan.json
+results/detailed_layers_20260507_134130/layer_runtime/shufflenet_v2_x1_0_onnxrt_cuda.csv
+results/detailed_layers_20260507_134130/layer_runtime/shufflenet_v2_x1_0_onnxrt_cuda.json
+results/detailed_layers_20260507_134130/layer_runtime/shufflenet_v2_x1_0_onnxrt_trt.csv
+results/detailed_layers_20260507_134130/layer_runtime/shufflenet_v2_x1_0_onnxrt_trt.json
+results/detailed_layers_20260507_134130/layer_runtime/shufflenet_v2_x1_0_pytorch_cpu.csv
+results/detailed_layers_20260507_134130/layer_runtime/shufflenet_v2_x1_0_pytorch_cpu.json
+results/detailed_layers_20260507_134130/layer_runtime/shufflenet_v2_x1_0_pytorch_cuda.csv
+results/detailed_layers_20260507_134130/layer_runtime/shufflenet_v2_x1_0_pytorch_cuda.json
+results/detailed_layers_20260507_134130/layer_runtime/shufflenet_v2_x1_0_tensorrt_fp16.csv
+results/detailed_layers_20260507_134130/layer_runtime/shufflenet_v2_x1_0_tensorrt_fp16.json
+results/detailed_layers_20260507_134130/layer_runtime/shufflenet_v2_x1_0_tensorrt_fp32.csv
+results/detailed_layers_20260507_134130/layer_runtime/shufflenet_v2_x1_0_tensorrt_fp32.json
+results/detailed_layers_20260507_134130/layer_runtime/shufflenet_v2_x1_0_tensorrt_int8.csv
+results/detailed_layers_20260507_134130/layer_runtime/shufflenet_v2_x1_0_tensorrt_int8.json
+results/detailed_layers_20260507_134130/layer_runtime/shufflenet_v2_x1_0_tflite_cpu.csv
+results/detailed_layers_20260507_134130/layer_runtime/shufflenet_v2_x1_0_tflite_cpu.json
+results/detailed_layers_20260507_134130/layer_runtime/shufflenet_v2_x1_0_tflite_gpu.csv
+results/detailed_layers_20260507_134130/layer_runtime/shufflenet_v2_x1_0_tflite_gpu.json
+results/detailed_layers_20260507_134130/layer_runtime/ssd_mobilenet_v2_ncnn_cpu.csv
+results/detailed_layers_20260507_134130/layer_runtime/ssd_mobilenet_v2_ncnn_cpu.json
+results/detailed_layers_20260507_134130/layer_runtime/ssd_mobilenet_v2_ncnn_vulkan.csv
+results/detailed_layers_20260507_134130/layer_runtime/ssd_mobilenet_v2_ncnn_vulkan.json
+results/detailed_layers_20260507_134130/layer_runtime/ssd_mobilenet_v2_onnxrt_cuda.csv
+results/detailed_layers_20260507_134130/layer_runtime/ssd_mobilenet_v2_onnxrt_cuda.json
+results/detailed_layers_20260507_134130/layer_runtime/ssd_mobilenet_v2_onnxrt_trt.csv
+results/detailed_layers_20260507_134130/layer_runtime/ssd_mobilenet_v2_onnxrt_trt.json
+results/detailed_layers_20260507_134130/layer_runtime/ssd_mobilenet_v2_pytorch_cpu.csv
+results/detailed_layers_20260507_134130/layer_runtime/ssd_mobilenet_v2_pytorch_cpu.json
+results/detailed_layers_20260507_134130/layer_runtime/ssd_mobilenet_v2_pytorch_cuda.csv
+results/detailed_layers_20260507_134130/layer_runtime/ssd_mobilenet_v2_pytorch_cuda.json
+results/detailed_layers_20260507_134130/layer_runtime/ssd_mobilenet_v2_tensorrt_fp16.csv
+results/detailed_layers_20260507_134130/layer_runtime/ssd_mobilenet_v2_tensorrt_fp16.json
+results/detailed_layers_20260507_134130/layer_runtime/ssd_mobilenet_v2_tensorrt_fp32.csv
+results/detailed_layers_20260507_134130/layer_runtime/ssd_mobilenet_v2_tensorrt_fp32.json
+results/detailed_layers_20260507_134130/layer_runtime/ssd_mobilenet_v2_tensorrt_int8.csv
+results/detailed_layers_20260507_134130/layer_runtime/ssd_mobilenet_v2_tensorrt_int8.json
+results/detailed_layers_20260507_134130/layer_runtime/ssd_mobilenet_v2_tflite_cpu.csv
+results/detailed_layers_20260507_134130/layer_runtime/ssd_mobilenet_v2_tflite_cpu.json
+results/detailed_layers_20260507_134130/layer_runtime/ssd_mobilenet_v2_tflite_gpu.csv
+results/detailed_layers_20260507_134130/layer_runtime/ssd_mobilenet_v2_tflite_gpu.json
+results/detailed_layers_20260507_134130/layer_runtime/yolov8n_ncnn_cpu.csv
+results/detailed_layers_20260507_134130/layer_runtime/yolov8n_ncnn_cpu.json
+results/detailed_layers_20260507_134130/layer_runtime/yolov8n_ncnn_vulkan.csv
+results/detailed_layers_20260507_134130/layer_runtime/yolov8n_ncnn_vulkan.json
+results/detailed_layers_20260507_134130/layer_runtime/yolov8n_onnxrt_cuda.csv
+results/detailed_layers_20260507_134130/layer_runtime/yolov8n_onnxrt_cuda.json
+results/detailed_layers_20260507_134130/layer_runtime/yolov8n_onnxrt_trt.csv
+results/detailed_layers_20260507_134130/layer_runtime/yolov8n_onnxrt_trt.json
+results/detailed_layers_20260507_134130/layer_runtime/yolov8n_pytorch_cpu.csv
+results/detailed_layers_20260507_134130/layer_runtime/yolov8n_pytorch_cpu.json
+results/detailed_layers_20260507_134130/layer_runtime/yolov8n_pytorch_cuda.csv
+results/detailed_layers_20260507_134130/layer_runtime/yolov8n_pytorch_cuda.json
+results/detailed_layers_20260507_134130/layer_runtime/yolov8n_tensorrt_fp16.csv
+results/detailed_layers_20260507_134130/layer_runtime/yolov8n_tensorrt_fp16.json
+results/detailed_layers_20260507_134130/layer_runtime/yolov8n_tensorrt_fp32.csv
+results/detailed_layers_20260507_134130/layer_runtime/yolov8n_tensorrt_fp32.json
+results/detailed_layers_20260507_134130/layer_runtime/yolov8n_tensorrt_int8.csv
+results/detailed_layers_20260507_134130/layer_runtime/yolov8n_tensorrt_int8.json
+results/detailed_layers_20260507_134130/layer_runtime/yolov8n_tflite_cpu.csv
+results/detailed_layers_20260507_134130/layer_runtime/yolov8n_tflite_cpu.json
+results/detailed_layers_20260507_134130/layer_runtime/yolov8n_tflite_gpu.csv
+results/detailed_layers_20260507_134130/layer_runtime/yolov8n_tflite_gpu.json
+results/detailed_layers_20260507_134130/manifest.json

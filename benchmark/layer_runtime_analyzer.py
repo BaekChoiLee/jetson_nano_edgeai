@@ -390,7 +390,7 @@ def _profile_tflite(
                 "samples": per_op_samples.get(key, num_runs),
             }
         )
-    records.sort(key=lambda r: r["mean_ms"], reverse=True)
+    # records.sort(key=lambda r: r["mean_ms"], reverse=True)
 
     return {
         "status": "ok",
@@ -441,7 +441,7 @@ def _parse_ncnn_layer_lines(output_text):
                 "samples": int(arr.size),
             }
         )
-    records.sort(key=lambda r: r["mean_ms"], reverse=True)
+    # records.sort(key=lambda r: r["mean_ms"], reverse=True)
     return records
 
 
@@ -709,7 +709,7 @@ def _profile_pytorch(model_name, runtime, model_dir, num_warmup, num_runs):
                 }
             )
 
-    records.sort(key=lambda r: r["mean_ms"], reverse=True)
+    # records.sort(key=lambda r: r["mean_ms"], reverse=True)
     return {
         "status": "ok",
         "backend": backend,
@@ -800,7 +800,7 @@ def _profile_tensorrt(model_name, runtime, model_dir, num_warmup, num_runs):
             }
         )
 
-    records.sort(key=lambda r: r["mean_ms"], reverse=True)
+    # records.sort(key=lambda r: r["mean_ms"], reverse=True)
     return {
         "status": "ok",
         "backend": "tensorrt",
@@ -930,7 +930,7 @@ def _profile_onnxrt(model_name, runtime, model_dir, num_warmup, num_runs):
                 "samples": int(arr.size),
             }
         )
-    records.sort(key=lambda r: r["mean_ms"], reverse=True)
+    # records.sort(key=lambda r: r["mean_ms"], reverse=True)
     return {
         "status": "ok",
         "backend": "onnxruntime",

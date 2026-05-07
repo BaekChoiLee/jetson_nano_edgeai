@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edge AI Benchmark Dashboard</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        :root {
+            --bg-color: #0f111a;
+            --panel-bg: rgba(25, 28, 41, 0.7);
+            --text-color: #e2e8f0;
+            --accent-color: #3b82f6;
+            --accent-hover: #2563eb;
+            --border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Sidebar styling */
+        .sidebar {
+            width: 320px;
+            background: var(--panel-bg);
+            backdrop-filter: blur(10px);
+            border-right: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .sidebar h1 {
+            font-size: 1.2rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .control-group {
+            margin-bottom: 20px;
+        }
+
+        .control-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border-color);
+            color: white;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        select:focus {
+            border-color: var(--accent-color);
+        }
+
+        .image-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .image-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.85rem;
+            padding: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .image-checkbox:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* Image Grid Area */
+        .image-viewer {
+            flex: 1;
+            padding: 20px;
+            display: grid;
+            gap: 20px;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .image-viewer[data-count="1"] { grid-template-columns: 1fr; }
+        .image-viewer[data-count="2"] { grid-template-columns: 1fr 1fr; }
+        .image-viewer[data-count="3"] { grid-template-columns: 1fr 1fr 1fr; }
+        .image-viewer[data-count="4"] { grid-template-columns: 1fr 1fr; }
+        .image-viewer[data-count="5"], .image-viewer[data-count="6"] { grid-template-columns: 1fr 1fr 1fr; }
+
+        .image-container {
+            background: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .image-title {
+            padding: 8px 12px;
+            background: rgba(0, 0, 0, 0.5);
+            font-size: 0.8rem;
+            font-weight: 600;
+            border-bottom: 1px solid var(--border-color);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            z-index: 10;
+        }
+
+        .canvas-area {
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+            cursor: grab;
+            background: #1e2130;
+        }
+
+        .canvas-area:active {
+            cursor: grabbing;
+        }
+
+        .canvas-area img {
+            position: absolute;
+            transform-origin: 0 0;
+            user-select: none;
+            max-width: none;
+        }
+
+        /* Metrics Table Area */
+        .metrics-panel {
+            height: 300px;
+            background: var(--panel-bg);
+            border-top: 1px solid var(--border-color);
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .metrics-panel h2 {
+            font-size: 1.1rem;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+        }
+
+        th, td {
+            padding: 10px 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background: rgba(255, 255, 255, 0.05);
+            color: #94a3b8;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+        }
+
+        tr:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h1>📊 Edge AI Dashboard</h1>
+        
+        <div class="control-group">
+            <label for="modelSelect">Select Model</label>
+            <select id="modelSelect">
+                <option value="">Loading...</option>
+            </select>
+        </div>
+
+        <div class="control-group">
+            <label>Compare Images (Max 6)</label>
+            <div class="image-list" id="imageList">
+                <!-- Checkboxes will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="image-viewer" id="imageViewer" data-count="0">
+            <!-- Images will be injected here -->
+        </div>
+
+        <div class="metrics-panel">
+            <h2>Performance & Accuracy Metrics</h2>
+            <table id="metricsTable">
+                <thead>
+                    <tr>
+                        <th>Runtime</th>
+                        <th>Power Mode</th>
+                        <th>Mean Latency (ms)</th>
+                        <th>Memory (MB)</th>
+                        <th>Avg Power (mW)</th>
+                        <th>Energy/Inf (mJ)</th>
+                        <th>Top 1 Acc (%)</th>
+                        <th>mAP 50</th>
+                    </tr>
+                </thead>
+                <tbody id="metricsBody">
+                    <!-- Rows will be injected here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = "http://localhost:8000";
+        let currentModel = "";
+        let selectedImages = [];
+        
+        const modelSelect = document.getElementById("modelSelect");
+        const imageList = document.getElementById("imageList");
+        const imageViewer = document.getElementById("imageViewer");
+        const metricsBody = document.getElementById("metricsBody");
+
+        // Initialize
+        async function init() {
+            try {
+                const res = await fetch(`${API_BASE}/api/models`);
+                const data = await res.json();
+                
+                modelSelect.innerHTML = '<option value="" disabled selected>Select a model</option>';
+                data.models.forEach(m => {
+                    const opt = document.createElement("option");
+                    opt.value = m;
+                    opt.textContent = m;
+                    modelSelect.appendChild(opt);
+                });
+
+                modelSelect.addEventListener("change", (e) => {
+                    currentModel = e.target.value;
+                    selectedImages = [];
+                    loadModelData();
+                });
+            } catch (err) {
+                console.error("Failed to load models", err);
+                modelSelect.innerHTML = '<option value="">Error loading models</option>';
+            }
+        }
+
+        async function loadModelData() {
+            // Load Images list
+            try {
+                const res = await fetch(`${API_BASE}/api/images/${currentModel}`);
+                const data = await res.json();
+                
+                imageList.innerHTML = "";
+                data.images.forEach(img => {
+                    const label = document.createElement("label");
+                    label.className = "image-checkbox";
+                    
+                    const checkbox = document.createElement("input");
+                    checkbox.type = "checkbox";
+                    checkbox.value = img;
+                    checkbox.addEventListener("change", handleImageSelection);
+                    
+                    label.appendChild(checkbox);
+                    label.appendChild(document.createTextNode(img.replace('.png', '').replace(currentModel + '_', '')));
+                    
+                    imageList.appendChild(label);
+                });
+                
+                updateImageViewer();
+            } catch (err) {
+                console.error("Failed to load images", err);
+            }
+
+            // Load Metrics
+            try {
+                const res = await fetch(`${API_BASE}/api/metrics/${currentModel}`);
+                const data = await res.json();
+                
+                metricsBody.innerHTML = "";
+                data.metrics.forEach(row => {
+                    const tr = document.createElement("tr");
+                    tr.innerHTML = `
+                        <td>${row.runtime || '-'}</td>
+                        <td>${row.power_mode || '-'}</td>
+                        <td>${row.mean_ms ? parseFloat(row.mean_ms).toFixed(2) : '-'}</td>
+                        <td>${row.memory_mb || '-'}</td>
+                        <td>${row.power_avg_mw || '-'}</td>
+                        <td>${row.energy_per_inference_mj ? parseFloat(row.energy_per_inference_mj).toFixed(2) : '-'}</td>
+                        <td>${row.top1 || '-'}</td>
+                        <td>${row.map_50 || '-'}</td>
+                    `;
+                    metricsBody.appendChild(tr);
+                });
+            } catch (err) {
+                console.error("Failed to load metrics", err);
+            }
+        }
+
+        function handleImageSelection(e) {
+            const checkbox = e.target;
+            if (checkbox.checked) {
+                if (selectedImages.length >= 6) {
+                    checkbox.checked = false;
+                    alert("You can select up to 6 images to compare.");
+                    return;
+                }
+                selectedImages.push(checkbox.value);
+            } else {
+                selectedImages = selectedImages.filter(img => img !== checkbox.value);
+            }
+            updateImageViewer();
+        }
+
+        function updateImageViewer() {
+            imageViewer.setAttribute("data-count", selectedImages.length);
+            imageViewer.innerHTML = "";
+            
+            selectedImages.forEach(img => {
+                const container = document.createElement("div");
+                container.className = "image-container";
+                
+                const title = document.createElement("div");
+                title.className = "image-title";
+                title.textContent = img.replace('.png', '').replace(currentModel + '_', '');
+                
+                const canvasArea = document.createElement("div");
+                canvasArea.className = "canvas-area";
+                
+                const imageEl = document.createElement("img");
+                imageEl.src = `${API_BASE}/images/${img}`;
+                imageEl.draggable = false;
+                
+                canvasArea.appendChild(imageEl);
+                container.appendChild(title);
+                container.appendChild(canvasArea);
+                imageViewer.appendChild(container);
+                
+                setupPanZoom(canvasArea, imageEl);
+            });
+        }
+
+        function setupPanZoom(container, img) {
+            let scale = 1;
+            let originX = 0;
+            let originY = 0;
+            let isDragging = false;
+            let startX, startY;
+
+            // Wait for image to load to set initial fit
+            img.onload = () => {
+                const containerRect = container.getBoundingClientRect();
+                const scaleX = containerRect.width / img.naturalWidth;
+                const scaleY = containerRect.height / img.naturalHeight;
+                scale = Math.min(scaleX, scaleY) * 0.95; // fit within container
+                
+                originX = (containerRect.width - img.naturalWidth * scale) / 2;
+                originY = 20; // some top padding
+                
+                updateTransform();
+            };
+
+            function updateTransform() {
+                img.style.transform = `translate(${originX}px, ${originY}px) scale(${scale})`;
+            }
+
+            container.addEventListener('wheel', (e) => {
+                e.preventDefault();
+                const zoomFactor = 1.1;
+                const direction = e.deltaY > 0 ? -1 : 1;
+                
+                const containerRect = container.getBoundingClientRect();
+                const mouseX = e.clientX - containerRect.left;
+                const mouseY = e.clientY - containerRect.top;
+
+                // Adjust origin so zoom is centered on mouse
+                if (direction > 0) {
+                    originX = mouseX - (mouseX - originX) * zoomFactor;
+                    originY = mouseY - (mouseY - originY) * zoomFactor;
+                    scale *= zoomFactor;
+                } else {
+                    originX = mouseX - (mouseX - originX) / zoomFactor;
+                    originY = mouseY - (mouseY - originY) / zoomFactor;
+                    scale /= zoomFactor;
+                }
+                
+                updateTransform();
+            });
+
+            container.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                startX = e.clientX - originX;
+                startY = e.clientY - originY;
+            });
+
+            window.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                originX = e.clientX - startX;
+                originY = e.clientY - startY;
+                updateTransform();
+            });
+
+            window.addEventListener('mouseup', () => {
+                isDragging = false;
+            });
+        }
+
+        init();
+    </script>
+</body>
+</html>
