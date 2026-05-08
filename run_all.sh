@@ -561,3 +561,10 @@ echo "  Next steps:"
 echo "  1. Review results CSV files"
 echo "  2. Compare across models and power modes"
 echo "  3. Share results with team"
+
+# 자동 압축
+echo ""
+echo "📦 결과를 자동으로 압축합니다..."
+TAR_NAME="${RESULTS_DIR%/}.tar.gz"
+tar -czvf "$TAR_NAME" "$RESULTS_DIR" > /dev/null 2>&1
+echo "✅ 압축 완료: $TAR_NAME (젯슨 나노에서 이 파일을 PC로 가져가세요!)"

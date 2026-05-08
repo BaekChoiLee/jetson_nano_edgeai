@@ -442,3 +442,10 @@ echo "============================================================"
 echo "[DONE] rebenchmark_clean_v2 완료"
 echo "  results: $RESULTS_ROOT"
 echo "============================================================"
+
+# 결과 자동 압축
+echo ""
+echo "📦 결과를 자동으로 압축합니다..."
+tar_name="${RESULTS_ROOT%/}.tar.gz"
+tar -czvf "$tar_name" "$RESULTS_ROOT" > /dev/null 2>&1
+echo "✅ 압축 완료: $tar_name (젯슨 나노에서 이 파일을 가져가세요!)"
