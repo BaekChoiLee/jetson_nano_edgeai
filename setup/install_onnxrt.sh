@@ -9,11 +9,11 @@ echo "[1] Trying pre-built wheel for JetPack 4.x..."
 
 # NVIDIA provides onnxruntime-gpu wheels for Jetson
 # Check https://elinux.org/Jetson_Zoo for latest URLs
-ONNXRT_VERSION="1.11.0"
+ONNXRT_VERSION="1.10.0"
 PYTHON_VER="cp38"  # Q-engineering image uses Python 3.8
 
 # Try NVIDIA's Jetson wheel
-pip3 install onnxruntime-gpu 2>/dev/null && {
+pip3 install onnxruntime-gpu==1.10.0 2>/dev/null && {
     echo "  Installed via pip (onnxruntime-gpu)."
 } || {
     echo "  pip install failed, trying NVIDIA Jetson wheel..."

@@ -8,6 +8,7 @@ Supported runtimes:
   - tflite_cpu, tflite_gpu     -> benchmark_model op profiling (if available)
   - ncnn_cpu, ncnn_vulkan      -> benchncnn layer timing (requires NCNN_BENCHMARK=ON)
 """
+from __future__ import annotations
 
 import argparse
 import csv
