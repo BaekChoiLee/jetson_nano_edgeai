@@ -19,6 +19,7 @@ import re
 import shlex
 import shutil
 import subprocess
+import traceback
 from collections import defaultdict
 
 import numpy as np
@@ -738,6 +739,12 @@ def _profile_tensorrt(model_name, runtime, model_dir, num_warmup, num_runs):
     if context is None:
         raise RuntimeError("Failed to create TRT execution context")
 
+    # IProfiler in TRT 8.2 (JetPack 4.6.1) has ABCMeta as metaclass but
+    # Python 3.8 can't subscript ABCMeta classes. Add __class_getitem__ to
+    # allow subclassing without errors.
+    if not hasattr(trt.IProfiler, "__class_getitem__"):
+        trt.IProfiler.__class_getitem__ = classmethod(lambda cls, x: cls)
+
     class LayerProfiler(trt.IProfiler):
         def __init__(self):
             super().__init__()
@@ -1115,6 +1122,10 @@ def main():
         meta["records"] = []
         meta["total_mean_ms"] = 0.0
         _write_csv(args.output_csv, args.model, args.runtime, [])
+        # Print full traceback for debugging
+        print(f"  [DEBUG] full traceback:", flush=True)
+        traceback.print_exc()
+
 
     with open(args.output_json, "w") as f:
         json.dump(meta, f, indent=2)
