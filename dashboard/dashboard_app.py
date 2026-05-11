@@ -7,6 +7,9 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 
+### python dashboard_app.py
+
+
 app = FastAPI()
 
 app.add_middleware(
@@ -17,10 +20,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-RESULTS_BASE = "/Users/hobongs/Desktop/HoBong_study/26-1/탄중/temp/jetson_nano_edgeai/results"
-possible_dirs = [d for d in glob.glob(os.path.join(RESULTS_BASE, "*")) if os.path.isdir(d)]
-# Find the most recently modified directory
-BASE_DIR = max(possible_dirs, key=os.path.getmtime)
+BASE_DIR = "/Users/hobongs/Desktop/HoBong_study/26-1/탄중/temp/jetson_nano_edgeai/results/clean_v2_20260419_150621"
 VISUALIZATIONS_DIR = os.path.join(BASE_DIR, "layer_runtime", "visualizations")
 
 # Serve static images
