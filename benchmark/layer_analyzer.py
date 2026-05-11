@@ -191,8 +191,7 @@ def analyze_layers(model_name, device="cuda", num_runs=20, output_dir="./results
     else:
         raise ValueError(f"Unknown model: {model_name}. Supported: {ALL_MODELS}")
 
-    # Sort by mean time (descending)
-    results.sort(key=lambda x: x["mean_ms"], reverse=True)
+    # Preserve execution order (no sort by mean_ms)
 
     # Print top-10 bottleneck layers
     print(f"\n{'='*70}")

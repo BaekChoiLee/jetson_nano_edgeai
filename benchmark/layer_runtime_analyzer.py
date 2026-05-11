@@ -300,7 +300,7 @@ def _parse_tflite_run_order(output_text, default_samples):
             continue
         seen.add(key)
         dedup.append(r)
-    dedup.sort(key=lambda r: r["mean_ms"], reverse=True)
+    # Preserve run-order (no sort by mean_ms)
     return dedup
 
 
@@ -1025,19 +1025,30 @@ def _enrich_records(records):
         return []
 
     enriched = [dict(r) for r in records]
-    enriched.sort(key=lambda r: float(r.get("mean_ms") or 0.0), reverse=True)
     total_ms = sum(float(r.get("mean_ms") or 0.0) for r in enriched)
-    cumulative = 0.0
 
-    for idx, row in enumerate(enriched, 1):
+    # Compute rank based on mean_ms (1 = slowest) WITHOUT reordering the list
+    sorted_by_time = sorted(
+        range(len(enriched)),
+        key=lambda i: float(enriched[i].get("mean_ms") or 0.0),
+        reverse=True,
+    )
+    rank_map = {orig_idx: rank for rank, orig_idx in enumerate(sorted_by_time, 1)}
+
+    cumulative_sorted = 0.0
+    cumulative_map = {}
+    for rank, orig_idx in enumerate(sorted_by_time, 1):
+        cumulative_sorted += float(enriched[orig_idx].get("mean_ms") or 0.0)
+        cumulative_map[orig_idx] = cumulative_sorted
+
+    for idx, row in enumerate(enriched):
         mean_ms = float(row.get("mean_ms") or 0.0)
-        cumulative += mean_ms
-        row["rank"] = idx
+        row["rank"] = rank_map[idx]
         row["percent_total_ms"] = (
             round((mean_ms / total_ms) * 100.0, 6) if total_ms > 0 else 0.0
         )
         row["cumulative_percent_ms"] = (
-            round((cumulative / total_ms) * 100.0, 6) if total_ms > 0 else 0.0
+            round((cumulative_map[idx] / total_ms) * 100.0, 6) if total_ms > 0 else 0.0
         )
     return enriched
 
