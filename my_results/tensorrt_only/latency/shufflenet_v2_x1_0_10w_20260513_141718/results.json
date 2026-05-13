@@ -1,0 +1,356 @@
+[
+  {
+    "runtime": "tensorrt_fp32",
+    "model": "shufflenet_v2_x1_0_fp32.engine",
+    "latency": {
+      "mean": 8.292624464035034,
+      "std": 0.4441776814349414,
+      "min": 8.096405982971191,
+      "max": 10.736249923706055,
+      "p50": 8.175755023956299,
+      "p95": 8.448867177963256,
+      "p99": 10.69030818939209
+    },
+    "memory_mb": 0.58,
+    "model_size_mb": 9.17,
+    "num_runs": 100,
+    "precision": "fp32",
+    "power_mode": "10w",
+    "tegrastats": {
+      "num_samples": 15,
+      "cpu_avg_util_pct": {
+        "mean": 32.82,
+        "max": 37.25,
+        "min": 23.0
+      },
+      "gpu_freq_mhz": {
+        "mean": 921.0,
+        "max": 921.0,
+        "min": 921.0
+      },
+      "gpu_util_pct": {
+        "mean": 8.0,
+        "max": 95.0,
+        "min": 0.0
+      },
+      "pom_5v_cpu_average_mw": {
+        "mean": 1184.4,
+        "max": 1251.0,
+        "min": 856.0
+      },
+      "pom_5v_cpu_current_mw": {
+        "mean": 1203.87,
+        "max": 1422.0,
+        "min": 856.0
+      },
+      "pom_5v_gpu_average_mw": {
+        "mean": 229.4,
+        "max": 428.0,
+        "min": 163.0
+      },
+      "pom_5v_gpu_current_mw": {
+        "mean": 428.53,
+        "max": 2980.0,
+        "min": 162.0
+      },
+      "pom_5v_in_average_mw": {
+        "mean": 3368.53,
+        "max": 3607.0,
+        "min": 2899.0
+      },
+      "pom_5v_in_current_mw": {
+        "mean": 3607.33,
+        "max": 6369.0,
+        "min": 2899.0
+      },
+      "ram_total_mb": {
+        "mean": 3964.0,
+        "max": 3964.0,
+        "min": 3964.0
+      },
+      "ram_used_mb": {
+        "mean": 2423.93,
+        "max": 2778.0,
+        "min": 1963.0
+      },
+      "swap_total_mb": {
+        "mean": 10174.0,
+        "max": 10174.0,
+        "min": 10174.0
+      },
+      "swap_used_mb": {
+        "mean": 1022.0,
+        "max": 1022.0,
+        "min": 1022.0
+      },
+      "temp_ao_c": {
+        "mean": 37.7,
+        "max": 41.0,
+        "min": 37.0
+      },
+      "temp_cpu_c": {
+        "mean": 29.07,
+        "max": 30.0,
+        "min": 28.5
+      },
+      "temp_gpu_c": {
+        "mean": 27.2,
+        "max": 28.5,
+        "min": 27.0
+      },
+      "temp_pll_c": {
+        "mean": 26.53,
+        "max": 27.5,
+        "min": 26.0
+      },
+      "temp_pmic_c": {
+        "mean": 50.0,
+        "max": 50.0,
+        "min": 50.0
+      },
+      "temp_thermal_c": {
+        "mean": 27.9,
+        "max": 29.5,
+        "min": 27.5
+      }
+    },
+    "wall_time_s": 6.39,
+    "status": "ok"
+  },
+  {
+    "runtime": "tensorrt_fp16",
+    "model": "shufflenet_v2_x1_0_fp16.engine",
+    "latency": {
+      "mean": 7.516826562881469,
+      "std": 0.38869274205442833,
+      "min": 7.237343788146973,
+      "max": 9.456250190734863,
+      "p50": 7.335546970367432,
+      "p95": 8.128719234466553,
+      "p99": 9.120629110336305
+    },
+    "memory_mb": 0.58,
+    "model_size_mb": 5.35,
+    "num_runs": 100,
+    "precision": "fp16",
+    "power_mode": "10w",
+    "tegrastats": {
+      "num_samples": 2,
+      "cpu_avg_util_pct": {
+        "mean": 36.62,
+        "max": 36.75,
+        "min": 36.5
+      },
+      "gpu_freq_mhz": {
+        "mean": 921.0,
+        "max": 921.0,
+        "min": 921.0
+      },
+      "gpu_util_pct": {
+        "mean": 91.0,
+        "max": 93.0,
+        "min": 89.0
+      },
+      "pom_5v_cpu_average_mw": {
+        "mean": 1213.0,
+        "max": 1232.0,
+        "min": 1194.0
+      },
+      "pom_5v_cpu_current_mw": {
+        "mean": 1232.5,
+        "max": 1271.0,
+        "min": 1194.0
+      },
+      "pom_5v_gpu_average_mw": {
+        "mean": 2804.5,
+        "max": 2863.0,
+        "min": 2746.0
+      },
+      "pom_5v_gpu_current_mw": {
+        "mean": 2863.0,
+        "max": 2980.0,
+        "min": 2746.0
+      },
+      "pom_5v_in_average_mw": {
+        "mean": 6234.5,
+        "max": 6329.0,
+        "min": 6140.0
+      },
+      "pom_5v_in_current_mw": {
+        "mean": 6329.0,
+        "max": 6518.0,
+        "min": 6140.0
+      },
+      "ram_total_mb": {
+        "mean": 3964.0,
+        "max": 3964.0,
+        "min": 3964.0
+      },
+      "ram_used_mb": {
+        "mean": 2775.0,
+        "max": 2776.0,
+        "min": 2774.0
+      },
+      "swap_total_mb": {
+        "mean": 10174.0,
+        "max": 10174.0,
+        "min": 10174.0
+      },
+      "swap_used_mb": {
+        "mean": 1023.0,
+        "max": 1023.0,
+        "min": 1023.0
+      },
+      "temp_ao_c": {
+        "mean": 40.0,
+        "max": 41.0,
+        "min": 39.0
+      },
+      "temp_cpu_c": {
+        "mean": 30.25,
+        "max": 30.5,
+        "min": 30.0
+      },
+      "temp_gpu_c": {
+        "mean": 28.25,
+        "max": 28.5,
+        "min": 28.0
+      },
+      "temp_pll_c": {
+        "mean": 26.75,
+        "max": 27.0,
+        "min": 26.5
+      },
+      "temp_pmic_c": {
+        "mean": 50.0,
+        "max": 50.0,
+        "min": 50.0
+      },
+      "temp_thermal_c": {
+        "mean": 28.75,
+        "max": 28.75,
+        "min": 28.75
+      }
+    },
+    "wall_time_s": 0.99,
+    "status": "ok"
+  },
+  {
+    "runtime": "tensorrt_int8",
+    "model": "shufflenet_v2_x1_0_int8.engine",
+    "latency": {
+      "mean": 8.068690595626832,
+      "std": 0.45922598001463955,
+      "min": 7.859896183013916,
+      "max": 10.903697967529297,
+      "p50": 7.947370529174805,
+      "p95": 8.605494260787964,
+      "p99": 10.731841325759888
+    },
+    "memory_mb": 0.58,
+    "model_size_mb": 9.25,
+    "num_runs": 100,
+    "precision": "int8",
+    "power_mode": "10w",
+    "tegrastats": {
+      "num_samples": 2,
+      "cpu_avg_util_pct": {
+        "mean": 30.88,
+        "max": 33.25,
+        "min": 28.5
+      },
+      "gpu_freq_mhz": {
+        "mean": 921.0,
+        "max": 921.0,
+        "min": 921.0
+      },
+      "gpu_util_pct": {
+        "mean": 39.0,
+        "max": 78.0,
+        "min": 0.0
+      },
+      "pom_5v_cpu_average_mw": {
+        "mean": 704.5,
+        "max": 880.0,
+        "min": 529.0
+      },
+      "pom_5v_cpu_current_mw": {
+        "mean": 880.5,
+        "max": 1232.0,
+        "min": 529.0
+      },
+      "pom_5v_gpu_average_mw": {
+        "mean": 806.5,
+        "max": 1491.0,
+        "min": 122.0
+      },
+      "pom_5v_gpu_current_mw": {
+        "mean": 1491.5,
+        "max": 2861.0,
+        "min": 122.0
+      },
+      "pom_5v_in_average_mw": {
+        "mean": 3765.5,
+        "max": 4673.0,
+        "min": 2858.0
+      },
+      "pom_5v_in_current_mw": {
+        "mean": 4673.0,
+        "max": 6488.0,
+        "min": 2858.0
+      },
+      "ram_total_mb": {
+        "mean": 3964.0,
+        "max": 3964.0,
+        "min": 3964.0
+      },
+      "ram_used_mb": {
+        "mean": 2774.0,
+        "max": 2774.0,
+        "min": 2774.0
+      },
+      "swap_total_mb": {
+        "mean": 10174.0,
+        "max": 10174.0,
+        "min": 10174.0
+      },
+      "swap_used_mb": {
+        "mean": 1024.0,
+        "max": 1024.0,
+        "min": 1024.0
+      },
+      "temp_ao_c": {
+        "mean": 40.5,
+        "max": 40.5,
+        "min": 40.5
+      },
+      "temp_cpu_c": {
+        "mean": 29.0,
+        "max": 30.0,
+        "min": 28.0
+      },
+      "temp_gpu_c": {
+        "mean": 28.25,
+        "max": 28.5,
+        "min": 28.0
+      },
+      "temp_pll_c": {
+        "mean": 26.25,
+        "max": 26.5,
+        "min": 26.0
+      },
+      "temp_pmic_c": {
+        "mean": 50.0,
+        "max": 50.0,
+        "min": 50.0
+      },
+      "temp_thermal_c": {
+        "mean": 27.5,
+        "max": 27.5,
+        "min": 27.5
+      }
+    },
+    "wall_time_s": 1.13,
+    "status": "ok"
+  }
+]

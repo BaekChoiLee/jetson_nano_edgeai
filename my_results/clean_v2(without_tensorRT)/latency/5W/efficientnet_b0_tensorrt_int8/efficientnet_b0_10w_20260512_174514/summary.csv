@@ -1,0 +1,2 @@
+model,runtime,power_mode,status,error,mean_ms,std_ms,min_ms,max_ms,p50_ms,p95_ms,p99_ms,memory_mb,model_size_mb,fps,power_avg_mw,power_max_mw
+efficientnet_b0_int8.engine,tensorrt_int8,10w,ok,,38.639134082794186,0.059294747685538385,38.477237701416016,38.967552185058594,38.637760162353516,38.726098251342776,38.753251953125,0.58,24.22,25.88,3064.79,4052.0

@@ -1,0 +1,1 @@
+model,runtime,rank,layer_name,backend,granularity,mean_ms,std_ms,min_ms,max_ms,samples,percent_total_ms,cumulative_percent_ms

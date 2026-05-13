@@ -1,0 +1,2 @@
+model,runtime,power_mode,status,error,mean_ms,std_ms,min_ms,max_ms,p50_ms,p95_ms,p99_ms,memory_mb,model_size_mb,fps,power_avg_mw,power_max_mw
+efficientnet_b0_fp16.engine,tensorrt_fp16,10w,ok,,31.17062833786011,0.0712066774008471,31.045312881469727,31.465885162353516,31.158308029174805,31.317864227294923,31.39222723007202,0.58,14.59,32.08,3145.39,4400.0

@@ -1,0 +1,2 @@
+model,runtime,power_mode,status,error,mean_ms,std_ms,min_ms,max_ms,p50_ms,p95_ms,p99_ms,memory_mb,model_size_mb,fps,power_avg_mw,power_max_mw
+shufflenet_v2_x1_0_fp32.engine,tensorrt_fp32,10w,ok,,11.179191999435425,0.1777218134657009,11.105417251586914,12.923280715942383,11.154609680175781,11.211128520965577,12.384004716873168,0.58,9.17,89.45,2445.45,3898.0

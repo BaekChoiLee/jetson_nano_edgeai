@@ -1,0 +1,121 @@
+{
+  "runtime": "onnxrt_cuda",
+  "model": "ssd_mobilenet_v2",
+  "status": "ok",
+  "latency": {
+    "mean": 81.77155751967803,
+    "std": 2.5628450559360014,
+    "min": 79.73050512373447,
+    "max": 92.43480488657951,
+    "p50": 80.74739831499755,
+    "p95": 88.30535870511085,
+    "p99": 89.72306754440069
+  },
+  "memory_mb": 228.0,
+  "model_size_mb": 23.23,
+  "num_runs": 200,
+  "num_warmup": 20,
+  "input_hw": [
+    320,
+    320
+  ],
+  "tegra_log": "results/clean_v2_20260512_131735/latency/5W/ssd_mobilenet_v2_onnxrt_cuda.tegra.log",
+  "tegrastats": {
+    "num_samples": 86,
+    "cpu_avg_util_pct": {
+      "mean": 25.49,
+      "max": 41.5,
+      "min": 6.75
+    },
+    "gpu_freq_mhz": {
+      "mean": 614.0,
+      "max": 614.0,
+      "min": 614.0
+    },
+    "gpu_util_pct": {
+      "mean": 72.79,
+      "max": 99.0,
+      "min": 0.0
+    },
+    "pom_5v_cpu_average_mw": {
+      "mean": 502.73,
+      "max": 549.0,
+      "min": 204.0
+    },
+    "pom_5v_cpu_current_mw": {
+      "mean": 482.91,
+      "max": 725.0,
+      "min": 202.0
+    },
+    "pom_5v_gpu_average_mw": {
+      "mean": 673.14,
+      "max": 1018.0,
+      "min": 81.0
+    },
+    "pom_5v_gpu_current_mw": {
+      "mean": 1018.13,
+      "max": 1597.0,
+      "min": 81.0
+    },
+    "pom_5v_in_average_mw": {
+      "mean": 2893.01,
+      "max": 3351.0,
+      "min": 1840.0
+    },
+    "pom_5v_in_current_mw": {
+      "mean": 3351.71,
+      "max": 4146.0,
+      "min": 1840.0
+    },
+    "ram_total_mb": {
+      "mean": 3964.0,
+      "max": 3964.0,
+      "min": 3964.0
+    },
+    "ram_used_mb": {
+      "mean": 2421.47,
+      "max": 2430.0,
+      "min": 2202.0
+    },
+    "swap_total_mb": {
+      "mean": 10174.0,
+      "max": 10174.0,
+      "min": 10174.0
+    },
+    "swap_used_mb": {
+      "mean": 1212.0,
+      "max": 1212.0,
+      "min": 1212.0
+    },
+    "temp_ao_c": {
+      "mean": 37.21,
+      "max": 38.5,
+      "min": 35.5
+    },
+    "temp_cpu_c": {
+      "mean": 27.39,
+      "max": 28.0,
+      "min": 26.0
+    },
+    "temp_gpu_c": {
+      "mean": 25.96,
+      "max": 27.0,
+      "min": 25.0
+    },
+    "temp_pll_c": {
+      "mean": 25.52,
+      "max": 26.0,
+      "min": 24.5
+    },
+    "temp_pmic_c": {
+      "mean": 50.0,
+      "max": 50.0,
+      "min": 50.0
+    },
+    "temp_thermal_c": {
+      "mean": 26.63,
+      "max": 27.5,
+      "min": 25.75
+    }
+  }
+}

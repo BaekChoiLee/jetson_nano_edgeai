@@ -1,0 +1,8 @@
+model,runtime,rank,layer_name,backend,granularity,mean_ms,std_ms,min_ms,max_ms,samples,percent_total_ms,cumulative_percent_ms
+yolov8n,onnxrt_trt,3,model_loading_uri,onnxruntime,onnx_node,39.941,0.0,39.941,39.941,1,0.02463,99.991233
+yolov8n,onnxrt_trt,1,session_initialization,onnxruntime,onnx_node,162033.798,0.0,162033.798,162033.798,1,99.920801,99.920801
+yolov8n,onnxrt_trt,6,TRTKernel_graph_torch_jit_13770358315410295820_1:TensorrtExecutionProvider_TRTKernel_graph_torch_jit_13770358315410295820_1_0_fence_before,onnxruntime,onnx_node,0.002983,0.000223,0.002,0.004,60,2e-06,99.999999
+yolov8n,onnxrt_trt,5,TRTKernel_graph_torch_jit_13770358315410295820_1:TensorrtExecutionProvider_TRTKernel_graph_torch_jit_13770358315410295820_1_0_kernel_time,onnxruntime,onnx_node,7.037833,1.538366,6.537,18.766,60,0.00434,99.999998
+yolov8n,onnxrt_trt,7,TRTKernel_graph_torch_jit_13770358315410295820_1:TensorrtExecutionProvider_TRTKernel_graph_torch_jit_13770358315410295820_1_0_fence_after,onnxruntime,onnx_node,0.001044,0.000206,0.001,0.002,45,1e-06,100.0
+yolov8n,onnxrt_trt,4,SequentialExecutor::Execute,onnxruntime,onnx_node,7.17505,1.541586,6.671,18.929,60,0.004425,99.995658
+yolov8n,onnxrt_trt,2,model_run,onnxruntime,onnx_node,74.273483,2.129279,73.554,90.591,60,0.045802,99.966603

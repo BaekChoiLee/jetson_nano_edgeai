@@ -1,0 +1,2 @@
+model,runtime,power_mode,status,error,mean_ms,std_ms,min_ms,max_ms,p50_ms,p95_ms,p99_ms,memory_mb,model_size_mb,fps,power_avg_mw,power_max_mw
+shufflenet_v2_x1_0,ncnn_cpu,10w,ok,,41.043249648064375,2.3062740186078536,39.69885315746069,61.49513786658645,40.23810802027583,46.12728806678206,46.65249085985124,3.96,8.66,24.36,2731.05,2763.0

@@ -1,0 +1,2 @@
+model,runtime,power_mode,status,error,mean_ms,std_ms,min_ms,max_ms,p50_ms,p95_ms,p99_ms,memory_mb,model_size_mb,fps,power_avg_mw,power_max_mw
+resnet50.onnx,onnxrt_tensorrt,10w,ok,,54.753940959926695,0.3999100843974991,54.20895526185632,56.067888624966145,54.640211164951324,55.483519937843084,55.682973731309175,651.16,97.41,18.26,4472.69,7510.0

@@ -1,0 +1,2 @@
+model,runtime,power_mode,status,error,mean_ms,std_ms,min_ms,max_ms,p50_ms,p95_ms,p99_ms,memory_mb,model_size_mb,fps,power_avg_mw,power_max_mw
+mobilenetv3_small,ncnn_vulkan,10w,ok,,10.625816464889795,0.808446641677778,10.239407885819674,15.438202768564224,10.406547226011753,11.908775195479393,14.596175057813525,2.03,9.68,94.11,2466.36,2997.0

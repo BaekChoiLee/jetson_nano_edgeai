@@ -1,0 +1,8 @@
+model,runtime,rank,layer_name,backend,granularity,mean_ms,std_ms,min_ms,max_ms,samples,percent_total_ms,cumulative_percent_ms
+mobilenetv3_small,onnxrt_trt,5,model_loading_uri,onnxruntime,onnx_node,27.301,0.0,27.301,27.301,1,0.485277,99.999954
+mobilenetv3_small,onnxrt_trt,4,session_initialization,onnxruntime,onnx_node,1395.463,0.0,1395.463,1395.463,1,24.80445,99.514677
+mobilenetv3_small,onnxrt_trt,6,TRTKernel_graph_torch_jit_15582754920080009174_1:TensorrtExecutionProvider_TRTKernel_graph_torch_jit_15582754920080009174_1_0_fence_before,onnxruntime,onnx_node,0.001583,0.000493,0.001,0.002,60,2.8e-05,99.999982
+mobilenetv3_small,onnxrt_trt,3,TRTKernel_graph_torch_jit_15582754920080009174_1:TensorrtExecutionProvider_TRTKernel_graph_torch_jit_15582754920080009174_1_0_kernel_time,onnxruntime,onnx_node,1400.120833,10719.704308,4.457,83739.732,60,24.887243,74.710227
+mobilenetv3_small,onnxrt_trt,7,TRTKernel_graph_torch_jit_15582754920080009174_1:TensorrtExecutionProvider_TRTKernel_graph_torch_jit_15582754920080009174_1_0_fence_after,onnxruntime,onnx_node,0.001,0.0,0.001,0.001,33,1.8e-05,100.0
+mobilenetv3_small,onnxrt_trt,2,SequentialExecutor::Execute,onnxruntime,onnx_node,1400.204183,10719.711293,4.533,83739.869,60,24.888725,49.822984
+mobilenetv3_small,onnxrt_trt,1,model_run,onnxruntime,onnx_node,1402.765917,10719.683728,7.115,83742.219,60,24.93426,24.93426

@@ -1,0 +1,2 @@
+model,runtime,power_mode,status,error,mean_ms,std_ms,min_ms,max_ms,p50_ms,p95_ms,p99_ms,memory_mb,model_size_mb,fps,power_avg_mw,power_max_mw
+shufflenet_v2_x1_0.onnx,onnxrt_cuda,10w,ok,,27.640267862007022,2.7203233300656975,22.444734815508127,32.855863217264414,28.962197713553905,29.57332362420857,30.99873823113739,390.51,8.82,36.18,2683.03,3432.0

@@ -1,5 +1,6 @@
 import os
 import glob
+import socket
 import pandas as pd
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
@@ -8,6 +9,18 @@ from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 
 ### python dashboard_app.py
+
+
+def find_available_port(preferred_port: int, host: str = "127.0.0.1") -> int:
+    for port in range(preferred_port, preferred_port + 20):
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+            sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+            try:
+                sock.bind((host, port))
+            except OSError:
+                continue
+            return port
+    raise RuntimeError(f"No available port from {preferred_port} to {preferred_port + 19}")
 
 
 app = FastAPI()
@@ -20,8 +33,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-BASE_DIR = "/Users/hobongs/Desktop/HoBong_study/26-1/탄중/temp/jetson_nano_edgeai/results/clean_v2_20260419_150621"
-VISUALIZATIONS_DIR = os.path.join(BASE_DIR, "layer_runtime", "visualizations")
+PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.environ.get(
+    "DASHBOARD_RESULTS_DIR",
+    os.path.join(PROJECT_DIR, "my_results", "visualizations"),
+)
+VISUALIZATIONS_DIR = BASE_DIR
+os.makedirs(VISUALIZATIONS_DIR, exist_ok=True)
 
 # Serve static images
 app.mount("/images", StaticFiles(directory=VISUALIZATIONS_DIR), name="images")
@@ -35,7 +53,7 @@ async def get_index():
 def get_models():
     try:
         df = pd.read_csv(os.path.join(BASE_DIR, "consolidated_latency.csv"))
-        models = df['model'].unique().tolist()
+        models = sorted(df['model'].dropna().unique().tolist())
         return {"models": models}
     except Exception as e:
         print(e)
@@ -52,12 +70,16 @@ def get_images(model_name: str):
 def get_metrics(model_name: str):
     try:
         latency_df = pd.read_csv(os.path.join(BASE_DIR, "consolidated_latency.csv"))
-        accuracy_df = pd.read_csv(os.path.join(BASE_DIR, "consolidated_accuracy.csv"))
+        accuracy_path = os.path.join(BASE_DIR, "consolidated_accuracy.csv")
+        accuracy_df = pd.read_csv(accuracy_path) if os.path.exists(accuracy_path) else pd.DataFrame()
 
         lat_model = latency_df[latency_df['model'] == model_name]
-        acc_model = accuracy_df[accuracy_df['model'] == model_name]
-        
-        merged = pd.merge(lat_model, acc_model[['runtime', 'map_50', 'top1']], on='runtime', how='left')
+        if not accuracy_df.empty and "model" in accuracy_df.columns:
+            acc_model = accuracy_df[accuracy_df['model'] == model_name]
+            acc_cols = [c for c in ['runtime', 'map_50', 'top1'] if c in acc_model.columns]
+            merged = pd.merge(lat_model, acc_model[acc_cols], on='runtime', how='left') if acc_cols else lat_model
+        else:
+            merged = lat_model
         merged = merged.fillna("")
         
         cols = ['runtime', 'power_mode', 'mean_ms', 'memory_mb', 'power_avg_mw', 'energy_per_inference_mj', 'top1', 'map_50']
@@ -68,6 +90,17 @@ def get_metrics(model_name: str):
         print(f"Error fetching metrics: {e}")
         return {"metrics": []}
 
+@app.get("/api/source")
+def get_source():
+    return {"base_dir": BASE_DIR, "visualizations_dir": VISUALIZATIONS_DIR}
+
 if __name__ == "__main__":
+    host = os.environ.get("DASHBOARD_HOST", "127.0.0.1")
+    preferred_port = int(os.environ.get("DASHBOARD_PORT", "8001"))
+    port = find_available_port(preferred_port, host=host)
     print("Starting FastAPI dashboard server...")
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    print(f"Dashboard data: {BASE_DIR}")
+    if port != preferred_port:
+        print(f"Port {preferred_port} is busy; using {port} instead.")
+    print(f"Open: http://{host}:{port}")
+    uvicorn.run(app, host=host, port=port)

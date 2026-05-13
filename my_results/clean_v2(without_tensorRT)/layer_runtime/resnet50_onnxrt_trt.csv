@@ -1,0 +1,8 @@
+model,runtime,rank,layer_name,backend,granularity,mean_ms,std_ms,min_ms,max_ms,samples,percent_total_ms,cumulative_percent_ms
+resnet50,onnxrt_trt,5,model_loading_uri,onnxruntime,onnx_node,159.974,0.0,159.974,159.974,1,3.371421,99.999946
+resnet50,onnxrt_trt,1,session_initialization,onnxruntime,onnx_node,2172.638,0.0,2172.638,2172.638,1,45.787923,45.787923
+resnet50,onnxrt_trt,6,TRTKernel_graph_torch_jit_5675755077205369876_1:TensorrtExecutionProvider_TRTKernel_graph_torch_jit_5675755077205369876_1_0_fence_before,onnxruntime,onnx_node,0.00155,0.00053,0.001,0.003,60,3.3e-05,99.999979
+resnet50,onnxrt_trt,4,TRTKernel_graph_torch_jit_5675755077205369876_1:TensorrtExecutionProvider_TRTKernel_graph_torch_jit_5675755077205369876_1_0_kernel_time,onnxruntime,onnx_node,786.7156,6026.436931,1.998,47076.656,60,16.579878,96.628525
+resnet50,onnxrt_trt,7,TRTKernel_graph_torch_jit_5675755077205369876_1:TensorrtExecutionProvider_TRTKernel_graph_torch_jit_5675755077205369876_1_0_fence_after,onnxruntime,onnx_node,0.001,0.0,0.001,0.001,13,2.1e-05,100.0
+resnet50,onnxrt_trt,3,SequentialExecutor::Execute,onnxruntime,onnx_node,786.7999,6026.446526,2.085,47076.814,60,16.581655,80.048647
+resnet50,onnxrt_trt,2,model_run,onnxruntime,onnx_node,838.872267,6027.344262,53.927,47135.782,60,17.67907,63.466993

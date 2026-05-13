@@ -1,0 +1,102 @@
+model,runtime,rank,layer_name,backend,granularity,mean_ms,std_ms,min_ms,max_ms,samples,percent_total_ms,cumulative_percent_ms
+shufflenet_v2_x1_0,tensorrt_int8,3,/conv1/conv1.0/Conv + /conv1/conv1.2/Relu,tensorrt,trt_layer,0.598613,0.023328,0.478073,0.66125,60,1.12118,71.445456
+shufflenet_v2_x1_0,tensorrt_int8,30,/maxpool/MaxPool,tensorrt,trt_layer,0.180192,0.003565,0.175104,0.192344,60,0.337493,83.745811
+shufflenet_v2_x1_0,tensorrt_int8,1,/stage2/stage2.0/branch1/branch1.0/Conv,tensorrt,trt_layer,36.509186,279.697125,0.090208,2184.903564,60,68.380355,68.380355
+shufflenet_v2_x1_0,tensorrt_int8,16,/stage2/stage2.0/branch2/branch2.0/Conv + /stage2/stage2.0/branch2/branch2.2/Relu,tensorrt,trt_layer,0.20991,0.037068,0.193177,0.421459,60,0.393154,78.611274
+shufflenet_v2_x1_0,tensorrt_int8,92,/stage2/stage2.0/branch1/branch1.2/Conv + /stage2/stage2.0/branch1/branch1.4/Relu,tensorrt,trt_layer,0.060402,0.000741,0.058385,0.061927,60,0.113131,99.410749
+shufflenet_v2_x1_0,tensorrt_int8,15,/stage2/stage2.0/branch2/branch2.3/Conv,tensorrt,trt_layer,0.214981,0.061296,0.191511,0.467396,60,0.402651,78.21812
+shufflenet_v2_x1_0,tensorrt_int8,77,/stage2/stage2.0/branch2/branch2.5/Conv + /stage2/stage2.0/branch2/branch2.7/Relu,tensorrt,trt_layer,0.111643,0.033934,0.09276,0.216718,60,0.209103,97.009846
+shufflenet_v2_x1_0,tensorrt_int8,14,/stage2/stage2.0/Reshape + /stage2/stage2.0/Transpose,tensorrt,trt_layer,0.276103,0.039512,0.25125,0.398594,60,0.517131,77.815468
+shufflenet_v2_x1_0,tensorrt_int8,97,/stage2/stage2.1/Slice,tensorrt,trt_layer,0.032838,0.000573,0.031406,0.034166,60,0.061504,99.803339
+shufflenet_v2_x1_0,tensorrt_int8,95,/stage2/stage2.1/Slice_1,tensorrt,trt_layer,0.043805,0.031461,0.03026,0.170989,60,0.082045,99.66506
+shufflenet_v2_x1_0,tensorrt_int8,72,/stage2/stage2.1/branch2/branch2.0/Conv + /stage2/stage2.1/branch2/branch2.2/Relu,tensorrt,trt_layer,0.130634,0.043103,0.09224,0.236302,60,0.244673,95.865078
+shufflenet_v2_x1_0,tensorrt_int8,70,/stage2/stage2.1/branch2/branch2.3/Conv,tensorrt,trt_layer,0.133802,0.03605,0.094739,0.192969,60,0.250606,95.369861
+shufflenet_v2_x1_0,tensorrt_int8,68,/stage2/stage2.1/branch2/branch2.5/Conv + /stage2/stage2.1/branch2/branch2.7/Relu,tensorrt,trt_layer,0.138612,0.031129,0.092136,0.222292,60,0.259615,94.865474
+shufflenet_v2_x1_0,tensorrt_int8,10,/stage2/stage2.1/Reshape + /stage2/stage2.1/Transpose,tensorrt,trt_layer,0.300114,0.029103,0.249427,0.346459,60,0.562102,75.699239
+shufflenet_v2_x1_0,tensorrt_int8,98,/stage2/stage2.2/Slice,tensorrt,trt_layer,0.032041,0.000551,0.031042,0.033542,60,0.060012,99.86335
+shufflenet_v2_x1_0,tensorrt_int8,93,/stage2/stage2.2/Slice_1,tensorrt,trt_layer,0.04787,0.038048,0.030052,0.189479,60,0.089659,99.500408
+shufflenet_v2_x1_0,tensorrt_int8,37,/stage2/stage2.2/branch2/branch2.0/Conv + /stage2/stage2.2/branch2/branch2.2/Relu,tensorrt,trt_layer,0.16236,0.024742,0.094896,0.221615,60,0.304094,86.026774
+shufflenet_v2_x1_0,tensorrt_int8,49,/stage2/stage2.2/branch2/branch2.3/Conv,tensorrt,trt_layer,0.153981,0.039583,0.094323,0.43526,60,0.288401,89.543487
+shufflenet_v2_x1_0,tensorrt_int8,50,/stage2/stage2.2/branch2/branch2.5/Conv + /stage2/stage2.2/branch2/branch2.7/Relu,tensorrt,trt_layer,0.153476,0.013476,0.096302,0.188907,60,0.287455,89.830942
+shufflenet_v2_x1_0,tensorrt_int8,8,/stage2/stage2.2/Reshape + /stage2/stage2.2/Transpose,tensorrt,trt_layer,0.314906,0.020137,0.249479,0.375365,60,0.589807,74.552404
+shufflenet_v2_x1_0,tensorrt_int8,99,/stage2/stage2.3/Slice,tensorrt,trt_layer,0.031418,0.000532,0.030416,0.033281,60,0.058845,99.922195
+shufflenet_v2_x1_0,tensorrt_int8,96,/stage2/stage2.3/Slice_1,tensorrt,trt_layer,0.040991,0.027175,0.029739,0.151198,60,0.076775,99.741835
+shufflenet_v2_x1_0,tensorrt_int8,39,/stage2/stage2.3/branch2/branch2.0/Conv + /stage2/stage2.3/branch2/branch2.2/Relu,tensorrt,trt_layer,0.158078,0.02169,0.095104,0.221979,60,0.296074,86.619897
+shufflenet_v2_x1_0,tensorrt_int8,55,/stage2/stage2.3/branch2/branch2.3/Conv,tensorrt,trt_layer,0.151679,0.014612,0.093542,0.206146,60,0.284089,91.261367
+shufflenet_v2_x1_0,tensorrt_int8,46,/stage2/stage2.3/branch2/branch2.5/Conv + /stage2/stage2.3/branch2/branch2.7/Relu,tensorrt,trt_layer,0.15541,0.013458,0.094427,0.189063,60,0.291077,88.675232
+shufflenet_v2_x1_0,tensorrt_int8,9,/stage2/stage2.3/Reshape + /stage2/stage2.3/Transpose,tensorrt,trt_layer,0.312197,0.016644,0.250052,0.387343,60,0.584733,75.137137
+shufflenet_v2_x1_0,tensorrt_int8,75,/stage3/stage3.0/branch1/branch1.0/Conv,tensorrt,trt_layer,0.121365,0.001451,0.118177,0.125677,60,0.227312,96.575371
+shufflenet_v2_x1_0,tensorrt_int8,13,/stage3/stage3.0/branch2/branch2.0/Conv + /stage3/stage3.0/branch2/branch2.2/Relu,tensorrt,trt_layer,0.277418,0.002464,0.268281,0.281979,60,0.519594,77.298338
+shufflenet_v2_x1_0,tensorrt_int8,85,/stage3/stage3.0/branch1/branch1.2/Conv + /stage3/stage3.0/branch1/branch1.4/Relu,tensorrt,trt_layer,0.081682,0.001093,0.079635,0.084062,60,0.152987,98.493538
+shufflenet_v2_x1_0,tensorrt_int8,76,/stage3/stage3.0/branch2/branch2.3/Conv,tensorrt,trt_layer,0.120329,0.001341,0.117292,0.123437,60,0.225372,96.800743
+shufflenet_v2_x1_0,tensorrt_int8,86,/stage3/stage3.0/branch2/branch2.5/Conv + /stage3/stage3.0/branch2/branch2.7/Relu,tensorrt,trt_layer,0.081505,0.001131,0.079167,0.083593,60,0.152656,98.646194
+shufflenet_v2_x1_0,tensorrt_int8,74,/stage3/stage3.0/Reshape + /stage3/stage3.0/Transpose,tensorrt,trt_layer,0.128392,0.000388,0.127604,0.129532,60,0.240473,96.348059
+shufflenet_v2_x1_0,tensorrt_int8,101,/stage3/stage3.1/Slice,tensorrt,trt_layer,0.020055,0.005848,0.017813,0.064739,60,0.037562,100.0
+shufflenet_v2_x1_0,tensorrt_int8,100,/stage3/stage3.1/Slice_1,tensorrt,trt_layer,0.021486,0.026253,0.017187,0.223125,60,0.040242,99.962438
+shufflenet_v2_x1_0,tensorrt_int8,83,/stage3/stage3.1/branch2/branch2.0/Conv + /stage3/stage3.1/branch2/branch2.2/Relu,tensorrt,trt_layer,0.096446,0.015337,0.090573,0.201146,60,0.18064,98.162803
+shufflenet_v2_x1_0,tensorrt_int8,82,/stage3/stage3.1/branch2/branch2.3/Conv,tensorrt,trt_layer,0.098639,0.025208,0.090625,0.232916,60,0.184747,97.982163
+shufflenet_v2_x1_0,tensorrt_int8,84,/stage3/stage3.1/branch2/branch2.5/Conv + /stage3/stage3.1/branch2/branch2.7/Relu,tensorrt,trt_layer,0.094902,0.024607,0.084531,0.189531,60,0.177748,98.340551
+shufflenet_v2_x1_0,tensorrt_int8,52,/stage3/stage3.1/Reshape + /stage3/stage3.1/Transpose,tensorrt,trt_layer,0.153056,0.055504,0.128906,0.510989,60,0.286668,90.404867
+shufflenet_v2_x1_0,tensorrt_int8,94,/stage3/stage3.2/Slice,tensorrt,trt_layer,0.044105,0.031809,0.018021,0.132708,60,0.082607,99.583015
+shufflenet_v2_x1_0,tensorrt_int8,67,/stage3/stage3.2/Slice_1,tensorrt,trt_layer,0.141738,0.026848,0.017865,0.203177,60,0.26547,94.605859
+shufflenet_v2_x1_0,tensorrt_int8,32,/stage3/stage3.2/branch2/branch2.0/Conv + /stage3/stage3.2/branch2/branch2.2/Relu,tensorrt,trt_layer,0.179042,0.015323,0.093646,0.231719,60,0.335339,84.4165
+shufflenet_v2_x1_0,tensorrt_int8,51,/stage3/stage3.2/branch2/branch2.3/Conv,tensorrt,trt_layer,0.15337,0.013614,0.090208,0.192396,60,0.287256,90.118198
+shufflenet_v2_x1_0,tensorrt_int8,57,/stage3/stage3.2/branch2/branch2.5/Conv + /stage3/stage3.2/branch2/branch2.7/Relu,tensorrt,trt_layer,0.151533,0.015831,0.090729,0.229427,60,0.283816,91.829012
+shufflenet_v2_x1_0,tensorrt_int8,25,/stage3/stage3.2/Reshape + /stage3/stage3.2/Transpose,tensorrt,trt_layer,0.196411,0.013934,0.129219,0.231979,60,0.367871,81.972939
+shufflenet_v2_x1_0,tensorrt_int8,87,/stage3/stage3.3/Slice,tensorrt,trt_layer,0.072203,0.02594,0.01901,0.162084,60,0.135234,98.781428
+shufflenet_v2_x1_0,tensorrt_int8,45,/stage3/stage3.3/Slice_1,tensorrt,trt_layer,0.155861,0.020679,0.018334,0.196979,60,0.291922,88.384155
+shufflenet_v2_x1_0,tensorrt_int8,29,/stage3/stage3.3/branch2/branch2.0/Conv + /stage3/stage3.3/branch2/branch2.2/Relu,tensorrt,trt_layer,0.180446,0.016164,0.091718,0.227604,60,0.337969,83.408318
+shufflenet_v2_x1_0,tensorrt_int8,66,/stage3/stage3.3/branch2/branch2.3/Conv,tensorrt,trt_layer,0.148481,0.012549,0.091302,0.192969,60,0.278099,94.340389
+shufflenet_v2_x1_0,tensorrt_int8,65,/stage3/stage3.3/branch2/branch2.5/Conv + /stage3/stage3.3/branch2/branch2.7/Relu,tensorrt,trt_layer,0.148661,0.01371,0.087813,0.192656,60,0.278437,94.06229
+shufflenet_v2_x1_0,tensorrt_int8,23,/stage3/stage3.3/Reshape + /stage3/stage3.3/Transpose,tensorrt,trt_layer,0.197961,0.019175,0.129687,0.283489,60,0.370774,81.237164
+shufflenet_v2_x1_0,tensorrt_int8,89,/stage3/stage3.4/Slice,tensorrt,trt_layer,0.069043,0.025699,0.019011,0.16526,60,0.129315,99.042148
+shufflenet_v2_x1_0,tensorrt_int8,44,/stage3/stage3.4/Slice_1,tensorrt,trt_layer,0.156375,0.02177,0.035833,0.205156,60,0.292885,88.092233
+shufflenet_v2_x1_0,tensorrt_int8,33,/stage3/stage3.4/branch2/branch2.0/Conv + /stage3/stage3.4/branch2/branch2.2/Relu,tensorrt,trt_layer,0.178253,0.00979,0.153854,0.223542,60,0.333861,84.750361
+shufflenet_v2_x1_0,tensorrt_int8,62,/stage3/stage3.4/branch2/branch2.3/Conv,tensorrt,trt_layer,0.149143,0.010951,0.091302,0.185365,60,0.279339,93.226585
+shufflenet_v2_x1_0,tensorrt_int8,64,/stage3/stage3.4/branch2/branch2.5/Conv + /stage3/stage3.4/branch2/branch2.7/Relu,tensorrt,trt_layer,0.148749,0.015235,0.089428,0.20401,60,0.278601,93.783853
+shufflenet_v2_x1_0,tensorrt_int8,20,/stage3/stage3.4/Reshape + /stage3/stage3.4/Transpose,tensorrt,trt_layer,0.200489,0.022375,0.129635,0.307552,60,0.375508,80.120968
+shufflenet_v2_x1_0,tensorrt_int8,88,/stage3/stage3.5/Slice,tensorrt,trt_layer,0.070159,0.022887,0.01849,0.145052,60,0.131405,98.912833
+shufflenet_v2_x1_0,tensorrt_int8,38,/stage3/stage3.5/Slice_1,tensorrt,trt_layer,0.158598,0.012791,0.099739,0.197761,60,0.297048,86.323823
+shufflenet_v2_x1_0,tensorrt_int8,34,/stage3/stage3.5/branch2/branch2.0/Conv + /stage3/stage3.5/branch2/branch2.2/Relu,tensorrt,trt_layer,0.177758,0.006309,0.162344,0.197292,60,0.332934,85.083295
+shufflenet_v2_x1_0,tensorrt_int8,54,/stage3/stage3.5/branch2/branch2.3/Conv,tensorrt,trt_layer,0.15267,0.013725,0.091146,0.194427,60,0.285945,90.977278
+shufflenet_v2_x1_0,tensorrt_int8,63,/stage3/stage3.5/branch2/branch2.5/Conv + /stage3/stage3.5/branch2/branch2.7/Relu,tensorrt,trt_layer,0.148784,0.012206,0.09151,0.188802,60,0.278667,93.505252
+shufflenet_v2_x1_0,tensorrt_int8,26,/stage3/stage3.5/Reshape + /stage3/stage3.5/Transpose,tensorrt,trt_layer,0.196372,0.014328,0.129792,0.255572,60,0.367797,82.340736
+shufflenet_v2_x1_0,tensorrt_int8,90,/stage3/stage3.6/Slice,tensorrt,trt_layer,0.068266,0.022113,0.01901,0.154948,60,0.12786,99.170008
+shufflenet_v2_x1_0,tensorrt_int8,40,/stage3/stage3.6/Slice_1,tensorrt,trt_layer,0.157984,0.011951,0.142396,0.213958,60,0.295898,86.915795
+shufflenet_v2_x1_0,tensorrt_int8,35,/stage3/stage3.6/branch2/branch2.0/Conv + /stage3/stage3.6/branch2/branch2.2/Relu,tensorrt,trt_layer,0.177513,0.010064,0.151979,0.22599,60,0.332475,85.415771
+shufflenet_v2_x1_0,tensorrt_int8,58,/stage3/stage3.6/branch2/branch2.3/Conv,tensorrt,trt_layer,0.149412,0.01369,0.091094,0.19651,60,0.279843,92.108855
+shufflenet_v2_x1_0,tensorrt_int8,59,/stage3/stage3.6/branch2/branch2.5/Conv + /stage3/stage3.6/branch2/branch2.7/Relu,tensorrt,trt_layer,0.14926,0.012506,0.101354,0.189896,60,0.279558,92.388413
+shufflenet_v2_x1_0,tensorrt_int8,27,/stage3/stage3.6/Reshape + /stage3/stage3.6/Transpose,tensorrt,trt_layer,0.194951,0.013112,0.149636,0.250364,60,0.365136,82.705872
+shufflenet_v2_x1_0,tensorrt_int8,91,/stage3/stage3.7/Slice,tensorrt,trt_layer,0.068133,0.021727,0.018958,0.150208,60,0.127611,99.297618
+shufflenet_v2_x1_0,tensorrt_int8,41,/stage3/stage3.7/Slice_1,tensorrt,trt_layer,0.157667,0.012676,0.110208,0.202239,60,0.295304,87.211099
+shufflenet_v2_x1_0,tensorrt_int8,31,/stage3/stage3.7/branch2/branch2.0/Conv + /stage3/stage3.7/branch2/branch2.2/Relu,tensorrt,trt_layer,0.179048,0.010075,0.167708,0.221823,60,0.33535,84.081161
+shufflenet_v2_x1_0,tensorrt_int8,61,/stage3/stage3.7/branch2/branch2.3/Conv,tensorrt,trt_layer,0.14917,0.012225,0.091302,0.186875,60,0.27939,92.947245
+shufflenet_v2_x1_0,tensorrt_int8,60,/stage3/stage3.7/branch2/branch2.5/Conv + /stage3/stage3.7/branch2/branch2.7/Relu,tensorrt,trt_layer,0.149198,0.012746,0.114114,0.186666,60,0.279442,92.667855
+shufflenet_v2_x1_0,tensorrt_int8,18,/stage3/stage3.7/Reshape + /stage3/stage3.7/Transpose,tensorrt,trt_layer,0.201665,0.045544,0.162188,0.542968,60,0.377711,79.369213
+shufflenet_v2_x1_0,tensorrt_int8,7,/stage4/stage4.0/branch1/branch1.0/Conv,tensorrt,trt_layer,0.323509,0.050638,0.225833,0.465781,60,0.60592,73.962596
+shufflenet_v2_x1_0,tensorrt_int8,4,/stage4/stage4.0/branch2/branch2.0/Conv + /stage4/stage4.0/branch2/branch2.2/Relu,tensorrt,trt_layer,0.355392,0.009987,0.326667,0.392032,60,0.665636,72.111092
+shufflenet_v2_x1_0,tensorrt_int8,69,/stage4/stage4.0/branch1/branch1.2/Conv + /stage4/stage4.0/branch1/branch1.4/Relu,tensorrt,trt_layer,0.135497,0.001879,0.131822,0.140573,60,0.253781,95.119255
+shufflenet_v2_x1_0,tensorrt_int8,71,/stage4/stage4.0/branch2/branch2.3/Conv,tensorrt,trt_layer,0.133769,0.045962,0.11875,0.407292,60,0.250544,95.620406
+shufflenet_v2_x1_0,tensorrt_int8,42,/stage4/stage4.0/branch2/branch2.5/Conv + /stage4/stage4.0/branch2/branch2.7/Relu,tensorrt,trt_layer,0.157154,0.031673,0.109427,0.215937,60,0.294344,87.505443
+shufflenet_v2_x1_0,tensorrt_int8,79,/stage4/stage4.0/Reshape + /stage4/stage4.0/Transpose,tensorrt,trt_layer,0.107063,0.02474,0.068698,0.169948,60,0.200525,97.411498
+shufflenet_v2_x1_0,tensorrt_int8,36,/stage4/stage4.1/Slice,tensorrt,trt_layer,0.163863,0.028565,0.008698,0.255156,60,0.306909,85.72268
+shufflenet_v2_x1_0,tensorrt_int8,47,/stage4/stage4.1/Slice_1,tensorrt,trt_layer,0.155174,0.016237,0.083959,0.223541,60,0.290635,88.965867
+shufflenet_v2_x1_0,tensorrt_int8,24,/stage4/stage4.1/branch2/branch2.0/Conv + /stage4/stage4.1/branch2/branch2.2/Relu,tensorrt,trt_layer,0.196429,0.007508,0.174531,0.224427,60,0.367904,81.605068
+shufflenet_v2_x1_0,tensorrt_int8,5,/stage4/stage4.1/branch2/branch2.3/Conv,tensorrt,trt_layer,0.333945,0.221612,0.271041,1.960729,60,0.625467,72.736558
+shufflenet_v2_x1_0,tensorrt_int8,21,/stage4/stage4.1/branch2/branch2.5/Conv + /stage4/stage4.1/branch2/branch2.7/Relu,tensorrt,trt_layer,0.200008,0.01318,0.130364,0.246615,60,0.374608,80.495576
+shufflenet_v2_x1_0,tensorrt_int8,78,/stage4/stage4.1/Reshape + /stage4/stage4.1/Transpose,tensorrt,trt_layer,0.107384,0.021846,0.068802,0.176198,60,0.201126,97.210973
+shufflenet_v2_x1_0,tensorrt_int8,43,/stage4/stage4.2/Slice,tensorrt,trt_layer,0.15692,0.016361,0.083125,0.213802,60,0.293905,87.799348
+shufflenet_v2_x1_0,tensorrt_int8,56,/stage4/stage4.2/Slice_1,tensorrt,trt_layer,0.15154,0.010427,0.125573,0.189375,60,0.283829,91.545196
+shufflenet_v2_x1_0,tensorrt_int8,28,/stage4/stage4.2/branch2/branch2.0/Conv + /stage4/stage4.2/branch2/branch2.2/Relu,tensorrt,trt_layer,0.194599,0.007263,0.171562,0.227084,60,0.364477,83.070349
+shufflenet_v2_x1_0,tensorrt_int8,11,/stage4/stage4.2/branch2/branch2.3/Conv,tensorrt,trt_layer,0.28901,0.042211,0.250261,0.461198,60,0.541305,76.240544
+shufflenet_v2_x1_0,tensorrt_int8,17,/stage4/stage4.2/branch2/branch2.5/Conv + /stage4/stage4.2/branch2/branch2.7/Relu,tensorrt,trt_layer,0.203009,0.010407,0.191302,0.240677,60,0.380228,78.991502
+shufflenet_v2_x1_0,tensorrt_int8,81,/stage4/stage4.2/Reshape + /stage4/stage4.2/Transpose,tensorrt,trt_layer,0.099819,0.028995,0.067657,0.186562,60,0.186957,97.797416
+shufflenet_v2_x1_0,tensorrt_int8,48,/stage4/stage4.3/Slice,tensorrt,trt_layer,0.154418,0.016791,0.085677,0.216771,60,0.289219,89.255086
+shufflenet_v2_x1_0,tensorrt_int8,53,/stage4/stage4.3/Slice_1,tensorrt,trt_layer,0.152948,0.012372,0.11125,0.196458,60,0.286466,90.691333
+shufflenet_v2_x1_0,tensorrt_int8,22,/stage4/stage4.3/branch2/branch2.0/Conv + /stage4/stage4.3/branch2/branch2.2/Relu,tensorrt,trt_layer,0.197983,0.010848,0.182083,0.234115,60,0.370815,80.86639
+shufflenet_v2_x1_0,tensorrt_int8,12,/stage4/stage4.3/branch2/branch2.3/Conv,tensorrt,trt_layer,0.287352,0.047495,0.237656,0.471719,60,0.5382,76.778744
+shufflenet_v2_x1_0,tensorrt_int8,19,/stage4/stage4.3/branch2/branch2.5/Conv + /stage4/stage4.3/branch2/branch2.7/Relu,tensorrt,trt_layer,0.200883,0.009396,0.183282,0.230521,60,0.376246,79.745459
+shufflenet_v2_x1_0,tensorrt_int8,80,/stage4/stage4.3/Reshape + /stage4/stage4.3/Transpose,tensorrt,trt_layer,0.106228,0.027765,0.067812,0.193594,60,0.198961,97.610459
+shufflenet_v2_x1_0,tensorrt_int8,2,/conv5/conv5.0/Conv + /conv5/conv5.2/Relu,tensorrt,trt_layer,1.037885,0.014213,0.987032,1.087604,60,1.94392,70.324276
+shufflenet_v2_x1_0,tensorrt_int8,73,/ReduceMean,tensorrt,trt_layer,0.129478,0.001415,0.126928,0.136042,60,0.242508,96.107586
+shufflenet_v2_x1_0,tensorrt_int8,6,/fc/Gemm,tensorrt,trt_layer,0.331089,0.010139,0.311354,0.361094,60,0.620117,73.356676

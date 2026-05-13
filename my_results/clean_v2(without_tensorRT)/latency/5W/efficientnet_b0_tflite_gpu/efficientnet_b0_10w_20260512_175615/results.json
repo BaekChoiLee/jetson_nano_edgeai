@@ -1,0 +1,108 @@
+[
+  {
+    "model": "efficientnet_b0",
+    "runtime": "tflite_gpu",
+    "error": "tflite_gpu: Descriptors cannot be created directly.\nIf this call came from a _pb2.py file, your generated code is out of date and must be regenerated with protoc >= 3.19.0.\nIf you cannot immediately regenerate your protos, some other possible workarounds are:\n 1. Downgrade the protobuf package to 3.20.x or lower.\n 2. Set PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python (but this will use pure-Python parsing and will be much slower).\n\nMore information: https://developers.google.com/protocol-buffers/docs/news/2022-05-06#python-updates",
+    "power_mode": "10w",
+    "tegrastats": {
+      "num_samples": 5,
+      "cpu_avg_util_pct": {
+        "mean": 11.15,
+        "max": 14.75,
+        "min": 4.5
+      },
+      "gpu_freq_mhz": {
+        "mean": 614.0,
+        "max": 614.0,
+        "min": 614.0
+      },
+      "gpu_util_pct": {
+        "mean": 0.0,
+        "max": 0.0,
+        "min": 0.0
+      },
+      "pom_5v_cpu_average_mw": {
+        "mean": 285.6,
+        "max": 326.0,
+        "min": 204.0
+      },
+      "pom_5v_cpu_current_mw": {
+        "mean": 318.0,
+        "max": 448.0,
+        "min": 204.0
+      },
+      "pom_5v_gpu_average_mw": {
+        "mean": 81.0,
+        "max": 81.0,
+        "min": 81.0
+      },
+      "pom_5v_gpu_current_mw": {
+        "mean": 81.0,
+        "max": 81.0,
+        "min": 81.0
+      },
+      "pom_5v_in_average_mw": {
+        "mean": 2138.8,
+        "max": 2164.0,
+        "min": 2124.0
+      },
+      "pom_5v_in_current_mw": {
+        "mean": 2164.8,
+        "max": 2245.0,
+        "min": 2123.0
+      },
+      "ram_total_mb": {
+        "mean": 3964.0,
+        "max": 3964.0,
+        "min": 3964.0
+      },
+      "ram_used_mb": {
+        "mean": 1643.4,
+        "max": 1655.0,
+        "min": 1637.0
+      },
+      "swap_total_mb": {
+        "mean": 10174.0,
+        "max": 10174.0,
+        "min": 10174.0
+      },
+      "swap_used_mb": {
+        "mean": 1030.0,
+        "max": 1030.0,
+        "min": 1030.0
+      },
+      "temp_ao_c": {
+        "mean": 35.3,
+        "max": 35.5,
+        "min": 35.0
+      },
+      "temp_cpu_c": {
+        "mean": 26.3,
+        "max": 26.5,
+        "min": 26.0
+      },
+      "temp_gpu_c": {
+        "mean": 25.0,
+        "max": 25.0,
+        "min": 25.0
+      },
+      "temp_pll_c": {
+        "mean": 24.5,
+        "max": 24.5,
+        "min": 24.5
+      },
+      "temp_pmic_c": {
+        "mean": 50.0,
+        "max": 50.0,
+        "min": 50.0
+      },
+      "temp_thermal_c": {
+        "mean": 25.6,
+        "max": 25.75,
+        "min": 25.5
+      }
+    },
+    "wall_time_s": 2.83,
+    "status": "error"
+  }
+]

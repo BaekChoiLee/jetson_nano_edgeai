@@ -1,0 +1,24 @@
+{
+  "clean_source": "/Users/hobongs/Desktop/HoBong_study/26-1/\u1110\u1161\u11ab\u110c\u116e\u11bc/temp/jetson_nano_edgeai/my_results/clean_v2(without_tensorRT)",
+  "tensorrt_source": "/Users/hobongs/Desktop/HoBong_study/26-1/\u1110\u1161\u11ab\u110c\u116e\u11bc/temp/jetson_nano_edgeai/my_results/tensorrt_only",
+  "output_dir": "/Users/hobongs/Desktop/HoBong_study/26-1/\u1110\u1161\u11ab\u110c\u116e\u11bc/temp/jetson_nano_edgeai/my_results/visualizations",
+  "policy": {
+    "clean_v2_excluded_runtimes": [
+      "tensorrt_fp16",
+      "tensorrt_fp32",
+      "tensorrt_int8"
+    ],
+    "tensorrt_only_included_runtimes": [
+      "tensorrt_fp16",
+      "tensorrt_fp32",
+      "tensorrt_int8"
+    ]
+  },
+  "counts": {
+    "latency_rows": 132,
+    "accuracy_rows": 62,
+    "layer_runtime_rows": 7791,
+    "layer_runtime_images": 54,
+    "framework_comparison_images": 6
+  }
+}

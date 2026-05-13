@@ -1,0 +1,8 @@
+model,runtime,rank,layer_name,backend,granularity,mean_ms,std_ms,min_ms,max_ms,samples,percent_total_ms,cumulative_percent_ms
+shufflenet_v2_x1_0,onnxrt_trt,5,model_loading_uri,onnxruntime,onnx_node,52.874,0.0,52.874,52.874,1,0.679791,99.999959
+shufflenet_v2_x1_0,onnxrt_trt,1,session_initialization,onnxruntime,onnx_node,6516.567,0.0,6516.567,6516.567,1,83.782206,83.782206
+shufflenet_v2_x1_0,onnxrt_trt,6,TRTKernel_graph_torch_jit_2221834802626824680_1:TensorrtExecutionProvider_TRTKernel_graph_torch_jit_2221834802626824680_1_0_fence_before,onnxruntime,onnx_node,0.0016,0.000523,0.001,0.003,60,2.1e-05,99.99998
+shufflenet_v2_x1_0,onnxrt_trt,4,TRTKernel_graph_torch_jit_2221834802626824680_1:TensorrtExecutionProvider_TRTKernel_graph_torch_jit_2221834802626824680_1_0_kernel_time,onnxruntime,onnx_node,402.149933,3036.579957,4.889,23726.562,60,5.170362,99.320169
+shufflenet_v2_x1_0,onnxrt_trt,7,TRTKernel_graph_torch_jit_2221834802626824680_1:TensorrtExecutionProvider_TRTKernel_graph_torch_jit_2221834802626824680_1_0_fence_after,onnxruntime,onnx_node,0.001571,0.003332,0.001,0.021,35,2e-05,100.0
+shufflenet_v2_x1_0,onnxrt_trt,3,SequentialExecutor::Execute,onnxruntime,onnx_node,402.29425,3036.592024,5.022,23726.799,60,5.172217,94.149807
+shufflenet_v2_x1_0,onnxrt_trt,2,model_run,onnxruntime,onnx_node,404.09615,3036.567154,8.52,23728.411,60,5.195384,88.97759

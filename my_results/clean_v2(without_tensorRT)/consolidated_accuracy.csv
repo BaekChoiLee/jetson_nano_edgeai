@@ -1,0 +1,63 @@
+error,final_class,map_50,map_50_95,model,n,runtime,status_reason,task,top1,top5
+,measured,,,mobilenetv3_small,500,pytorch_cpu,ok,classification,84.4,96.4
+,measured,,,mobilenetv3_small,500,pytorch_cuda,ok,classification,84.4,96.4
+,measured,,,mobilenetv3_small,500,onnxrt_cuda,ok,classification,84.4,96.4
+,measured,,,mobilenetv3_small,500,onnxrt_trt,ok,classification,84.4,96.4
+,measured,,,mobilenetv3_small,500,tflite_cpu,ok,classification,84.4,96.4
+,measured,,,mobilenetv3_small,500,tensorrt_fp32,ok,classification,84.4,96.4
+,measured,,,mobilenetv3_small,500,tensorrt_fp16,ok,classification,84.8,96.4
+,measured,,,mobilenetv3_small,500,tensorrt_int8,ok,classification,84.8,96.4
+,measured,,,mobilenetv3_small,500,ncnn_cpu,ok,classification,84.4,96.4
+,measured,,,mobilenetv3_small,500,ncnn_vulkan,ok,classification,84.4,96.4
+,measured,,,resnet50,500,pytorch_cpu,ok,classification,91.0,98.0
+,measured,,,resnet50,500,pytorch_cuda,ok,classification,91.0,98.0
+,measured,,,resnet50,500,onnxrt_cuda,ok,classification,91.0,98.0
+,measured,,,resnet50,500,onnxrt_trt,ok,classification,91.0,98.0
+,measured,,,resnet50,500,tflite_cpu,ok,classification,90.0,97.8
+,measured,,,resnet50,500,tensorrt_fp32,ok,classification,91.0,98.0
+,measured,,,resnet50,500,tensorrt_fp16,ok,classification,91.0,98.0
+,measured,,,resnet50,500,tensorrt_int8,ok,classification,91.0,98.0
+,measured,,,resnet50,500,ncnn_cpu,ok,classification,91.0,98.0
+,measured,,,resnet50,500,ncnn_vulkan,ok,classification,91.0,98.0
+,measured,,,efficientnet_b0,500,pytorch_cpu,ok,classification,91.6,98.6
+,measured,,,efficientnet_b0,500,pytorch_cuda,ok,classification,91.6,98.6
+,measured,,,efficientnet_b0,500,onnxrt_cuda,ok,classification,91.6,98.6
+,measured,,,efficientnet_b0,500,onnxrt_trt,ok,classification,91.6,98.6
+,measured,,,efficientnet_b0,500,tflite_cpu,ok,classification,91.6,98.6
+,measured,,,efficientnet_b0,500,tensorrt_fp32,ok,classification,91.6,98.6
+,measured,,,efficientnet_b0,500,tensorrt_fp16,ok,classification,91.6,98.6
+,measured,,,efficientnet_b0,500,tensorrt_int8,ok,classification,77.2,94.6
+,measured,,,efficientnet_b0,500,ncnn_cpu,ok,classification,91.6,98.6
+,measured,,,efficientnet_b0,500,ncnn_vulkan,ok,classification,91.6,98.6
+,measured,,,shufflenet_v2_x1_0,500,pytorch_cpu,ok,classification,87.8,97.2
+,measured,,,shufflenet_v2_x1_0,500,pytorch_cuda,ok,classification,87.8,97.2
+,measured,,,shufflenet_v2_x1_0,500,onnxrt_cuda,ok,classification,87.8,97.2
+,measured,,,shufflenet_v2_x1_0,500,onnxrt_trt,ok,classification,87.8,97.2
+,measured,,,shufflenet_v2_x1_0,500,tflite_cpu,ok,classification,87.8,97.2
+,measured,,,shufflenet_v2_x1_0,500,tensorrt_fp32,ok,classification,87.8,97.2
+,measured,,,shufflenet_v2_x1_0,500,tensorrt_fp16,ok,classification,87.8,97.2
+,measured,,,shufflenet_v2_x1_0,500,tensorrt_int8,ok,classification,87.8,97.2
+,measured,,,shufflenet_v2_x1_0,500,ncnn_cpu,ok,classification,87.8,97.2
+,measured,,,shufflenet_v2_x1_0,500,ncnn_vulkan,ok,classification,87.8,97.2
+file missing,na,,,yolov8n,,pytorch_cpu,artifact_missing,detection,,
+file missing,na,,,yolov8n,,pytorch_cuda,artifact_missing,detection,,
+file missing,na,,,yolov8n,,tensorrt_fp32,artifact_missing,detection,,
+file missing,na,,,yolov8n,,tensorrt_fp16,artifact_missing,detection,,
+file missing,na,,,yolov8n,,tensorrt_int8,artifact_missing,detection,,
+file missing,na,,,yolov8n,,onnxrt_cuda,artifact_missing,detection,,
+file missing,na,,,yolov8n,,onnxrt_trt,artifact_missing,detection,,
+file missing,na,,,yolov8n,,tflite_cpu,artifact_missing,detection,,
+file missing,na,,,yolov8n,,tflite_gpu,artifact_missing,detection,,
+file missing,na,,,yolov8n,,ncnn_cpu,artifact_missing,detection,,
+file missing,na,,,yolov8n,,ncnn_vulkan,artifact_missing,detection,,
+file missing,na,,,ssd_mobilenet_v2,,pytorch_cpu,artifact_missing,detection,,
+file missing,na,,,ssd_mobilenet_v2,,pytorch_cuda,artifact_missing,detection,,
+file missing,na,,,ssd_mobilenet_v2,,tensorrt_fp32,artifact_missing,detection,,
+file missing,na,,,ssd_mobilenet_v2,,tensorrt_fp16,artifact_missing,detection,,
+file missing,na,,,ssd_mobilenet_v2,,tensorrt_int8,artifact_missing,detection,,
+file missing,na,,,ssd_mobilenet_v2,,onnxrt_cuda,artifact_missing,detection,,
+file missing,na,,,ssd_mobilenet_v2,,onnxrt_trt,artifact_missing,detection,,
+file missing,na,,,ssd_mobilenet_v2,,tflite_cpu,artifact_missing,detection,,
+file missing,na,,,ssd_mobilenet_v2,,tflite_gpu,artifact_missing,detection,,
+file missing,na,,,ssd_mobilenet_v2,,ncnn_cpu,artifact_missing,detection,,
+file missing,na,,,ssd_mobilenet_v2,,ncnn_vulkan,artifact_missing,detection,,

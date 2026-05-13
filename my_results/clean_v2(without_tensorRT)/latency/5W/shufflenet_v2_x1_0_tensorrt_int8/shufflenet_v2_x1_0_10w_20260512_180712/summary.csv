@@ -1,0 +1,2 @@
+model,runtime,power_mode,status,error,mean_ms,std_ms,min_ms,max_ms,p50_ms,p95_ms,p99_ms,memory_mb,model_size_mb,fps,power_avg_mw,power_max_mw
+shufflenet_v2_x1_0_int8.engine,tensorrt_int8,10w,ok,,11.190417447090148,0.4110585463725808,10.902812957763672,14.399531364440918,11.129167079925537,11.403445100784301,14.109348297119139,0.58,9.25,89.36,2534.18,3864.0

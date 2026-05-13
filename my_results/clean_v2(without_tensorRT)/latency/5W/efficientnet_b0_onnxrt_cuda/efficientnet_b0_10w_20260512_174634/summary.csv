@@ -1,0 +1,2 @@
+model,runtime,power_mode,status,error,mean_ms,std_ms,min_ms,max_ms,p50_ms,p95_ms,p99_ms,memory_mb,model_size_mb,fps,power_avg_mw,power_max_mw
+efficientnet_b0.onnx,onnxrt_cuda,10w,ok,,53.7747446866706,0.1916536096448899,53.61100006848574,56.19193334132433,53.753606509417295,53.86413210071623,54.16687155142426,382.82,20.16,18.6,3106.1,4326.0

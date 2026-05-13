@@ -1,0 +1,2 @@
+model,runtime,power_mode,status,error,mean_ms,std_ms,min_ms,max_ms,p50_ms,p95_ms,p99_ms,memory_mb,model_size_mb,fps,power_avg_mw,power_max_mw
+resnet50,pytorch_cpu,10w,ok,,762.1526587638073,36.68704258696554,663.2008091546595,896.2320322170854,764.2314219847322,825.2210256410763,842.9891840741038,21.02,97.7,1.31,5333.98,5607.0

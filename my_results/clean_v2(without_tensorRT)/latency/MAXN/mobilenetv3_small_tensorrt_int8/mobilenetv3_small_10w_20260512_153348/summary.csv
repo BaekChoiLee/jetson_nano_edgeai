@@ -1,0 +1,2 @@
+model,runtime,power_mode,status,error,mean_ms,std_ms,min_ms,max_ms,p50_ms,p95_ms,p99_ms,memory_mb,model_size_mb,fps,power_avg_mw,power_max_mw
+mobilenetv3_small_int8.engine,tensorrt_int8,10w,ok,,7.110366606712342,0.4390043982886924,6.926353931427002,10.24296760559082,7.002005577087402,7.276239895820617,9.485070562362667,0.58,12.24,140.64,3666.33,5904.0

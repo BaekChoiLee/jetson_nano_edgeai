@@ -1,0 +1,2 @@
+model,runtime,power_mode,status,error,mean_ms,std_ms,min_ms,max_ms,p50_ms,p95_ms,p99_ms,memory_mb,model_size_mb,fps,power_avg_mw,power_max_mw
+efficientnet_b0,ncnn_cpu,10w,ok,,63.18079195916653,8.218902149750365,57.8206111676991,154.5522240921855,60.025570914149284,71.01346985436976,73.35895139723995,24.27,20.09,15.83,5157.59,5325.0

@@ -1,0 +1,2 @@
+model,runtime,power_mode,status,error,mean_ms,std_ms,min_ms,max_ms,p50_ms,p95_ms,p99_ms,memory_mb,model_size_mb,fps,power_avg_mw,power_max_mw
+shufflenet_v2_x1_0,ncnn_vulkan,10w,ok,,15.836786485742778,0.3291735020683278,15.639783348888159,18.632228020578623,15.776478685438633,15.96113268751651,17.916010715998702,2.26,8.66,63.14,2724.5,3397.0

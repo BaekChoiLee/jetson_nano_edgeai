@@ -1,0 +1,169 @@
+co2_per_inference_mg,energy_per_inference_mj,error,final_class,mean_ms,memory_mb,model,model_size_mb,num_runs,p50_ms,p95_ms,p99_ms,power_avg_mw,power_max_mw,power_mode,runtime,source_path,status,status_reason,std_ms,total_co2_mg,total_energy_mj
+0.20685,1622.354659,,measured,348.1388,13.34,mobilenetv3_small,9.75,200,376.358,430.7702,456.5739,4660.08,4920.0,MAXN,pytorch_cpu,results/clean_v2_20260512_131735/latency/MAXN/mobilenetv3_small_pytorch_cpu,ok,ok,83.3253,41.37,324470.9318
+0.013798,108.216598,,measured,27.7524,12.29,mobilenetv3_small,9.75,200,26.8266,32.2764,34.3787,3899.36,4840.0,MAXN,pytorch_cuda,results/clean_v2_20260512_131735/latency/MAXN/mobilenetv3_small_pytorch_cuda,ok,ok,2.1376,2.7595,21643.3197
+0.002747,21.547459,,measured,7.0076,0.58,mobilenetv3_small,11.94,200,6.8852,7.6848,9.1105,3074.87,5904.0,MAXN,tensorrt_fp32,results/clean_v2_20260512_131735/latency/MAXN/mobilenetv3_small_tensorrt_fp32,ok,ok,0.4216,0.5495,4309.4918
+0.002662,20.875682,,measured,5.8849,0.58,mobilenetv3_small,6.78,200,5.7414,6.5685,8.5139,3547.33,5864.0,MAXN,tensorrt_fp16,results/clean_v2_20260512_131735/latency/MAXN/mobilenetv3_small_tensorrt_fp16,ok,ok,0.497,0.5323,4175.1365
+0.003324,26.069073,,measured,7.1104,0.58,mobilenetv3_small,12.24,200,7.002,7.2762,9.4851,3666.33,5904.0,MAXN,tensorrt_int8,results/clean_v2_20260512_131735/latency/MAXN/mobilenetv3_small_tensorrt_int8,ok,ok,0.439,0.6648,5213.8146
+0.0052,40.784924,,measured,11.1433,388.38,mobilenetv3_small,9.71,200,10.9088,12.8202,15.1304,3660.04,5855.0,MAXN,onnxrt_cuda,results/clean_v2_20260512_131735/latency/MAXN/mobilenetv3_small_onnxrt_cuda,ok,ok,0.9092,1.04,8156.9847
+0.002865,22.473377,,measured,7.2151,986.35,mobilenetv3_small,9.71,200,7.118,7.6252,9.3285,3114.77,5697.0,MAXN,onnxrt_trt,results/clean_v2_20260512_131735/latency/MAXN/mobilenetv3_small_onnxrt_trt,ok,ok,0.3617,0.5731,4494.6754
+0.027141,212.872046,,measured,63.3893,16.38,mobilenetv3_small,11.99,200,62.3677,67.9283,70.5376,3358.17,3778.0,MAXN,tflite_cpu,results/clean_v2_20260512_131735/latency/MAXN/mobilenetv3_small_tflite_cpu,ok,ok,2.3581,5.4282,42574.4091
+,,"tflite_gpu: Descriptors cannot be created directly.
+If this call came from a _pb2.py file, your generated code is out of date and must be regenerated with protoc >= 3.19.0.
+If you cannot immediately regenerate your protos, some other possible workarounds are:
+ 1. Downgrade the protobuf package to 3.20.x or lower.
+ 2. Set PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python (but this will use pure-Python parsing and will be much slower).
+
+More information: https://developers.google.com/protocol-buffers/docs/news/2022-05-06#python-updates",error,,,mobilenetv3_small,,,,,,2411.5,2637.0,MAXN,tflite_gpu,results/clean_v2_20260512_131735/latency/MAXN/mobilenetv3_small_tflite_gpu,error,runtime_error,,,
+0.005345,41.917678,,measured,9.8306,3.96,mobilenetv3_small,9.68,200,8.8947,14.1887,21.0129,4264.0,5141.0,MAXN,ncnn_cpu,results/clean_v2_20260512_131735/latency/MAXN/mobilenetv3_small_ncnn_cpu,ok,ok,4.5183,1.0689,8383.5357
+0.002799,21.951286,,measured,7.2664,2.17,mobilenetv3_small,9.68,200,7.1491,7.5446,9.8466,3020.93,4280.0,MAXN,ncnn_vulkan,results/clean_v2_20260512_131735/latency/MAXN/mobilenetv3_small_ncnn_vulkan,ok,ok,0.4201,0.5598,4390.2572
+0.518327,4065.307259,,measured,762.1527,21.02,resnet50,97.7,200,764.2314,825.221,842.9892,5333.98,5607.0,MAXN,pytorch_cpu,results/clean_v2_20260512_131735/latency/MAXN/resnet50_pytorch_cpu,ok,ok,36.687,103.6653,813061.4517
+0.061128,479.435228,,measured,90.2361,125.64,resnet50,97.7,200,90.2083,91.088,92.1425,5313.12,8423.0,MAXN,pytorch_cuda,results/clean_v2_20260512_131735/latency/MAXN/resnet50_pytorch_cuda,ok,ok,0.6651,12.2256,95887.0455
+0.03567,279.763718,,measured,55.242,0.58,resnet50,121.75,200,55.1354,55.7904,56.0184,5064.33,7354.0,MAXN,tensorrt_fp32,results/clean_v2_20260512_131735/latency/MAXN/resnet50_tensorrt_fp32,ok,ok,0.3072,7.134,55952.7436
+0.019271,151.142397,,measured,29.8445,0.58,resnet50,61.14,200,29.8014,30.2426,30.3099,5064.33,6932.0,MAXN,tensorrt_fp16,results/clean_v2_20260512_131735/latency/MAXN/resnet50_tensorrt_fp16,ok,ok,0.1943,3.8541,30228.4793
+0.040053,314.139248,,measured,54.4161,0.58,resnet50,115.83,200,54.3167,54.8566,55.8971,5772.91,7458.0,MAXN,tensorrt_int8,results/clean_v2_20260512_131735/latency/MAXN/resnet50_tensorrt_int8,ok,ok,0.4313,8.0106,62827.8496
+0.37644,2952.46757,,measured,513.2459,391.41,resnet50,97.41,200,512.9556,516.4848,520.4068,5752.54,6865.0,MAXN,onnxrt_cuda,results/clean_v2_20260512_131735/latency/MAXN/resnet50_onnxrt_cuda,ok,ok,1.8991,75.2879,590493.5139
+0.031224,244.897221,,measured,54.7539,651.16,resnet50,97.41,200,54.6402,55.4835,55.683,4472.69,7510.0,MAXN,onnxrt_trt,results/clean_v2_20260512_131735/latency/MAXN/resnet50_onnxrt_trt,ok,ok,0.3999,6.2449,48979.4442
+0.3199,2509.018894,,measured,552.9043,196.38,resnet50,97.43,200,549.9915,568.6152,602.9788,4537.89,4760.0,MAXN,tflite_cpu,results/clean_v2_20260512_131735/latency/MAXN/resnet50_tflite_cpu,ok,ok,17.3174,63.98,501803.7788
+,,"tflite_gpu: Descriptors cannot be created directly.
+If this call came from a _pb2.py file, your generated code is out of date and must be regenerated with protoc >= 3.19.0.
+If you cannot immediately regenerate your protos, some other possible workarounds are:
+ 1. Downgrade the protobuf package to 3.20.x or lower.
+ 2. Set PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python (but this will use pure-Python parsing and will be much slower).
+
+More information: https://developers.google.com/protocol-buffers/docs/news/2022-05-06#python-updates",error,,,resnet50,,,,,,2465.33,2605.0,MAXN,tflite_gpu,results/clean_v2_20260512_131735/latency/MAXN/resnet50_tflite_gpu,error,runtime_error,,,
+0.169499,1329.40664,,measured,242.7701,11.86,resnet50,97.39,200,240.1211,253.3274,302.9185,5475.99,5713.0,MAXN,ncnn_cpu,results/clean_v2_20260512_131735/latency/MAXN/resnet50_ncnn_cpu,ok,ok,13.1175,33.8999,265881.328
+0.059644,467.798374,,measured,91.7437,1.65,resnet50,97.39,200,91.7234,92.4823,93.9071,5098.97,6523.0,MAXN,ncnn_vulkan,results/clean_v2_20260512_131735/latency/MAXN/resnet50_ncnn_vulkan,ok,ok,0.5798,11.9289,93559.6748
+0.767367,6018.563698,,measured,1267.3115,18.23,efficientnet_b0,20.33,200,1300.3402,1531.1095,1571.4299,4749.08,5079.0,MAXN,pytorch_cpu,results/clean_v2_20260512_131735/latency/MAXN/efficientnet_b0_pytorch_cpu,ok,ok,212.4369,153.4734,1203712.7397
+0.025437,199.507774,,measured,44.5687,30.94,efficientnet_b0,20.33,200,42.9161,49.9032,58.1406,4476.41,6090.0,MAXN,pytorch_cuda,results/clean_v2_20260512_131735/latency/MAXN/efficientnet_b0_pytorch_cuda,ok,ok,3.5969,5.0874,39901.5549
+0.014125,110.78661,,measured,27.4872,0.58,efficientnet_b0,25.22,200,27.4032,27.8095,28.0882,4030.48,6742.0,MAXN,tensorrt_fp32,results/clean_v2_20260512_131735/latency/MAXN/efficientnet_b0_tensorrt_fp32,ok,ok,0.2443,2.8251,22157.322
+0.012704,99.641841,,measured,22.1576,0.58,efficientnet_b0,14.59,200,22.0907,22.4872,22.5667,4496.96,6569.0,MAXN,tensorrt_fp16,results/clean_v2_20260512_131735/latency/MAXN/efficientnet_b0_tensorrt_fp16,ok,ok,0.1605,2.5409,19928.3682
+0.016425,128.826619,,measured,27.5443,0.58,efficientnet_b0,24.22,200,27.467,27.8823,28.0702,4677.07,6697.0,MAXN,tensorrt_int8,results/clean_v2_20260512_131735/latency/MAXN/efficientnet_b0_tensorrt_int8,ok,ok,0.1849,3.2851,25765.3238
+0.023899,187.442228,,measured,39.5076,387.63,efficientnet_b0,20.16,200,39.3301,40.2599,40.4064,4744.46,7249.0,MAXN,onnxrt_cuda,results/clean_v2_20260512_131735/latency/MAXN/efficientnet_b0_onnxrt_cuda,ok,ok,0.3469,4.7798,37488.4456
+0.012503,98.065817,,measured,27.935,833.79,efficientnet_b0,20.16,200,27.6999,28.7144,30.7244,3510.5,6999.0,MAXN,onnxrt_trt,results/clean_v2_20260512_131735/latency/MAXN/efficientnet_b0_onnxrt_trt,ok,ok,0.5704,2.5007,19613.1635
+0.121151,950.206334,,measured,277.5719,46.24,efficientnet_b0,20.16,200,277.058,283.8336,288.3454,3423.28,3784.0,MAXN,tflite_cpu,results/clean_v2_20260512_131735/latency/MAXN/efficientnet_b0_tflite_cpu,ok,ok,3.8435,24.2303,190041.2668
+,,"tflite_gpu: Descriptors cannot be created directly.
+If this call came from a _pb2.py file, your generated code is out of date and must be regenerated with protoc >= 3.19.0.
+If you cannot immediately regenerate your protos, some other possible workarounds are:
+ 1. Downgrade the protobuf package to 3.20.x or lower.
+ 2. Set PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python (but this will use pure-Python parsing and will be much slower).
+
+More information: https://developers.google.com/protocol-buffers/docs/news/2022-05-06#python-updates",error,,,efficientnet_b0,,,,,,2636.33,2844.0,MAXN,tflite_gpu,results/clean_v2_20260512_131735/latency/MAXN/efficientnet_b0_tflite_gpu,error,runtime_error,,,
+0.041547,325.860662,,measured,63.1808,24.27,efficientnet_b0,20.09,200,60.0256,71.0135,73.359,5157.59,5325.0,MAXN,ncnn_cpu,results/clean_v2_20260512_131735/latency/MAXN/efficientnet_b0_ncnn_cpu,ok,ok,8.2189,8.3094,65172.1325
+0.011764,92.263738,,measured,23.2369,2.46,efficientnet_b0,20.09,200,22.9699,24.945,26.8533,3970.57,5277.0,MAXN,ncnn_vulkan,results/clean_v2_20260512_131735/latency/MAXN/efficientnet_b0_ncnn_vulkan,ok,ok,0.7591,2.3527,18452.7476
+0.215751,1692.161748,,measured,363.3572,13.8,shufflenet_v2_x1_0,8.75,200,394.4917,424.636,457.1913,4657.02,4912.0,MAXN,pytorch_cpu,results/clean_v2_20260512_131735/latency/MAXN/shufflenet_v2_x1_0_pytorch_cpu,ok,ok,66.8335,43.1501,338432.3495
+0.015231,119.456713,,measured,30.7417,11.7,shufflenet_v2_x1_0,8.75,200,29.8055,34.8427,39.2838,3885.82,4864.0,MAXN,pytorch_cuda,results/clean_v2_20260512_131735/latency/MAXN/shufflenet_v2_x1_0_pytorch_cuda,ok,ok,2.2414,3.0461,23891.3425
+0.00339,26.588679,,measured,8.1801,0.58,shufflenet_v2_x1_0,9.17,200,8.13,8.326,9.2836,3250.41,6297.0,MAXN,tensorrt_fp32,results/clean_v2_20260512_131735/latency/MAXN/shufflenet_v2_x1_0_tensorrt_fp32,ok,ok,0.2087,0.678,5317.7358
+0.003343,26.219781,,measured,7.3446,0.58,shufflenet_v2_x1_0,5.35,200,7.2845,7.4563,8.1982,3569.94,6228.0,MAXN,tensorrt_fp16,results/clean_v2_20260512_131735/latency/MAXN/shufflenet_v2_x1_0_tensorrt_fp16,ok,ok,0.3334,0.6686,5243.9563
+0.003951,30.98447,,measured,8.1624,0.58,shufflenet_v2_x1_0,9.25,200,7.974,9.2539,10.6077,3796.0,6630.0,MAXN,tensorrt_int8,results/clean_v2_20260512_131735/latency/MAXN/shufflenet_v2_x1_0_tensorrt_int8,ok,ok,0.5726,0.7901,6196.8941
+0.007661,60.088389,,measured,15.9613,389.37,shufflenet_v2_x1_0,8.82,200,15.5937,19.2589,20.2103,3764.63,5396.0,MAXN,onnxrt_cuda,results/clean_v2_20260512_131735/latency/MAXN/shufflenet_v2_x1_0_onnxrt_cuda,ok,ok,1.178,1.5323,12017.6778
+0.003846,30.163064,,measured,8.8082,979.91,shufflenet_v2_x1_0,8.82,200,8.636,9.1711,11.6134,3424.43,5924.0,MAXN,onnxrt_trt,results/clean_v2_20260512_131735/latency/MAXN/shufflenet_v2_x1_0_onnxrt_trt,ok,ok,0.5497,0.7692,6032.6129
+,,file missing,na,,,shufflenet_v2_x1_0,,,,,,,,MAXN,tflite_cpu,results/clean_v2_20260512_131735/latency/MAXN/shufflenet_v2_x1_0_tflite_cpu,na,file_missing,,,
+,,file missing,na,,,shufflenet_v2_x1_0,,,,,,,,MAXN,tflite_gpu,results/clean_v2_20260512_131735/latency/MAXN/shufflenet_v2_x1_0_tflite_gpu,na,file_missing,,,
+0.011471,89.969457,,measured,19.0883,4.18,shufflenet_v2_x1_0,8.66,200,17.8498,28.4578,31.2269,4713.33,5291.0,MAXN,ncnn_cpu,results/clean_v2_20260512_131735/latency/MAXN/shufflenet_v2_x1_0_ncnn_cpu,ok,ok,4.6298,2.2942,17993.8914
+0.004925,38.630464,,measured,11.1611,2.16,shufflenet_v2_x1_0,8.66,200,11.0351,11.9498,12.2483,3461.17,4848.0,MAXN,ncnn_vulkan,results/clean_v2_20260512_131735/latency/MAXN/shufflenet_v2_x1_0_ncnn_vulkan,ok,ok,0.3534,0.9851,7726.0929
+0.716134,5616.737953,,measured,955.8778,124.0,yolov8n,12.42,200,947.3947,1032.972,1046.5792,5876.0,6237.0,MAXN,pytorch_cpu,results/clean_v2_20260512_131735/latency/MAXN/yolov8n_pytorch_cpu.json,ok,ok,36.8274,143.2268,1123347.5906
+0.067091,526.205728,,measured,92.6833,640.0,yolov8n,12.42,200,92.6508,93.0348,93.7063,5677.46,8053.0,MAXN,pytorch_cuda,results/clean_v2_20260512_131735/latency/MAXN/yolov8n_pytorch_cuda.json,ok,ok,0.2595,13.4182,105241.1457
+0.066314,520.109131,,measured,79.0431,209.0,yolov8n,27.39,200,79.037,79.3457,79.5879,6580.07,7651.0,MAXN,tensorrt_fp32,results/clean_v2_20260512_131735/latency/MAXN/yolov8n_tensorrt_fp32.json,ok,ok,0.1731,13.2628,104021.8262
+0.04557,357.409878,,measured,60.4646,201.0,yolov8n,15.83,200,60.4248,60.7042,61.4648,5911.06,6486.0,MAXN,tensorrt_fp16,results/clean_v2_20260512_131735/latency/MAXN/yolov8n_tensorrt_fp16.json,ok,ok,0.2145,9.114,71481.9757
+0.065745,515.648048,,measured,78.515,175.0,yolov8n,27.22,200,78.5043,78.7154,79.1206,6567.51,7257.0,MAXN,tensorrt_int8,results/clean_v2_20260512_131735/latency/MAXN/yolov8n_tensorrt_int8.json,ok,ok,0.1526,13.149,103129.6095
+0.089836,704.596866,,measured,111.9771,239.0,yolov8n,12.18,200,111.9134,112.625,113.1833,6292.33,7716.0,MAXN,onnxrt_cuda,results/clean_v2_20260512_131735/latency/MAXN/yolov8n_onnxrt_cuda.json,ok,ok,0.4391,17.9672,140919.3731
+0.068608,538.100982,,measured,75.614,1.0,yolov8n,12.18,200,75.6053,75.8289,76.1104,7116.42,7532.0,MAXN,onnxrt_trt,results/clean_v2_20260512_131735/latency/MAXN/yolov8n_onnxrt_trt.json,ok,ok,0.1692,13.7216,107620.1964
+0.509756,3998.087043,,measured,1141.8995,12.0,yolov8n,12.18,200,1141.8276,1146.0955,1154.5836,3501.26,3963.0,MAXN,tflite_cpu,results/clean_v2_20260512_131735/latency/MAXN/yolov8n_tflite_cpu.json,ok,ok,3.6431,101.9512,799617.4087
+0.510389,4003.048411,,measured,1144.7584,14.0,yolov8n,12.18,200,1144.3709,1146.8336,1154.1242,3496.85,4159.0,MAXN,tflite_gpu,results/clean_v2_20260512_131735/latency/MAXN/yolov8n_tflite_gpu.json,ok,ok,1.9813,102.0777,800609.6822
+,,file missing,na,,,yolov8n,,,,,,,,MAXN,ncnn_cpu,results/clean_v2_20260512_131735/latency/MAXN/yolov8n_ncnn_cpu,na,file_missing,,,
+,,file missing,na,,,yolov8n,,,,,,,,MAXN,ncnn_vulkan,results/clean_v2_20260512_131735/latency/MAXN/yolov8n_ncnn_vulkan,na,file_missing,,,
+0.838531,6576.711205,,measured,1300.0973,48.0,ssd_mobilenet_v2,23.5,200,1297.2657,1591.6887,1628.1947,5058.63,5520.0,MAXN,pytorch_cpu,results/clean_v2_20260512_131735/latency/MAXN/ssd_mobilenet_v2_pytorch_cpu.json,ok,ok,215.1482,167.7061,1315342.2409
+0.035973,282.142081,,measured,59.1074,467.0,ssd_mobilenet_v2,23.5,200,58.0404,61.358,64.0544,4773.38,7202.0,MAXN,pytorch_cuda,results/clean_v2_20260512_131735/latency/MAXN/ssd_mobilenet_v2_pytorch_cuda.json,ok,ok,1.685,7.1946,56428.4162
+0.020683,162.220037,,measured,30.8867,215.0,ssd_mobilenet_v2,24.49,200,30.8496,31.1948,31.4835,5252.1,6200.0,MAXN,tensorrt_fp32,results/clean_v2_20260512_131735/latency/MAXN/ssd_mobilenet_v2_tensorrt_fp32.json,ok,ok,0.1712,4.1366,32444.0074
+0.018747,147.035525,,measured,28.2895,238.0,ssd_mobilenet_v2,13.57,200,28.225,28.6169,29.1396,5197.53,6130.0,MAXN,tensorrt_fp16,results/clean_v2_20260512_131735/latency/MAXN/ssd_mobilenet_v2_tensorrt_fp16.json,ok,ok,0.2072,3.7494,29407.105
+0.023149,181.563294,,measured,34.093,127.0,ssd_mobilenet_v2,23.67,200,34.0429,34.3783,34.93,5325.53,5940.0,MAXN,tensorrt_int8,results/clean_v2_20260512_131735/latency/MAXN/ssd_mobilenet_v2_tensorrt_int8.json,ok,ok,0.2944,4.6299,36312.6589
+0.03878,304.153749,,measured,58.7403,116.0,ssd_mobilenet_v2,23.23,200,58.7386,58.9822,59.2265,5177.94,6319.0,MAXN,onnxrt_cuda,results/clean_v2_20260512_131735/latency/MAXN/ssd_mobilenet_v2_onnxrt_cuda.json,ok,ok,0.1762,7.7559,60830.7498
+0.015319,120.151462,,measured,31.5878,940.0,ssd_mobilenet_v2,23.23,200,31.5788,31.6874,31.8487,3803.73,6050.0,MAXN,onnxrt_trt,results/clean_v2_20260512_131735/latency/MAXN/ssd_mobilenet_v2_onnxrt_trt.json,ok,ok,0.1054,3.0639,24030.2925
+0.171223,1342.928827,,measured,391.1766,2.0,ssd_mobilenet_v2,23.16,200,391.0142,394.2655,398.3081,3433.05,3692.0,MAXN,tflite_cpu,results/clean_v2_20260512_131735/latency/MAXN/ssd_mobilenet_v2_tflite_cpu.json,ok,ok,1.7165,34.2447,268585.7653
+0.177267,1390.33295,,measured,402.4235,2.0,ssd_mobilenet_v2,23.16,200,401.5466,411.7255,417.084,3454.9,4004.0,MAXN,tflite_gpu,results/clean_v2_20260512_131735/latency/MAXN/ssd_mobilenet_v2_tflite_gpu.json,ok,ok,5.1871,35.4535,278066.59
+0.070997,556.837061,,measured,102.3622,24.0,ssd_mobilenet_v2,23.12,200,101.01,110.0668,156.4156,5439.87,5710.0,MAXN,ncnn_cpu,results/clean_v2_20260512_131735/latency/MAXN/ssd_mobilenet_v2_ncnn_cpu.json,ok,ok,18.1911,14.1993,111367.4122
+0.029636,232.435322,,measured,44.3107,1.0,ssd_mobilenet_v2,23.12,200,43.7994,46.343,46.9085,5245.58,5971.0,MAXN,ncnn_vulkan,results/clean_v2_20260512_131735/latency/MAXN/ssd_mobilenet_v2_ncnn_vulkan.json,ok,ok,0.9672,5.9271,46487.0643
+0.150697,1181.938786,,measured,474.3199,11.39,mobilenetv3_small,9.75,200,466.3456,679.5694,705.2472,2491.86,2790.0,5W,pytorch_cpu,results/clean_v2_20260512_131735/latency/5W/mobilenetv3_small_pytorch_cpu,ok,ok,132.7491,30.1394,236387.7572
+0.016367,128.366957,,measured,51.1192,12.29,mobilenetv3_small,9.75,200,48.6508,58.3514,65.7213,2511.13,3033.0,5W,pytorch_cuda,results/clean_v2_20260512_131735/latency/5W/mobilenetv3_small_pytorch_cuda,ok,ok,4.5981,3.2734,25673.3913
+0.003102,24.330848,,measured,9.6994,0.58,mobilenetv3_small,11.94,200,9.3465,10.8002,13.1483,2508.49,3966.0,5W,tensorrt_fp32,results/clean_v2_20260512_131735/latency/5W/mobilenetv3_small_tensorrt_fp32,ok,ok,0.7902,0.6204,4866.1696
+0.004337,34.017549,,measured,13.6303,0.58,mobilenetv3_small,6.78,200,13.4992,16.9039,18.859,2495.73,3190.0,5W,tensorrt_fp16,results/clean_v2_20260512_131735/latency/5W/mobilenetv3_small_tensorrt_fp16,ok,ok,1.7563,0.8674,6803.5097
+0.003202,25.111796,,measured,9.6404,0.58,mobilenetv3_small,12.24,200,9.4504,10.5988,12.1435,2604.85,4000.0,5W,tensorrt_int8,results/clean_v2_20260512_131735/latency/5W/mobilenetv3_small_tensorrt_int8,ok,ok,0.6264,0.6404,5022.3592
+0.007485,58.705699,,measured,21.5987,388.56,mobilenetv3_small,9.71,200,21.144,25.5648,26.5893,2718.02,3737.0,5W,onnxrt_cuda,results/clean_v2_20260512_131735/latency/5W/mobilenetv3_small_onnxrt_cuda,ok,ok,1.7102,1.497,11741.1397
+0.003646,28.595537,,measured,12.1605,990.95,mobilenetv3_small,9.71,200,11.9007,15.2515,16.5154,2351.51,3846.0,5W,onnxrt_trt,results/clean_v2_20260512_131735/latency/5W/mobilenetv3_small_onnxrt_trt,ok,ok,2.3808,0.7292,5719.1075
+0.033577,263.346493,,measured,107.5125,18.99,mobilenetv3_small,11.99,200,106.5851,117.8272,130.8605,2449.45,2600.0,5W,tflite_cpu,results/clean_v2_20260512_131735/latency/5W/mobilenetv3_small_tflite_cpu,ok,ok,7.8663,6.7153,52669.2986
+,,"tflite_gpu: Descriptors cannot be created directly.
+If this call came from a _pb2.py file, your generated code is out of date and must be regenerated with protoc >= 3.19.0.
+If you cannot immediately regenerate your protos, some other possible workarounds are:
+ 1. Downgrade the protobuf package to 3.20.x or lower.
+ 2. Set PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python (but this will use pure-Python parsing and will be much slower).
+
+More information: https://developers.google.com/protocol-buffers/docs/news/2022-05-06#python-updates",error,,,mobilenetv3_small,,,,,,2287.33,2360.0,5W,tflite_gpu,results/clean_v2_20260512_131735/latency/5W/mobilenetv3_small_tflite_gpu,error,runtime_error,,,
+0.007418,58.177551,,measured,21.6849,4.48,mobilenetv3_small,9.68,200,19.7256,36.3418,38.2538,2682.86,2840.0,5W,ncnn_cpu,results/clean_v2_20260512_131735/latency/5W/mobilenetv3_small_ncnn_cpu,ok,ok,5.2947,1.4835,11635.5102
+0.003341,26.207048,,measured,10.6258,2.03,mobilenetv3_small,9.68,200,10.4065,11.9088,14.5962,2466.36,2997.0,5W,ncnn_vulkan,results/clean_v2_20260512_131735/latency/5W/mobilenetv3_small_ncnn_vulkan,ok,ok,0.8084,0.6683,5241.4096
+0.654594,5134.072248,,measured,1870.4927,24.42,resnet50,97.7,200,1865.3313,1964.9669,2017.126,2744.77,2912.0,5W,pytorch_cpu,results/clean_v2_20260512_131735/latency/5W/resnet50_pytorch_cpu,ok,ok,64.9888,130.9188,1026814.4496
+0.053673,420.964916,,measured,125.0999,125.64,resnet50,97.7,200,123.7422,130.2257,137.2161,3365.03,5212.0,5W,pytorch_cuda,results/clean_v2_20260512_131735/latency/5W/resnet50_pytorch_cuda,ok,ok,7.1082,10.7346,84192.9833
+0.035403,277.668385,,measured,79.1423,0.58,resnet50,121.75,200,78.9733,79.8852,82.7897,3508.47,4657.0,5W,tensorrt_fp32,results/clean_v2_20260512_131735/latency/5W/resnet50_tensorrt_fp32,ok,ok,0.6669,7.0805,55533.6771
+0.018379,144.147784,,measured,43.2436,0.58,resnet50,61.14,200,43.0576,43.8178,47.5219,3333.39,4577.0,5W,tensorrt_fp16,results/clean_v2_20260512_131735/latency/5W/resnet50_tensorrt_fp16,ok,ok,0.9147,3.6758,28829.5568
+0.037287,292.447004,,measured,78.6057,0.58,resnet50,115.83,200,78.4885,79.1366,83.0182,3720.43,4665.0,5W,tensorrt_int8,results/clean_v2_20260512_131735/latency/5W/resnet50_tensorrt_int8,ok,ok,1.0352,7.4574,58489.4009
+0.302646,2373.692586,,measured,645.7569,391.64,resnet50,97.41,200,645.0931,650.4729,652.9316,3675.83,4538.0,5W,onnxrt_cuda,results/clean_v2_20260512_131735/latency/5W/resnet50_onnxrt_cuda,ok,ok,1.8062,60.5292,474738.5171
+0.031982,250.837257,,measured,79.2332,681.11,resnet50,97.41,200,78.8426,82.3696,83.6819,3165.81,4769.0,5W,onnxrt_trt,results/clean_v2_20260512_131735/latency/5W/resnet50_onnxrt_trt,ok,ok,1.2721,6.3964,50167.4514
+0.493621,3871.536785,,measured,1466.9802,198.24,resnet50,97.43,200,1459.8657,1522.7661,1550.7628,2639.12,2912.0,5W,tflite_cpu,results/clean_v2_20260512_131735/latency/5W/resnet50_tflite_cpu,ok,ok,27.8836,98.7242,774307.3571
+,,"tflite_gpu: Descriptors cannot be created directly.
+If this call came from a _pb2.py file, your generated code is out of date and must be regenerated with protoc >= 3.19.0.
+If you cannot immediately regenerate your protos, some other possible workarounds are:
+ 1. Downgrade the protobuf package to 3.20.x or lower.
+ 2. Set PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python (but this will use pure-Python parsing and will be much slower).
+
+More information: https://developers.google.com/protocol-buffers/docs/news/2022-05-06#python-updates",error,,,resnet50,,,,,,2266.0,2438.0,5W,tflite_gpu,results/clean_v2_20260512_131735/latency/5W/resnet50_tflite_gpu,error,runtime_error,,,
+0.377869,2963.680771,,measured,952.3457,12.12,resnet50,97.39,200,846.7708,1590.2119,1810.9589,3111.98,3514.0,5W,ncnn_cpu,results/clean_v2_20260512_131735/latency/5W/resnet50_ncnn_cpu,ok,ok,360.0332,75.5739,592736.1543
+0.060192,472.094098,,measured,133.6423,1.77,resnet50,97.39,200,133.5166,134.4607,134.6503,3532.52,4080.0,5W,ncnn_vulkan,results/clean_v2_20260512_131735/latency/5W/resnet50_ncnn_vulkan,ok,ok,0.3719,12.0384,94418.8195
+0.512374,4018.622227,,measured,1618.976,22.34,efficientnet_b0,20.33,200,1557.3427,2127.849,2252.4783,2482.2,2714.0,5W,pytorch_cpu,results/clean_v2_20260512_131735/latency/5W/efficientnet_b0_pytorch_cpu,ok,ok,285.408,102.4749,803724.4454
+0.025576,200.59263,,measured,71.5942,30.94,efficientnet_b0,20.33,200,72.8642,82.9681,94.7248,2801.8,3778.0,5W,pytorch_cuda,results/clean_v2_20260512_131735/latency/5W/efficientnet_b0_pytorch_cuda,ok,ok,6.0041,5.1151,40118.5259
+0.0143,112.159703,,measured,38.6314,0.58,efficientnet_b0,25.22,200,38.592,38.8,38.9205,2903.33,4320.0,5W,tensorrt_fp32,results/clean_v2_20260512_131735/latency/5W/efficientnet_b0_tensorrt_fp32,ok,ok,0.3378,2.8601,22431.9405
+0.012501,98.043694,,measured,31.1706,0.58,efficientnet_b0,14.59,200,31.1583,31.3179,31.3922,3145.39,4400.0,5W,tensorrt_fp16,results/clean_v2_20260512_131735/latency/5W/efficientnet_b0_tensorrt_fp16,ok,ok,0.0712,2.5001,19608.7387
+0.015099,118.420727,,measured,38.6391,0.58,efficientnet_b0,24.22,200,38.6378,38.7261,38.7533,3064.79,4052.0,5W,tensorrt_int8,results/clean_v2_20260512_131735/latency/5W/efficientnet_b0_tensorrt_int8,ok,ok,0.0593,3.0197,23684.1455
+0.021296,167.029596,,measured,53.7747,382.82,efficientnet_b0,20.16,200,53.7536,53.8641,54.1669,3106.1,4326.0,5W,onnxrt_cuda,results/clean_v2_20260512_131735/latency/5W/efficientnet_b0_onnxrt_cuda,ok,ok,0.1917,4.2593,33405.9191
+0.012018,94.261304,,measured,39.0599,763.39,efficientnet_b0,20.16,200,39.0372,39.2345,39.4856,2413.25,4253.0,5W,onnxrt_trt,results/clean_v2_20260512_131735/latency/5W/efficientnet_b0_onnxrt_trt,ok,ok,0.1189,2.4037,18852.2607
+0.141518,1109.944099,,measured,453.5234,45.95,efficientnet_b0,20.16,200,451.6942,464.5245,503.3315,2447.38,2641.0,5W,tflite_cpu,results/clean_v2_20260512_131735/latency/5W/efficientnet_b0_tflite_cpu,ok,ok,9.0721,28.3036,221988.8197
+,,"tflite_gpu: Descriptors cannot be created directly.
+If this call came from a _pb2.py file, your generated code is out of date and must be regenerated with protoc >= 3.19.0.
+If you cannot immediately regenerate your protos, some other possible workarounds are:
+ 1. Downgrade the protobuf package to 3.20.x or lower.
+ 2. Set PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python (but this will use pure-Python parsing and will be much slower).
+
+More information: https://developers.google.com/protocol-buffers/docs/news/2022-05-06#python-updates",error,,,efficientnet_b0,,,,,,2164.8,2245.0,5W,tflite_gpu,results/clean_v2_20260512_131735/latency/5W/efficientnet_b0_tflite_gpu,error,runtime_error,,,
+0.052602,412.563907,,measured,149.8603,24.39,efficientnet_b0,20.09,200,147.407,154.4414,199.3021,2752.99,2844.0,5W,ncnn_cpu,results/clean_v2_20260512_131735/latency/5W/efficientnet_b0_ncnn_cpu,ok,ok,10.1961,10.5204,82512.7815
+0.012575,98.624216,,measured,32.6024,2.38,efficientnet_b0,20.09,200,32.5847,32.7521,32.9002,3025.06,3357.0,5W,ncnn_vulkan,results/clean_v2_20260512_131735/latency/5W/efficientnet_b0_ncnn_vulkan,ok,ok,0.2184,2.5149,19724.8432
+0.136955,1074.155668,,measured,437.2868,10.27,shufflenet_v2_x1_0,8.75,200,448.9422,617.5768,672.8546,2456.41,2564.0,5W,pytorch_cpu,results/clean_v2_20260512_131735/latency/5W/shufflenet_v2_x1_0_pytorch_cpu,ok,ok,132.7539,27.391,214831.1337
+0.015144,118.774953,,measured,47.106,11.7,shufflenet_v2_x1_0,8.75,200,45.742,56.3033,68.5986,2521.44,3200.0,5W,pytorch_cuda,results/clean_v2_20260512_131735/latency/5W/shufflenet_v2_x1_0_pytorch_cuda,ok,ok,4.4685,3.0288,23754.9905
+0.003486,27.338175,,measured,11.1792,0.58,shufflenet_v2_x1_0,9.17,200,11.1546,11.2111,12.384,2445.45,3898.0,5W,tensorrt_fp32,results/clean_v2_20260512_131735/latency/5W/shufflenet_v2_x1_0_tensorrt_fp32,ok,ok,0.1777,0.6971,5467.6349
+0.003565,27.961424,,measured,10.7623,0.58,shufflenet_v2_x1_0,5.35,200,10.2268,11.8497,12.7238,2598.09,3938.0,5W,tensorrt_fp16,results/clean_v2_20260512_131735/latency/5W/shufflenet_v2_x1_0_tensorrt_fp16,ok,ok,0.6992,0.713,5592.2848
+0.003616,28.358488,,measured,11.1904,0.58,shufflenet_v2_x1_0,9.25,200,11.1292,11.4034,14.1093,2534.18,3864.0,5W,tensorrt_int8,results/clean_v2_20260512_131735/latency/5W/shufflenet_v2_x1_0_tensorrt_int8,ok,ok,0.4111,0.7231,5671.6976
+0.009455,74.159754,,measured,27.6403,390.51,shufflenet_v2_x1_0,8.82,200,28.9622,29.5733,30.9987,2683.03,3432.0,5W,onnxrt_cuda,results/clean_v2_20260512_131735/latency/5W/shufflenet_v2_x1_0_onnxrt_cuda,ok,ok,2.7203,1.8911,14831.9508
+0.003683,28.888916,,measured,12.1023,981.59,shufflenet_v2_x1_0,8.82,200,11.8015,12.8138,13.2948,2387.06,3784.0,5W,onnxrt_trt,results/clean_v2_20260512_131735/latency/5W/shufflenet_v2_x1_0_onnxrt_trt,ok,ok,0.5249,0.7367,5777.7832
+,,file missing,na,,,shufflenet_v2_x1_0,,,,,,,,5W,tflite_cpu,results/clean_v2_20260512_131735/latency/5W/shufflenet_v2_x1_0_tflite_cpu,na,file_missing,,,
+,,file missing,na,,,shufflenet_v2_x1_0,,,,,,,,5W,tflite_gpu,results/clean_v2_20260512_131735/latency/5W/shufflenet_v2_x1_0_tflite_gpu,na,file_missing,,,
+0.014292,112.091031,,measured,41.0432,3.96,shufflenet_v2_x1_0,8.66,200,40.2381,46.1273,46.6525,2731.05,2763.0,5W,ncnn_cpu,results/clean_v2_20260512_131735/latency/5W/shufflenet_v2_x1_0_ncnn_cpu,ok,ok,2.3063,2.8583,22418.2063
+0.005501,43.147362,,measured,15.8368,2.26,shufflenet_v2_x1_0,8.66,200,15.7765,15.9611,17.916,2724.5,3397.0,5W,ncnn_vulkan,results/clean_v2_20260512_131735/latency/5W/shufflenet_v2_x1_0_ncnn_vulkan,ok,ok,0.3292,1.1003,8629.4723
+0.900118,7059.752258,,measured,2517.7074,134.0,yolov8n,12.42,200,2514.6544,2712.6096,2759.7068,2804.04,3210.0,5W,pytorch_cpu,results/clean_v2_20260512_131735/latency/5W/yolov8n_pytorch_cpu.json,ok,ok,116.5596,180.0237,1411950.4516
+0.061096,479.187491,,measured,133.091,471.0,yolov8n,12.42,200,131.7367,138.2713,157.071,3600.45,5116.0,5W,pytorch_cuda,results/clean_v2_20260512_131735/latency/5W/yolov8n_pytorch_cuda.json,ok,ok,4.6326,12.2193,95837.4982
+0.057742,452.881367,,measured,111.1589,225.0,yolov8n,27.39,200,109.9645,116.06,116.9844,4074.18,4753.0,5W,tensorrt_fp32,results/clean_v2_20260512_131735/latency/5W/yolov8n_tensorrt_fp32.json,ok,ok,2.7954,11.5485,90576.2734
+0.042063,329.907041,,measured,86.8581,236.0,yolov8n,15.83,200,84.6371,95.4971,111.2064,3798.23,4602.0,5W,tensorrt_fp16,results/clean_v2_20260512_131735/latency/5W/yolov8n_tensorrt_fp16.json,ok,ok,5.106,8.4126,65981.4082
+0.059226,464.51689,,measured,110.7559,216.0,yolov8n,27.22,200,109.6996,115.891,117.0314,4194.06,4825.0,5W,tensorrt_int8,results/clean_v2_20260512_131735/latency/5W/yolov8n_tensorrt_int8.json,ok,ok,2.9622,11.8452,92903.378
+0.079314,622.071931,,measured,150.2074,227.0,yolov8n,12.18,200,149.6105,154.7387,155.9976,4141.42,4801.0,5W,onnxrt_cuda,results/clean_v2_20260512_131735/latency/5W/yolov8n_onnxrt_cuda.json,ok,ok,1.7456,15.8628,124414.3861
+0.061359,481.246893,,measured,108.1167,0.0,yolov8n,12.18,200,106.5763,113.3392,114.0018,4451.18,4864.0,5W,onnxrt_trt,results/clean_v2_20260512_131735/latency/5W/yolov8n_onnxrt_trt.json,ok,ok,3.3864,12.2718,96249.3785
+0.566314,4441.68062,,measured,1795.1334,33.0,yolov8n,12.18,200,1795.002,1812.9017,1816.4219,2474.29,2912.0,5W,tflite_cpu,results/clean_v2_20260512_131735/latency/5W/yolov8n_tflite_cpu.json,ok,ok,9.8921,113.2629,888336.1241
+0.563237,4417.543125,,measured,1789.2541,51.0,yolov8n,12.18,200,1786.7629,1808.4612,1824.1076,2468.93,2871.0,5W,tflite_gpu,results/clean_v2_20260512_131735/latency/5W/yolov8n_tflite_gpu.json,ok,ok,14.7151,112.6473,883508.625
+,,file missing,na,,,yolov8n,,,,,,,,5W,ncnn_cpu,results/clean_v2_20260512_131735/latency/5W/yolov8n_ncnn_cpu,na,file_missing,,,
+,,file missing,na,,,yolov8n,,,,,,,,5W,ncnn_vulkan,results/clean_v2_20260512_131735/latency/5W/yolov8n_ncnn_vulkan,na,file_missing,,,
+0.676083,5302.61176,,measured,2111.072,47.0,ssd_mobilenet_v2,23.5,200,2078.3893,2669.0166,2739.3545,2511.81,2835.0,5W,pytorch_cpu,results/clean_v2_20260512_131735/latency/5W/ssd_mobilenet_v2_pytorch_cpu.json,ok,ok,295.0299,135.2166,1060522.3521
+0.036218,284.065412,,measured,88.1936,412.0,ssd_mobilenet_v2,23.5,200,86.5224,94.9799,102.6871,3220.93,4418.0,5W,pytorch_cuda,results/clean_v2_20260512_131735/latency/5W/ssd_mobilenet_v2_pytorch_cuda.json,ok,ok,4.8887,7.2437,56813.0824
+0.020597,161.542081,,measured,47.7287,203.0,ssd_mobilenet_v2,24.49,200,46.4344,52.9695,56.7274,3384.59,3886.0,5W,tensorrt_fp32,results/clean_v2_20260512_131735/latency/5W/ssd_mobilenet_v2_tensorrt_fp32.json,ok,ok,2.5237,4.1193,32308.4161
+0.018692,146.60165,,measured,43.6534,216.0,ssd_mobilenet_v2,13.57,200,43.0948,45.9585,47.3106,3358.31,3800.0,5W,tensorrt_fp16,results/clean_v2_20260512_131735/latency/5W/ssd_mobilenet_v2_tensorrt_fp16.json,ok,ok,1.1569,3.7383,29320.33
+0.020555,161.21935,,measured,46.9804,164.0,ssd_mobilenet_v2,23.67,200,46.3487,49.0523,52.6756,3431.63,3846.0,5W,tensorrt_int8,results/clean_v2_20260512_131735/latency/5W/ssd_mobilenet_v2_tensorrt_int8.json,ok,ok,1.3386,4.1111,32243.87
+0.034945,274.074689,,measured,81.7716,228.0,ssd_mobilenet_v2,23.23,200,80.7474,88.3054,89.7231,3351.71,4146.0,5W,onnxrt_cuda,results/clean_v2_20260512_131735/latency/5W/ssd_mobilenet_v2_onnxrt_cuda.json,ok,ok,2.5628,6.9889,54814.9379
+0.014623,114.692312,,measured,44.8934,1001.0,ssd_mobilenet_v2,23.23,200,44.5184,46.4329,49.163,2554.77,3993.0,5W,onnxrt_trt,results/clean_v2_20260512_131735/latency/5W/ssd_mobilenet_v2_onnxrt_trt.json,ok,ok,0.9587,2.9247,22938.4623
+0.178846,1402.715508,,measured,561.0301,2.0,ssd_mobilenet_v2,23.16,200,560.8674,568.6658,570.5177,2500.25,2790.0,5W,tflite_cpu,results/clean_v2_20260512_131735/latency/5W/ssd_mobilenet_v2_tflite_cpu.json,ok,ok,4.3709,35.7692,280543.1015
+0.178192,1397.581179,,measured,558.2643,2.0,ssd_mobilenet_v2,23.16,200,557.9017,565.6708,573.2046,2503.44,2790.0,5W,tflite_gpu,results/clean_v2_20260512_131735/latency/5W/ssd_mobilenet_v2_tflite_gpu.json,ok,ok,4.4116,35.6383,279516.2358
+0.084973,666.45317,,measured,230.7184,32.0,ssd_mobilenet_v2,23.12,200,226.7196,250.021,297.9213,2888.6,2993.0,5W,ncnn_cpu,results/clean_v2_20260512_131735/latency/5W/ssd_mobilenet_v2_ncnn_cpu.json,ok,ok,24.2012,16.9946,133290.634
+0.027665,216.983642,,measured,63.7812,0.0,ssd_mobilenet_v2,23.12,200,61.5347,71.5647,73.1287,3402.0,3496.0,5W,ncnn_vulkan,results/clean_v2_20260512_131735/latency/5W/ssd_mobilenet_v2_ncnn_vulkan.json,ok,ok,3.7514,5.5331,43396.7285

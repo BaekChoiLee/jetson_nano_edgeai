@@ -1,0 +1,2 @@
+model,runtime,power_mode,status,error,mean_ms,std_ms,min_ms,max_ms,p50_ms,p95_ms,p99_ms,memory_mb,model_size_mb,fps,power_avg_mw,power_max_mw
+mobilenetv3_small_fp32.engine,tensorrt_fp32,10w,ok,,9.69941430568695,0.7902320500588114,9.171355247497559,14.443646430969238,9.346536636352539,10.800249481201169,13.148337879180902,0.58,11.94,103.1,2508.49,3966.0

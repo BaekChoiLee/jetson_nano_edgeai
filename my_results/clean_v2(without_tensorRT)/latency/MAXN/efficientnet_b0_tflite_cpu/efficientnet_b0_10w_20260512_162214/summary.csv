@@ -1,0 +1,2 @@
+model,runtime,power_mode,status,error,mean_ms,std_ms,min_ms,max_ms,p50_ms,p95_ms,p99_ms,memory_mb,model_size_mb,fps,power_avg_mw,power_max_mw
+efficientnet_b0.tflite,tflite_cpu,10w,ok,,277.5718730338849,3.8434643518708493,270.99131187424064,300.1649519428611,277.0579815842211,283.8335904991254,288.34540833719075,46.24,20.16,3.6,3423.28,3784.0

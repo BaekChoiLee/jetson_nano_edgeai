@@ -1,0 +1,2 @@
+model,runtime,power_mode,status,error,mean_ms,std_ms,min_ms,max_ms,p50_ms,p95_ms,p99_ms,memory_mb,model_size_mb,fps,power_avg_mw,power_max_mw
+resnet50,ncnn_cpu,10w,ok,,242.77006047545,13.117547348431508,232.76981990784407,373.0844580568373,240.12105842120945,253.32738556899128,302.91851520538324,11.86,97.39,4.12,5475.99,5713.0

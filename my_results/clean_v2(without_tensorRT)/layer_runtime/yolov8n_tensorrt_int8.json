@@ -1,0 +1,14 @@
+{
+  "model": "yolov8n",
+  "runtime": "tensorrt_int8",
+  "num_warmup": 10,
+  "num_runs": 50,
+  "status": "error",
+  "backend": "",
+  "granularity": "",
+  "records_count": 0,
+  "error": "module 'numpy' has no attribute 'bool'.\n`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.\nThe aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:\n    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations",
+  "schema_version": "layer_runtime_v2",
+  "records": [],
+  "total_mean_ms": 0.0
+}

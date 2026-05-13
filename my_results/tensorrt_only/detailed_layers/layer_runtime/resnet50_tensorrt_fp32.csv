@@ -1,0 +1,57 @@
+model,runtime,rank,layer_name,backend,granularity,mean_ms,std_ms,min_ms,max_ms,samples,percent_total_ms,cumulative_percent_ms
+resnet50,tensorrt_fp32,3,/conv1/Conv + /relu/Relu,tensorrt,trt_layer,2.526868,0.577513,2.252448,6.890781,60,3.21209,13.124224
+resnet50,tensorrt_fp32,54,/maxpool/MaxPool,tensorrt,trt_layer,0.465968,0.010854,0.451666,0.52401,60,0.592327,99.503311
+resnet50,tensorrt_fp32,55,/layer1/layer1.0/conv1/Conv + /layer1/layer1.0/relu/Relu,tensorrt,trt_layer,0.309076,0.002381,0.303645,0.312709,60,0.39289,99.896201
+resnet50,tensorrt_fp32,18,/layer1/layer1.0/conv2/Conv + /layer1/layer1.0/relu_1/Relu,tensorrt,trt_layer,1.387589,0.009724,1.35625,1.412292,60,1.763868,49.18879
+resnet50,tensorrt_fp32,32,/layer1/layer1.0/conv3/Conv,tensorrt,trt_layer,1.144498,0.008323,1.125625,1.158125,60,1.454857,71.719535
+resnet50,tensorrt_fp32,29,/layer1/layer1.0/downsample/downsample.0/Conv + /layer1/layer1.0/Add + /layer1/layer1.0/relu_2/Relu,tensorrt,trt_layer,1.238055,0.011177,1.215417,1.250781,60,1.573784,67.121706
+resnet50,tensorrt_fp32,52,/layer1/layer1.1/conv1/Conv + /layer1/layer1.1/relu/Relu,tensorrt,trt_layer,0.869772,0.00539,0.85802,0.879271,60,1.105632,98.094194
+resnet50,tensorrt_fp32,16,/layer1/layer1.1/conv2/Conv + /layer1/layer1.1/relu_1/Relu,tensorrt,trt_layer,1.389356,0.01002,1.352708,1.408177,60,1.766114,45.659035
+resnet50,tensorrt_fp32,31,/layer1/layer1.1/conv3/Conv + /layer1/layer1.1/Add + /layer1/layer1.1/relu_2/Relu,tensorrt,trt_layer,1.23566,0.011554,1.211094,1.250312,60,1.570739,70.264678
+resnet50,tensorrt_fp32,51,/layer1/layer1.2/conv1/Conv + /layer1/layer1.2/relu/Relu,tensorrt,trt_layer,0.878003,0.006178,0.859583,0.887813,60,1.116095,96.988562
+resnet50,tensorrt_fp32,17,/layer1/layer1.2/conv2/Conv + /layer1/layer1.2/relu_1/Relu,tensorrt,trt_layer,1.389178,0.010028,1.361406,1.411614,60,1.765888,47.424922
+resnet50,tensorrt_fp32,30,/layer1/layer1.2/conv3/Conv + /layer1/layer1.2/Add + /layer1/layer1.2/relu_2/Relu,tensorrt,trt_layer,1.236835,0.010996,1.211771,1.249584,60,1.572233,68.693939
+resnet50,tensorrt_fp32,15,/layer2/layer2.0/conv1/Conv + /layer2/layer2.0/relu/Relu,tensorrt,trt_layer,1.74095,0.00905,1.722656,1.755573,60,2.213051,43.892921
+resnet50,tensorrt_fp32,10,/layer2/layer2.0/conv2/Conv + /layer2/layer2.0/relu_1/Relu,tensorrt,trt_layer,2.019878,0.012006,1.990625,2.053334,60,2.567617,32.01483
+resnet50,tensorrt_fp32,42,/layer2/layer2.0/conv3/Conv,tensorrt,trt_layer,1.073608,0.00687,1.057448,1.084375,60,1.364743,85.970408
+resnet50,tensorrt_fp32,11,/layer2/layer2.0/downsample/downsample.0/Conv + /layer2/layer2.0/Add + /layer2/layer2.0/relu_2/Relu,tensorrt,trt_layer,2.006005,0.015011,1.972396,2.036615,60,2.549982,34.564812
+resnet50,tensorrt_fp32,48,/layer2/layer2.1/conv1/Conv + /layer2/layer2.1/relu/Relu,tensorrt,trt_layer,0.916433,0.007155,0.899323,0.930729,60,1.164946,93.544582
+resnet50,tensorrt_fp32,19,/layer2/layer2.1/conv2/Conv + /layer2/layer2.1/relu_1/Relu,tensorrt,trt_layer,1.325948,0.007785,1.312031,1.343646,60,1.685511,50.874301
+resnet50,tensorrt_fp32,38,/layer2/layer2.1/conv3/Conv + /layer2/layer2.1/Add + /layer2/layer2.1/relu_2/Relu,tensorrt,trt_layer,1.120376,0.009138,1.098281,1.136979,60,1.424193,80.354414
+resnet50,tensorrt_fp32,49,/layer2/layer2.2/conv1/Conv + /layer2/layer2.2/relu/Relu,tensorrt,trt_layer,0.916093,0.007697,0.897552,0.931667,60,1.164514,94.709096
+resnet50,tensorrt_fp32,20,/layer2/layer2.2/conv2/Conv + /layer2/layer2.2/relu_1/Relu,tensorrt,trt_layer,1.317606,0.006749,1.302552,1.330573,60,1.674907,52.549208
+resnet50,tensorrt_fp32,39,/layer2/layer2.2/conv3/Conv + /layer2/layer2.2/Add + /layer2/layer2.2/relu_2/Relu,tensorrt,trt_layer,1.118079,0.010063,1.094791,1.135261,60,1.421273,81.775688
+resnet50,tensorrt_fp32,50,/layer2/layer2.3/conv1/Conv + /layer2/layer2.3/relu/Relu,tensorrt,trt_layer,0.915194,0.008026,0.895677,0.932032,60,1.163371,95.872467
+resnet50,tensorrt_fp32,21,/layer2/layer2.3/conv2/Conv + /layer2/layer2.3/relu_1/Relu,tensorrt,trt_layer,1.317,0.007354,1.303541,1.343229,60,1.674137,54.223345
+resnet50,tensorrt_fp32,40,/layer2/layer2.3/conv3/Conv + /layer2/layer2.3/Add + /layer2/layer2.3/relu_2/Relu,tensorrt,trt_layer,1.118009,0.010898,1.091511,1.137395,60,1.421184,83.196872
+resnet50,tensorrt_fp32,14,/layer3/layer3.0/conv1/Conv + /layer3/layer3.0/relu/Relu,tensorrt,trt_layer,1.835756,0.007644,1.814115,1.857447,60,2.333566,41.67987
+resnet50,tensorrt_fp32,4,/layer3/layer3.0/conv2/Conv + /layer3/layer3.0/relu_1/Relu,tensorrt,trt_layer,2.301881,0.009139,2.273281,2.337604,60,2.926092,16.050317
+resnet50,tensorrt_fp32,41,/layer3/layer3.0/conv3/Conv,tensorrt,trt_layer,1.108261,0.00742,1.092239,1.122344,60,1.408793,84.605665
+resnet50,tensorrt_fp32,7,/layer3/layer3.0/downsample/downsample.0/Conv + /layer3/layer3.0/Add + /layer3/layer3.0/relu_2/Relu,tensorrt,trt_layer,2.116391,0.007263,2.102708,2.136354,60,2.690302,24.178664
+resnet50,tensorrt_fp32,47,/layer3/layer3.1/conv1/Conv + /layer3/layer3.1/relu/Relu,tensorrt,trt_layer,1.002398,0.008176,0.986822,1.040782,60,1.274223,92.379636
+resnet50,tensorrt_fp32,24,/layer3/layer3.1/conv2/Conv + /layer3/layer3.1/relu_1/Relu,tensorrt,trt_layer,1.285256,0.012794,1.25125,1.309479,60,1.633785,59.130558
+resnet50,tensorrt_fp32,33,/layer3/layer3.1/conv3/Conv + /layer3/layer3.1/Add + /layer3/layer3.1/relu_2/Relu,tensorrt,trt_layer,1.135862,0.010781,1.113802,1.15349,60,1.443879,73.163413
+resnet50,tensorrt_fp32,43,/layer3/layer3.2/conv1/Conv + /layer3/layer3.2/relu/Relu,tensorrt,trt_layer,1.010478,0.004707,0.999739,1.022708,60,1.284494,87.254902
+resnet50,tensorrt_fp32,26,/layer3/layer3.2/conv2/Conv + /layer3/layer3.2/relu_1/Relu,tensorrt,trt_layer,1.281205,0.012441,1.242188,1.300469,60,1.628635,62.389628
+resnet50,tensorrt_fp32,36,/layer3/layer3.2/conv3/Conv + /layer3/layer3.2/Add + /layer3/layer3.2/relu_2/Relu,tensorrt,trt_layer,1.133707,0.009797,1.113281,1.149115,60,1.441139,77.489237
+resnet50,tensorrt_fp32,45,/layer3/layer3.3/conv1/Conv + /layer3/layer3.3/relu/Relu,tensorrt,trt_layer,1.009816,0.006701,0.995469,1.047344,60,1.283652,89.822537
+resnet50,tensorrt_fp32,23,/layer3/layer3.3/conv2/Conv + /layer3/layer3.3/relu_1/Relu,tensorrt,trt_layer,1.287382,0.01406,1.250833,1.310521,60,1.636487,57.496773
+resnet50,tensorrt_fp32,34,/layer3/layer3.3/conv3/Conv + /layer3/layer3.3/Add + /layer3/layer3.3/relu_2/Relu,tensorrt,trt_layer,1.135038,0.011052,1.113958,1.158334,60,1.442831,74.606245
+resnet50,tensorrt_fp32,46,/layer3/layer3.4/conv1/Conv + /layer3/layer3.4/relu/Relu,tensorrt,trt_layer,1.009205,0.00683,0.997865,1.047969,60,1.282876,91.105413
+resnet50,tensorrt_fp32,25,/layer3/layer3.4/conv2/Conv + /layer3/layer3.4/relu_1/Relu,tensorrt,trt_layer,1.282621,0.013419,1.246042,1.308906,60,1.630435,60.760993
+resnet50,tensorrt_fp32,35,/layer3/layer3.4/conv3/Conv + /layer3/layer3.4/Add + /layer3/layer3.4/relu_2/Relu,tensorrt,trt_layer,1.134268,0.01115,1.110937,1.172136,60,1.441853,76.048097
+resnet50,tensorrt_fp32,44,/layer3/layer3.5/conv1/Conv + /layer3/layer3.5/relu/Relu,tensorrt,trt_layer,1.010076,0.008435,0.996458,1.047552,60,1.283983,88.538885
+resnet50,tensorrt_fp32,22,/layer3/layer3.5/conv2/Conv + /layer3/layer3.5/relu_1/Relu,tensorrt,trt_layer,1.287739,0.014863,1.251302,1.325729,60,1.636941,55.860286
+resnet50,tensorrt_fp32,37,/layer3/layer3.5/conv3/Conv + /layer3/layer3.5/Add + /layer3/layer3.5/relu_2/Relu,tensorrt,trt_layer,1.133585,0.011378,1.109844,1.163437,60,1.440984,78.930221
+resnet50,tensorrt_fp32,9,/layer4/layer4.0/conv1/Conv + /layer4/layer4.0/relu/Relu,tensorrt,trt_layer,2.070156,0.009698,2.051875,2.089844,60,2.631529,29.447213
+resnet50,tensorrt_fp32,2,/layer4/layer4.0/conv2/Conv + /layer4/layer4.0/relu_1/Relu,tensorrt,trt_layer,3.71649,0.008269,3.702917,3.738906,60,4.724307,9.912134
+resnet50,tensorrt_fp32,8,/layer4/layer4.0/conv3/Conv,tensorrt,trt_layer,2.074475,0.010988,2.030625,2.097708,60,2.63702,26.815683
+resnet50,tensorrt_fp32,1,/layer4/layer4.0/downsample/downsample.0/Conv + /layer4/layer4.0/Add + /layer4/layer4.0/relu_2/Relu,tensorrt,trt_layer,4.081129,0.018577,4.029167,4.11099,60,5.187827,5.187827
+resnet50,tensorrt_fp32,27,/layer4/layer4.1/conv1/Conv + /layer4/layer4.1/relu/Relu,tensorrt,trt_layer,1.246144,0.019671,1.199479,1.31,60,1.584066,63.973694
+resnet50,tensorrt_fp32,12,/layer4/layer4.1/conv2/Conv + /layer4/layer4.1/relu_1/Relu,tensorrt,trt_layer,1.881172,0.005827,1.867656,1.897084,60,2.391298,36.95611
+resnet50,tensorrt_fp32,5,/layer4/layer4.1/conv3/Conv + /layer4/layer4.1/Add + /layer4/layer4.1/relu_2/Relu,tensorrt,trt_layer,2.139148,0.011897,2.108541,2.159428,60,2.71923,18.769547
+resnet50,tensorrt_fp32,28,/layer4/layer4.2/conv1/Conv + /layer4/layer4.2/relu/Relu,tensorrt,trt_layer,1.238404,0.019466,1.203125,1.323281,60,1.574228,65.547922
+resnet50,tensorrt_fp32,13,/layer4/layer4.2/conv2/Conv + /layer4/layer4.2/relu_1/Relu,tensorrt,trt_layer,1.880303,0.006096,1.870052,1.896511,60,2.390193,39.346303
+resnet50,tensorrt_fp32,6,/layer4/layer4.2/conv3/Conv + /layer4/layer4.2/Add + /layer4/layer4.2/relu_2/Relu,tensorrt,trt_layer,2.138821,0.011967,2.105417,2.154636,60,2.718815,21.488361
+resnet50,tensorrt_fp32,56,/avgpool/GlobalAveragePool,tensorrt,trt_layer,0.081656,0.001339,0.07849,0.085938,60,0.103799,100.0
+resnet50,tensorrt_fp32,53,/fc/Gemm,tensorrt,trt_layer,0.642548,0.022831,0.607865,0.699271,60,0.816791,98.910985

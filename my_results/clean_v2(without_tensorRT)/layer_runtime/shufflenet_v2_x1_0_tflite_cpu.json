@@ -1,0 +1,14 @@
+{
+  "model": "shufflenet_v2_x1_0",
+  "runtime": "tflite_cpu",
+  "num_warmup": 10,
+  "num_runs": 50,
+  "status": "error",
+  "backend": "",
+  "granularity": "",
+  "records_count": 0,
+  "error": "benchmark_model not found. Set --tflite-benchmark-bin or TFLITE_BENCHMARK_MODEL_BIN.",
+  "schema_version": "layer_runtime_v2",
+  "records": [],
+  "total_mean_ms": 0.0
+}

@@ -1,0 +1,2 @@
+model,runtime,power_mode,status,error,mean_ms,std_ms,min_ms,max_ms,p50_ms,p95_ms,p99_ms,memory_mb,model_size_mb,fps,power_avg_mw,power_max_mw
+mobilenetv3_small,pytorch_cpu,10w,ok,,474.3198704184033,132.74913106482018,292.74642700329423,715.5907708220184,466.34555933997035,679.5694108353928,705.2471870183944,11.39,9.75,2.11,2491.86,2790.0

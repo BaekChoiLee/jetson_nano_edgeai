@@ -1,0 +1,2 @@
+model,runtime,power_mode,status,error,mean_ms,std_ms,min_ms,max_ms,p50_ms,p95_ms,p99_ms,memory_mb,model_size_mb,fps,power_avg_mw,power_max_mw
+efficientnet_b0,pytorch_cpu,10w,ok,,1267.3114674421959,212.43685261787158,671.4304429478943,1613.1640272215009,1300.340241054073,1531.109532341361,1571.4298903103918,18.23,20.33,0.79,4749.08,5079.0

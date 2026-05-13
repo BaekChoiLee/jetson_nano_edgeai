@@ -1,0 +1,14 @@
+model,runtime,rank,layer_name,backend,granularity,mean_ms,std_ms,min_ms,max_ms,samples,percent_total_ms,cumulative_percent_ms
+ssd_mobilenet_v2,onnxrt_trt,5,model_loading_uri,onnxruntime,onnx_node,55.047,0.0,55.047,55.047,1,0.598803,99.997043
+ssd_mobilenet_v2,onnxrt_trt,4,session_initialization,onnxruntime,onnx_node,1890.462,0.0,1890.462,1890.462,1,20.564517,99.39824
+ssd_mobilenet_v2,onnxrt_trt,11,Cast:StatefulPartitionedCall/Cast_fence_before,onnxruntime,onnx_node,0.00215,0.000357,0.002,0.003,60,2.3e-05,99.999977
+ssd_mobilenet_v2,onnxrt_trt,7,Cast:StatefulPartitionedCall/Cast_kernel_time,onnxruntime,onnx_node,0.049483,0.003222,0.046,0.071,60,0.000538,99.999518
+ssd_mobilenet_v2,onnxrt_trt,13,Cast:StatefulPartitionedCall/Cast_fence_after,onnxruntime,onnx_node,0.001,0.0,0.001,0.001,44,1.1e-05,100.0
+ssd_mobilenet_v2,onnxrt_trt,6,MemcpyFromHost:Memcpy_kernel_time,onnxruntime,onnx_node,0.177983,0.039908,0.134,0.372,60,0.001936,99.998979
+ssd_mobilenet_v2,onnxrt_trt,10,MemcpyFromHost:Memcpy_fence_after,onnxruntime,onnx_node,0.006733,0.000727,0.006,0.009,60,7.3e-05,99.999954
+ssd_mobilenet_v2,onnxrt_trt,9,TRTKernel_graph_tf2onnx_13787934107006508419_1:TensorrtExecutionProvider_TRTKernel_graph_tf2onnx_13787934107006508419_1_0_fence_before,onnxruntime,onnx_node,0.0132,0.001077,0.012,0.019,60,0.000144,99.999881
+ssd_mobilenet_v2,onnxrt_trt,3,TRTKernel_graph_tf2onnx_13787934107006508419_1:TensorrtExecutionProvider_TRTKernel_graph_tf2onnx_13787934107006508419_1_0_kernel_time,onnxruntime,onnx_node,2408.611467,18462.044621,4.741,144218.267,60,26.200967,78.833723
+ssd_mobilenet_v2,onnxrt_trt,8,TRTKernel_graph_tf2onnx_13787934107006508419_1:TensorrtExecutionProvider_TRTKernel_graph_tf2onnx_13787934107006508419_1_0_fence_after,onnxruntime,onnx_node,0.020167,0.010818,0.017,0.103,60,0.000219,99.999737
+ssd_mobilenet_v2,onnxrt_trt,2,SequentialExecutor::Execute,onnxruntime,onnx_node,2409.070333,18462.096454,5.148,144219.124,60,26.205958,52.632756
+ssd_mobilenet_v2,onnxrt_trt,1,model_run,onnxruntime,onnx_node,2429.371767,18460.692049,25.789,144228.638,60,26.426798,26.426798
+ssd_mobilenet_v2,onnxrt_trt,12,MemcpyFromHost:Memcpy_fence_before,onnxruntime,onnx_node,0.0011,0.000436,0.001,0.003,20,1.2e-05,99.999989

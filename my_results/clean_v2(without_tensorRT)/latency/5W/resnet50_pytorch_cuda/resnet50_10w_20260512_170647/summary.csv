@@ -1,0 +1,2 @@
+model,runtime,power_mode,status,error,mean_ms,std_ms,min_ms,max_ms,p50_ms,p95_ms,p99_ms,memory_mb,model_size_mb,fps,power_avg_mw,power_max_mw
+resnet50,pytorch_cuda,10w,ok,,125.09993827819824,7.108197037121755,123.19499969482422,219.5950469970703,123.74216079711914,130.2256881713867,137.21612670898438,125.64,97.7,7.99,3365.03,5212.0

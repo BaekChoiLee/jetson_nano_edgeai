@@ -1,0 +1,2 @@
+model,runtime,power_mode,status,error,mean_ms,std_ms,min_ms,max_ms,p50_ms,p95_ms,p99_ms,memory_mb,model_size_mb,fps,power_avg_mw,power_max_mw
+resnet50.tflite,tflite_cpu,10w,ok,,1466.9801986892708,27.883607383111993,1431.0956452973187,1677.5894979946315,1459.8656939342618,1522.7660596137866,1550.7628486678004,198.24,97.43,0.68,2639.12,2912.0

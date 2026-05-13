@@ -1,0 +1,2 @@
+model,runtime,power_mode,status,error,mean_ms,std_ms,min_ms,max_ms,p50_ms,p95_ms,p99_ms,memory_mb,model_size_mb,fps,power_avg_mw,power_max_mw
+shufflenet_v2_x1_0,pytorch_cuda,10w,ok,,47.10598407745361,4.468455119413516,45.08177185058594,75.73999786376953,45.74197959899902,56.30332145690917,68.59859771728512,11.7,8.75,21.23,2521.44,3200.0

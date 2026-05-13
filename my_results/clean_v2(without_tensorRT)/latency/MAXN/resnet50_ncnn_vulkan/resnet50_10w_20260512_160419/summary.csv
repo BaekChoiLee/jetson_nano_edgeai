@@ -1,0 +1,2 @@
+model,runtime,power_mode,status,error,mean_ms,std_ms,min_ms,max_ms,p50_ms,p95_ms,p99_ms,memory_mb,model_size_mb,fps,power_avg_mw,power_max_mw
+resnet50,ncnn_vulkan,10w,ok,,91.74374760594219,0.5797931019846639,90.96133802086115,94.76718073710799,91.72338107600808,92.48226219788194,93.90709959436208,1.65,97.39,10.9,5098.97,6523.0

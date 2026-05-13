@@ -1,0 +1,11 @@
+runtime,top1,top5,n,status,status_reason,error
+pytorch_cpu,87.8,97.2,500,measured,ok,
+pytorch_cuda,87.8,97.2,500,measured,ok,
+onnxrt_cuda,87.8,97.2,500,measured,ok,
+onnxrt_trt,87.8,97.2,500,measured,ok,
+tflite_cpu,87.8,97.2,500,measured,ok,
+tensorrt_fp32,87.8,97.2,500,measured,ok,
+tensorrt_fp16,87.8,97.2,500,measured,ok,
+tensorrt_int8,87.8,97.2,500,measured,ok,
+ncnn_cpu,87.8,97.2,500,measured,ok,
+ncnn_vulkan,87.8,97.2,500,measured,ok,

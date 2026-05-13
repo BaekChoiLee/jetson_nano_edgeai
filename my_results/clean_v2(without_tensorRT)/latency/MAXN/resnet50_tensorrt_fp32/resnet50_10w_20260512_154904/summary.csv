@@ -1,0 +1,2 @@
+model,runtime,power_mode,status,error,mean_ms,std_ms,min_ms,max_ms,p50_ms,p95_ms,p99_ms,memory_mb,model_size_mb,fps,power_avg_mw,power_max_mw
+resnet50_fp32.engine,tensorrt_fp32,10w,ok,,55.24199960708618,0.30719290002232363,54.671146392822266,56.70021057128906,55.1353645324707,55.790421867370604,56.01840744018555,0.58,121.75,18.1,5064.33,7354.0

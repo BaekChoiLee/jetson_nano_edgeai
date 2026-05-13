@@ -1,0 +1,2 @@
+model,runtime,power_mode,status,error,mean_ms,std_ms,min_ms,max_ms,p50_ms,p95_ms,p99_ms,memory_mb,model_size_mb,fps,power_avg_mw,power_max_mw
+mobilenetv3_small.tflite,tflite_cpu,10w,ok,,63.389273232314736,2.358073959896173,60.93579111620784,73.96972505375743,62.3677191324532,67.92828787583858,70.53757891524583,16.38,11.99,15.78,3358.17,3778.0

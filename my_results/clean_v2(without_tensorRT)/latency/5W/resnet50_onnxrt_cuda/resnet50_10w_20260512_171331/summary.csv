@@ -1,0 +1,2 @@
+model,runtime,power_mode,status,error,mean_ms,std_ms,min_ms,max_ms,p50_ms,p95_ms,p99_ms,memory_mb,model_size_mb,fps,power_avg_mw,power_max_mw
+resnet50.onnx,onnxrt_cuda,10w,ok,,645.756945668254,1.8061704815071862,644.3758700042963,654.7618745826185,645.0931243598461,650.4729142179713,652.9315645387396,391.64,97.41,1.55,3675.83,4538.0

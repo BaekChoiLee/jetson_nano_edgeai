@@ -1,0 +1,12 @@
+{
+  "project_dir": "/home/jetson/hb/jetson_nano_edgeai",
+  "model_dir": "models",
+  "results_root": "/home/jetson/hb/jetson_nano_edgeai/results/tensorrt_only_20260513_135919/detailed_layers",
+  "models": "mobilenetv3_small resnet50 efficientnet_b0 shufflenet_v2_x1_0 yolov8n ssd_mobilenet_v2",
+  "runtimes": "tensorrt_fp32 tensorrt_fp16 tensorrt_int8",
+  "num_warmup": 10,
+  "num_runs": 50,
+  "num_amplify": 2000,
+  "include_power": 0,
+  "include_timelines": 0
+}

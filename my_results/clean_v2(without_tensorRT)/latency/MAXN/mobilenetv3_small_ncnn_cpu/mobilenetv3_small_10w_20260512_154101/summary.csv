@@ -1,0 +1,2 @@
+model,runtime,power_mode,status,error,mean_ms,std_ms,min_ms,max_ms,p50_ms,p95_ms,p99_ms,memory_mb,model_size_mb,fps,power_avg_mw,power_max_mw
+mobilenetv3_small,ncnn_cpu,10w,ok,,9.830565203446895,4.518306102145426,8.572291117161512,65.17097633332014,8.894745027646422,14.188675140030668,21.012863116338846,3.96,9.68,101.72,4264.0,5141.0

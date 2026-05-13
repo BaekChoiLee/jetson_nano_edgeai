@@ -1,0 +1,2 @@
+model,runtime,power_mode,status,error,mean_ms,std_ms,min_ms,max_ms,p50_ms,p95_ms,p99_ms,memory_mb,model_size_mb,fps,power_avg_mw,power_max_mw
+mobilenetv3_small.onnx,onnxrt_cuda,10w,ok,,21.598683290649205,1.710220416925425,17.196469008922577,26.958109810948372,21.14401664584875,25.5648368736729,26.589281689375635,388.56,9.71,46.3,2718.02,3737.0

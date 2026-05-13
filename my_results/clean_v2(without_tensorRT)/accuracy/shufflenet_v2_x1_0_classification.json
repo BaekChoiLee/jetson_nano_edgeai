@@ -1,0 +1,92 @@
+[
+  {
+    "top1": 87.8,
+    "top5": 97.2,
+    "n": 500,
+    "runtime": "pytorch_cpu",
+    "status": "measured",
+    "status_reason": "ok",
+    "error": ""
+  },
+  {
+    "top1": 87.8,
+    "top5": 97.2,
+    "n": 500,
+    "runtime": "pytorch_cuda",
+    "status": "measured",
+    "status_reason": "ok",
+    "error": ""
+  },
+  {
+    "top1": 87.8,
+    "top5": 97.2,
+    "n": 500,
+    "runtime": "onnxrt_cuda",
+    "status": "measured",
+    "status_reason": "ok",
+    "error": ""
+  },
+  {
+    "top1": 87.8,
+    "top5": 97.2,
+    "n": 500,
+    "runtime": "onnxrt_trt",
+    "status": "measured",
+    "status_reason": "ok",
+    "error": ""
+  },
+  {
+    "top1": 87.8,
+    "top5": 97.2,
+    "n": 500,
+    "runtime": "tflite_cpu",
+    "status": "measured",
+    "status_reason": "ok",
+    "error": ""
+  },
+  {
+    "top1": 87.8,
+    "top5": 97.2,
+    "n": 500,
+    "runtime": "tensorrt_fp32",
+    "status": "measured",
+    "status_reason": "ok",
+    "error": ""
+  },
+  {
+    "top1": 87.8,
+    "top5": 97.2,
+    "n": 500,
+    "runtime": "tensorrt_fp16",
+    "status": "measured",
+    "status_reason": "ok",
+    "error": ""
+  },
+  {
+    "top1": 87.8,
+    "top5": 97.2,
+    "n": 500,
+    "runtime": "tensorrt_int8",
+    "status": "measured",
+    "status_reason": "ok",
+    "error": ""
+  },
+  {
+    "top1": 87.8,
+    "top5": 97.2,
+    "n": 500,
+    "runtime": "ncnn_cpu",
+    "status": "measured",
+    "status_reason": "ok",
+    "error": ""
+  },
+  {
+    "top1": 87.8,
+    "top5": 97.2,
+    "n": 500,
+    "runtime": "ncnn_vulkan",
+    "status": "measured",
+    "status_reason": "ok",
+    "error": ""
+  }
+]

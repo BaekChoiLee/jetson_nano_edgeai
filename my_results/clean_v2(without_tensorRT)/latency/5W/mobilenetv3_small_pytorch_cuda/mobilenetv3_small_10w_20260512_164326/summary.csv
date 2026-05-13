@@ -1,0 +1,2 @@
+model,runtime,power_mode,status,error,mean_ms,std_ms,min_ms,max_ms,p50_ms,p95_ms,p99_ms,memory_mb,model_size_mb,fps,power_avg_mw,power_max_mw
+mobilenetv3_small,pytorch_cuda,10w,ok,,51.11921192169189,4.598129360729832,42.68942642211914,69.11734771728516,48.65083312988281,58.351354217529284,65.72129692077635,12.29,9.75,19.56,2511.13,3033.0

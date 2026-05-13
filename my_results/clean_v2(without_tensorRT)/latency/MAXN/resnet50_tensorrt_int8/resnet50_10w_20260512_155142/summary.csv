@@ -1,0 +1,2 @@
+model,runtime,power_mode,status,error,mean_ms,std_ms,min_ms,max_ms,p50_ms,p95_ms,p99_ms,memory_mb,model_size_mb,fps,power_avg_mw,power_max_mw
+resnet50_int8.engine,tensorrt_int8,10w,ok,,54.41605987548828,0.43130686626885756,53.8423957824707,58.399635314941406,54.31674575805664,54.8565731048584,55.89712482452392,0.58,115.83,18.38,5772.91,7458.0
