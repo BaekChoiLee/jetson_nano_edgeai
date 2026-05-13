@@ -24,6 +24,11 @@ from collections import defaultdict
 
 import numpy as np
 
+# numpy 1.24+ removed np.bool, but older TensorRT Python bindings still
+# reference it inside trt.nptype().
+if "bool" not in np.__dict__:
+    np.bool = np.bool_
+
 
 CLASSIFICATION_FACTORIES = {
     "mobilenetv3_small": "mobilenet_v3_small",
