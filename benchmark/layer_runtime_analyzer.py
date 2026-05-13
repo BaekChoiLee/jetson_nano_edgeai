@@ -535,12 +535,15 @@ def _resolve_trt_engine_path(model_name, runtime, model_dir):
     if model_name == "ssd_mobilenet_v2":
         candidates.extend(
             [
+                os.path.join(model_dir, f"{model_name}_raw_{precision}.engine"),
+                os.path.join(model_dir, f"{model_name}_raw_fpinput_{precision}.engine"),
+                os.path.join(model_dir, f"{model_name}_raw3_fpinput_{precision}.engine"),
                 os.path.join(model_dir, f"{model_name}_effnms_fpinput_{precision}.engine"),
                 os.path.join(model_dir, f"{model_name}_effnms_{precision}.engine"),
             ]
         )
     for p in candidates:
-        if os.path.exists(p):
+        if os.path.exists(p) and os.path.getsize(p) > 0:
             return p
     raise FileNotFoundError(f"TRT engine not found for {model_name}/{runtime}: {candidates}")
 
@@ -822,6 +825,8 @@ def _resolve_onnx_path(model_name, model_dir):
     candidates = [os.path.join(model_dir, f"{model_name}.onnx")]
     if model_name == "ssd_mobilenet_v2":
         candidates = [
+            os.path.join(model_dir, "ssd_mobilenet_v2_raw_fpinput.onnx"),
+            os.path.join(model_dir, "ssd_mobilenet_v2_raw3_fpinput.onnx"),
             os.path.join(model_dir, "ssd_mobilenet_v2_raw.onnx"),
             os.path.join(model_dir, "ssd_mobilenet_v2_effnms.onnx"),
             os.path.join(model_dir, "ssd_mobilenet_v2.onnx"),
