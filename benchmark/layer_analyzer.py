@@ -191,8 +191,10 @@ def analyze_layers(model_name, device="cuda", num_runs=20, output_dir="./results
     else:
         raise ValueError(f"Unknown model: {model_name}. Supported: {ALL_MODELS}")
 
-    # Sort by mean time (descending)
-    results.sort(key=lambda x: x["mean_ms"], reverse=True)
+    # Detection models (profiler): sort by mean time — no sequential order exists.
+    # Classification models (hooks): keep named_modules() sequential order.
+    if model_name in TORCHSCRIPT_INPUT_SIZES:
+        results.sort(key=lambda x: x["mean_ms"], reverse=True)
 
     # Print top-10 bottleneck layers
     print(f"\n{'='*70}")
