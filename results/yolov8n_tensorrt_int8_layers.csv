@@ -1,0 +1,178 @@
+model,runtime,rank,layer_name,backend,granularity,mean_ms,std_ms,min_ms,max_ms,samples,percent_total_ms,cumulative_percent_ms
+yolov8n,tensorrt_int8,1,/model.22/dfl/conv/Conv,tensorrt,trt_layer,34.010363,256.69657,0.587656,2005.734131,60,25.460863,25.460863
+yolov8n,tensorrt_int8,2,/model.22/cv2.0/cv2.0.0/conv/Conv || /model.22/cv3.0/cv3.0.0/conv/Conv,tensorrt,trt_layer,5.851658,0.103771,5.766198,6.590938,60,4.380672,29.841535
+yolov8n,tensorrt_int8,3,/model.22/cv3.0/cv3.0.1/conv/Conv,tensorrt,trt_layer,4.172045,0.073038,4.1325,4.714792,60,3.123279,32.964814
+yolov8n,tensorrt_int8,4,/model.0/conv/Conv,tensorrt,trt_layer,4.000437,1.936515,3.740625,18.875053,60,2.99481,35.959624
+yolov8n,tensorrt_int8,5,/model.22/cv2.1/cv2.1.0/conv/Conv || /model.22/cv3.1/cv3.1.0/conv/Conv,tensorrt,trt_layer,3.090902,0.059761,3.049948,3.529688,60,2.313913,38.273538
+yolov8n,tensorrt_int8,6,/model.22/dfl/Softmax,tensorrt,trt_layer,2.807503,0.04666,2.796563,3.165156,60,2.101755,40.375293
+yolov8n,tensorrt_int8,7,/model.1/conv/Conv,tensorrt,trt_layer,2.620857,0.344774,2.525052,5.263802,60,1.962028,42.33732
+yolov8n,tensorrt_int8,8,/model.22/cv2.0/cv2.0.1/conv/Conv,tensorrt,trt_layer,2.341627,0.043783,2.318334,2.667864,60,1.75299,44.090311
+yolov8n,tensorrt_int8,9,/model.7/conv/Conv,tensorrt,trt_layer,2.328595,0.289172,2.258437,4.548386,60,1.743234,45.833545
+yolov8n,tensorrt_int8,10,/model.22/cv2.2/cv2.2.0/conv/Conv || /model.22/cv3.2/cv3.2.0/conv/Conv,tensorrt,trt_layer,2.297779,0.046598,2.26052,2.639166,60,1.720165,47.55371
+yolov8n,tensorrt_int8,11,/model.2/m.0/cv1/conv/Conv,tensorrt,trt_layer,2.025469,0.361375,1.970625,4.800834,60,1.516308,49.070018
+yolov8n,tensorrt_int8,12,/model.2/m.0/cv2/conv/Conv,tensorrt,trt_layer,2.004739,0.250325,1.949427,3.926093,60,1.500789,50.570808
+yolov8n,tensorrt_int8,13,/model.3/conv/Conv,tensorrt,trt_layer,1.977792,0.246941,1.917916,3.872968,60,1.480616,52.051424
+yolov8n,tensorrt_int8,14,/model.5/conv/Conv,tensorrt,trt_layer,1.958137,0.242435,1.89224,3.817917,60,1.465902,53.517326
+yolov8n,tensorrt_int8,15,(Unnamed Layer* 230) [Shuffle] + /model.22/dfl/Transpose_1,tensorrt,trt_layer,1.89784,0.043509,1.853125,1.987396,60,1.420762,54.938088
+yolov8n,tensorrt_int8,16,/model.15/cv1/conv/Conv,tensorrt,trt_layer,1.345686,0.023906,1.33375,1.522344,60,1.007408,55.945496
+yolov8n,tensorrt_int8,17,/model.12/cv1/conv/Conv,tensorrt,trt_layer,1.304343,0.023089,1.288958,1.466718,60,0.976458,56.921955
+yolov8n,tensorrt_int8,18,/model.22/cv3.1/cv3.1.1/conv/Conv,tensorrt,trt_layer,1.267529,0.021587,1.256979,1.428906,60,0.948898,57.870853
+yolov8n,tensorrt_int8,19,/model.22/dfl/Reshape + /model.22/dfl/Transpose,tensorrt,trt_layer,1.24445,0.021768,1.228229,1.382604,60,0.931621,58.802474
+yolov8n,tensorrt_int8,20,/model.22/Split_8,tensorrt,trt_layer,1.237392,0.022345,1.231979,1.408646,60,0.926337,59.728811
+yolov8n,tensorrt_int8,21,/model.22/Sigmoid_output_0 copy,tensorrt,trt_layer,1.234188,0.001496,1.230781,1.237031,60,0.923939,60.65275
+yolov8n,tensorrt_int8,22,"PWN(PWN(/model.0/act/Sigmoid), /model.0/act/Mul)",tensorrt,trt_layer,1.2202,0.364768,1.170938,4.022031,60,0.913467,61.566217
+yolov8n,tensorrt_int8,23,/model.22/cv3.0/cv3.0.2/Conv,tensorrt,trt_layer,1.192012,0.019299,1.180209,1.334635,60,0.892365,62.458582
+yolov8n,tensorrt_int8,24,/model.4/cv2/conv/Conv,tensorrt,trt_layer,1.162653,0.129224,1.134948,2.152344,60,0.870386,63.328968
+yolov8n,tensorrt_int8,25,/model.19/conv/Conv,tensorrt,trt_layer,1.157971,0.022522,1.13724,1.325,60,0.866881,64.195849
+yolov8n,tensorrt_int8,26,/model.2/cv2/conv/Conv,tensorrt,trt_layer,1.148103,0.129441,1.125313,2.142187,60,0.859494,65.055343
+yolov8n,tensorrt_int8,27,PWN(/model.22/Sigmoid),tensorrt,trt_layer,1.05409,0.01219,1.050625,1.147448,60,0.789114,65.844457
+yolov8n,tensorrt_int8,28,/model.9/cv2/conv/Conv,tensorrt,trt_layer,1.047591,0.042722,1.033698,1.374062,60,0.784248,66.628705
+yolov8n,tensorrt_int8,29,/model.8/m.0/cv1/conv/Conv,tensorrt,trt_layer,1.026414,0.165508,0.991979,2.297032,60,0.768395,67.3971
+yolov8n,tensorrt_int8,30,/model.13/Resize,tensorrt,trt_layer,1.021983,0.018463,1.017448,1.163489,60,0.765078,68.162177
+yolov8n,tensorrt_int8,31,/model.22/Reshape_output_0 copy,tensorrt,trt_layer,1.009845,0.018002,1.005209,1.147916,60,0.755991,68.918168
+yolov8n,tensorrt_int8,32,/model.21/m.0/cv1/conv/Conv,tensorrt,trt_layer,1.008491,0.019031,0.995417,1.147812,60,0.754977,69.673145
+yolov8n,tensorrt_int8,33,/model.8/m.0/cv2/conv/Conv,tensorrt,trt_layer,1.007418,0.124128,0.980625,1.959791,60,0.754174,70.427319
+yolov8n,tensorrt_int8,34,/model.22/Split,tensorrt,trt_layer,0.99378,0.017589,0.988906,1.128594,60,0.743964,71.171284
+yolov8n,tensorrt_int8,35,/model.16/conv/Conv,tensorrt,trt_layer,0.991628,0.020967,0.967812,1.130573,60,0.742353,71.913637
+yolov8n,tensorrt_int8,36,/model.21/m.0/cv2/conv/Conv,tensorrt,trt_layer,0.990824,0.019637,0.976406,1.135365,60,0.741751,72.655388
+yolov8n,tensorrt_int8,37,/model.2/cv1/conv/Conv,tensorrt,trt_layer,0.92232,0.105362,0.903907,1.731458,60,0.690468,73.345856
+yolov8n,tensorrt_int8,38,/model.6/cv2/conv/Conv,tensorrt,trt_layer,0.920557,0.10826,0.894844,1.750261,60,0.689148,74.035004
+yolov8n,tensorrt_int8,39,/model.8/cv2/conv/Conv,tensorrt,trt_layer,0.820868,0.098843,0.799062,1.579063,60,0.614519,74.649523
+yolov8n,tensorrt_int8,40,/model.21/cv2/conv/Conv,tensorrt,trt_layer,0.811413,0.014551,0.795157,0.918229,60,0.607441,75.256964
+yolov8n,tensorrt_int8,41,/model.21/cv1/conv/Conv,tensorrt,trt_layer,0.809108,0.015336,0.796614,0.919896,60,0.605715,75.862679
+yolov8n,tensorrt_int8,42,/model.15/cv2/conv/Conv,tensorrt,trt_layer,0.783122,0.014716,0.769219,0.889219,60,0.586261,76.44894
+yolov8n,tensorrt_int8,43,/model.4/m.0/cv1/conv/Conv,tensorrt,trt_layer,0.756981,0.091591,0.739479,1.460209,60,0.566692,77.015632
+yolov8n,tensorrt_int8,44,/model.4/m.0/cv2/conv/Conv,tensorrt,trt_layer,0.747931,0.146148,0.718021,1.870052,60,0.559917,77.575548
+yolov8n,tensorrt_int8,45,/model.15/m.0/cv1/conv/Conv,tensorrt,trt_layer,0.7451,0.013939,0.738177,0.849739,60,0.557797,78.133346
+yolov8n,tensorrt_int8,46,/model.4/m.1/cv1/conv/Conv,tensorrt,trt_layer,0.744279,0.121134,0.72375,1.674479,60,0.557183,78.690528
+yolov8n,tensorrt_int8,47,/model.4/m.1/cv2/conv/Conv,tensorrt,trt_layer,0.740255,0.091659,0.71948,1.443698,60,0.55417,79.244699
+yolov8n,tensorrt_int8,48,/model.6/m.0/cv1/conv/Conv,tensorrt,trt_layer,0.736627,0.088212,0.717188,1.413489,60,0.551454,79.796153
+yolov8n,tensorrt_int8,49,/model.18/m.0/cv1/conv/Conv,tensorrt,trt_layer,0.727426,0.013586,0.718229,0.825937,60,0.544566,80.340719
+yolov8n,tensorrt_int8,50,/model.12/m.0/cv1/conv/Conv,tensorrt,trt_layer,0.726733,0.013595,0.717292,0.827604,60,0.544047,80.884766
+yolov8n,tensorrt_int8,51,/model.15/m.0/cv2/conv/Conv,tensorrt,trt_layer,0.725921,0.01428,0.713803,0.831563,60,0.54344,81.428206
+yolov8n,tensorrt_int8,52,/model.6/m.1/cv2/conv/Conv,tensorrt,trt_layer,0.721896,0.088106,0.70151,1.397708,60,0.540426,81.968632
+yolov8n,tensorrt_int8,53,/model.6/m.0/cv2/conv/Conv,tensorrt,trt_layer,0.721727,0.088782,0.702552,1.402917,60,0.5403,82.508932
+yolov8n,tensorrt_int8,54,/model.6/m.1/cv1/conv/Conv,tensorrt,trt_layer,0.720372,0.08841,0.699583,1.398958,60,0.539285,83.048217
+yolov8n,tensorrt_int8,55,/model.18/cv2/conv/Conv,tensorrt,trt_layer,0.717431,0.013954,0.69724,0.81099,60,0.537084,83.585301
+yolov8n,tensorrt_int8,56,/model.12/cv2/conv/Conv,tensorrt,trt_layer,0.714477,0.013757,0.69401,0.794792,60,0.534872,84.120173
+yolov8n,tensorrt_int8,57,/model.18/cv1/conv/Conv,tensorrt,trt_layer,0.71241,0.013767,0.699739,0.79875,60,0.533325,84.653498
+yolov8n,tensorrt_int8,58,/model.12/m.0/cv2/conv/Conv,tensorrt,trt_layer,0.71042,0.013989,0.70224,0.815,60,0.531835,85.185333
+yolov8n,tensorrt_int8,59,/model.22/cv2.1/cv2.1.1/conv/Conv,tensorrt,trt_layer,0.710013,0.012959,0.7025,0.806406,60,0.53153,85.716864
+yolov8n,tensorrt_int8,60,/model.18/m.0/cv2/conv/Conv,tensorrt,trt_layer,0.709678,0.012825,0.700469,0.804427,60,0.53128,86.248144
+yolov8n,tensorrt_int8,61,/model.4/cv1/conv/Conv,tensorrt,trt_layer,0.616511,0.128134,0.58849,1.600313,60,0.461533,86.709676
+yolov8n,tensorrt_int8,62,"PWN(PWN(/model.2/cv2/act/Sigmoid), /model.2/cv2/act/Mul)",tensorrt,trt_layer,0.604674,0.075592,0.593229,1.185209,60,0.452671,87.162348
+yolov8n,tensorrt_int8,63,/model.22/cv2.0/cv2.0.2/Conv,tensorrt,trt_layer,0.599809,0.010595,0.588698,0.676822,60,0.449029,87.611377
+yolov8n,tensorrt_int8,64,/model.8/cv1/conv/Conv,tensorrt,trt_layer,0.589878,0.098565,0.567761,1.346666,60,0.441595,88.052972
+yolov8n,tensorrt_int8,65,"PWN(PWN(/model.2/cv1/act/Sigmoid), /model.2/cv1/act/Mul)",tensorrt,trt_layer,0.58348,0.072691,0.572865,1.141823,60,0.436805,88.489777
+yolov8n,tensorrt_int8,66,"PWN(PWN(/model.1/act/Sigmoid), /model.1/act/Mul)",tensorrt,trt_layer,0.561074,0.069996,0.550313,1.098698,60,0.420032,88.909809
+yolov8n,tensorrt_int8,67,/model.6/cv1/conv/Conv,tensorrt,trt_layer,0.529721,0.063861,0.512135,1.019635,60,0.39656,89.306369
+yolov8n,tensorrt_int8,68,/model.22/cv3.2/cv3.2.1/conv/Conv,tensorrt,trt_layer,0.523819,0.008921,0.5175,0.589115,60,0.392142,89.698511
+yolov8n,tensorrt_int8,69,/model.10/Resize,tensorrt,trt_layer,0.515061,0.009378,0.512291,0.586875,60,0.385585,90.084096
+yolov8n,tensorrt_int8,70,/model.13/Resize_output_0 copy,tensorrt,trt_layer,0.413645,0.004103,0.405625,0.435521,60,0.309663,90.39376
+yolov8n,tensorrt_int8,71,"PWN(PWN(/model.22/cv3.0/cv3.0.0/act/Sigmoid), /model.22/cv3.0/cv3.0.0/act/Mul)",tensorrt,trt_layer,0.385189,0.00688,0.38224,0.43724,60,0.28836,90.68212
+yolov8n,tensorrt_int8,72,"PWN(PWN(PWN(/model.2/m.0/cv2/act/Sigmoid), /model.2/m.0/cv2/act/Mul), /model.2/m.0/Add)",tensorrt,trt_layer,0.384695,0.046544,0.3775,0.742188,60,0.287991,90.970111
+yolov8n,tensorrt_int8,73,"PWN(PWN(/model.22/cv3.0/cv3.0.1/act/Sigmoid), /model.22/cv3.0/cv3.0.1/act/Mul)",tensorrt,trt_layer,0.357034,0.006316,0.354636,0.405052,60,0.267283,91.237394
+yolov8n,tensorrt_int8,74,"PWN(PWN(/model.4/cv2/act/Sigmoid), /model.4/cv2/act/Mul)",tensorrt,trt_layer,0.341539,0.042106,0.333907,0.664896,60,0.255683,91.493077
+yolov8n,tensorrt_int8,75,/model.22/cv3.1/cv3.1.2/Conv,tensorrt,trt_layer,0.323382,0.005512,0.318541,0.363282,60,0.24209,91.735167
+yolov8n,tensorrt_int8,76,"PWN(PWN(/model.22/cv2.0/cv2.0.0/act/Sigmoid), /model.22/cv2.0/cv2.0.0/act/Mul)",tensorrt,trt_layer,0.321175,0.005656,0.318229,0.363854,60,0.240438,91.975606
+yolov8n,tensorrt_int8,77,"PWN(PWN(/model.4/cv1/act/Sigmoid), /model.4/cv1/act/Mul)",tensorrt,trt_layer,0.31962,0.128494,0.300625,1.306562,60,0.239274,92.21488
+yolov8n,tensorrt_int8,78,"PWN(PWN(/model.3/act/Sigmoid), /model.3/act/Mul)",tensorrt,trt_layer,0.307342,0.038184,0.30099,0.600573,60,0.230083,92.444962
+yolov8n,tensorrt_int8,79,"PWN(PWN(/model.22/cv2.0/cv2.0.1/act/Sigmoid), /model.22/cv2.0/cv2.0.1/act/Mul)",tensorrt,trt_layer,0.304323,0.005292,0.302187,0.344532,60,0.227823,92.672785
+yolov8n,tensorrt_int8,80,"PWN(PWN(/model.2/m.0/cv1/act/Sigmoid), /model.2/m.0/cv1/act/Mul)",tensorrt,trt_layer,0.304054,0.037813,0.298229,0.594479,60,0.227621,92.900406
+yolov8n,tensorrt_int8,81,/model.22/Reshape_1_output_0 copy,tensorrt,trt_layer,0.300313,0.005552,0.297708,0.342136,60,0.224821,93.125227
+yolov8n,tensorrt_int8,82,/model.22/cv2.2/cv2.2.1/conv/Conv,tensorrt,trt_layer,0.299037,0.006261,0.291927,0.341198,60,0.223865,93.349092
+yolov8n,tensorrt_int8,83,/model.9/cv1/conv/Conv,tensorrt,trt_layer,0.291376,0.034965,0.281406,0.558854,60,0.21813,93.567222
+yolov8n,tensorrt_int8,84,"PWN(PWN(/model.15/cv2/act/Sigmoid), /model.15/cv2/act/Mul)",tensorrt,trt_layer,0.272843,0.004844,0.269896,0.30901,60,0.204256,93.771478
+yolov8n,tensorrt_int8,85,"PWN(PWN(/model.15/cv1/act/Sigmoid), /model.15/cv1/act/Mul)",tensorrt,trt_layer,0.270927,0.004623,0.267552,0.305208,60,0.202822,93.974299
+yolov8n,tensorrt_int8,86,/model.2/Split_0,tensorrt,trt_layer,0.210843,0.011687,0.204688,0.299375,60,0.157841,94.132141
+yolov8n,tensorrt_int8,87,/model.10/Resize_output_0 copy,tensorrt,trt_layer,0.210148,0.002447,0.205156,0.219011,60,0.157321,94.289462
+yolov8n,tensorrt_int8,88,/model.2/Split_output_1 copy,tensorrt,trt_layer,0.209011,0.010619,0.203854,0.288594,60,0.15647,94.445932
+yolov8n,tensorrt_int8,89,/model.2/Split,tensorrt,trt_layer,0.208511,0.011255,0.203802,0.293854,60,0.156096,94.602028
+yolov8n,tensorrt_int8,90,"PWN(PWN(PWN(/model.4/m.1/cv2/act/Sigmoid), /model.4/m.1/cv2/act/Mul), /model.4/m.1/Add)",tensorrt,trt_layer,0.201618,0.023678,0.195052,0.383125,60,0.150935,94.752963
+yolov8n,tensorrt_int8,91,"PWN(PWN(PWN(/model.4/m.0/cv2/act/Sigmoid), /model.4/m.0/cv2/act/Mul), /model.4/m.0/Add)",tensorrt,trt_layer,0.192931,0.104608,0.17625,0.996354,60,0.144432,94.897395
+yolov8n,tensorrt_int8,92,/model.22/cv2.1/cv2.1.2/Conv,tensorrt,trt_layer,0.177469,0.003806,0.172396,0.203334,60,0.132857,95.030252
+yolov8n,tensorrt_int8,93,"PWN(PWN(/model.6/cv2/act/Sigmoid), /model.6/cv2/act/Mul)",tensorrt,trt_layer,0.161755,0.019784,0.157604,0.313489,60,0.121093,95.151345
+yolov8n,tensorrt_int8,94,"PWN(PWN(/model.4/m.0/cv1/act/Sigmoid), /model.4/m.0/cv1/act/Mul)",tensorrt,trt_layer,0.15835,0.019543,0.15375,0.308177,60,0.118544,95.269889
+yolov8n,tensorrt_int8,95,"PWN(PWN(/model.15/m.0/cv2/act/Sigmoid), /model.15/m.0/cv2/act/Mul)",tensorrt,trt_layer,0.155746,0.002722,0.154375,0.175989,60,0.116595,95.386484
+yolov8n,tensorrt_int8,96,"PWN(PWN(/model.4/m.1/cv1/act/Sigmoid), /model.4/m.1/cv1/act/Mul)",tensorrt,trt_layer,0.154943,0.019001,0.149687,0.300625,60,0.115994,95.502478
+yolov8n,tensorrt_int8,97,"PWN(PWN(/model.6/cv1/act/Sigmoid), /model.6/cv1/act/Mul)",tensorrt,trt_layer,0.150339,0.01832,0.145834,0.290729,60,0.112547,95.615024
+yolov8n,tensorrt_int8,98,"PWN(PWN(/model.5/act/Sigmoid), /model.5/act/Mul)",tensorrt,trt_layer,0.14965,0.018489,0.145573,0.291458,60,0.112031,95.727056
+yolov8n,tensorrt_int8,99,"PWN(PWN(/model.15/m.0/cv1/act/Sigmoid), /model.15/m.0/cv1/act/Mul)",tensorrt,trt_layer,0.145219,0.002856,0.143541,0.166094,60,0.108714,95.83577
+yolov8n,tensorrt_int8,100,"PWN(PWN(/model.18/cv1/act/Sigmoid), /model.18/cv1/act/Mul)",tensorrt,trt_layer,0.141844,0.002598,0.140364,0.161042,60,0.106187,95.941957
+yolov8n,tensorrt_int8,101,"PWN(PWN(/model.18/cv2/act/Sigmoid), /model.18/cv2/act/Mul)",tensorrt,trt_layer,0.140007,0.002585,0.138073,0.158906,60,0.104812,96.046769
+yolov8n,tensorrt_int8,102,"PWN(PWN(/model.12/cv1/act/Sigmoid), /model.12/cv1/act/Mul)",tensorrt,trt_layer,0.139784,0.002704,0.137708,0.159948,60,0.104645,96.151414
+yolov8n,tensorrt_int8,103,/model.4/Split,tensorrt,trt_layer,0.13878,0.075291,0.125156,0.716875,60,0.103894,96.255308
+yolov8n,tensorrt_int8,104,"PWN(PWN(/model.12/cv2/act/Sigmoid), /model.12/cv2/act/Mul)",tensorrt,trt_layer,0.136789,0.00261,0.135156,0.155729,60,0.102403,96.357711
+yolov8n,tensorrt_int8,105,/model.4/Split_1,tensorrt,trt_layer,0.134982,0.05204,0.123282,0.534427,60,0.10105,96.458761
+yolov8n,tensorrt_int8,106,/model.15/Split,tensorrt,trt_layer,0.128201,0.002208,0.124218,0.139844,60,0.095974,96.554735
+yolov8n,tensorrt_int8,107,/model.4/m.0/Add_output_0 copy,tensorrt,trt_layer,0.126679,0.010009,0.122343,0.202656,60,0.094835,96.64957
+yolov8n,tensorrt_int8,108,/model.15/Split_5,tensorrt,trt_layer,0.126637,0.002167,0.123594,0.137969,60,0.094803,96.744373
+yolov8n,tensorrt_int8,109,/model.4/Split_output_1 copy,tensorrt,trt_layer,0.126474,0.01017,0.121771,0.20375,60,0.094681,96.839054
+yolov8n,tensorrt_int8,110,"Reformatting CopyNode for Input Tensor 0 to PWN(PWN(/model.9/cv2/act/Sigmoid), /model.9/cv2/act/Mul)",tensorrt,trt_layer,0.124745,0.002263,0.122813,0.141563,60,0.093387,96.93244
+yolov8n,tensorrt_int8,111,/model.12/cv2/act/Mul_output_0 copy,tensorrt,trt_layer,0.124656,0.001689,0.121875,0.134531,60,0.09332,97.025761
+yolov8n,tensorrt_int8,112,/model.9/m/MaxPool,tensorrt,trt_layer,0.12358,0.015688,0.120677,0.24401,60,0.092515,97.118275
+yolov8n,tensorrt_int8,113,/model.9/m_2/MaxPool,tensorrt,trt_layer,0.123437,0.015529,0.119791,0.242344,60,0.092407,97.210683
+yolov8n,tensorrt_int8,114,/model.9/m_1/MaxPool,tensorrt,trt_layer,0.122606,0.015281,0.119375,0.239687,60,0.091785,97.302468
+yolov8n,tensorrt_int8,115,/model.22/Reshape_2_output_0 copy,tensorrt,trt_layer,0.108936,0.002075,0.107656,0.124531,60,0.081552,97.38402
+yolov8n,tensorrt_int8,116,/model.22/cv3.2/cv3.2.2/Conv,tensorrt,trt_layer,0.106219,0.002276,0.102969,0.121927,60,0.079518,97.463537
+yolov8n,tensorrt_int8,117,"PWN(PWN(PWN(/model.6/m.1/cv2/act/Sigmoid), /model.6/m.1/cv2/act/Mul), /model.6/m.1/Add)",tensorrt,trt_layer,0.102999,0.011714,0.1,0.192813,60,0.077107,97.540645
+yolov8n,tensorrt_int8,118,"PWN(PWN(/model.22/cv3.1/cv3.1.0/act/Sigmoid), /model.22/cv3.1/cv3.1.0/act/Mul)",tensorrt,trt_layer,0.099984,0.002258,0.098646,0.11625,60,0.07485,97.615495
+yolov8n,tensorrt_int8,119,"PWN(PWN(/model.22/cv3.1/cv3.1.1/act/Sigmoid), /model.22/cv3.1/cv3.1.1/act/Mul)",tensorrt,trt_layer,0.094615,0.001688,0.093489,0.107187,60,0.070831,97.686326
+yolov8n,tensorrt_int8,120,"PWN(PWN(PWN(/model.6/m.0/cv2/act/Sigmoid), /model.6/m.0/cv2/act/Mul), /model.6/m.0/Add)",tensorrt,trt_layer,0.089524,0.009946,0.086511,0.165677,60,0.06702,97.753345
+yolov8n,tensorrt_int8,121,"PWN(PWN(/model.22/cv2.1/cv2.1.0/act/Sigmoid), /model.22/cv2.1/cv2.1.0/act/Mul)",tensorrt,trt_layer,0.089082,0.001729,0.087292,0.101875,60,0.066689,97.820034
+yolov8n,tensorrt_int8,122,"PWN(PWN(/model.18/m.0/cv2/act/Sigmoid), /model.18/m.0/cv2/act/Mul)",tensorrt,trt_layer,0.088106,0.001757,0.087084,0.10125,60,0.065958,97.885992
+yolov8n,tensorrt_int8,123,"PWN(PWN(/model.16/act/Sigmoid), /model.16/act/Mul)",tensorrt,trt_layer,0.085685,0.001657,0.084375,0.097761,60,0.064146,97.950137
+yolov8n,tensorrt_int8,124,"PWN(PWN(/model.12/m.0/cv2/act/Sigmoid), /model.12/m.0/cv2/act/Mul)",tensorrt,trt_layer,0.084851,0.001463,0.083802,0.095781,60,0.063521,98.013658
+yolov8n,tensorrt_int8,125,"PWN(PWN(/model.8/cv1/act/Sigmoid), /model.8/cv1/act/Mul)",tensorrt,trt_layer,0.082495,0.038196,0.075157,0.375834,60,0.061757,98.075416
+yolov8n,tensorrt_int8,126,"PWN(PWN(/model.6/m.0/cv1/act/Sigmoid), /model.6/m.0/cv1/act/Mul)",tensorrt,trt_layer,0.081427,0.010143,0.079323,0.159271,60,0.060958,98.136374
+yolov8n,tensorrt_int8,127,"PWN(PWN(/model.22/cv2.1/cv2.1.1/act/Sigmoid), /model.22/cv2.1/cv2.1.1/act/Mul)",tensorrt,trt_layer,0.080891,0.00144,0.079739,0.09151,60,0.060557,98.196931
+yolov8n,tensorrt_int8,128,"PWN(PWN(/model.6/m.1/cv1/act/Sigmoid), /model.6/m.1/cv1/act/Mul)",tensorrt,trt_layer,0.079599,0.00956,0.076562,0.152865,60,0.059589,98.25652
+yolov8n,tensorrt_int8,129,"PWN(PWN(/model.21/cv2/act/Sigmoid), /model.21/cv2/act/Mul)",tensorrt,trt_layer,0.078598,0.00166,0.077135,0.090365,60,0.05884,98.31536
+yolov8n,tensorrt_int8,130,"PWN(PWN(/model.21/cv1/act/Sigmoid), /model.21/cv1/act/Mul)",tensorrt,trt_layer,0.077143,0.001383,0.075208,0.086458,60,0.057751,98.373111
+yolov8n,tensorrt_int8,131,"PWN(PWN(/model.7/act/Sigmoid), /model.7/act/Mul)",tensorrt,trt_layer,0.075934,0.009323,0.073333,0.147448,60,0.056846,98.429957
+yolov8n,tensorrt_int8,132,"PWN(PWN(/model.18/m.0/cv1/act/Sigmoid), /model.18/m.0/cv1/act/Mul)",tensorrt,trt_layer,0.075797,0.001589,0.074219,0.087396,60,0.056743,98.4867
+yolov8n,tensorrt_int8,133,"PWN(PWN(/model.8/cv2/act/Sigmoid), /model.8/cv2/act/Mul)",tensorrt,trt_layer,0.075612,0.009291,0.073542,0.146875,60,0.056605,98.543305
+yolov8n,tensorrt_int8,134,"PWN(PWN(/model.12/m.0/cv1/act/Sigmoid), /model.12/m.0/cv1/act/Mul)",tensorrt,trt_layer,0.074494,0.001267,0.072917,0.083021,60,0.055768,98.599072
+yolov8n,tensorrt_int8,135,/model.9/m/MaxPool_output_0 copy,tensorrt,trt_layer,0.074135,0.009127,0.072552,0.144219,60,0.055499,98.654571
+yolov8n,tensorrt_int8,136,/model.9/m_1/MaxPool_output_0 copy,tensorrt,trt_layer,0.073155,0.009214,0.071614,0.143906,60,0.054765,98.709337
+yolov8n,tensorrt_int8,137,"PWN(PWN(/model.9/cv2/act/Sigmoid), /model.9/cv2/act/Mul)",tensorrt,trt_layer,0.071657,0.001636,0.070677,0.083385,60,0.053644,98.762981
+yolov8n,tensorrt_int8,138,/model.22/Mul_2_output_0 copy,tensorrt,trt_layer,0.069724,0.000384,0.068906,0.070781,60,0.052197,98.815177
+yolov8n,tensorrt_int8,139,/model.22/cv2.2/cv2.2.2/Conv,tensorrt,trt_layer,0.069125,0.001695,0.065104,0.078802,60,0.051748,98.866926
+yolov8n,tensorrt_int8,140,/model.6/Split,tensorrt,trt_layer,0.067555,0.005325,0.063906,0.107084,60,0.050573,98.917499
+yolov8n,tensorrt_int8,141,/model.12/Split,tensorrt,trt_layer,0.066216,0.001235,0.064063,0.072552,60,0.049571,98.96707
+yolov8n,tensorrt_int8,142,/model.18/Split,tensorrt,trt_layer,0.065934,0.001616,0.063803,0.074948,60,0.04936,99.016429
+yolov8n,tensorrt_int8,143,/model.6/Split_2,tensorrt,trt_layer,0.06531,0.005609,0.062864,0.108125,60,0.048892,99.065322
+yolov8n,tensorrt_int8,144,/model.12/Split_4,tensorrt,trt_layer,0.065121,0.001271,0.063541,0.073282,60,0.048751,99.114073
+yolov8n,tensorrt_int8,145,/model.9/cv2/act/Mul_output_0 copy,tensorrt,trt_layer,0.065085,0.001201,0.063021,0.072344,60,0.048724,99.162796
+yolov8n,tensorrt_int8,146,/model.6/m.0/Add_output_0 copy,tensorrt,trt_layer,0.065,0.005308,0.063125,0.105416,60,0.04866,99.211457
+yolov8n,tensorrt_int8,147,/model.18/Split_6,tensorrt,trt_layer,0.064797,0.001339,0.062813,0.072552,60,0.048508,99.259965
+yolov8n,tensorrt_int8,148,/model.6/Split_output_1 copy,tensorrt,trt_layer,0.063685,0.005419,0.061875,0.104948,60,0.047676,99.307641
+yolov8n,tensorrt_int8,149,"PWN(PWN(PWN(/model.8/m.0/cv2/act/Sigmoid), /model.8/m.0/cv2/act/Mul), /model.8/m.0/Add)",tensorrt,trt_layer,0.055928,0.005932,0.054062,0.10125,60,0.041869,99.34951
+yolov8n,tensorrt_int8,150,/model.22/Mul_2,tensorrt,trt_layer,0.052659,0.012036,0.050781,0.145104,60,0.039422,99.388932
+yolov8n,tensorrt_int8,151,"PWN(PWN(/model.21/m.0/cv2/act/Sigmoid), /model.21/m.0/cv2/act/Mul)",tensorrt,trt_layer,0.048227,0.000881,0.047552,0.054687,60,0.036104,99.425035
+yolov8n,tensorrt_int8,152,"PWN(PWN(/model.19/act/Sigmoid), /model.19/act/Mul)",tensorrt,trt_layer,0.046794,0.001096,0.045729,0.054739,60,0.035031,99.460066
+yolov8n,tensorrt_int8,153,"PWN(PWN(/model.21/m.0/cv1/act/Sigmoid), /model.21/m.0/cv1/act/Mul)",tensorrt,trt_layer,0.044146,0.001077,0.042865,0.051146,60,0.033049,99.493115
+yolov8n,tensorrt_int8,154,"PWN(PWN(/model.8/m.0/cv1/act/Sigmoid), /model.8/m.0/cv1/act/Mul)",tensorrt,trt_layer,0.042472,0.004828,0.040834,0.079323,60,0.031795,99.52491
+yolov8n,tensorrt_int8,155,"PWN(PWN(/model.9/cv1/act/Sigmoid), /model.9/cv1/act/Mul)",tensorrt,trt_layer,0.042417,0.004924,0.04052,0.079896,60,0.031754,99.556665
+yolov8n,tensorrt_int8,156,/model.22/Div_1_output_0 copy,tensorrt,trt_layer,0.040903,0.021631,0.037396,0.207031,60,0.030621,99.587285
+yolov8n,tensorrt_int8,157,/model.22/Sub_1_output_0 copy,tensorrt,trt_layer,0.040344,0.020387,0.037083,0.196927,60,0.030202,99.617488
+yolov8n,tensorrt_int8,158,/model.22/Slice,tensorrt,trt_layer,0.03999,0.001127,0.038698,0.047188,60,0.029937,99.647425
+yolov8n,tensorrt_int8,159,/model.22/Slice_1,tensorrt,trt_layer,0.038293,0.000335,0.037656,0.038907,60,0.028667,99.676092
+yolov8n,tensorrt_int8,160,/model.8/Split,tensorrt,trt_layer,0.038025,0.021329,0.033907,0.201823,60,0.028466,99.704558
+yolov8n,tensorrt_int8,161,/model.8/Split_3,tensorrt,trt_layer,0.036856,0.020995,0.033177,0.198072,60,0.027591,99.732149
+yolov8n,tensorrt_int8,162,/model.21/Split,tensorrt,trt_layer,0.035136,0.000923,0.03375,0.040469,60,0.026304,99.758453
+yolov8n,tensorrt_int8,163,/model.21/Split_7,tensorrt,trt_layer,0.034733,0.000836,0.033386,0.039844,60,0.026002,99.784455
+yolov8n,tensorrt_int8,164,/model.8/Split_output_1 copy,tensorrt,trt_layer,0.033931,0.003169,0.032292,0.058021,60,0.025401,99.809856
+yolov8n,tensorrt_int8,165,"PWN(PWN(/model.22/cv3.2/cv3.2.0/act/Sigmoid), /model.22/cv3.2/cv3.2.0/act/Mul)",tensorrt,trt_layer,0.030581,0.000732,0.029948,0.035781,60,0.022894,99.83275
+yolov8n,tensorrt_int8,166,"PWN(PWN(/model.22/cv3.2/cv3.2.1/act/Sigmoid), /model.22/cv3.2/cv3.2.1/act/Mul)",tensorrt,trt_layer,0.02985,0.00067,0.028907,0.034167,60,0.022346,99.855096
+yolov8n,tensorrt_int8,167,"PWN(PWN(/model.22/cv2.2/cv2.2.0/act/Sigmoid), /model.22/cv2.2/cv2.2.0/act/Mul)",tensorrt,trt_layer,0.028978,0.000723,0.027865,0.033438,60,0.021694,99.87679
+yolov8n,tensorrt_int8,168,Reformatting CopyNode for Input Tensor 0 to /model.9/m/MaxPool,tensorrt,trt_layer,0.028435,0.00396,0.02724,0.058698,60,0.021287,99.898077
+yolov8n,tensorrt_int8,169,/model.9/cv1/act/Mul_output_0 copy,tensorrt,trt_layer,0.027642,0.003447,0.026458,0.053542,60,0.020693,99.91877
+yolov8n,tensorrt_int8,170,"PWN(PWN(/model.22/cv2.2/cv2.2.1/act/Sigmoid), /model.22/cv2.2/cv2.2.1/act/Mul)",tensorrt,trt_layer,0.02573,0.000936,0.024479,0.030729,60,0.019262,99.938032
+yolov8n,tensorrt_int8,171,"PWN(/model.22/Constant_11_output_0 + (Unnamed Layer* 242) [Shuffle], PWN(/model.22/Add_2, /model.22/Div_1))",tensorrt,trt_layer,0.023836,0.012123,0.021719,0.116927,60,0.017844,99.955876
+yolov8n,tensorrt_int8,172,/model.22/Sub_1,tensorrt,trt_layer,0.019237,0.018538,0.016198,0.161615,60,0.014401,99.970278
+yolov8n,tensorrt_int8,173,/model.22/Sub,tensorrt,trt_layer,0.018552,0.000269,0.018021,0.019115,60,0.013888,99.984166
+yolov8n,tensorrt_int8,174,/model.22/Add_1,tensorrt,trt_layer,0.018068,0.00024,0.017552,0.018594,60,0.013526,99.997692
+yolov8n,tensorrt_int8,175,/model.22/Constant_12_output_0 + (Unnamed Layer* 247) [Shuffle],tensorrt,trt_layer,0.001655,0.007772,0.000625,0.061354,60,0.001239,99.998931
+yolov8n,tensorrt_int8,176,/model.22/Constant_9_output_0,tensorrt,trt_layer,0.000714,8e-05,0.000625,0.000989,60,0.000535,99.999465
+yolov8n,tensorrt_int8,177,/model.22/Constant_9_output_0_9,tensorrt,trt_layer,0.000714,7.6e-05,0.000625,0.000938,60,0.000535,100.0
